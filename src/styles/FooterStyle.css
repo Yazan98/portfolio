@@ -1,0 +1,23 @@
+.GithubLogo {
+    width: 20px;
+    height: 20px;
+    color: rgb(153, 153, 153);
+}
+
+.Images {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 1em;
+}
+
+.GridItem {
+    padding: 0%;
+}
+
+.MuiGrid-spacing-xs-4 > .MuiGrid-item {
+    padding: 0px;
+}
