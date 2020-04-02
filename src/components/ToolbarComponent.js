@@ -26,7 +26,7 @@ const useStyles = makeStyles((theme) => ({
     const classes = useStyles();
     return (
       <div className={classes.root}>
-        <AppBar style={{ background: 'rgba(255, 255, 255, 0.8)', color: '#000' }} position="static">
+        <AppBar style={{ background: 'rgb(26, 32, 44)', color: '#fff' }} position="static">
           <Toolbar className="Toolbar">
             <Typography variant="h6" className={classes.title}>
               Portfolio
