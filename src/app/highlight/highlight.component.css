@@ -1,5 +1,6 @@
 .HighlightWebsite {
   height: 300px;
+  margin-top: 2em;
   background-color: black;
   text-align: center;
   align-items: center;
@@ -7,6 +8,7 @@
 }
 
 .MainArea {
+  padding-top: 4em;
   text-align: center;
     -ms-flex-line-pack: center;
     align-content: center;

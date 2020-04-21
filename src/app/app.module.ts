@@ -9,6 +9,8 @@ import { FooterStaticComponent } from './footer-static/footer-static.component';
 import { HighlightComponent } from './highlight/highlight.component';
 import { Routes, RouterModule } from '@angular/router';
 import { SkillsComponent } from './skills/skills.component';
+import { PlatformsComponent } from './platforms/platforms.component';
+import { ToolsComponent } from './tools/tools.component';
 
 
 const routes: Routes = [
@@ -23,7 +25,9 @@ const routes: Routes = [
       NavbarComponent,
       FooterStaticComponent,
       HighlightComponent,
-      SkillsComponent
+      SkillsComponent,
+      PlatformsComponent,
+      ToolsComponent
    ],
    imports: [
       BrowserModule,
