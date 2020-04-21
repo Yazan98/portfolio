@@ -9,6 +9,7 @@ import { FooterStaticComponent } from './footer-static/footer-static.component';
 import { Routes, RouterModule } from '@angular/router';
 import { HomepageComponent } from './homepage/homepage.component';
 import { ProjectsComponent } from './projects/projects.component';
+import { OpensourceProjectsComponent } from './opensource-projects/opensource-projects.component';
 
 
 const routes: Routes = [
@@ -16,6 +17,7 @@ const routes: Routes = [
   { path: 'about', component: HomepageComponent },
   { path: 'projects', component: ProjectsComponent },
   { path: 'contact', component: HomepageComponent },
+  { path: 'projects/other', component: OpensourceProjectsComponent }
 ];
 
 
@@ -24,7 +26,8 @@ const routes: Routes = [
       AppComponent,
       NavbarComponent,
       FooterStaticComponent,
-      ProjectsComponent
+      ProjectsComponent,
+      OpensourceProjectsComponent
    ],
    imports: [
       BrowserModule,
