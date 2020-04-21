@@ -8,12 +8,13 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { FooterStaticComponent } from './footer-static/footer-static.component';
 import { Routes, RouterModule } from '@angular/router';
 import { HomepageComponent } from './homepage/homepage.component';
+import { ProjectsComponent } from './projects/projects.component';
 
 
 const routes: Routes = [
   { path: '', component: HomepageComponent },
   { path: 'about', component: HomepageComponent },
-  { path: 'projects', component: HomepageComponent },
+  { path: 'projects', component: ProjectsComponent },
   { path: 'contact', component: HomepageComponent },
 ];
 
@@ -22,7 +23,8 @@ const routes: Routes = [
    declarations: [
       AppComponent,
       NavbarComponent,
-      FooterStaticComponent
+      FooterStaticComponent,
+      ProjectsComponent
    ],
    imports: [
       BrowserModule,
@@ -30,7 +32,9 @@ const routes: Routes = [
       BrowserAnimationsModule,
       RouterModule.forRoot(routes)
    ],
-   exports: [RouterModule],
+   exports: [
+      RouterModule
+   ],
    providers: [],
    bootstrap: [
       AppComponent

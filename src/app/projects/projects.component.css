@@ -1,0 +1,32 @@
+.HighlightWebsite {
+  height: 300px;
+  margin-top: 2em;
+  background-color: black;
+  text-align: center;
+  align-items: center;
+  color: white;
+}
+
+.MainArea {
+  padding-top: 4em;
+  text-align: center;
+    -ms-flex-line-pack: center;
+    align-content: center;
+    width: 50%;
+    text-align: start;
+    vertical-align: middle;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+}
+
+h1 {
+  margin: 0%;
+  font-size: 2em;
+}
+
+p {
+  margin: 0%;
+}
