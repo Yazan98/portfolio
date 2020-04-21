@@ -11,11 +11,14 @@ import { Routes, RouterModule } from '@angular/router';
 import { SkillsComponent } from './skills/skills.component';
 import { PlatformsComponent } from './platforms/platforms.component';
 import { ToolsComponent } from './tools/tools.component';
+import { HomepageComponent } from './homepage/homepage.component';
 
 
 const routes: Routes = [
-  { path: '', component: HighlightComponent },
-  { path: '/about', component: HighlightComponent },
+  { path: '', component: HomepageComponent },
+  { path: 'about', component: HomepageComponent },
+  { path: 'projects', component: HomepageComponent },
+  { path: 'contact', component: HomepageComponent },
 ];
 
 
@@ -32,8 +35,10 @@ const routes: Routes = [
    imports: [
       BrowserModule,
       AppRoutingModule,
-      BrowserAnimationsModule
+      BrowserAnimationsModule,
+      RouterModule.forRoot(routes)
    ],
+   exports: [RouterModule],
    providers: [],
    bootstrap: [
       AppComponent
