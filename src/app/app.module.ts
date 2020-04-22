@@ -10,13 +10,14 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomepageComponent } from './homepage/homepage.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { OpensourceProjectsComponent } from './opensource-projects/opensource-projects.component';
+import { ContactComponent } from './contact/contact.component';
 
 
 const routes: Routes = [
   { path: '', component: HomepageComponent },
   { path: 'about', component: HomepageComponent },
   { path: 'projects', component: ProjectsComponent },
-  { path: 'contact', component: HomepageComponent },
+  { path: 'contact', component: ContactComponent },
   { path: 'projects/other', component: OpensourceProjectsComponent }
 ];
 
@@ -27,7 +28,8 @@ const routes: Routes = [
       NavbarComponent,
       FooterStaticComponent,
       ProjectsComponent,
-      OpensourceProjectsComponent
+      OpensourceProjectsComponent,
+      ContactComponent
    ],
    imports: [
       BrowserModule,
