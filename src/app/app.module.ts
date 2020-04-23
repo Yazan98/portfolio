@@ -11,12 +11,14 @@ import { HomepageComponent } from './homepage/homepage.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { OpensourceProjectsComponent } from './opensource-projects/opensource-projects.component';
 import { ContactComponent } from './contact/contact.component';
+import { VortexMainPageComponent } from './sub/vortex/vortex-main-page/vortex-main-page.component';
 
 
 const routes: Routes = [
   { path: '', component: HomepageComponent },
   { path: 'about', component: HomepageComponent },
   { path: 'projects', component: ProjectsComponent },
+  { path: 'projects/vortex', component: VortexMainPageComponent },
   { path: 'contact', component: ContactComponent },
   { path: 'projects/other', component: OpensourceProjectsComponent }
 ];
