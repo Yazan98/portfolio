@@ -56,6 +56,19 @@ p {
   font-size: 2rem;
   text-align: center;
   padding: 0 0.5em;
+  margin: 0%;
+}
+
+.test {
+  font-family: Montserrat, sans-serif;
+  font-weight: 300;
+  letter-spacing: -0.005em;
+  line-height: 1.4;
+  margin-top: 0;
+  color: rgba(255,255,255,0.9);
+  font-size: 2rem;
+  text-align: center;
+  padding: 0 0.5em;
 }
 
 
@@ -162,4 +175,41 @@ a {
 
 #Source {
   padding-left: 10px;
+}
+
+.Features {
+  text-align: center;
+  padding-top: 5%;
+  width: auto;
+}
+
+.Features .container {
+  text-align: center;
+}
+
+.bg {
+  background-color: #0061f2;
+  background: linear-gradient(156deg, rgba(2,0,36,1) 0%, rgba(2,0,36,1) 0%, rgba(0,212,255,1) 0%);
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  text-align: center;
+  align-items: center;
+    line-height:100px;
+    text-align:center;
+    margin: 0;
+    margin-left: 2.2em;
+    margin-bottom: 1em;
+}
+
+h2 {
+  margin-bottom: 0%;
+}
+
+.Features {
+  text-align: center;
+}
+
+#Item {
+  width: 250px;
 }
