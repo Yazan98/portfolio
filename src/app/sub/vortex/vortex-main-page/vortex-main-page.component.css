@@ -210,6 +210,72 @@ h2 {
   text-align: center;
 }
 
-#Item {
+#Item, .ImageContainer {
   width: 250px;
 }
+
+.WhySection {
+  padding-top: 2em;
+  padding-left: 2em;
+}
+
+.UniqueFeatures {
+  text-align: center;
+  align-items: center;
+}
+
+.card {
+  margin-top: 2em;
+  margin-bottom: 2em;
+  border-radius: 0.5em;
+  text-align: start;
+  padding: 2em;
+  height: 280px;
+}
+
+.CardImage {
+  margin: 2em;
+}
+
+.card-title {
+  width: 150px;
+  margin-top: 1.2em;
+  line-height: 1.25;
+  margin-left: 18px;
+  font-size: 20px;
+}
+
+.UniqueFeatures {
+  margin-top: 5em;
+  margin-bottom: 3em;
+}
+
+.card a {
+  margin: 20px;
+  -webkit-transition: color 1s; /* For Safari 3.0 to 6.0 */
+  transition: color 1s; /* For modern browsers */
+}
+
+.card a:hover {
+  color: rgba(0,212,255,1);
+}
+
+.card-title-2 {
+  line-height: 1;
+  margin-left: 18px;
+  font-size: 15px;
+  margin-bottom: 1em;
+  color: var(--text-color-light);
+  color: #939dad;
+}
+
+.ArrowImage {
+  width: 20px;
+  height: 20px;
+  padding-top: 0.5em;
+}
+
+.card-text-all {
+  color: rgba(0,212,255,1);
+}
+
