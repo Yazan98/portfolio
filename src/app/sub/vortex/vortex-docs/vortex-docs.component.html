@@ -3,30 +3,30 @@
   <!-- Sidebar  -->
   <nav id="sidebar">
       <div class="sidebar-header">
-          <h3>Bootstrap Sidebar</h3>
+          <h3>Vortex Documentation</h3>
       </div>
 
       <ul class="list-unstyled components">
-          <p>Dummy Heading</p>
+          <p>Vortex Details</p>
           <li class="active">
-              <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Home</a>
+              <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Getting Started</a>
               <ul class="collapse list-unstyled" id="homeSubmenu">
                   <li>
-                      <a href="#">Home 1</a>
+                      <a href="#">Overview</a>
                   </li>
                   <li>
-                      <a href="#">Home 2</a>
+                      <a href="#">Components</a>
                   </li>
                   <li>
-                      <a href="#">Home 3</a>
+                      <a href="#">Application Structure</a>
                   </li>
               </ul>
           </li>
           <li>
-              <a href="#">About</a>
+              <a href="#">Vortex Architecture</a>
           </li>
           <li>
-              <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Pages</a>
+              <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Configuration</a>
               <ul class="collapse list-unstyled" id="pageSubmenu">
                   <li>
                       <a href="#">Page 1</a>
@@ -59,27 +59,44 @@
 
   <!-- Page Content  -->
   <div id="content">
-
-
-
-      <h2>Collapsible Sidebar Using Bootstrap 4</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <h2>Vortex Documentation</h2>
+      <p>Welcome To Vortex Documentation To Explain Vortex Features, Components, Structure With Examples About Each Section</p>
+      <p>Before Start What is Vortex ? Vortex is An Android Infrastructure To Build Multi Modular Android Applications With Handled Common Cases In Any Application And With Vortex You Can Build High Level Applications With Clean Code Based On Modules Also Everything In The Base Code You Can Override Everything To Create The Custom Scopes Continue To See The Features And Components</p>
 
       <div class="line"></div>
 
-      <h2>Lorem Ipsum Dolor</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <h2>Overview</h2>
+      <p>Vortex is an Android Infrastructure To Build Android Applications With Latest Technologies and Ready State Handling with User Interface Implementation For The Android Common Cases This Library is Not Just Base Code it's also help you to get the target as soon as possible with ready techniques, base code for everything and this library built on modularity architecture actually you can depends on Vortex To Build Any Kind Of Android Apps , but the problem here this library depends on other android apis to implement some operations like google maps and 3th libraries to make sure your application has the right dependencies to start using Vortex Library you should apply 2 Gradle Plugins The First One For Vortex Dependcies With Multi Modular Application To Apply The Right Dependency to Right Module, the Second one should provide the application the right dependencies to each module</p>
 
       <div class="line"></div>
 
-      <h2>Lorem Ipsum Dolor</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <h2>Multi Modular Applications</h2>
+      <p>Vortex has Main 3 Modules you should include in your app to install Vortex
+        <br>
+        Not Vortex Don't Support Single Module Application Gradle Plugins Don't Working With Single Module
+        <br>
+        Each Application Should Implemented With 3 Layers (ui, data, domain)
+
+        </p>
+
+        <ul>
+          <li>UI: User Interface it includes (Activities, Fragments, Notifications, Dialogs, Application Configuration) -- Optional Dagger Application Scope</li>
+          <li>DATA: The Data Layer Should Implement RxJava With Retrofit To Handle Api Requests with Local Database Configuration and Shared Prefs Keys</li>
+          <li>DOMAIN: This Layer Should include The ViewModels With Application Business Logic Because Each ViewModel has The Hole Logic For Each Section and this is the important part in the application for this all ViewModels in the Same Layer</li>
+        </ul>
 
       <div class="line"></div>
 
-      <h3>Lorem Ipsum Dolor</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <h3>Vortex Process</h3>
+      <p>
+        Vortex In General Is An Application Generator With Specific Structure To Handle Everything In Android Applications But
+        <br>
+        Where to begin
+        <br>
+        First Thing You Should Create Vortex Application Via Vortex CLI The CLI Can Generate Application, Modules, Components
+        <br>
+        Then You Can Start With Logic Handling Docs, And Vortex Implementation
+      </p>
   </div>
 </div>
 
