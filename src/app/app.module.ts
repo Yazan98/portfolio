@@ -12,6 +12,7 @@ import { ProjectsComponent } from './projects/projects.component';
 import { OpensourceProjectsComponent } from './opensource-projects/opensource-projects.component';
 import { ContactComponent } from './contact/contact.component';
 import { VortexMainPageComponent } from './sub/vortex/vortex-main-page/vortex-main-page.component';
+import { VortexDocsComponent } from './sub/vortex/vortex-docs/vortex-docs.component';
 
 
 const routes: Routes = [
@@ -19,6 +20,7 @@ const routes: Routes = [
   { path: 'about', component: HomepageComponent },
   { path: 'projects', component: ProjectsComponent },
   { path: 'projects/vortex', component: VortexMainPageComponent },
+  { path: 'projects/vortex/docs', component: VortexDocsComponent },
   { path: 'contact', component: ContactComponent },
   { path: 'projects/other', component: OpensourceProjectsComponent }
 ];
@@ -31,7 +33,9 @@ const routes: Routes = [
       FooterStaticComponent,
       ProjectsComponent,
       OpensourceProjectsComponent,
-      ContactComponent
+      ContactComponent,
+      VortexDocsComponent,
+      VortexMainPageComponent
    ],
    imports: [
       BrowserModule,
