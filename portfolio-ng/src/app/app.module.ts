@@ -13,6 +13,7 @@ import { OpensourceProjectsComponent } from './opensource-projects/opensource-pr
 import { ContactComponent } from './contact/contact.component';
 import { VortexMainPageComponent } from './sub/vortex/vortex-main-page/vortex-main-page.component';
 import { VortexDocsComponent } from './sub/vortex/vortex-docs/vortex-docs.component';
+import { MwarridPageComponent } from './sub/mwarrid-page/mwarrid-page.component';
 
 
 const routes: Routes = [
@@ -22,7 +23,8 @@ const routes: Routes = [
   { path: 'projects/vortex', component: VortexMainPageComponent },
   { path: 'projects/vortex/docs', component: VortexDocsComponent },
   { path: 'contact', component: ContactComponent },
-  { path: 'projects/other', component: OpensourceProjectsComponent }
+  { path: 'projects/other', component: OpensourceProjectsComponent },
+  { path: 'projects/mwarrid', component: MwarridPageComponent }
 ];
 
 
@@ -35,7 +37,8 @@ const routes: Routes = [
       OpensourceProjectsComponent,
       ContactComponent,
       VortexDocsComponent,
-      VortexMainPageComponent
+      VortexMainPageComponent,
+      MwarridPageComponent
    ],
    imports: [
       BrowserModule,
