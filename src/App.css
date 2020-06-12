@@ -199,3 +199,37 @@ html {
 	position:relative;
 	top:1px;
 }
+
+.OtherProjects {
+  color: white;
+  padding-top: 20px;
+}
+
+.OtherProjects:hover {
+  color: white;
+  text-decoration: none;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+.OtherProjects {
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+}
+
+.OtherProjects::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: white;
+  transition: width .3s;
+}
+
+.OtherProjects:hover::after {
+  width: 100%;
+  transition: width .3s;
+}

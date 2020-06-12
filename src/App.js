@@ -7,6 +7,7 @@ import {
   Route
 } from "react-router-dom";
 import ProjectsComponent from './components/ProjectsComponent';
+import OtherProjectsComponent from './components/OtherProjectsComponent';
 
 class App extends React.Component {
 
@@ -17,6 +18,7 @@ class App extends React.Component {
             <Switch>
                 <Route exact path="/" component={HomeComponent} />
                 <Route path="/projects" component={ProjectsComponent} />
+                <Route path="/other" component={OtherProjectsComponent} />
                 <Route path="/about" component={HomeComponent} />
                 <Route path="/services" component={HomeComponent} />
             </Switch>

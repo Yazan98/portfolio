@@ -22,8 +22,8 @@ export default class HomeComponent extends React.Component {
                         <Grid item xs/>
                         <Button color="inherit"><NavLink className="Link" to="">Home</NavLink></Button>
                         <Button color="inherit"><NavLink className="Link" to="/projects">Projects</NavLink></Button>
-                        <Button color="inherit"><NavLink className="Link"  to="/about">About</NavLink></Button>
-                        <Button color="inherit"><NavLink className="Link"  to="/services">Services</NavLink></Button>
+                        <Button color="inherit"><NavLink className="Link" to="/about">About</NavLink></Button>
+                        <Button color="inherit"><NavLink className="Link" to="/services">Services</NavLink></Button>
                     </Toolbar>
                 </AppBar>
                 </div>
