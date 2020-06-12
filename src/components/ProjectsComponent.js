@@ -76,7 +76,7 @@ export default class ProjectsComponent extends React.Component {
                             </div>
                         </div>
                         <div class="col-sm" id="Image">
-                        <img src="https://user-images.githubusercontent.com/29167110/79882433-837fd400-83ea-11ea-9e2f-2e00f3a0c0dc.png" width="500" height="500"/>
+                        <img src="https://user-images.githubusercontent.com/29167110/84553819-119e7980-ad0d-11ea-9ca6-352a9dab3151.png" width="500" height="500"/>
                         </div>
                     </div>
                 </div>
@@ -159,7 +159,7 @@ export default class ProjectsComponent extends React.Component {
                                     </div>
                                 </div>
                                 <div class="col-sm" id="Image">
-                                <img src="https://user-images.githubusercontent.com/29167110/79907474-8b06a380-8411-11ea-9cc8-d1c124d94a59.png" width="500" height="500"/>
+                                <img src="https://user-images.githubusercontent.com/29167110/84553892-62ae6d80-ad0d-11ea-80ed-393ed35eb666.png" width="500" height="500"/>
                                 </div>
                             </div>
                         </div>

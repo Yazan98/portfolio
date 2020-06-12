@@ -40,27 +40,42 @@ class OtherProjectsComponent extends Component {
                     <Grid item xs={3}>
                         <div className="Section">
                             <div className="SectionContent">
-                                <p className="SideSection">Frontend Side</p>
-                                <h4>Vortex</h4>
-                                <p className="SectionDescription">Android Infrastructure That Includes The Common Cases In Any Application With Ready Configuration, Mvvm Base Code With Redux State Handling, Implementation Check The Docs To See The Features</p>
-                            </div>
+                                <div className="SectionData">
+                                    <p className="SideSection">Frontend Side</p>
+                                    <h4>Vortex</h4>
+                                    <p className="SectionDescription">Android Infrastructure That Includes The Common Cases In Any Application With Ready Configuration, Mvvm Base Code With Redux State Handling, Implementation Check The Docs To See The Features</p>
+                                </div>
+                                <div class="triangle-down">
+                                    <img src="https://user-images.githubusercontent.com/29167110/84554488-f7b26600-ad0f-11ea-8b77-234f6d93ec8f.png" width="15px" height="15px" style={{ marginLeft:"25px" }}/>
+                                </div>
+                                </div>
                         </div>
                     </Grid>
                     <Grid item xs={3}>
                         <div className="Section">
                             <div className="SectionContent">
+                                <div className="SectionData">
                                 <p className="SideSection">Frontend Side</p>
                                 <h4>Atto</h4>
                                 <p className="SectionDescription">Mvp Implementation With Ready Base Code To Handle Presenters, Common Application Configuration With Gradle Plugin To Implement Gradle App Module Dpendencies With UseCases, Api Handling</p>
+                                </div>
+                                <div class="triangle-down">
+                                    <img src="https://user-images.githubusercontent.com/29167110/84554488-f7b26600-ad0f-11ea-8b77-234f6d93ec8f.png" width="15px" height="15px" style={{ marginLeft:"25px" }}/>
+                                </div>
                             </div>
                         </div>
                     </Grid>
                     <Grid item xs={3}>
                         <div className="Section">
                             <div className="SectionContent">
-                                <p className="SideSection">Frontend Side</p>
-                                <h4>Ktor App</h4>
-                                <p className="SectionDescription">Backend Project Restful Api With Mongo DB , Kotlin Api, Ktor Framework Example and This Project is An Starter Kit To Start Any Ktor Application With Common Server Side Configuration</p>
+                               <div className="SectionData">
+                               <p className="SideSection">Frontend Side</p>
+                               <h4>Ktor App</h4>
+                               <p className="SectionDescription">Backend Project Restful Api With Mongo DB , Kotlin Api, Ktor Framework Example and This Project is An Starter Kit To Start Any Ktor Application With Common Server Side Configuration</p>
+                               </div>
+                               <div class="triangle-down">
+                               <img src="https://user-images.githubusercontent.com/29167110/84554488-f7b26600-ad0f-11ea-8b77-234f6d93ec8f.png" width="15px" height="15px" style={{ marginLeft:"25px" }}/>
+                               </div>
                             </div>
                         </div>
                     </Grid>
@@ -74,27 +89,43 @@ class OtherProjectsComponent extends Component {
                     <Grid item xs={3}>
                         <div className="Section">
                             <div className="SectionContent">
+                                <div className="SectionData">
                                 <p className="SideSection">Frontend Side</p>
                                 <h4>Groupy</h4>
                                 <p className="SectionDescription">Graduation Project Designed With Vortex-Firebase and Firebase as a Backend Side, Firestore Database, Firebase Auth To Login, Register, Kotlin Programming Language</p>
+                                </div>
+                                <div class="triangle-down">
+                                <img src="https://user-images.githubusercontent.com/29167110/84554488-f7b26600-ad0f-11ea-8b77-234f6d93ec8f.png" width="15px" height="15px" style={{ marginLeft:"25px" }}/>
+                                </div>
                             </div>
                         </div>
                     </Grid>
                     <Grid item xs={3}>
                         <div className="Section">
                             <div className="SectionContent">
+                                <div className="SectionData">
                                 <p className="SideSection">Backend Side</p>
                                 <h4>Bookie</h4>
                                 <p className="SectionDescription">Restful Api For Books Application and Mysql Database Implementation For Manage The Books With Restful Apis (Trainig Project) Written In Java Language</p>
+                                </div>
+                                <div class="triangle-down">
+                                <img src="https://user-images.githubusercontent.com/29167110/84554488-f7b26600-ad0f-11ea-8b77-234f6d93ec8f.png" width="15px" height="15px" style={{ marginLeft:"25px" }}/>
+
+                                </div>
                             </div>
                         </div>
                     </Grid>
                     <Grid item xs={3}>
                         <div className="Section">
                             <div className="SectionContent">
+                                <div className="SectionData">
                                 <p className="SideSection">Intellij IDEA Theme</p>
                                 <h4>Thentrom</h4>
                                 <p className="SectionDescription">Dark Theme With Orange, Yellow Color For kotlin :P Nice Plugin For Kotlin that provides you to write kotlin code with nice orange color</p>
+                                </div>
+                                <div class="triangle-down">
+                                <img src="https://user-images.githubusercontent.com/29167110/84554488-f7b26600-ad0f-11ea-8b77-234f6d93ec8f.png" width="15px" height="15px" style={{ marginLeft:"25px" }}/>
+                                </div>
                             </div>
                         </div>
                     </Grid>
@@ -108,27 +139,42 @@ class OtherProjectsComponent extends Component {
                     <Grid item xs={3}>
                         <div className="Section">
                             <div className="SectionContent">
+                                <div className="SectionData">
                                 <p className="SideSection">Backend Side</p>
                                 <h4>Destiny Api</h4>
                                 <p className="SectionDescription">Spring Boot With Kotlin Restful Api To Manage Restaurant Application With Recipes, Config, Security, JWT, Json Response, Error Handling, Full Project With MySql Database</p>
+                                </div>
+                                <div class="triangle-down">
+                                <img src="https://user-images.githubusercontent.com/29167110/84554630-a8b90080-ad10-11ea-8414-8c3a48c72f4d.png" width="30px" height="30px" style={{ marginLeft:"20px" }}/>
+                                </div>
                             </div>
                         </div>
                     </Grid>
                     <Grid item xs={3}>
                         <div className="Section">
                             <div className="SectionContent">
+                                <div className="SectionData">
                                 <p className="SideSection">Backend Side</p>
                                 <h4>Actor</h4>
                                 <p className="SectionDescription">Spring Boot With Gson To Generate Postman Collection From Spring Controllers And Create Json File To Import The Api's into Postman Client Writter In Kotlin Language</p>
+                                </div>
+                                <div class="triangle-down">
+                                <img src="https://user-images.githubusercontent.com/29167110/84554630-a8b90080-ad10-11ea-8414-8c3a48c72f4d.png" width="30px" height="30px" style={{ marginLeft:"20px" }}/>
+                                </div>
                             </div>
                         </div>
                     </Grid>
                     <Grid item xs={3}>
                         <div className="Section">
                             <div className="SectionContent">
+                                <div className="SectionData">
                                 <p className="SideSection">Frontend Side</p>
                                 <h4>Exposer</h4>
                                 <p className="SectionDescription">Kotlin Multi Platform Domain Layer Leader Lead The Domain Layer Into Shared Code, Custom Implementation For Android , IOS Layer That Handle The Local Mobile Operations</p>
+                                </div>
+                                <div class="triangle-down">
+                                <img src="https://user-images.githubusercontent.com/29167110/84554630-a8b90080-ad10-11ea-8414-8c3a48c72f4d.png" width="30px" height="30px" style={{ marginLeft:"20px" }}/>
+                                </div>
                             </div>
                         </div>
                     </Grid>
