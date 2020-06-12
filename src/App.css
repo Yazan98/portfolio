@@ -1,38 +1,134 @@
-.App {
+
+html, body, .App {
+  background-color: #1B1E23;
+  width: 100%;
+}
+
+.HeaderContent {
+  background-color: #262A2D;
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
   align-items: center;
+  vertical-align: middle;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.Header {
+  padding-top: 200px;
+  background-color: #262A2D;
+  padding-bottom: 200px;
+  text-align: start;
+  -ms-flex-line-pack: center;
+    align-content: center;
+    width: 50%;
+    text-align: start;
+    vertical-align: middle;
+    margin-left: 20em;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+p {
+  margin: 0%;
+  padding: 0%;
+}
+
+.ServiceItem {
+  padding: 10px;
+  margin: 2em;
+  text-align: center;
+  align-items: center;
+}
+
+.ServicesTitle {
+  color: white;
+  padding: 30px;
+ text-align: center;
+}
+
+.Section {
+  margin: 30px;
+  padding: 30px;
+  color: white;
+  width: 250px;
+  border-radius: 2%;
+  border-color: white;
+  border-width: 1px;
+  border-style: solid;
+  height: 300px;
+  padding-top: 30px;
+}
+
+.SideSection {
+  font-size: 10px;
+  margin-top: 30px;
+}
+
+.SectionDescription {
+  font-size: 13px;
+  padding-top: 20px;
+}
+
+
+.ToolsContainer[data-v-2c2e245b] {
+  color: white;
+  padding: 1em;
+  height: auto;
+  margin-top: 20px;
+  font-family: Saira Semi Condensed, sans-serif
+}
+
+div.scrollmenu[data-v-2c2e245b] {
+  overflow: auto;
+  padding: 1em;
+  white-space: nowrap
+}
+
+h5[data-v-2c2e245b] {
+  text-align: center
+}
+
+div.scrollmenu img[data-v-2c2e245b] {
+  display: inline-block;
+  color: #fff;
+  padding: 14px;
+  text-decoration: none;
+  width: 110px;
+  height: auto;
+  margin-left: 1em;
+  text-align: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  scale: none
+}
+
+.scrollmenu[data-v-2c2e245b] {
+  width: auto;
+  text-align: center
+}
+
+h5 {
+  color: white;
+  text-align: center;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x:hidden;
+  max-width: NNNpx;
+}
+
+.ToolsContainer {
+  margin-top: 50px;
+}
+
+.Section:hover {
+  border-color: red;
+  transition: 0.6s;
+  transform-style: preserve-3d;
+  transform: rotateX(90deg);
+  transform-origin:center bottom;
+  opacity: 0;
+  transform: rotateY(0deg);
+  transform: translatey(-40px);
+  opacity: 1;
 }
