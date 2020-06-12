@@ -132,3 +132,26 @@ html {
   transform: translatey(-40px);
   opacity: 1;
 }
+
+.Link {
+  color: #262A2D;
+}
+
+.Link:hover {
+  text-decoration: none;
+  color: #262A2D;
+}
+
+.HighlightWebsite {
+  color: white;
+}
+
+.MainArea {
+  background-color: #262A2D;
+  padding-top: 200px;
+  padding-bottom: 200px;
+  text-align: start;
+    text-align: start;
+    vertical-align: middle;
+    padding-left: 20em;
+}

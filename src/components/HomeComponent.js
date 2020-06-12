@@ -6,28 +6,28 @@ import Button from '@material-ui/core/Button';
 import { Grid } from '@material-ui/core';
 import '../App.css';
 import TextLoop from "react-text-loop";
-import { makeStyles } from '@material-ui/core/styles';
-import Paper from '@material-ui/core/Paper';
+import { NavLink } from 'react-router-dom'
 
 export default class HomeComponent extends React.Component {
     render() {
         return (
             <div className="HomePage">
-                <header>
-                    <div className="ToolbarSection">
-                    <AppBar position="static" className="AppBar" color="default">
-                        <Toolbar>
-                            <Typography variant="h6">
-                                Portfolio
-                            </Typography>
-                            <Grid item xs/>
-                            <Button color="inherit">Projects</Button>
-                            <Button color="inherit">About</Button>
-                            <Button color="inherit">Services</Button>
-                        </Toolbar>
-                    </AppBar>
-                    </div>
-                </header>
+            <header>
+                <div className="ToolbarSection">
+                <AppBar position="static" className="AppBar" color="default">
+                    <Toolbar>
+                        <Typography variant="h6">
+                            Portfolio
+                        </Typography>
+                        <Grid item xs/>
+                        <Button color="inherit"><NavLink className="Link" to="">Home</NavLink></Button>
+                        <Button color="inherit"><NavLink className="Link" to="/projects">Projects</NavLink></Button>
+                        <Button color="inherit"><NavLink className="Link"  to="/about">About</NavLink></Button>
+                        <Button color="inherit"><NavLink className="Link"  to="/services">Services</NavLink></Button>
+                    </Toolbar>
+                </AppBar>
+                </div>
+            </header>
 
                 <div className="HeaderContent">
                     <div className="Header">
