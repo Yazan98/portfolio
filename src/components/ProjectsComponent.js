@@ -44,7 +44,7 @@ export default class ProjectsComponent extends React.Component {
                     With Describtion, Details
                     </p>
                     <div class="OtherContainer">
-                    <NavLink className="OtherProjects" to="/other">Other Projects</NavLink>
+                    <NavLink className="Github" style={{ marginTop:"1em" }} to="/other">Other Projects</NavLink>
                     </div>
                 </div>
             </div>

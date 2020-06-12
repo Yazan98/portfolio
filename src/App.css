@@ -129,7 +129,6 @@ html {
   transform-origin:center bottom;
   opacity: 0;
   transform: rotateY(0deg);
-  transform: translatey(-40px);
   opacity: 1;
 }
 
@@ -233,3 +232,45 @@ li {
   width: 100%;
   transition: width .3s;
 }
+
+
+.AboutMe {
+ color: white;
+}
+
+.PageContent {
+  margin: 2em;
+}
+
+.Github {
+	border-radius:28px;
+	border:2px solid red;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:17px;
+	padding:16px 31px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px red;
+}
+.Github:hover {
+  background-color:red;
+  transition: 0.6s;
+  transform-style: preserve-3d;
+  transform: rotateX(90deg);
+  transform-origin:center bottom;
+  opacity: 0;
+  transform: rotateY(0deg);
+  opacity: 1;
+}
+.Github:active {
+	position:relative;
+	top:1px;
+}
+
+a:hover {
+  text-decoration: none;
+  color: white;
+}
+        

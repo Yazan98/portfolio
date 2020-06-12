@@ -8,6 +8,7 @@ import {
 } from "react-router-dom";
 import ProjectsComponent from './components/ProjectsComponent';
 import OtherProjectsComponent from './components/OtherProjectsComponent';
+import AboutComponent from './components/AboutComponent';
 
 class App extends React.Component {
 
@@ -19,7 +20,7 @@ class App extends React.Component {
                 <Route exact path="/" component={HomeComponent} />
                 <Route path="/projects" component={ProjectsComponent} />
                 <Route path="/other" component={OtherProjectsComponent} />
-                <Route path="/about" component={HomeComponent} />
+                <Route path="/about" component={AboutComponent} />
                 <Route path="/services" component={HomeComponent} />
             </Switch>
           </Router>
