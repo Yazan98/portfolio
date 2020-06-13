@@ -9,6 +9,8 @@ import {
 import ProjectsComponent from './components/ProjectsComponent';
 import OtherProjectsComponent from './components/OtherProjectsComponent';
 import AboutComponent from './components/AboutComponent';
+import VortexMainPageComponent from './components/VortexProjectComponent';
+
 
 class App extends React.Component {
 
@@ -22,6 +24,7 @@ class App extends React.Component {
                 <Route path="/other" component={OtherProjectsComponent} />
                 <Route path="/about" component={AboutComponent} />
                 <Route path="/services" component={HomeComponent} />
+                <Route path="/vortex" component={VortexMainPageComponent} />
             </Switch>
           </Router>
           </>

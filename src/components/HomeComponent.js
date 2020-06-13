@@ -9,6 +9,12 @@ import TextLoop from "react-text-loop";
 import { NavLink } from 'react-router-dom'
 
 export default class HomeComponent extends React.Component {
+
+
+    componentDidMount() {
+        document.title = "Portfolio | Home";
+    }
+
     render() {
         return (
             <div className="HomePage">
@@ -58,7 +64,7 @@ export default class HomeComponent extends React.Component {
                     justify="center">
                         <Grid item xs={3}>
                             <div className="Section">
-                                <div className="SectionContent">
+                                <div className="SectionData">
                                     <p className="SideSection">Frontend Side</p>
                                     <h4>Android Apps</h4>
                                     <p className="SectionDescription">Design, Maintain Android Applications With Responsive Layouts , Latest Technologies, Strong Infastructure</p>
@@ -67,7 +73,7 @@ export default class HomeComponent extends React.Component {
                         </Grid>
                         <Grid item xs={3}>
                             <div className="Section">
-                                <div className="SectionContent">
+                                <div className="SectionData">
                                     <p className="SideSection">Backend Side</p>
                                     <h4>SpringBoot Web Apps</h4>
                                     <p className="SectionDescription">Build Backend Projects With Spring Boot Framework, Good Infastructure, Error Handling, Restful Api</p>
@@ -76,7 +82,7 @@ export default class HomeComponent extends React.Component {
                         </Grid>
                         <Grid item xs={3}>
                             <div className="Section">
-                                <div className="SectionContent">
+                                <div className="SectionData">
                                     <p className="SideSection">Frontend Side</p>
                                     <h4>Website</h4>
                                     <p className="SectionDescription">Build Websites With (Vue.js, React.js) , Boostrap , Javascript With Restful Api, Responsive Design , Clean Code</p>
@@ -92,7 +98,7 @@ export default class HomeComponent extends React.Component {
                     justify="center">
                         <Grid item xs={3}>
                             <div className="Section">
-                                <div className="SectionContent">
+                                <div className="SectionData">
                                     <p className="SideSection">Configuration</p>
                                     <h4>Plugins</h4>
                                     <p className="SectionDescription">Design, Build (Gradle, Intellij, CLI) For Android Applications for Better Gradle Configutation</p>
@@ -101,7 +107,7 @@ export default class HomeComponent extends React.Component {
                         </Grid>
                         <Grid item xs={3}>
                             <div className="Section">
-                                <div className="SectionContent">
+                                <div className="SectionData">
                                     <p className="SideSection">Backend Side</p>
                                     <h4>Ktor Framework</h4>
                                     <p className="SectionDescription">Build Backend Projects With Ktor Framework , Restful Api</p>
@@ -110,7 +116,7 @@ export default class HomeComponent extends React.Component {
                         </Grid>
                         <Grid item xs={3}>
                             <div className="Section">
-                                <div className="SectionContent">
+                                <div className="SectionData">
                                     <p className="SideSection">Frontend Side</p>
                                     <h4>Design</h4>
                                     <p className="SectionDescription">Design Application Interface , Logos With Adobe Photoshop, After Effects For Simple Animation (Biggener Level)</p>

@@ -10,6 +10,10 @@ import { NavLink } from 'react-router-dom'
 
 class AboutComponent extends Component {
 
+    componentDidMount() {
+        document.title = "Portfolio | About Me";
+    }
+
     render() {
         return (
             <div className="AboutPage">

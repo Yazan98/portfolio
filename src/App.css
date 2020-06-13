@@ -52,7 +52,7 @@ p {
   border-color: white;
   border-width: 1.5px;
   border-style: solid;
-  height: 300px;
+  height: 320px;
 }
 
 .SideSection {
@@ -222,7 +222,7 @@ li {
   display: block;
   width: 0;
   height: 2px;
-  background: white;
+  background: red;
   transition: width .3s;
 }
 
@@ -290,4 +290,8 @@ a:hover {
 
 .SectionData {
   padding: 20px;
+}
+
+a {
+  color: white;
 }

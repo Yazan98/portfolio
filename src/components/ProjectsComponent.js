@@ -10,6 +10,12 @@ import { BrowserRouter as Router, Link } from "react-router-dom";
 import { NavLink } from 'react-router-dom'
 
 export default class ProjectsComponent extends React.Component {
+
+    componentDidMount() {
+        document.title = "Portfolio | Projects";
+    }
+
+
     render() {
         return (
             <>
