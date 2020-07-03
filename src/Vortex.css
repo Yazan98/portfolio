@@ -318,3 +318,14 @@
     background-color: white;
   }
   
+  .VortexContainer h2 {
+    font-size: large;
+  }
+
+  .VortexContainer h4 {
+    font-size: medium;
+  }
+
+  .ServicesSection {
+    background-color: gainsboro;
+  }

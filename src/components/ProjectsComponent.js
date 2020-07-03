@@ -58,64 +58,6 @@ export default class ProjectsComponent extends React.Component {
 
                 <div className="AppsSection">
 
-                <div class="Item">
-                <div class="container">
-                    <div class="row" id="SubContainerApp">
-                        <div class="col-sm" id="ColumnInfoApp">
-                        <p>Android Application</p>
-                        <h5>Closed Source App</h5>
-                        <h1>Mwarrid</h1>
-                        <p>An integrated electronic marketing platform from a website and an application on smartphones and tablets help to
-             connect the food sector suppliers in all their fields with restaurants, cafes, hotels, wedding hall and all those
-              involved in selling food in the retail sector and soon individuals. So that suppliers periodically display their
-              products, set their prices, and market them, to help our customers follow the market, view the latest offers, instant
-               order, and track order status through the supplier's online platform.</p>
-                            <div class="container" id="buttonsContainer">
-                                <div class="row">
-                                <div class="col-sm">
-                                    <a class="myButton" id="myButton">View Details</a>
-                                </div>
-                                <div class="col-sm">
-                                <a class="myButton" id="myButton" href="https://play.google.com/store/apps/details?id=com.mwarrid.mwarrid" target="_blank">View Project</a>
-                                </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm" id="Image">
-                        <img src="https://user-images.githubusercontent.com/29167110/84553819-119e7980-ad0d-11ea-9ca6-352a9dab3151.png" width="500" height="500"/>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-                    <div class="Item">
-                        <div class="container">
-                            <div class="row" id="SubContainerApp">
-                                <div class="col-sm" id="ColumnInfoApp">
-                                <p>Android Application</p>
-                                <h5>Closed Source App</h5>
-                                <h1>Diretto</h1>
-                                <p>An integrated platform capable of connecting the customers to the merchants of cvarious types and
-            communicating with each other, asking them to facilitate access to each other and know the evaluation
-            of others and the possibility of evaluation as well.</p>
-                                    <div class="container" id="buttonsContainer">
-                                        <div class="row">
-                                        <div class="col-sm">
-                                            <a class="myButton" id="myButton">View Details</a>
-                                        </div>
-                                        <div class="col-sm">
-                    <a class="myButton" id="myButton" href="https://play.google.com/store/apps/details?id=com.noventapp.direct.user" target="_blank">View Project</a>
-                                        </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm" id="Image">
-                                <img src="https://user-images.githubusercontent.com/29167110/79885144-39005680-83ee-11ea-9093-29ff0afe4e68.png" width="500" height="500"/>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
                     <div class="Item">
                         <div class="container">
                             <div class="row" id="SubContainerApp">
