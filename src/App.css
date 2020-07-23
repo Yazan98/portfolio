@@ -295,3 +295,11 @@ a:hover {
 a {
   color: white;
 }
+
+.ToolIcon {
+  width: 70px;
+  object-fit: contain;
+  margin-right: 10px;
+  margin-left: 10px;
+  height: 70px;
+}

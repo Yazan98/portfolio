@@ -129,13 +129,14 @@ export default class HomeComponent extends React.Component {
                 <div className="ToolsContainer">
                     <h5>Tools</h5>
                     <div data-v-2c2e245b="" class="scrollmenu">
-                        <img data-v-2c2e245b="" src="https://yazan98.github.io/img/jsLogo.8b8524a4.png"/>
-                        <img data-v-2c2e245b="" src="https://yazan98.github.io/img/android-logo.eb03ed7e.svg"/>
-                        <img data-v-2c2e245b="" src="https://yazan98.github.io/img/docker.8250fb6c.png"/>
-                        <img data-v-2c2e245b="" src="https://yazan98.github.io/img/java-logo.8309fda0.png"/>
-                        <img data-v-2c2e245b="" src="https://yazan98.github.io/img/kotlin_logo.309f8ebe.png"/>
-                        <img data-v-2c2e245b="" src="https://yazan98.github.io/img/gradle.9a0296da.png"/>
-                        <img data-v-2c2e245b="" src="https://angular.io/assets/images/logos/angular/angular.svg"/>
+                        <img className="ToolIcon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/480px-JavaScript-logo.png"/>
+                        <img className="ToolIcon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Android_logo_2019.svg/1000px-Android_logo_2019.svg.png"/>
+                        <img className="ToolIcon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Kotlin-logo.svg/1200px-Kotlin-logo.svg.png"/>
+                        <img className="ToolIcon" src="https://logos-download.com/wp-content/uploads/2016/10/Java_logo.png"/>
+                        <img className="ToolIcon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1280px-React-icon.svg.png"/>
+                        <img className="ToolIcon" src="https://www.docker.com/sites/default/files/d8/2019-07/vertical-logo-monochromatic.png"/>
+                        <img className="ToolIcon" src="https://image.flaticon.com/icons/png/512/37/37318.png"/>
+                        <img className="ToolIcon" src="https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png"/>
                     </div>
                 </div>
 

@@ -63,7 +63,7 @@ export default class ProjectsComponent extends React.Component {
                             <div class="row" id="SubContainerApp">
                                 <div class="col-sm" id="ColumnInfoApp">
                                 <p>Android Application</p>
-                                <h5>Closed Source App</h5>
+                                <h5>Open Source App</h5>
                                 <h1>Autohub</h1>
                                 <p>An Github Client Built To Test Vortex Infrastructure For Android Applications With A Lot Of Features To Manage Github Accounts
                                 Personal Accounts, Repositories, Search Repository, Popular Repos, Orgs, Gists, Github Auth, With Kotlin Programming Language
@@ -74,7 +74,7 @@ export default class ProjectsComponent extends React.Component {
                                             <a class="myButton" id="myButton">View Details</a>
                                         </div>
                                         <div class="col-sm">
-                                            <a class="myButton" id="myButton" href="https://github.com/Yazan98/Destiny" target="_blank">View Project</a>
+                                            <a class="myButton" id="myButton" href="https://github.com/Yazan98/Github-Client" target="_blank">View Project</a>
                                         </div>
                                         </div>
                                     </div>
@@ -101,7 +101,7 @@ export default class ProjectsComponent extends React.Component {
                                             <a class="myButton" id="myButton">View Details</a>
                                         </div>
                                         <div class="col-sm">
-                                            <a class="myButton" id="myButton" href="https://github.com/Yazan98/Destiny" target="_blank">View Project</a>
+                                            <a class="myButton" id="myButton" href="https://github.com/Yazan98/Wintrop" target="_blank">View Project</a>
                                         </div>
                                         </div>
                                     </div>
