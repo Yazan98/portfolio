@@ -137,6 +137,7 @@ export default class HomeComponent extends React.Component {
                         <img className="ToolIcon" src="https://www.docker.com/sites/default/files/d8/2019-07/vertical-logo-monochromatic.png"/>
                         <img className="ToolIcon" src="https://image.flaticon.com/icons/png/512/37/37318.png"/>
                         <img className="ToolIcon" src="https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png"/>
+                        <img className="ToolIcon" src="https://www.dariawan.com/media/images/tech-spring-boot.width-1024.png"/>
                     </div>
                 </div>
 
