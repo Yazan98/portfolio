@@ -7,6 +7,8 @@ import { Grid } from '@material-ui/core';
 import '../App.css';
 import TextLoop from "react-text-loop";
 import { NavLink } from 'react-router-dom'
+import AppBarComponent from '../common/AppBarComponent';
+
 
 class AboutComponent extends Component {
 
@@ -18,22 +20,8 @@ class AboutComponent extends Component {
         return (
             <div className="AboutPage">
             
-            <header>
-                <div className="ToolbarSection">
-                <AppBar position="static" className="AppBar" color="default">
-                    <Toolbar>
-                        <Typography variant="h6">
-                            Portfolio
-                        </Typography>
-                        <Grid item xs/>
-                        <Button color="inherit"><NavLink className="Link" to="">Home</NavLink></Button>
-                        <Button color="inherit"><NavLink className="Link" to="/projects">Projects</NavLink></Button>
-                        <Button color="inherit"><NavLink className="Link" to="/about">About</NavLink></Button>
-                        <Button color="inherit"><NavLink className="Link" to="/services">Services</NavLink></Button>
-                    </Toolbar>
-                </AppBar>
-                </div>
-            </header>
+            <AppBarComponent />
+
 
             <div className="PageContent">
             

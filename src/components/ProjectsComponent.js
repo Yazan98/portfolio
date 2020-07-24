@@ -1,13 +1,8 @@
 import React from 'react';
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
-import Typography from '@material-ui/core/Typography';
-import Button from '@material-ui/core/Button';
-import { Grid } from '@material-ui/core';
 import '../App.css';
 import TextLoop from "react-text-loop";
-import { BrowserRouter as Router, Link } from "react-router-dom";
 import { NavLink } from 'react-router-dom'
+import AppBarComponent from '../common/AppBarComponent';
 
 export default class ProjectsComponent extends React.Component {
 
@@ -19,22 +14,7 @@ export default class ProjectsComponent extends React.Component {
     render() {
         return (
             <>
-            <header>
-                <div className="ToolbarSection">
-                <AppBar position="static" className="AppBar" color="default">
-                    <Toolbar>
-                        <Typography variant="h6">
-                            Portfolio
-                        </Typography>
-                        <Grid item xs/>
-                        <Button color="inherit"><NavLink className="Link" to="">Home</NavLink></Button>
-                        <Button color="inherit"><NavLink className="Link" to="/projects">Projects</NavLink></Button>
-                        <Button color="inherit"><NavLink className="Link" to="/about">About</NavLink></Button>
-                        <Button color="inherit"><NavLink className="Link" to="/services">Services</NavLink></Button>
-                    </Toolbar>
-                </AppBar>
-                </div>
-            </header>
+            <AppBarComponent />
 
             <div class="HighlightWebsite">
                 <div class="MainArea">
@@ -57,6 +37,36 @@ export default class ProjectsComponent extends React.Component {
             
 
                 <div className="AppsSection">
+                     <div class="Item">	
+                <div class="container">	
+                    <div class="row" id="SubContainerApp">	
+                        <div class="col-sm" id="ColumnInfoApp">	
+                        <p>Android Application</p>	
+                        <h5>Closed Source App</h5>	
+                        <h1>Mwarrid</h1>	
+                        <p>An integrated electronic marketing platform from a website and an application on smartphones and tablets help to	
+             connect the food sector suppliers in all their fields with restaurants, cafes, hotels, wedding hall and all those	
+              involved in selling food in the retail sector and soon individuals. So that suppliers periodically display their	
+              products, set their prices, and market them, to help our customers follow the market, view the latest offers, instant	
+               order, and track order status through the supplier's online platform.</p>	
+                            <div class="container" id="buttonsContainer">	
+                                <div class="row">	
+                                <div class="col-sm">	
+                                    <a class="myButton" id="myButton">View Details</a>	
+                                </div>	
+                                <div class="col-sm">	
+                                <a class="myButton" id="myButton" href="https://play.google.com/store/apps/details?id=com.mwarrid.mwarrid" target="_blank">View Project</a>	
+                                </div>	
+                                </div>	
+                            </div>	
+                        </div>	
+                        <div class="col-sm" id="Image">	
+                        <img src="https://user-images.githubusercontent.com/29167110/84553819-119e7980-ad0d-11ea-9ca6-352a9dab3151.png" width="500" height="500"/>	
+                        </div>	
+                    </div>	
+                </div>	
+            </div>	
+
 
                     <div class="Item">
                         <div class="container">
