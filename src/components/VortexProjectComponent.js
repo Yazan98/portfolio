@@ -4,6 +4,7 @@ import '../Vortex.css';
 import { Grid } from '@material-ui/core';
 import '../App.css';
 import { NavLink } from 'react-router-dom'
+import FooterComponent from '../common/FooterComponent';
 
 class VortexMainPageComponent extends Component {
 

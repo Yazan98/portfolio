@@ -81,7 +81,7 @@ div.scrollmenu[data-v-2c2e245b] {
   white-space: nowrap
 }
 
-h5[data-v-2c2e245b] {
+.Tools {
   text-align: center
 }
 
@@ -106,7 +106,6 @@ div.scrollmenu img[data-v-2c2e245b] {
 
 h5 {
   color: white;
-  text-align: center;
 }
 
 html {
@@ -302,4 +301,10 @@ a {
   margin-right: 10px;
   margin-left: 10px;
   height: 70px;
+}
+
+footer {
+  position: relative;
+  color: white;
+  margin-top: 40px;
 }

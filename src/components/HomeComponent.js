@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
+
 import { Grid } from '@material-ui/core';
 import '../App.css';
 import TextLoop from "react-text-loop";
 import AppBarComponent from '../common/AppBarComponent';
+import FooterComponent from '../common/FooterComponent';
 
 export default class HomeComponent extends React.Component {
 
@@ -14,7 +16,6 @@ export default class HomeComponent extends React.Component {
     render() {
         return (
             <>
-            <AppBarComponent />
             <div className="HomePage">
                 <div className="HeaderContent">
                     <div className="Header">
@@ -108,7 +109,7 @@ export default class HomeComponent extends React.Component {
                 </div>
 
                 <div className="ToolsContainer">
-                    <h5>Tools</h5>
+                    <h5 className="Tools">Tools</h5>
                     <div data-v-2c2e245b="" class="scrollmenu">
                         <img className="ToolIcon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/480px-JavaScript-logo.png"/>
                         <img className="ToolIcon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Android_logo_2019.svg/1000px-Android_logo_2019.svg.png"/>
@@ -121,7 +122,6 @@ export default class HomeComponent extends React.Component {
                         <img className="ToolIcon" src="https://www.dariawan.com/media/images/tech-spring-boot.width-1024.png"/>
                     </div>
                 </div>
-
 
             </div>
             </>

@@ -8,6 +8,7 @@ import '../App.css';
 import TextLoop from "react-text-loop";
 import { NavLink } from 'react-router-dom'
 import AppBarComponent from '../common/AppBarComponent';
+import FooterComponent from '../common/FooterComponent';
 
 
 class AboutComponent extends Component {
@@ -19,9 +20,6 @@ class AboutComponent extends Component {
     render() {
         return (
             <div className="AboutPage">
-            
-            <AppBarComponent />
-
 
             <div className="PageContent">
             

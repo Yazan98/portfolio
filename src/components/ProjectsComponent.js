@@ -3,6 +3,7 @@ import '../App.css';
 import TextLoop from "react-text-loop";
 import { NavLink } from 'react-router-dom'
 import AppBarComponent from '../common/AppBarComponent';
+import FooterComponent from '../common/FooterComponent';
 
 export default class ProjectsComponent extends React.Component {
 
@@ -14,7 +15,6 @@ export default class ProjectsComponent extends React.Component {
     render() {
         return (
             <>
-            <AppBarComponent />
 
             <div class="HighlightWebsite">
                 <div class="MainArea">

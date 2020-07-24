@@ -4,6 +4,7 @@ import '../App.css';
 import TextLoop from "react-text-loop";
 import AppBarComponent from '../common/AppBarComponent';
 import { NavLink, Link } from 'react-router-dom'
+import FooterComponent from '../common/FooterComponent';
 
 class OtherProjectsComponent extends Component {
 
@@ -15,8 +16,6 @@ class OtherProjectsComponent extends Component {
     render() {
         return (
             <div className="OtherProjectsPage">
-                <AppBarComponent />
-
                 <div className="OtherProjectsContainer">
 
                 <div className="ServicesSection">

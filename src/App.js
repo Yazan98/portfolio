@@ -11,6 +11,8 @@ import OtherProjectsComponent from './components/OtherProjectsComponent';
 import AboutComponent from './components/AboutComponent';
 import VortexMainPageComponent from './components/VortexProjectComponent';
 import VortexDocsComponent from './components/VortexDocsComponent';
+import FooterComponent from './common/FooterComponent';
+import AppBarComponent from './common/AppBarComponent';
 
 class App extends React.Component {
 
@@ -18,6 +20,7 @@ class App extends React.Component {
       return (
           <>
           <Router>
+          <AppBarComponent />
             <Switch>
                 <Route exact path="/" component={HomeComponent} />
                 <Route path="/projects" component={ProjectsComponent} />
@@ -28,6 +31,7 @@ class App extends React.Component {
                 <Route path="/vortex-docs" component={VortexDocsComponent} />
             </Switch>
           </Router>
+          <FooterComponent />
           </>
       );
   }
