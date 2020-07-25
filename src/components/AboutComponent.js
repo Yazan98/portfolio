@@ -20,7 +20,7 @@ class AboutComponent extends Component {
     render() {
         return (
             <div className="AboutPage">
-
+            <AppBarComponent />
             <div className="PageContent">
             
             <h2 className="AboutMe">About Me</h2>
@@ -47,6 +47,7 @@ class AboutComponent extends Component {
             <a style={{ marginTop:"1em" }} href="https://www.linkedin.com/in/yazan-tarifi-106282192/">Linkedin Profile</a><br></br>
             </div>
             
+            <FooterComponent />
             </div>
         );
     }

@@ -2,9 +2,7 @@ import React, { Component } from 'react';
 import { FaGithub, FaDocu } from 'react-icons/fa';
 import '../Vortex.css';
 import { Grid } from '@material-ui/core';
-import '../App.css';
 import { NavLink } from 'react-router-dom'
-import FooterComponent from '../common/FooterComponent';
 
 class VortexMainPageComponent extends Component {
 
@@ -16,6 +14,12 @@ class VortexMainPageComponent extends Component {
         return (
             <div className="VortexContainer">
                 <div class="HighlightWebsite">
+                <ul>
+                  <li style={{color:"#DCDCDC"}}><a href="#home">Home</a></li>
+                  <li style={{color:"#DCDCDC"}}><a href="#news">Generator</a></li>
+                  <li style={{color:"#DCDCDC"}}><a href="#contact">Features</a></li>
+                  <li style={{float:"right", color:"#DCDCDC"}}><a class="active" href="#about">About</a></li>
+                </ul>
               <div class="MainArea">
                 <h1 class="MainVortex">Vortex</h1>
                 <p class="Description">Android Infrastructure Built With Kotlin To Build High Level Multi Modular Android Applications</p>
@@ -27,6 +31,7 @@ class VortexMainPageComponent extends Component {
             </div>
             </div>
 
+            <h3 style={{textAlign:"center", color:"black", marginTop:"50px"}}>Features</h3>
             <section className="Features">
               <div className="container">
                 <div className="row">
@@ -34,29 +39,29 @@ class VortexMainPageComponent extends Component {
                     <p className="bg">
                       <img src="https://user-images.githubusercontent.com/29167110/80116087-70513d80-857d-11ea-888e-283b903d8ab4.png" width="40" height="40"/>
                     </p>
-                    <h2>Multi Modular Applications</h2>
-                    <h4>Build Multi Modular Android Applications With Clean Layers Implementation</h4>
+                    <h2 style={{color:"black"}}>Multi Modular Applications</h2>
+                    <h4 style={{color:"black"}}>Build Multi Modular Android Applications With Clean Layers Implementation</h4>
                   </div>
                   <div className="col-sm" id="Item">
                     <p className="bg">
                       <img src="https://user-images.githubusercontent.com/29167110/80117192-c4a8ed00-857e-11ea-9ccf-8ad2f3ced60b.png" width="40" height="40"/>
                     </p>
-                    <h2>Base Code</h2>
-                    <h4>Base Code Ready To Use With Common UseCases In Any Android Application</h4>
+                    <h2 style={{color:"black"}}>Base Code</h2>
+                    <h4 style={{color:"black"}}>Base Code Ready To Use With Common UseCases In Any Android Application</h4>
                   </div>
                   <div className="col-sm" id="Item">
                     <p className="bg">
                       <img src="https://user-images.githubusercontent.com/29167110/80117747-734d2d80-857f-11ea-8f35-b54b235f3631.png" width="40" height="40"/>
                     </p>
-                    <h2>Latest Technologies</h2>
-                    <h4>Vortex Used and Combined The Latest Technologies Into One Base Code</h4>
+                    <h2 style={{color:"black"}}>Latest Technologies</h2>
+                    <h4 style={{color:"black"}}>Vortex Used and Combined The Latest Technologies Into One Base Code</h4>
                   </div>
                   <div className="col-sm" id="Item">
                     <p className="bg">
                       <img src="https://user-images.githubusercontent.com/29167110/80118211-fff7eb80-857f-11ea-9b9d-c772cba98689.png" width="40" height="40"/>
                     </p>
-                    <h2>Open Source</h2>
-                    <h4>Vortex Built With ♥ Kotlin In Open Source Repository On Github</h4>
+                    <h2 style={{color:"black"}}>Open Source</h2>
+                    <h4 style={{color:"black"}}>Vortex Built With ♥ Kotlin In Open Source Repository On Github</h4>
                   </div>
                 </div>
               </div>

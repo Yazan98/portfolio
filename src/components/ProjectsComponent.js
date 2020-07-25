@@ -15,7 +15,7 @@ export default class ProjectsComponent extends React.Component {
     render() {
         return (
             <>
-
+            <AppBarComponent />
             <div class="HighlightWebsite">
                 <div class="MainArea">
                     <p>The projects I worked on</p>
@@ -187,6 +187,7 @@ export default class ProjectsComponent extends React.Component {
                     </div>
 
             </div>
+            <FooterComponent />
             </>
         );
     }

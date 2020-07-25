@@ -3,6 +3,9 @@ import React, { Component } from 'react';
 import { Grid } from '@material-ui/core';
 import '../App.css';
 import TextLoop from "react-text-loop";
+import AppBarComponent from '../common/AppBarComponent';
+import FooterComponent from '../common/FooterComponent';
+
 
 export default class HomeComponent extends React.Component {
 
@@ -15,6 +18,7 @@ export default class HomeComponent extends React.Component {
         
         return (
             <>
+            <AppBarComponent />
             <div className="HomePage">
                 <div className="HeaderContent">
                     <div className="Header">
@@ -123,6 +127,7 @@ export default class HomeComponent extends React.Component {
                 </div>
 
             </div>
+            <FooterComponent />
             </>
         );
     }

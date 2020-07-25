@@ -21,7 +21,6 @@ class App extends React.Component {
       return (
           <>
           <Router>
-          <AppBarComponent />
             <Switch>
                 <Route exact path="/" component={HomeComponent} />
                 <Route path="/projects" component={ProjectsComponent} />
@@ -33,7 +32,6 @@ class App extends React.Component {
                 <Route path="/app/details" component={AppPageComponent} render={(props) => <AppPageComponent text="Hello, " {...props} />} />
             </Switch>
           </Router>
-          <FooterComponent />
           </>
       );
   }
