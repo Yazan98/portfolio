@@ -1,6 +1,6 @@
 
 html, body, .App {
-  background-color: #1B1E23;
+  background-color: #262a2d;
   width: 100%;
 }
 
@@ -53,6 +53,14 @@ p {
   border-width: 1.5px;
   border-style: solid;
   height: 320px;
+  transform: translateY(0);
+  transition: .4s ease-in-out;
+  background-color: #1b1f23;
+}
+
+.Section h4 {
+  transform: translateY(0);
+  transition: .4s ease-in-out;
 }
 
 .SideSection {
@@ -119,7 +127,7 @@ html {
 }
 
 .Section:hover {
-  border-color: red;
+  border-color: #7fe96e;
   transition: 0.6s;
   transform-style: preserve-3d;
   transform: rotateX(90deg);
@@ -127,6 +135,13 @@ html {
   opacity: 0;
   transform: rotateY(0deg);
   opacity: 1;
+  transform: translateY(-5%);
+  transition: .4s ease-in-out;
+}
+
+.Section:hover h4 {
+  color: #7fe96e;
+  transition: .4s ease-in-out;
 }
 
 .Link {
@@ -221,7 +236,7 @@ li {
   display: block;
   width: 0;
   height: 2px;
-  background: red;
+  background: #7fe96e;
   transition: width .3s;
 }
 
@@ -241,7 +256,7 @@ li {
 
 .Github {
 	border-radius:28px;
-	border:2px solid red;
+	border:2px solid #7fe96e;
 	display:inline-block;
 	cursor:pointer;
 	color:#ffffff;
@@ -249,10 +264,10 @@ li {
 	font-size:17px;
 	padding:16px 31px;
 	text-decoration:none;
-	text-shadow:0px 1px 0px red;
+	text-shadow:0px 1px 0px #7fe96e;
 }
 .Github:hover {
-  background-color:red;
+  background-color:#7fe96e;
   transition: 0.6s;
   transform-style: preserve-3d;
   transform: rotateX(90deg);
@@ -307,4 +322,9 @@ footer {
   position: relative;
   color: white;
   margin-top: 40px;
+}
+
+.GithubContainer {
+  width: 60%;
+  height: 30%;
 }

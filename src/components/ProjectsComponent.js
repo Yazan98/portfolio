@@ -52,7 +52,16 @@ export default class ProjectsComponent extends React.Component {
                             <div class="container" id="buttonsContainer">	
                                 <div class="row">	
                                 <div class="col-sm">	
-                                    <a class="myButton" id="myButton">View Details</a>	
+                                    <NavLink
+                                        to={{
+                                            props:true,
+                                            pathname:'/app/details',
+                                            name:"yazan",
+                                            props: {
+                                                isMember:true
+                                            }
+                                        }}
+                                    ><a class="myButton" id="myButton">View Details</a></NavLink>	
                                 </div>	
                                 <div class="col-sm">	
                                 <a class="myButton" id="myButton" href="https://play.google.com/store/apps/details?id=com.mwarrid.mwarrid" target="_blank">View Project</a>	

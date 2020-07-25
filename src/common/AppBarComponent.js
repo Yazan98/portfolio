@@ -13,7 +13,7 @@ export default function AppBarComponent() {
                 <div className="ToolbarSection">
                 <AppBar position="static" className="AppBar" color="default">
                     <Toolbar>
-                        <Typography variant="h6">
+                        <Typography variant="h6" color="textPrimary">
                             Portfolio
                         </Typography>
                         <Grid item xs/>

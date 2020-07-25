@@ -13,6 +13,7 @@ import VortexMainPageComponent from './components/VortexProjectComponent';
 import VortexDocsComponent from './components/VortexDocsComponent';
 import FooterComponent from './common/FooterComponent';
 import AppBarComponent from './common/AppBarComponent';
+import AppPageComponent from './components/AppPageComponent';
 
 class App extends React.Component {
 
@@ -29,6 +30,7 @@ class App extends React.Component {
                 <Route path="/services" component={HomeComponent} />
                 <Route path="/vortex" component={VortexMainPageComponent} />
                 <Route path="/vortex-docs" component={VortexDocsComponent} />
+                <Route path="/app/details" component={AppPageComponent} render={(props) => <AppPageComponent text="Hello, " {...props} />} />
             </Switch>
           </Router>
           <FooterComponent />
