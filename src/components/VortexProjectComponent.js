@@ -15,10 +15,10 @@ class VortexMainPageComponent extends Component {
             <div className="VortexContainer">
                 <div class="HighlightWebsite">
                 <ul>
-                  <li style={{color:"#DCDCDC"}}><a href="#home">Home</a></li>
-                  <li style={{color:"#DCDCDC"}}><a href="#news">Generator</a></li>
-                  <li style={{color:"#DCDCDC"}}><a href="#contact">Features</a></li>
-                  <li style={{float:"right", color:"#DCDCDC"}}><a class="active" href="#about">About</a></li>
+                  <li style={{color:"#DCDCDC"}}><a id="VortexLink" href="#home">Home</a></li>
+                  <li style={{color:"#DCDCDC"}}><a id="VortexLink" href="#news">Generator</a></li>
+                  <li style={{color:"#DCDCDC"}}><a id="VortexLink" href="#contact">Features</a></li>
+                  <li style={{float:"right", color:"#DCDCDC"}}><a class="active" id="VortexLink" href="#about">About</a></li>
                 </ul>
               <div class="MainArea">
                 <h1 class="MainVortex">Vortex</h1>

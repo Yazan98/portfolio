@@ -11,9 +11,7 @@ import OtherProjectsComponent from './components/OtherProjectsComponent';
 import AboutComponent from './components/AboutComponent';
 import VortexMainPageComponent from './components/VortexProjectComponent';
 import VortexDocsComponent from './components/VortexDocsComponent';
-import FooterComponent from './common/FooterComponent';
-import AppBarComponent from './common/AppBarComponent';
-import AppPageComponent from './components/AppPageComponent';
+import MwarridProjectComponent from './projects/MwarridProjectComponent';
 
 class App extends React.Component {
 
@@ -29,7 +27,7 @@ class App extends React.Component {
                 <Route path="/services" component={HomeComponent} />
                 <Route path="/vortex" component={VortexMainPageComponent} />
                 <Route path="/vortex-docs" component={VortexDocsComponent} />
-                <Route path="/app/details" component={AppPageComponent} render={(props) => <AppPageComponent text="Hello, " {...props} />} />
+                <Route path="/mwarrid" component={MwarridProjectComponent} />
             </Switch>
           </Router>
           </>

@@ -345,7 +345,7 @@ li {
   float: left;
 }
 
-a {
+#VortexLink {
   display: block;
   padding: 8px;
 }

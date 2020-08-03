@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 export default function FooterComponent() {
     return (
-<footer class="page-footer font-small teal pt-4">
+<footer class="page-footer font-small teal pt-4" style={{backgroundColor:"#141619"}}>
 
   <div class="container-fluid text-center text-md-left">
 
@@ -28,7 +28,7 @@ export default function FooterComponent() {
 
   </div>
 
-  <div class="footer-copyright text-center py-3" style={{ backgroundColor:"#141619", marginTop:"20px" }}>© 2020 Copyright:
+  <div class="footer-copyright text-center py-3" style={{ marginTop:"20px" }}>© 2020 Copyright:
     <a href="https://github.com/Yazan98"> Yazan98</a>
   </div>
 
