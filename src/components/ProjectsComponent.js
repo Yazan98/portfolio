@@ -52,7 +52,7 @@ export default class ProjectsComponent extends React.Component {
                             <div class="container" id="buttonsContainer">	
                                 <div class="row">	
                                 <div class="col-sm">	
-                                    <a class="myButton" id="myButton"><NavLink to="/mwarrid">View Details</NavLink></a>
+                                <NavLink to="/mwarrid"><a class="myButton" id="myButton">View Details</a></NavLink>
                                 </div>	
                                 <div class="col-sm">	
                                 <a class="myButton" id="myButton" href="https://play.google.com/store/apps/details?id=com.mwarrid.mwarrid" target="_blank">View Project</a>	
@@ -80,9 +80,7 @@ export default class ProjectsComponent extends React.Component {
                               </p>
                                     <div class="container" id="buttonsContainer">
                                         <div class="row">
-                                        <div class="col-sm">
-                                            <a class="myButton" id="myButton">View Details</a>
-                                        </div>
+                                        
                                         <div class="col-sm">
                                             <a class="myButton" id="myButton" href="https://github.com/Yazan98/Github-Client" target="_blank">View Project</a>
                                         </div>
@@ -107,9 +105,7 @@ export default class ProjectsComponent extends React.Component {
                                 </p>
                                     <div class="container" id="buttonsContainer">
                                         <div class="row">
-                                        <div class="col-sm">
-                                            <a class="myButton" id="myButton">View Details</a>
-                                        </div>
+                                        
                                         <div class="col-sm">
                                             <a class="myButton" id="myButton" href="https://github.com/Yazan98/Wintrop" target="_blank">View Project</a>
                                         </div>
@@ -134,9 +130,7 @@ export default class ProjectsComponent extends React.Component {
                             </p>
                                 <div class="container" id="buttonsContainer">
                                     <div class="row">
-                                    <div class="col-sm">
-                                        <a class="myButton" id="myButton">View Details</a>
-                                    </div>
+                                    
                                     <div class="col-sm">
                                         <a class="myButton" id="myButton" href="https://github.com/Yazan98/Destiny" target="_blank">View Project</a>
                                     </div>
@@ -159,16 +153,7 @@ export default class ProjectsComponent extends React.Component {
                                 <h1>Drasati</h1>
                                 <p>An organizing platform for school students that aims to gather students and link them with audible lessons by providing a tree plan with the possibility to speak with teachers if a difference occurs on a certain point with the support feature of all classes
                                 </p>
-                                    <div class="container" id="buttonsContainer">
-                                        <div class="row">
-                                        <div class="col-sm">
-                                            <a class="myButton" id="myButton">View Details</a>
-                                        </div>
-                                        <div class="col-sm">
-                                            <a class="myButton" id="myButton" href="https://github.com/Yazan98/Destiny" target="_blank">View Project</a>
-                                        </div>
-                                        </div>
-                                    </div>
+                                    
                                 </div>
                                 <div class="col-sm" id="Image">
                                 <img src="https://user-images.githubusercontent.com/29167110/79912378-da50d200-8419-11ea-857c-0e1c3b9c3c68.png" width="500" height="500"/>

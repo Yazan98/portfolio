@@ -9,9 +9,8 @@ import {
 import ProjectsComponent from './components/ProjectsComponent';
 import OtherProjectsComponent from './components/OtherProjectsComponent';
 import AboutComponent from './components/AboutComponent';
-import VortexMainPageComponent from './components/VortexProjectComponent';
-import VortexDocsComponent from './components/VortexDocsComponent';
 import MwarridProjectComponent from './projects/MwarridProjectComponent';
+import AutohubComponent from './projects/AutohubComponent';
 
 class App extends React.Component {
 
@@ -24,10 +23,8 @@ class App extends React.Component {
                 <Route path="/projects" component={ProjectsComponent} />
                 <Route path="/other" component={OtherProjectsComponent} />
                 <Route path="/about" component={AboutComponent} />
-                <Route path="/services" component={HomeComponent} />
-                <Route path="/vortex" component={VortexMainPageComponent} />
-                <Route path="/vortex-docs" component={VortexDocsComponent} />
                 <Route path="/mwarrid" component={MwarridProjectComponent} />
+                <Route path="/autohub" component={AutohubComponent} />
             </Switch>
           </Router>
           </>

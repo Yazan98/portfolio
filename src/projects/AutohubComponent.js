@@ -3,21 +3,26 @@ import AppBarComponent from '../common/AppBarComponent';
 import FooterComponent from '../common/FooterComponent';
 import '../App.css';
 
-class MwarridProjectComponent extends Component {
+class AutohubComponent extends Component {
     render() {
         return (
             <React.Fragment>
                 <AppBarComponent />
 
-                <div className="MwarridContainer" style={{margin:"50px"}}>
+                <div className="App" style={{margin:"50px"}}>
 
-                    <img src="https://user-images.githubusercontent.com/29167110/89157146-e2440600-d520-11ea-95ed-bf2a9836148d.png" width="100" height="100" />
-                    <p style={{color:"white", width:"30%" , marginTop:"1em"}}>An integrated electronic marketing platform from a website and an application on smartphones and tablets help to connect the food sector suppliers in all their fields with restaurants, cafes, hotels, wedding hall and all those involved in selling food in the retail sector and soon individuals. So that suppliers periodically display their products, set their prices, and market them, to help our customers follow the market, view the latest offers, instant order, and track order status through the supplier's online platform.</p>
+                    <img src="https://user-images.githubusercontent.com/29167110/89196847-a41a0700-d55f-11ea-923f-f687e9366513.png" width="100" height="100" />
+                    <p style={{color:"white", width:"30%" , marginTop:"1em"}}>An Github Client Built To Test Vortex Infrastructure For Android Applications With A Lot Of Features To Manage Github Accounts Personal Accounts, Repositories, Search Repository, Popular Repos, Orgs, Gists, Github Auth, With Kotlin Programming Language
 
-                    <h4 style={{color:"white", marginTop:"1em"}}>Mwarrid (ANDROID APP)</h4>
-                    <p style={{color:"white"}}>This Application Designed With latest android technologies with Mvvm Archeticture, Powered by Switch.jo company</p>
+                    </p>
+
+                    <h4 style={{color:"white", marginTop:"1em"}}>Autohub (GITHUB CLIENT)</h4>
+                    <p style={{color:"white"}}>This Application is Not Completed yet and designed to test Vortex.io library with latest technologies</p>
                     <div className="tags" style={{marginTop:"1em", width:"70%"}}>
                         <p id="AppTag">Kotlin</p>
+                        <p id="AppTag">Vortex</p>
+                        <p id="AppTag">Firebase</p>
+                        <p id="AppTag">Realm</p>
                         <p id="AppTag">Dagger</p>
                         <p id="AppTag">Mvvm</p>
                         <p id="AppTag">RxJava</p>
@@ -44,4 +49,4 @@ class MwarridProjectComponent extends Component {
     }
 }
 
-export default MwarridProjectComponent;
+export default AutohubComponent;

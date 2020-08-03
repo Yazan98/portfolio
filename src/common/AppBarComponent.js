@@ -20,7 +20,6 @@ export default function AppBarComponent() {
                         <Button color="inherit"><NavLink className="Link" to="">Home</NavLink></Button>
                         <Button color="inherit"><NavLink className="Link" to="/projects">Projects</NavLink></Button>
                         <Button color="inherit"><NavLink className="Link" to="/about">About</NavLink></Button>
-                        <Button color="inherit"><NavLink className="Link" to="/services">Services</NavLink></Button>
                     </Toolbar>
                 </AppBar>
                 </div>

@@ -31,7 +31,7 @@ class OtherProjectsComponent extends Component {
                                     <p className="SideSection">Frontend Side</p>
                                     <h4>Vortex</h4>
                                     <p className="SectionDescription">Android Infrastructure That Includes The Common Cases In Any Application With Ready Configuration, Mvvm Base Code With Redux State Handling, Implementation Check The Docs To See The Features</p>
-                                    <Link style={{ paddingTop:"1em" }} to="/vortex" className="OtherProjects">Library Overview</Link>
+                                    <a style={{ paddingTop:"1em" }} href="https://github.com/vortex-io/vortex" className="OtherProjects">Library Overview</a>
                                 </div>
                                 <div class="triangle-down">
                                     <img src="https://user-images.githubusercontent.com/29167110/84554488-f7b26600-ad0f-11ea-8b77-234f6d93ec8f.png" width="15px" height="15px" style={{ marginLeft:"25px" }}/>
@@ -46,7 +46,7 @@ class OtherProjectsComponent extends Component {
                                 <p className="SideSection">Frontend Side</p>
                                 <h4>Atto</h4>
                                 <p className="SectionDescription">Mvp Implementation With Ready Base Code To Handle Presenters, Common Application Configuration With Gradle Plugin To Implement Gradle App Module Dpendencies With UseCases, Api Handling, Some ViewModels To Save State</p>
-                                <Link style={{ paddingTop:"1em" }} to="/vortex" className="OtherProjects">Library Overview</Link>
+                                <a style={{ paddingTop:"1em" }} href="https://github.com/Yazan98/atto" className="OtherProjects">Library Overview</a>
                                 </div>
                                 <div class="triangle-down">
                                     <img src="https://user-images.githubusercontent.com/29167110/84554488-f7b26600-ad0f-11ea-8b77-234f6d93ec8f.png" width="15px" height="15px" style={{ marginLeft:"25px" }}/>
@@ -83,7 +83,7 @@ class OtherProjectsComponent extends Component {
                                 <p className="SideSection">Frontend Side</p>
                                 <h4>Groupy</h4>
                                 <p className="SectionDescription">Graduation Project To Manage Collage Groups, Task Managment Designed With Vortex-Firebase and Firebase as a Backend Side, Firestore Database, Firebase Auth To Login, Register, Kotlin Programming Language</p>
-                                <Link style={{ paddingTop:"1em" }} to="/groupy" className="OtherProjects"><a href="https://github.com/Yazan98/Ktor-Example">View Project</a></Link>
+                                <Link style={{ paddingTop:"1em" }} to="/groupy" className="OtherProjects"><a href="https://github.com/Yazan98/groupy">View Project</a></Link>
                                 </div>
                                 <div class="triangle-down">
                                 <img src="https://user-images.githubusercontent.com/29167110/84554488-f7b26600-ad0f-11ea-8b77-234f6d93ec8f.png" width="15px" height="15px" style={{ marginLeft:"25px" }}/>
