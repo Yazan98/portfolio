@@ -21,7 +21,7 @@
     "react-github-contribution-calendar": "^2.0.0",
     "react-icons": "^3.10.0",
     "react-router": "^5.2.0",
-    "react-router-dom": "^5.1.2",
+    "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.3",
     "react-syntax-highlighter": "^13.0.0",
     "react-text-loop": "^2.3.0",

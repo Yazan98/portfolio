@@ -1,0 +1,24 @@
+.ProjectComponentContainer {
+  .ProjectItem {
+    border-color: black;
+    border-width: 5px;
+    border-radius: 20px;
+    padding: 20px;
+    border-style: solid;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    max-height: 300px;
+    min-height: 200px;
+  }
+
+  p {
+    padding: 0%;
+    margin: 0%;
+    font-size: x-small;
+  }
+
+  .Description {
+    margin-top: 7em;
+  }
+}
