@@ -25,3 +25,14 @@ export class SocialMediaEntity {
     ) {
     }
 }
+
+export class Project {
+    constructor(
+        public name: string,
+        public description: string,
+        public mainImageLink: string,
+        public type: string,
+        public appLink: string
+    ) {
+    }
+}

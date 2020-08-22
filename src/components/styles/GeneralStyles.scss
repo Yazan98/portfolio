@@ -83,3 +83,34 @@
     margin-bottom: 0;
   }
 }
+
+.MobileViewContainer {
+  #AppDescription {
+    width: 80%;
+    padding: 5rem;
+    p {
+      width: 80%;
+    }
+  }
+
+  .DescriptionContent {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 400px;
+  }
+
+  img {
+    width: 700px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+}
+
+.ProjectsTitle {
+  text-align: center;
+  color: #2962ff;
+  margin-top: 10rem;
+}

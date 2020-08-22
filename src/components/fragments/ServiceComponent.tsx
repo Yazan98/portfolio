@@ -1,7 +1,7 @@
 import React from 'react';
 import '../styles/GeneralStyles.scss';
 
-export class ProjectView extends React.Component<{ name: string, shortName: string, description: string }> {
+export class ServiceComponent extends React.Component<{ name: string, shortName: string, description: string }> {
     render() {
         let {name, shortName, description} = this.props;
         return (

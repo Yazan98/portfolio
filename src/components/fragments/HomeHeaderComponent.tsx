@@ -16,10 +16,12 @@ export default function HomeHeaderComponent() {
                             <span>Backend (SpringBoot) </span>
                             <span>Backend (Nest.js) </span>
                             <span>Backend (Ktor) </span>
-                            <span>Flutter Apps </span>
                         </TextLoop>{" "}
                         Developer
                     </p>
+                    <p className="Name">Hi, my name is</p>
+                    <h2 className="MainName">{infoManager.getPersonalInfo().name}</h2>
+                    <h2 className="MainName2">I build things for Fun</h2>
                     <p className="Description">
                         {infoManager.getPersonalInfo().description}
                     </p>
