@@ -4,6 +4,8 @@ import ToolbarComponent from "../common/ToolbarComponent";
 import HomeHeaderComponent from "../fragments/HomeHeaderComponent";
 import {InfoManager, infoManager} from "../../info/InfoManager";
 import {ProjectView} from "../fragments/ProjectComponent";
+import TechnologiesComponent from "../fragments/TechnologiesComponent";
+import {FooterComponent} from "../common/FooterComponent";
 
 export default function HomePageComponent() {
     return (
@@ -13,7 +15,9 @@ export default function HomePageComponent() {
             <ToolbarComponent />
             <HomeHeaderComponent />
 
-            <div className="ProjectsSection">
+            <div className="ProjectsSection" style={{
+                marginBottom: "10em"
+            }}>
                 <h4 style={{
                     color: InfoManager.BLUE_COLOR,
                     marginLeft: "60px"
@@ -33,6 +37,11 @@ export default function HomePageComponent() {
                     }
                 </div>
             </div>
+
+            <TechnologiesComponent />
+
+            <FooterComponent />
+            <BlueLineComponent />
 
         </div>
     );

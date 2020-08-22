@@ -1,8 +1,7 @@
 .HomeHeaderComponentContainer {
   padding: 5em;
-  margin-top: 8em;
-  margin-bottom: 8em;
-  FlexHomeContainer {
+  margin-bottom: 13em;
+  .FlexHomeContainer {
     display: flex;
     flex-wrap: nowrap;
     width: 100%;
@@ -28,11 +27,31 @@
   }
 
   #Section {
-    margin-top: 10%;
+    margin-top: 15%;
   }
 
   ul, li {
     list-style-type: none;
   }
 
+  .HomePhonesImage {
+    margin-top: 3rem;
+  }
+
+}
+
+.TechnologiesComponentContainer {
+  .FooterImage {
+    width: 50px;
+    height: 50px;
+    object-fit: fill;
+    margin-top: 1rem;
+    margin-right: 9rem;
+  }
+
+  .ImagesContainer {
+    text-align: center;
+    align-items: center;
+    justify-items: center;
+  }
 }

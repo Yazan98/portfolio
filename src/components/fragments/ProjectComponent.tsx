@@ -8,7 +8,7 @@ export class ProjectView extends React.Component<{ name: string, shortName: stri
             <div className="ProjectComponentContainer">
                 <div className="ProjectItem">
                     <p>{shortName}</p>
-                    <h6>{name}</h6>
+                    <h5>{name}</h5>
                     <p className="Description">{description}</p>
                 </div>
             </div>
