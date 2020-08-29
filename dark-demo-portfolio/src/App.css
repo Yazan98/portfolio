@@ -132,10 +132,8 @@ html {
   transform-style: preserve-3d;
   transform: rotateX(90deg);
   transform-origin:center bottom;
-  opacity: 0;
   transform: rotateY(0deg);
-  opacity: 1;
-  transform: translateY(-5%);
+  transform: translateY(-2%);
   transition: .4s ease-in-out;
 }
 

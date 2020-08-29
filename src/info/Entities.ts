@@ -36,3 +36,15 @@ export class Project {
     ) {
     }
 }
+
+export class GithubProject {
+    constructor(
+        public name: string,
+        public description: string,
+        public link: string,
+        public githubLink: string,
+        public isOpenSource: boolean,
+        public tags: Array<string>
+    ) {
+    }
+}

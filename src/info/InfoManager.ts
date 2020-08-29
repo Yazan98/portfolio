@@ -1,5 +1,5 @@
 import {InfoManagerImpl} from "./Impl";
-import {PersonalInfo, PersonalService, Project, SocialMediaEntity} from "./Entities";
+import {GithubProject, PersonalInfo, PersonalService, Project, SocialMediaEntity} from "./Entities";
 
 export class InfoManager implements InfoManagerImpl {
 
@@ -47,6 +47,29 @@ export class InfoManager implements InfoManagerImpl {
                 "\n", "https://user-images.githubusercontent.com/29167110/79907964-619a4780-8412-11ea-8b37-37425054088e.png", InfoManager.OPEN_SOURCE, "https://github.com/Yazan98/Destiny"),
             new Project("Drasati", "An organizing platform for school students that aims to gather students and link them with audible lessons by providing a tree plan with the possibility to speak with teachers if a difference occurs on a certain point with the support feature of all classes\n" +
                 "\n", "https://user-images.githubusercontent.com/29167110/79912378-da50d200-8419-11ea-857c-0e1c3b9c3c68.png", InfoManager.CLOSED_SOURCE, "")
+        ];
+    }
+
+    getGithubProjects(): Array<GithubProject> {
+        return [
+            new GithubProject("Vortex", "Android Infrastructure To Build Android Applications With Latest Technologies and Ready State Handling with User Interface Implementation For The Android Common Cases", "https://www.vortex-io.github.io", "https://github.com/vortex-io/Vortex", true, ["Kotlin", "Mvvm", "Redux", "Plugins"]),
+            new GithubProject("Exposer", "Android Domain Layer Controller Via UseCases To Handle Shared Logic Between Android, IOS Via Kotlin Multiplatform With Reactive Programming, Memory, etc", "https://www.vortex-io.github.io", "https://github.com/vortex-io/Vortex", true, ["Kotlin", "Mvvm", "Redux", "Plugins"]),
+            new GithubProject("Portfolio", "My Personal Website (First Website) Built With React.js To Build My Portfolio", "https://www.vortex-io.github.io", "https://github.com/vortex-io/Vortex", true, ["Kotlin", "Mvvm", "Redux", "Plugins"]),
+            new GithubProject("Wintrop", "Android Infrastructure To Build Android Applications With Latest Technologies and Ready State Handling with User Interface Implementation For The Android Common Cases", "https://www.vortex-io.github.io", "https://github.com/vortex-io/Vortex", true, ["Kotlin", "Mvvm", "Redux", "Plugins"]),
+            new GithubProject("Github-Client", "Android Infrastructure To Build Android Applications With Latest Technologies and Ready State Handling with User Interface Implementation For The Android Common Cases", "https://www.vortex-io.github.io", "https://github.com/vortex-io/Vortex", true, ["Kotlin", "Mvvm", "Redux", "Plugins"]),
+            new GithubProject("Destiny", "Android Infrastructure To Build Android Applications With Latest Technologies and Ready State Handling with User Interface Implementation For The Android Common Cases", "https://www.vortex-io.github.io", "https://github.com/vortex-io/Vortex", true, ["Kotlin", "Mvvm", "Redux", "Plugins"]),
+            new GithubProject("Vortex", "Android Infrastructure To Build Android Applications With Latest Technologies and Ready State Handling with User Interface Implementation For The Android Common Cases", "https://www.vortex-io.github.io", "https://github.com/vortex-io/Vortex", true, ["Kotlin", "Mvvm", "Redux", "Plugins"]),
+            new GithubProject("Vortex", "Android Infrastructure To Build Android Applications With Latest Technologies and Ready State Handling with User Interface Implementation For The Android Common Cases", "https://www.vortex-io.github.io", "https://github.com/vortex-io/Vortex", true, ["Kotlin", "Mvvm", "Redux", "Plugins"]),
+            new GithubProject("Vortex", "Android Infrastructure To Build Android Applications With Latest Technologies and Ready State Handling with User Interface Implementation For The Android Common Cases", "https://www.vortex-io.github.io", "https://github.com/vortex-io/Vortex", true, ["Kotlin", "Mvvm", "Redux", "Plugins"]),
+            new GithubProject("Vortex", "Android Infrastructure To Build Android Applications With Latest Technologies and Ready State Handling with User Interface Implementation For The Android Common Cases", "https://www.vortex-io.github.io", "https://github.com/vortex-io/Vortex", true, ["Kotlin", "Mvvm", "Redux", "Plugins"]),
+            new GithubProject("Vortex", "Android Infrastructure To Build Android Applications With Latest Technologies and Ready State Handling with User Interface Implementation For The Android Common Cases", "https://www.vortex-io.github.io", "https://github.com/vortex-io/Vortex", true, ["Kotlin", "Mvvm", "Redux", "Plugins"]),
+            new GithubProject("Vortex", "Android Infrastructure To Build Android Applications With Latest Technologies and Ready State Handling with User Interface Implementation For The Android Common Cases", "https://www.vortex-io.github.io", "https://github.com/vortex-io/Vortex", true, ["Kotlin", "Mvvm", "Redux", "Plugins"]),
+            new GithubProject("Vortex", "Android Infrastructure To Build Android Applications With Latest Technologies and Ready State Handling with User Interface Implementation For The Android Common Cases", "https://www.vortex-io.github.io", "https://github.com/vortex-io/Vortex", true, ["Kotlin", "Mvvm", "Redux", "Plugins"]),
+            new GithubProject("Vortex", "Android Infrastructure To Build Android Applications With Latest Technologies and Ready State Handling with User Interface Implementation For The Android Common Cases", "https://www.vortex-io.github.io", "https://github.com/vortex-io/Vortex", true, ["Kotlin", "Mvvm", "Redux", "Plugins"]),
+            new GithubProject("Vortex", "Android Infrastructure To Build Android Applications With Latest Technologies and Ready State Handling with User Interface Implementation For The Android Common Cases", "https://www.vortex-io.github.io", "https://github.com/vortex-io/Vortex", true, ["Kotlin", "Mvvm", "Redux", "Plugins"]),
+            new GithubProject("Vortex", "Android Infrastructure To Build Android Applications With Latest Technologies and Ready State Handling with User Interface Implementation For The Android Common Cases", "https://www.vortex-io.github.io", "https://github.com/vortex-io/Vortex", true, ["Kotlin", "Mvvm", "Redux", "Plugins"]),
+            new GithubProject("Vortex", "Android Infrastructure To Build Android Applications With Latest Technologies and Ready State Handling with User Interface Implementation For The Android Common Cases", "https://www.vortex-io.github.io", "https://github.com/vortex-io/Vortex", true, ["Kotlin", "Mvvm", "Redux", "Plugins"]),
+            new GithubProject("Vortex", "Android Infrastructure To Build Android Applications With Latest Technologies and Ready State Handling with User Interface Implementation For The Android Common Cases", "https://www.vortex-io.github.io", "https://github.com/vortex-io/Vortex", true, ["Kotlin", "Mvvm", "Redux", "Plugins"]),
         ];
     }
 

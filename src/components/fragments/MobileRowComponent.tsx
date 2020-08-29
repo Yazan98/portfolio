@@ -1,5 +1,6 @@
 import React from 'react';
 import '../styles/GeneralStyles.scss';
+import {InfoManager} from "../../info/InfoManager";
 
 export class MobileRowComponent extends React.Component<{ name: string, type: string, description: string, imageUrl: string, appUrl: string, isRtlRow: boolean }> {
     render() {
@@ -25,7 +26,9 @@ export class MobileRowComponent extends React.Component<{ name: string, type: st
                 <div id="AppDescription" className="col">
                     <div className="DescriptionContent">
                         <h6>{type}</h6>
-                        <h2>{name}</h2>
+                        <h2 style={{
+                            color: InfoManager.BLUE_COLOR
+                        }}>{name}</h2>
                         <p>{description}</p>
                     </div>
                 </div>
@@ -45,7 +48,9 @@ export class MobileRowComponent extends React.Component<{ name: string, type: st
                 <div id="AppDescription" className="col">
                     <div className="DescriptionContent">
                         <h6>{type}</h6>
-                        <h2>{name}</h2>
+                        <h2 style={{
+                            color: InfoManager.BLUE_COLOR
+                        }}>{name}</h2>
                         <p>{description}</p>
                     </div>
                 </div>

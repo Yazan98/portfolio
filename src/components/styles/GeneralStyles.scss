@@ -114,3 +114,31 @@
   color: #2962ff;
   margin-top: 10rem;
 }
+
+.GithubProjectItem {
+  p {
+    font-size: small;
+  }
+}
+
+.ProjectItem {
+  margin: 30px;
+  color: white;
+  transform: translateY(0);
+  transition: .4s ease-in-out;
+  background-color: #1b1f23;
+}
+
+.ProjectItem:hover {
+  border-color: #7fe96e;
+  transform-style: preserve-3d;
+  transform-origin:center bottom;
+  transform: translateY(-2%);
+  transition: .4s ease-in-out;
+}
+
+.GithubProjectItem {
+  p {
+    color: #414141;
+  }
+}
