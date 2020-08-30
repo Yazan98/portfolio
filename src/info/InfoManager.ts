@@ -1,5 +1,13 @@
 import {InfoManagerImpl} from "./Impl";
-import {GithubProject, PersonalInfo, PersonalService, Project, SocialMediaEntity} from "./Entities";
+import {
+    ArchiveEntity,
+    GithubProject,
+    LinkItem,
+    PersonalInfo,
+    PersonalService,
+    Project,
+    SocialMediaEntity
+} from "./Entities";
 
 export class InfoManager implements InfoManagerImpl {
 
@@ -58,18 +66,29 @@ export class InfoManager implements InfoManagerImpl {
             new GithubProject("Wintrop", "Android Infrastructure To Build Android Applications With Latest Technologies and Ready State Handling with User Interface Implementation For The Android Common Cases", "https://www.vortex-io.github.io", "https://github.com/vortex-io/Vortex", true, ["Kotlin", "Mvvm", "Redux", "Plugins"]),
             new GithubProject("Github-Client", "Android Infrastructure To Build Android Applications With Latest Technologies and Ready State Handling with User Interface Implementation For The Android Common Cases", "https://www.vortex-io.github.io", "https://github.com/vortex-io/Vortex", true, ["Kotlin", "Mvvm", "Redux", "Plugins"]),
             new GithubProject("Destiny", "Android Infrastructure To Build Android Applications With Latest Technologies and Ready State Handling with User Interface Implementation For The Android Common Cases", "https://www.vortex-io.github.io", "https://github.com/vortex-io/Vortex", true, ["Kotlin", "Mvvm", "Redux", "Plugins"]),
-            new GithubProject("Vortex", "Android Infrastructure To Build Android Applications With Latest Technologies and Ready State Handling with User Interface Implementation For The Android Common Cases", "https://www.vortex-io.github.io", "https://github.com/vortex-io/Vortex", true, ["Kotlin", "Mvvm", "Redux", "Plugins"]),
-            new GithubProject("Vortex", "Android Infrastructure To Build Android Applications With Latest Technologies and Ready State Handling with User Interface Implementation For The Android Common Cases", "https://www.vortex-io.github.io", "https://github.com/vortex-io/Vortex", true, ["Kotlin", "Mvvm", "Redux", "Plugins"]),
-            new GithubProject("Vortex", "Android Infrastructure To Build Android Applications With Latest Technologies and Ready State Handling with User Interface Implementation For The Android Common Cases", "https://www.vortex-io.github.io", "https://github.com/vortex-io/Vortex", true, ["Kotlin", "Mvvm", "Redux", "Plugins"]),
-            new GithubProject("Vortex", "Android Infrastructure To Build Android Applications With Latest Technologies and Ready State Handling with User Interface Implementation For The Android Common Cases", "https://www.vortex-io.github.io", "https://github.com/vortex-io/Vortex", true, ["Kotlin", "Mvvm", "Redux", "Plugins"]),
-            new GithubProject("Vortex", "Android Infrastructure To Build Android Applications With Latest Technologies and Ready State Handling with User Interface Implementation For The Android Common Cases", "https://www.vortex-io.github.io", "https://github.com/vortex-io/Vortex", true, ["Kotlin", "Mvvm", "Redux", "Plugins"]),
-            new GithubProject("Vortex", "Android Infrastructure To Build Android Applications With Latest Technologies and Ready State Handling with User Interface Implementation For The Android Common Cases", "https://www.vortex-io.github.io", "https://github.com/vortex-io/Vortex", true, ["Kotlin", "Mvvm", "Redux", "Plugins"]),
-            new GithubProject("Vortex", "Android Infrastructure To Build Android Applications With Latest Technologies and Ready State Handling with User Interface Implementation For The Android Common Cases", "https://www.vortex-io.github.io", "https://github.com/vortex-io/Vortex", true, ["Kotlin", "Mvvm", "Redux", "Plugins"]),
-            new GithubProject("Vortex", "Android Infrastructure To Build Android Applications With Latest Technologies and Ready State Handling with User Interface Implementation For The Android Common Cases", "https://www.vortex-io.github.io", "https://github.com/vortex-io/Vortex", true, ["Kotlin", "Mvvm", "Redux", "Plugins"]),
-            new GithubProject("Vortex", "Android Infrastructure To Build Android Applications With Latest Technologies and Ready State Handling with User Interface Implementation For The Android Common Cases", "https://www.vortex-io.github.io", "https://github.com/vortex-io/Vortex", true, ["Kotlin", "Mvvm", "Redux", "Plugins"]),
-            new GithubProject("Vortex", "Android Infrastructure To Build Android Applications With Latest Technologies and Ready State Handling with User Interface Implementation For The Android Common Cases", "https://www.vortex-io.github.io", "https://github.com/vortex-io/Vortex", true, ["Kotlin", "Mvvm", "Redux", "Plugins"]),
-            new GithubProject("Vortex", "Android Infrastructure To Build Android Applications With Latest Technologies and Ready State Handling with User Interface Implementation For The Android Common Cases", "https://www.vortex-io.github.io", "https://github.com/vortex-io/Vortex", true, ["Kotlin", "Mvvm", "Redux", "Plugins"]),
-            new GithubProject("Vortex", "Android Infrastructure To Build Android Applications With Latest Technologies and Ready State Handling with User Interface Implementation For The Android Common Cases", "https://www.vortex-io.github.io", "https://github.com/vortex-io/Vortex", true, ["Kotlin", "Mvvm", "Redux", "Plugins"]),
+        ];
+    }
+
+    getArchiveList(): Array<ArchiveEntity> {
+        return [
+            new ArchiveEntity(2019, "Vortex Android Infrastructure", "Github", ["Kotlin . Mvvm . Redux . Androidx"], true, [new LinkItem("github", "https://github.com/vortex-io/Vortex")]),
+            new ArchiveEntity(2020, "Exposer Mobile Domain Layer Leader", "Github", ["Kotlin Multiplatform . RxJava . Domain Layer Logic"], true, [new LinkItem("github", "https://github.com/Yazan98/Exposer")]),
+            new ArchiveEntity(2020, "Yazan98.info (Portfolio)", "Github", ["React.js . Typescript . Material UI"], true, [new LinkItem("github", "https://github.com/Yazan98/portfolio")]),
+            new ArchiveEntity(2019, "Ktor Application (Restful Api)", "Github", ["ktor.io . Mongoose . Firebase"], true, [new LinkItem("github", "https://github.com/Yazan98/Ktor-Example")]),
+            new ArchiveEntity(2019, "Wintrop Weather Android Application", "Github", ["Material UI . Retrofit . MVVM"], true, [new LinkItem("github", "https://github.com/Yazan98/Wintrop")]),
+            new ArchiveEntity(2019, "Autohub (Github Client Android Application)", "Github", ["Material UI . Retrofit . MVVM . Github Api"], true, [new LinkItem("github", "https://github.com/Yazan98/Github-Client")]),
+            new ArchiveEntity(2019, "Destiny (Restaurant Android Application With Restful Api (SpringBoot))", "Github", ["MVVM . Android Material UI . SpringBoot Api"], true, [new LinkItem("github", "https://github.com/Yazan98/Destiny")]),
+            new ArchiveEntity(2019, "Groupy (Graduation Project)", "Github", ["MVC . Firebase . Chat-kit"], true, [new LinkItem("github", "https://github.com/Yazan98/Groupy")]),
+            new ArchiveEntity(2019, "Feature Flag Config To Control UI Rendering", "Github", ["SpringBoot . Kotlin"], true, [new LinkItem("github", "https://github.com/Yazan98/Feature-Flag-Example")]),
+            new ArchiveEntity(2019, "PostMan Collection Generator For SpringBoot", "Github", ["SpringBoot . Kotlin . GSON"], true, [new LinkItem("github", "https://github.com/Yazan98/Actor")]),
+            new ArchiveEntity(2019, "Destiny Api (Restful Api Built With SpringBoot)", "Github", ["JWT . Mysql . Kotlin . SpringBoot"], true, [new LinkItem("github", "https://github.com/Yazan98/Destiny-Api")]),
+            new ArchiveEntity(2019, "Thentrom (intellij Theme For Kotlin Projects (OLD VERSION))", "Github", ["Intellij SDK"], true, [new LinkItem("github", "https://github.com/Yazan98/Thentrom")]),
+            new ArchiveEntity(2017, "Bokkie Api (Spring Boot Restful Api For Books App)", "Github", ["Java . Spring Boot . Mysql"], true, [new LinkItem("github", "https://github.com/Yazan98/Books-spring")]),
+            new ArchiveEntity(2019, "Atto Base Code To Build MVP Android Applications", "Github", ["Kotlin . MVP . RxJava2"], true, [new LinkItem("github", "https://github.com/Yazan98/Atto")]),
+            new ArchiveEntity(2019, "Drasati (Provide Students Android App To Study With Courses Tree)", "Github", ["Atto . MVP . Kotlin"], false, []),
+            new ArchiveEntity(2020, "Mwarrid", "Switch.jo", ["Kotlin . MVVM . MultiModular App"], false, [new LinkItem("google-play", "https://play.google.com/store/apps/details?id=com.mwarrid.mwarrid")]),
+            new ArchiveEntity(2018, "Diretto", "NoventApp", ["Java . MVP"], false, [new LinkItem("google-play", "https://play.google.com/store/apps/details?id=com.noventapp.diretto.user")]),
+            new ArchiveEntity(2020, "Yazan98.github.io Portfolio V1", "Github", ["React.js . Javascript"], false, [new LinkItem("google-play", "https://portfolio-5c378.web.app")]),
         ];
     }
 

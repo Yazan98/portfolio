@@ -48,3 +48,23 @@ export class GithubProject {
     ) {
     }
 }
+
+export class ArchiveEntity {
+    constructor(
+        public year: number,
+        public title: string,
+        public madeAt: string,
+        public builtWith: Array<string>,
+        public isOpenSource: boolean,
+        public links: Array<LinkItem>
+    ) {
+    }
+}
+
+export class LinkItem {
+    constructor(
+        public type: string,
+        public link: string
+    ) {
+    }
+}
