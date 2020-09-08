@@ -1,6 +1,6 @@
 import {InfoManagerImpl} from "./Impl";
 import {
-    ArchiveEntity,
+    ArchiveEntity, ExpItem,
     GithubProject,
     LinkItem,
     PersonalInfo,
@@ -92,6 +92,44 @@ export class InfoManager implements InfoManagerImpl {
         ];
     }
 
+    getAndroidExp(): Array<ExpItem> {
+        return [
+            new ExpItem("Applications", "Multi Modular Applications"),
+            new ExpItem("Dependency Injection", "Dagger . Koin . Motif . Hilt"),
+            new ExpItem("Android Jetpack", "Navigation . Component Architecture"),
+            new ExpItem("Multi Threading", "Kotlin coroutines . RxJava"),
+            new ExpItem("REST Api", "Retrofit . Volley"),
+            new ExpItem("Architectures", "MVC . MVP . MVVM . MVI . Viper . Redux"),
+            new ExpItem("Firebase", "Auth . Firestore . Notifications . Crashlytics . Analytics"),
+            new ExpItem("Reactive Programming", "RxJava . RxAndroid"),
+            new ExpItem("Version Control", "GIT Command Line . GUI"),
+            new ExpItem("Continuous Integration", "Jenkins . Travis CI . Fastlane"),
+        ]
+    }
+
+    getBackendExp(): Array<ExpItem> {
+        return [
+            new ExpItem("Firebase Integration", "Realtime Database . Push Notifications"),
+            new ExpItem("Database", "Mysql . Mongodb"),
+            new ExpItem("Security", "Api Key . JWT"),
+            new ExpItem("Deployment", "Heroku . AWS . Digital Ocean"),
+            new ExpItem("Build Environment", "Gradle . Maven"),
+            new ExpItem("Utils", "Error Handling . Swagger UI . GIT"),
+        ];
+    }
+
+    getReactExp(): Array<ExpItem> {
+        return [
+            new ExpItem("SPA", "State full Component . Stateless Component"),
+            new ExpItem("Navigation", "React Router . Normal Html Links"),
+            new ExpItem("Restful Api", "Javascript Fetch . Axios"),
+            new ExpItem("Styling", "CSS . SCSS . Material UI . Bootstrap"),
+            new ExpItem("Deployment", "Github Pages . Firebase Hosting"),
+            new ExpItem("Component Rendering", "Dynamic Component Rendering (Linear, Grid)"),
+        ];
+    }
+
 }
+
 
 export const infoManager = new InfoManager();

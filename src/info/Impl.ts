@@ -1,4 +1,12 @@
-import {ArchiveEntity, GithubProject, PersonalInfo, PersonalService, Project, SocialMediaEntity} from "./Entities";
+import {
+    ArchiveEntity,
+    ExpItem,
+    GithubProject,
+    PersonalInfo,
+    PersonalService,
+    Project,
+    SocialMediaEntity
+} from "./Entities";
 
 export interface InfoManagerImpl {
     getPersonalInfo(): PersonalInfo,
@@ -6,5 +14,6 @@ export interface InfoManagerImpl {
     getPersonalServices(): Array<PersonalService>,
     getProjects(): Array<Project>,
     getGithubProjects(): Array<GithubProject>,
-    getArchiveList(): Array<ArchiveEntity>
+    getArchiveList(): Array<ArchiveEntity>,
+    getAndroidExp(): Array<ExpItem>
 }

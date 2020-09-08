@@ -4,7 +4,8 @@ import BlueLineComponent from "../common/BlueLineComponent";
 import ToolbarComponent from "../common/ToolbarComponent";
 import {FooterComponent} from "../common/FooterComponent";
 import Grid from "@material-ui/core/Grid";
-import {InfoManager} from "../../info/InfoManager";
+import {infoManager, InfoManager} from "../../info/InfoManager";
+import {ExpItem} from "../../info/Entities";
 export default function ResumePageComponent() {
     return (
         <div className="ResumePageComponentContainer">
@@ -125,7 +126,6 @@ export default function ResumePageComponent() {
                                 </p>
 
                             </div>
-                            <div className="vl"/>
                         </div>
                     </Grid>
                     <Grid item xs={6} spacing={0}>
@@ -139,6 +139,10 @@ export default function ResumePageComponent() {
                                 "backend using Java and kotlin,\n" +
                                 "I have multiple open source projects :\n" +
                                 "https://github.com/Vortex-io\n")}
+
+                            {getExperienceSectionElement("FRONTEND SKILLS", "Android Developer", "I have 4 years experience", "Java , Kotlin", infoManager.getAndroidExp())}
+                            {getExperienceSectionElement("FRONTEND SKILLS", "React.js Developer", "Personal Experience", "Javascript . Typescript", infoManager.getReactExp())}
+                            {getExperienceSectionElement("BACKEND SKILLS", "SpringBoot Developer", "I have 2 years experience", "Java , Kotlin", infoManager.getBackendExp())}
                         </div>
                     </Grid>
                 </Grid>
@@ -152,7 +156,7 @@ export default function ResumePageComponent() {
 function getPrimaryElement(title: string, start: string, date: string, name: string, description: string) {
     return (
       <div className="PrimaryElementContainer">
-          <h4>{title}</h4>
+          {getTitleElement(title)}
          <div className="ContentContainer">
              <div className="DateContainer">
                  <div className="SmallCircle"/>
@@ -170,8 +174,37 @@ function getPrimaryElement(title: string, start: string, date: string, name: str
 function getTitleDescriptionElement(title: string, description: string) {
     return (
         <div className="PrimaryTitleContentContainer">
-            <h4 className="PrimaryContainer">{title}</h4>
+            {getTitleElement(title)}
             <p className="DescriptionTitle">{description}</p>
         </div>
+    );
+}
+
+function getExperienceSectionElement(title: string, subTitle: string, exp: string, languages: string, expItems: Array<ExpItem>) {
+    return (
+        <div className={"ExperienceSectionElement"}>
+            {getTitleElement(title)}
+            <h6 style={{ marginTop: "1em" }}><strong>{subTitle}</strong></h6>
+            <p>
+                <span><strong>Brief : </strong>{exp}</span>
+                <br />
+                <span><strong>Languages : </strong>{languages}</span>
+            </p>
+            <strong>Technologies</strong>
+            <div className="Items" style={{ marginTop: "10px" }}>
+                {expItems.map((item , index) => {
+                    return <p className="ExpItem" key={index}>
+                        <span><strong>{item.type} : </strong></span>
+                        <span>{item.description}</span>
+                    </p>
+                })}
+            </div>
+        </div>
+    );
+}
+
+function getTitleElement(title: string) {
+    return (
+        <h4 className="PrimaryContainer">{title}</h4>
     );
 }

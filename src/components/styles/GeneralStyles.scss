@@ -149,11 +149,14 @@ td {
 }
 
 .ResumePageComponentContainer {
-  .BlueSide {
+  .ResumeContainer {
     background-color: #1e1e1e;
+  }
+
+  .BlueSide {
     color: white;
     display: flex;
-    padding-top: 3em;
+    padding-top: 10em;
     padding-left: 3em;
     overflow: hidden;
     position: relative;
@@ -284,6 +287,8 @@ td {
   .CVContent {
     padding-top: 3em;
     padding-left: 3em;
+    padding-bottom: 3em;
+    background-color: white;
   }
 
   .PrimaryContainer {
@@ -293,5 +298,9 @@ td {
 
   .DescriptionTitle {
     width: 80%;
+  }
+
+  .ExpItem {
+    margin: 0%;
   }
 }

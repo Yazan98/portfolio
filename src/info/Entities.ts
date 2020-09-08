@@ -68,3 +68,11 @@ export class LinkItem {
     ) {
     }
 }
+
+export class ExpItem {
+    constructor(
+        public type: string,
+        public description: string
+    ) {
+    }
+}
