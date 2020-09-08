@@ -1,8 +1,9 @@
 import React from 'react';
 import '../styles/HomeHeaderStyle.scss';
 import {infoManager} from "../../info/InfoManager";
-import phones from '../images/phones.png';
+import phones from '../images/header_image.png';
 import TextLoop from "react-text-loop/lib";
+import { NavLink } from "react-router-dom";
 
 export default function HomeHeaderComponent() {
     return (
@@ -25,6 +26,7 @@ export default function HomeHeaderComponent() {
                     <p className="Description">
                         {infoManager.getPersonalInfo().description}
                     </p>
+                    <NavLink to="/resume" className="ResumeButton">View Resume</NavLink>
                 </div>
                 <div className="col">
                     <img className="HomePhonesImage" src={phones} width="800px" />
