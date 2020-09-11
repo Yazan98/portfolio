@@ -26,7 +26,7 @@ export default function ProjectsPageComponent() {
                     infoManager.getProjects().map((item, index) => {
                         return <MobileRowComponent name={item.name} type={item.type}
                                                    description={item.description} imageUrl={item.mainImageLink}
-                                                   appUrl={item.appLink} isRtlRow={index % 2 == 0}/>
+                                                   appUrl={item.appLink} isRtlRow={index % 2 === 0}/>
                     })
                 }
             </div>

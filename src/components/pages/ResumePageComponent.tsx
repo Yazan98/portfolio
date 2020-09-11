@@ -143,6 +143,7 @@ export default function ResumePageComponent() {
                             {getExperienceSectionElement("FRONTEND SKILLS", "Android Developer", "I have 4 years experience", "Java , Kotlin", infoManager.getAndroidExp())}
                             {getExperienceSectionElement("FRONTEND SKILLS", "React.js Developer", "Personal Experience", "Javascript . Typescript", infoManager.getReactExp())}
                             {getExperienceSectionElement("BACKEND SKILLS", "SpringBoot Developer", "I have 2 years experience", "Java , Kotlin", infoManager.getBackendExp())}
+                            {getExperienceSectionElement("OTHER SKILLS", "Random Skills", "Personal Experience", "Java , Kotlin , Javascript", infoManager.getOtherExp())}
                         </div>
                     </Grid>
                 </Grid>

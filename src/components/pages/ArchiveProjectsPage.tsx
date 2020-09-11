@@ -4,6 +4,12 @@ import ToolbarComponent from "../common/ToolbarComponent";
 import {FooterComponent} from "../common/FooterComponent";
 import {infoManager, InfoManager} from "../../info/InfoManager";
 import '../styles/GeneralStyles.scss';
+import Logo from "../images/google_play.png";
+import GithubLogo from '../images/github.png';
+import {ArchiveEntity, LinkItem} from "../../info/Entities";
+import index from "react-github-contribution-calendar";
+import ReactDOM from 'react-dom';
+
 
 export default function ArchivePageComponent() {
     const baz =infoManager.getArchiveList();
@@ -27,25 +33,24 @@ export default function ArchivePageComponent() {
                         <th>Made at</th>
                         <th>Built with</th>
                         <th>Type</th>
-                        <th>Links</th>
                     </tr>
                     {
 
                         sortedBaz.map((item) => {
-                            let openSource = item.isOpenSource;
                             let type = ""
-                            if (openSource) {
+                            if (item.isOpenSource) {
                                 type = "Open Source"
                             } else {
                                 type = "Closed Source"
                             }
-                            return <tr>
+
+                            return (<tr>
                                 <td>{item.year}</td>
-                                <td><strong style={{ color: InfoManager.BLUE_COLOR }}>{item.title}</strong></td>
+                                <td><strong style={{color: InfoManager.BLUE_COLOR}}>{item.title}</strong></td>
                                 <td>{item.madeAt}</td>
                                 <td>{item.builtWith}</td>
                                 <td>{type}</td>
-                            </tr>
+                            </tr>);
                         })
                     }
                 </table>
@@ -56,4 +61,10 @@ export default function ArchivePageComponent() {
 
         </div>
     );
+}
+
+export class ItemCC extends React.Component {
+    render() {
+        return <h1>hello</h1>
+    }
 }

@@ -5,7 +5,7 @@ import {
     LinkItem,
     PersonalInfo,
     PersonalService,
-    Project,
+    Project, ProjectInfo,
     SocialMediaEntity
 } from "./Entities";
 
@@ -17,6 +17,7 @@ export class InfoManager implements InfoManagerImpl {
     public static WHITE_MODE_BACKGROUND_COLOR = "#ffffff";
     public static OPEN_SOURCE = "Open Source";
     public static CLOSED_SOURCE = "Closed Source";
+    public static PROJECT_MOBILE_TYPE = "Mobile"
 
     getPersonalInfo(): PersonalInfo {
         return new PersonalInfo(
@@ -126,6 +127,39 @@ export class InfoManager implements InfoManagerImpl {
             new ExpItem("Styling", "CSS . SCSS . Material UI . Bootstrap"),
             new ExpItem("Deployment", "Github Pages . Firebase Hosting"),
             new ExpItem("Component Rendering", "Dynamic Component Rendering (Linear, Grid)"),
+        ];
+    }
+
+    getOtherExp(): Array<ExpItem> {
+        return [
+            new ExpItem("Version Control", "Github . Gitlab . Bitbucket"),
+            new ExpItem("Continuous Integration", "Jenkins . Circle CI . Travis CI . Fastlane"),
+            new ExpItem("Code Review", "Sonar Cube"),
+            new ExpItem("Design", "Photoshop . AfterEffects"),
+            new ExpItem("Gradle Plugins", "Custom Gradle Plugins"),
+        ];
+    }
+
+    getAllProjects(): Array<ProjectInfo> {
+        return [
+            new ProjectInfo("Mwarrid", "An integrated electronic marketing platform from a website and an application on smartphones and tablets help to connect the food sector suppliers in all their fields with restaurants, cafes, hotels, wedding hall and all those involved in selling food in the retail sector and soon individuals. So that suppliers periodically display their products, set their prices, and market them, to help our customers follow the market, view the latest offers, instant order, and track order status through the",
+                false, ["Kotlin", "RxJava", "Mvvm", "Room", "Live Data", "Dagger"], "Switch.jo", [
+                    "https://user-images.githubusercontent.com/29167110/89159145-f3424680-d523-11ea-8dcc-837c65103a37.png",
+                    "https://user-images.githubusercontent.com/29167110/89159661-a7dc6800-d524-11ea-846a-d8f136210f7d.png",
+                    "https://user-images.githubusercontent.com/29167110/89159719-bd519200-d524-11ea-9a1d-2b922798fc2a.png",
+                    "https://user-images.githubusercontent.com/29167110/89159770-d22e2580-d524-11ea-8e17-5e96542ac62f.png"
+                ], "https://play.google.com/store/apps/details?id=com.mwarrid.mwarrid", "https://user-images.githubusercontent.com/29167110/89157146-e2440600-d520-11ea-95ed-bf2a9836148d.png", "Mobile"),
+            new ProjectInfo("Wintrop", "Weather Application Powered By Vortex , Latest Android Technologies With Managed Structure To Show Weather Status For Amman, Irbid, Aqaba",
+                true, ["Kotlin", "Realm", "Mvvm", "Retrofit", "RxJava", "Kotlin Courotines"], "Personal Github Account", [
+                    "https://user-images.githubusercontent.com/29167110/72382085-7038da80-3710-11ea-8f0a-ecfdccf05e99.jpg",
+                    "https://user-images.githubusercontent.com/29167110/72382120-8181e700-3710-11ea-8eba-db5eb0c15a31.jpg",
+                    "https://user-images.githubusercontent.com/29167110/72382141-8b0b4f00-3710-11ea-9aaf-d367e6f7abd9.jpg"
+                ], "https://github.com/Yazan98/Wintrop", "https://user-images.githubusercontent.com/29167110/72382065-6616dc00-3710-11ea-9958-6819483ac26d.png", "Mobile"),
+            // new ProjectInfo("Autohub", "An Github Client Built To Test Vortex Infrastructure For Android Applications With A Lot Of Features To Manage Github Accounts Personal Accounts, Repositories, Search Repository, Popular Repos, Orgs, Gists, Github Auth, With Kotlin Programming Language\n" +
+            //     "\n", true, ["Vortex", "Kotlin", "Mvvm", "Koin", "Redux", "RxJava", "Retrofit", "Github Api V3"],
+            //     "Personal Github Account", [
+            //         ""
+            //     ])
         ];
     }
 

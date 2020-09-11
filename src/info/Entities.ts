@@ -76,3 +76,18 @@ export class ExpItem {
     ) {
     }
 }
+
+export class ProjectInfo {
+    constructor(
+        public name: string,
+        public description: string,
+        public isOpenSource: boolean,
+        public tags: Array<string>,
+        public designedPlace: string,
+        public images: Array<string>,
+        public link: string,
+        public logo: string,
+        public type: string
+    ) {
+    }
+}
