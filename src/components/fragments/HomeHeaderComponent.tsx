@@ -29,7 +29,7 @@ export default function HomeHeaderComponent() {
                     <NavLink to="/resume" className="ResumeButton">View Resume</NavLink>
                 </div>
                 <div className="col">
-                    <img className="HomePhonesImage" src={phones} width="800px" />
+                    <img alt="Image" className="HomePhonesImage" src={phones} width="800px" />
                 </div>
             </div>
         </div>

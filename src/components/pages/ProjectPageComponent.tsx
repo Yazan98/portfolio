@@ -8,10 +8,6 @@ import {ProjectInfo} from "../../info/Entities";
 
 export default class ProjectPageComponent extends React.Component<any, any> {
 
-    constructor(props: any){
-        super(props);
-    }
-
     render() {
         let params = this.props.location.pathname
         let items = infoManager.getAllProjects();
@@ -61,7 +57,7 @@ export default class ProjectPageComponent extends React.Component<any, any> {
         }
         return (
             <div className="MobilePageContainer" style={{ padding: "3rem" }}>
-                <img src={project?.logo} width="100px" height="100px"/>
+                <img alt="Image" src={project?.logo} width="100px" height="100px"/>
                 <p style={{ display: "flex" }}>
                     <span><h3 style={{ color: InfoManager.BLUE_COLOR, marginTop: "1rem", paddingTop: "10px" }}>{project?.name}</h3></span>
                     <span className="TagItem" style={{ marginLeft: "3rem" , width: "auto", textDecoration: "none", color: "white"}}><a style={{ textDecoration: "none", color: "white" }} href={project?.link}>Project Link</a></span>
@@ -74,7 +70,7 @@ export default class ProjectPageComponent extends React.Component<any, any> {
                 })}</p>
                 <div className={"ProjectImages"}>
                     <p style={{ display: "inline-flex" }}>{project?.images.map(item => {
-                        return <span ><img className="AppImage" src={item}/></span>
+                        return <span ><img alt="Image" className="AppImage" src={item}/></span>
                     })}</p>
                 </div>
             </div>

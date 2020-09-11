@@ -33,7 +33,7 @@ export class MobileRowComponent extends React.Component<{ name: string, type: st
                     </div>
                 </div>
                 <div className="col">
-                    <img src={imageUrl} />
+                    <img alt="Image" src={imageUrl} />
                 </div>
             </div>
         );
@@ -43,7 +43,7 @@ export class MobileRowComponent extends React.Component<{ name: string, type: st
         return (
             <div className="row">
                 <div className="col">
-                    <img src={imageUrl} />
+                    <img alt="Image" src={imageUrl} />
                 </div>
                 <div id="AppDescription" className="col">
                     <div className="DescriptionContent">

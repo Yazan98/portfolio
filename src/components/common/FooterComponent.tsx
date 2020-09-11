@@ -15,9 +15,9 @@ export function FooterComponent() {
                     <h6>Follow Me On</h6>
                     <div className="row">
                         <div className="col">
-                            <a href="https://www.facebook.com/yazantarifi98/"><img className="FooterImage" src={FacebookLogo}/></a>
-                            <a href="https://www.linkedin.com/in/yazan-tarifi-106282192/"><img className="FooterImage" src={LinkedinLogo}/></a>
-                            <a href="https://github.com/Yazan98"><img className="FooterImage" src={GithubLogo}/></a>
+                            <a href="https://www.facebook.com/yazantarifi98/"><img alt="Image" className="FooterImage" src={FacebookLogo}/></a>
+                            <a href="https://www.linkedin.com/in/yazan-tarifi-106282192/"><img alt="Image" className="FooterImage" src={LinkedinLogo}/></a>
+                            <a href="https://github.com/Yazan98"><img alt="Image" className="FooterImage" src={GithubLogo}/></a>
                         </div>
                     </div>
                    <a href="https://www.behance.net/emamghola?tracking_source=search_users_recommended%7Cemam%20ghola"><p className="Name">Design : <span>Emam Ghola</span></p></a>

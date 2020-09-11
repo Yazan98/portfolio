@@ -20,15 +20,15 @@ export default function TechnologiesComponent() {
             <div className="ImagesContainer">
                 <div className="row">
                     <div className="col">
-                        <img className="FooterImage" src={JsLogo}/>
-                        <img className="FooterImage" src={Android}/>
-                        <img className="FooterImage" src={Kotlin}/>
-                        <img className="FooterImage" src={Java}/>
-                        <img className="FooterImage" src={ReactImage}/>
-                        <img className="FooterImage" src={Docker}/>
-                        <img className="FooterImage" src={Github}/>
-                        <img className="FooterImage" src={TypescriptLogo}/>
-                        <img className="FooterImage" src={Spring}/>
+                        <img alt="Image" className="FooterImage" src={JsLogo}/>
+                        <img alt="Image" className="FooterImage" src={Android}/>
+                        <img alt="Image" className="FooterImage" src={Kotlin}/>
+                        <img alt="Image" className="FooterImage" src={Java}/>
+                        <img alt="Image" className="FooterImage" src={ReactImage}/>
+                        <img alt="Image" className="FooterImage" src={Docker}/>
+                        <img alt="Image" className="FooterImage" src={Github}/>
+                        <img alt="Image" className="FooterImage" src={TypescriptLogo}/>
+                        <img alt="Image" className="FooterImage" src={Spring}/>
                     </div>
                 </div>
             </div>
