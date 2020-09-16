@@ -168,7 +168,7 @@ export class InfoManager implements InfoManagerImpl {
             new ProjectInfo("Drasati", "An organizing platform for school students that aims to gather students and link them with audible lessons by providing a tree plan with the possibility to speak with teachers if a difference occurs on a certain point with the support feature of all classes",
                 false, ["Atto", "Firebase", "MVP", "Kotlin", "Firestore Chat"], "Tournament", [
                     ""
-                ], "", "", "Mobile")
+                ], "", "https://user-images.githubusercontent.com/29167110/93354705-26017f00-f7f2-11ea-8a43-bb359f0a3358.png", "Mobile")
         ];
     }
 
