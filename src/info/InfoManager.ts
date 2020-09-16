@@ -46,8 +46,6 @@ export class InfoManager implements InfoManagerImpl {
 
     getProjects(): Array<Project> {
         return [
-            new Project("Mwarrid", "An integrated electronic marketing platform from a website and an application on smartphones and tablets help to connect the food sector suppliers in all their fields with restaurants, cafes, hotels, wedding hall and all those involved in selling food in the retail sector and soon individuals. So that suppliers periodically display their products, set their prices, and market them, to help our customers follow the market, view the latest offers, instant order, and track order status through the supplier's online platform.",
-                "https://user-images.githubusercontent.com/29167110/90952896-0312c380-e41c-11ea-805e-72b4f6198528.png", InfoManager.CLOSED_SOURCE, "https://play.google.com/store/apps/details?id=com.mwarrid.mwarrid"),
             new Project("Autohub", "An Github Client Built To Test Vortex Infrastructure For Android Applications With A Lot Of Features To Manage Github Accounts Personal Accounts, Repositories, Search Repository, Popular Repos, Orgs, Gists, Github Auth, With Kotlin Programming Language\n" +
                 "\n", "https://user-images.githubusercontent.com/29167110/79905453-30b81380-840e-11ea-87b6-91159aa4f8b8.png", InfoManager.OPEN_SOURCE, "https://github.com/Yazan98/Github-Client"),
             new Project("Wintrop", "Weather Application Powered By Vortex , Latest Android Technologies With Managed Structure To Show Weather Status For Amman, Irbid, Aqaba\n" +
@@ -87,7 +85,6 @@ export class InfoManager implements InfoManagerImpl {
             new ArchiveEntity(2017, "Bokkie Api (Spring Boot Restful Api For Books App)", "Github", ["Java . Spring Boot . Mysql"], true, [new LinkItem("github", "https://github.com/Yazan98/Books-spring")]),
             new ArchiveEntity(2019, "Atto Base Code To Build MVP Android Applications", "Github", ["Kotlin . MVP . RxJava2"], true, [new LinkItem("github", "https://github.com/Yazan98/Atto")]),
             new ArchiveEntity(2019, "Drasati (Provide Students Android App To Study With Courses Tree)", "Github", ["Atto . MVP . Kotlin"], false, []),
-            new ArchiveEntity(2020, "Mwarrid", "Switch.jo", ["Kotlin . MVVM . MultiModular App"], false, [new LinkItem("google-play", "https://play.google.com/store/apps/details?id=com.mwarrid.mwarrid")]),
             new ArchiveEntity(2018, "Diretto", "NoventApp", ["Java . MVP"], false, [new LinkItem("google-play", "https://play.google.com/store/apps/details?id=com.noventapp.diretto.user")]),
             new ArchiveEntity(2020, "Yazan98.github.io Portfolio V1", "Github", ["React.js . Javascript"], false, [new LinkItem("google-play", "https://portfolio-5c378.web.app")]),
         ];
@@ -142,13 +139,6 @@ export class InfoManager implements InfoManagerImpl {
 
     getAllProjects(): Array<ProjectInfo> {
         return [
-            new ProjectInfo("Mwarrid", "An integrated electronic marketing platform from a website and an application on smartphones and tablets help to connect the food sector suppliers in all their fields with restaurants, cafes, hotels, wedding hall and all those involved in selling food in the retail sector and soon individuals. So that suppliers periodically display their products, set their prices, and market them, to help our customers follow the market, view the latest offers, instant order, and track order status through the",
-                false, ["Kotlin", "RxJava", "Mvvm", "Room", "Live Data", "Dagger"], "Switch.jo", [
-                    "https://user-images.githubusercontent.com/29167110/89159145-f3424680-d523-11ea-8dcc-837c65103a37.png",
-                    "https://user-images.githubusercontent.com/29167110/89159661-a7dc6800-d524-11ea-846a-d8f136210f7d.png",
-                    "https://user-images.githubusercontent.com/29167110/89159719-bd519200-d524-11ea-9a1d-2b922798fc2a.png",
-                    "https://user-images.githubusercontent.com/29167110/89159770-d22e2580-d524-11ea-8e17-5e96542ac62f.png"
-                ], "https://play.google.com/store/apps/details?id=com.mwarrid.mwarrid", "https://user-images.githubusercontent.com/29167110/89157146-e2440600-d520-11ea-95ed-bf2a9836148d.png", "Mobile"),
             new ProjectInfo("Wintrop", "Weather Application Powered By Vortex , Latest Android Technologies With Managed Structure To Show Weather Status For Amman, Irbid, Aqaba",
                 true, ["Kotlin", "Realm", "Mvvm", "Retrofit", "RxJava", "Kotlin Courotines"], "Personal Github Account", [
                     "https://user-images.githubusercontent.com/29167110/72382085-7038da80-3710-11ea-8f0a-ecfdccf05e99.jpg",
