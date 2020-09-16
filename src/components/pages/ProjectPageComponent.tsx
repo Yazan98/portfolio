@@ -49,18 +49,22 @@ export default class ProjectPageComponent extends React.Component<any, any> {
     }
 
     private renderMobilePage(project: ProjectInfo | undefined) {
+        let isProjectVisible = false
         let type = ""
         if (project?.isOpenSource) {
             type = "This Project Is Open Source Project"
         } else {
             type = "This Project Is Closed Source Project"
         }
+
+        isProjectVisible = project?.link !== "";
+
         return (
             <div className="MobilePageContainer" style={{ padding: "3rem" }}>
                 <img alt="Image" src={project?.logo} width="100px" height="100px"/>
                 <p style={{ display: "flex" }}>
                     <span><h3 style={{ color: InfoManager.BLUE_COLOR, marginTop: "1rem", paddingTop: "10px" }}>{project?.name}</h3></span>
-                    <span className="TagItem" style={{ marginLeft: "3rem" , width: "auto", textDecoration: "none", color: "white"}}><a style={{ textDecoration: "none", color: "white" }} href={project?.link}>Project Link</a></span>
+                    {isProjectVisible ? <span className="TagItem" style={{ marginLeft: "3rem" , width: "auto", textDecoration: "none", color: "white"}}><a style={{ textDecoration: "none", color: "white" }} href={project?.link}>Project Link</a></span> : <span></span>}
                 </p>
                 <h6 style={{ marginTop: "1em" }}><strong>Designed In : {project?.designedPlace}</strong></h6>
                 <h6><strong>{type}</strong></h6>

@@ -64,9 +64,9 @@ export class InfoManager implements InfoManagerImpl {
             new GithubProject("Vortex", "Android Infrastructure To Build Android Applications With Latest Technologies and Ready State Handling with User Interface Implementation For The Android Common Cases", "https://www.vortex-io.github.io", "https://github.com/vortex-io/Vortex", true, ["Kotlin", "Mvvm", "Redux", "Plugins"]),
             new GithubProject("Exposer", "Android Domain Layer Controller Via UseCases To Handle Shared Logic Between Android, IOS Via Kotlin Multiplatform With Reactive Programming, Memory, etc", "https://www.vortex-io.github.io", "https://github.com/vortex-io/Vortex", true, ["Kotlin", "Mvvm", "Redux", "Plugins"]),
             new GithubProject("Portfolio", "My Personal Website (First Website) Built With React.js To Build My Portfolio", "https://www.vortex-io.github.io", "https://github.com/vortex-io/Vortex", true, ["Kotlin", "Mvvm", "Redux", "Plugins"]),
-            new GithubProject("Wintrop", "Android Infrastructure To Build Android Applications With Latest Technologies and Ready State Handling with User Interface Implementation For The Android Common Cases", "https://www.vortex-io.github.io", "https://github.com/vortex-io/Vortex", true, ["Kotlin", "Mvvm", "Redux", "Plugins"]),
-            new GithubProject("Github-Client", "Android Infrastructure To Build Android Applications With Latest Technologies and Ready State Handling with User Interface Implementation For The Android Common Cases", "https://www.vortex-io.github.io", "https://github.com/vortex-io/Vortex", true, ["Kotlin", "Mvvm", "Redux", "Plugins"]),
-            new GithubProject("Destiny", "Android Infrastructure To Build Android Applications With Latest Technologies and Ready State Handling with User Interface Implementation For The Android Common Cases", "https://www.vortex-io.github.io", "https://github.com/vortex-io/Vortex", true, ["Kotlin", "Mvvm", "Redux", "Plugins"]),
+            new GithubProject("Wintrop", "Android Application Built With Kotlin For Weather Based On Vortex, Mvvm, Redux, public weather Api", "https://www.vortex-io.github.io", "https://github.com/vortex-io/Vortex", true, ["Kotlin", "Mvvm", "Redux", "Plugins"]),
+            new GithubProject("Github-Client", "Github Android Application (Demo) Built on Vortex, Mvvm, Kotlin To Test Vortex", "https://www.vortex-io.github.io", "https://github.com/vortex-io/Vortex", true, ["Kotlin", "Mvvm", "Redux", "Plugins"]),
+            new GithubProject("Destiny", "Android Application Demo For Realm Training and Test Spring Boot Api (Destiny-Api)", "https://www.vortex-io.github.io", "https://github.com/vortex-io/Vortex", true, ["Kotlin", "Mvvm", "Redux", "Plugins"]),
         ];
     }
 
@@ -155,11 +155,20 @@ export class InfoManager implements InfoManagerImpl {
                     "https://user-images.githubusercontent.com/29167110/72382120-8181e700-3710-11ea-8eba-db5eb0c15a31.jpg",
                     "https://user-images.githubusercontent.com/29167110/72382141-8b0b4f00-3710-11ea-9aaf-d367e6f7abd9.jpg"
                 ], "https://github.com/Yazan98/Wintrop", "https://user-images.githubusercontent.com/29167110/72382065-6616dc00-3710-11ea-9958-6819483ac26d.png", "Mobile"),
-            // new ProjectInfo("Autohub", "An Github Client Built To Test Vortex Infrastructure For Android Applications With A Lot Of Features To Manage Github Accounts Personal Accounts, Repositories, Search Repository, Popular Repos, Orgs, Gists, Github Auth, With Kotlin Programming Language\n" +
-            //     "\n", true, ["Vortex", "Kotlin", "Mvvm", "Koin", "Redux", "RxJava", "Retrofit", "Github Api V3"],
-            //     "Personal Github Account", [
-            //         ""
-            //     ])
+            new ProjectInfo("Autohub", "An Github Client Built To Test Vortex Infrastructure For Android Applications With A Lot Of Features To Manage Github Accounts Personal Accounts, Repositories, Search Repository, Popular Repos, Orgs, Gists, Github Auth, With Kotlin Programming Language\n" +
+                "\n", true, ["Vortex", "Kotlin", "Mvvm", "Koin", "Redux", "RxJava", "Retrofit", "Github Api V3"],
+                "Personal Github Account", [
+                    "https://user-images.githubusercontent.com/29167110/93309074-efa70e00-f7b7-11ea-8fed-85594aa2b741.jpeg",
+                    "https://user-images.githubusercontent.com/29167110/93313040-cc329200-f7bc-11ea-978b-67f8468f6535.png",
+                    "https://user-images.githubusercontent.com/29167110/93313120-e4a2ac80-f7bc-11ea-96ba-cce6542f6352.png",
+                    "https://user-images.githubusercontent.com/29167110/93313173-fab06d00-f7bc-11ea-9719-cb0f508eb01f.png",
+                    "https://user-images.githubusercontent.com/29167110/93313218-0ac84c80-f7bd-11ea-8023-73befd39b1fb.png"
+                ], "https://github.com/Yazan98/Github-Client",
+                "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Octicons-mark-github.svg/1024px-Octicons-mark-github.svg.png", "Mobile"),
+            new ProjectInfo("Drasati", "An organizing platform for school students that aims to gather students and link them with audible lessons by providing a tree plan with the possibility to speak with teachers if a difference occurs on a certain point with the support feature of all classes",
+                false, ["Atto", "Firebase", "MVP", "Kotlin", "Firestore Chat"], "Tournament", [
+                    ""
+                ], "", "", "Mobile")
         ];
     }
 

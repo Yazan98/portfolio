@@ -20,8 +20,7 @@ export function FooterComponent() {
                             <a href="https://github.com/Yazan98"><img alt="Image" className="FooterImage" src={GithubLogo}/></a>
                         </div>
                     </div>
-                   <a href="https://www.behance.net/emamghola?tracking_source=search_users_recommended%7Cemam%20ghola"><p className="Name">Design : <span>Emam Ghola</span></p></a>
-                    <p>Yazan Tarifi @ 2020 All Rights Reserved</p>
+                    <p style={{ marginTop: "10px" }}>Yazan Tarifi @ 2020 All Rights Reserved</p>
                 </div>
                 <div className="col">
                     <div className="Area" style={{textAlign: "center"}}>

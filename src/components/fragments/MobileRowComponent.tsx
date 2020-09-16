@@ -1,6 +1,7 @@
 import React from 'react';
 import '../styles/GeneralStyles.scss';
 import {InfoManager} from "../../info/InfoManager";
+import { NavLink } from "react-router-dom";
 
 export class MobileRowComponent extends React.Component<{ name: string, type: string, description: string, imageUrl: string, appUrl: string, isRtlRow: boolean }> {
     render() {
@@ -30,6 +31,7 @@ export class MobileRowComponent extends React.Component<{ name: string, type: st
                             color: InfoManager.BLUE_COLOR
                         }}>{name}</h2>
                         <p>{description}</p>
+                        <NavLink className={"MobileButton"} to={"/project/" + name}><a >View Details</a></NavLink>
                     </div>
                 </div>
                 <div className="col">
@@ -52,6 +54,7 @@ export class MobileRowComponent extends React.Component<{ name: string, type: st
                             color: InfoManager.BLUE_COLOR
                         }}>{name}</h2>
                         <p>{description}</p>
+                        <NavLink className={"MobileButton"} to={"/project/" + name}><a>View Details</a></NavLink>
                     </div>
                 </div>
             </div>
