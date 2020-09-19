@@ -19,7 +19,7 @@ export default function HomePageComponent() {
             <div className="ProjectsSection" style={{
                 marginBottom: "10em"
             }}>
-                <h4 className={"Item"}>What Can I Do</h4>
+                <h4 className={"ItemProjectTitle"}>What Can I Do</h4>
                 <div id={"ServicesItem"} className="row">
                     {
                         infoManager.getPersonalServices().map((item , index) => {

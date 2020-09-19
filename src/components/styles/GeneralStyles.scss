@@ -442,7 +442,22 @@ td {
   }
 }
 
-@media screen and (max-width: 700px) {
+.ItemProjectTitle {
+  color: #2962ff;
+  margin-left:4rem;
+  margin-bottom: 1em;
+  font-size: 20px;
+}
+
+@media only screen and (min-device-width: 411px) and (max-device-width: 700px) {
+
+  .HomePageContainer {
+    .ItemProjectTitle {
+      margin-left: 0;
+      font-size: large;
+      color: #2962ff;
+    }
+  }
   .ProjectsSection {
     h4 {
       margin: 0;
