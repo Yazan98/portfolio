@@ -35,6 +35,18 @@ p {
     width: 40%;
   }
 
+  .FooterContent {
+    display: flex;
+  }
+
+  #Section {
+    flex: 1;
+  }
+
+  .Area {
+    text-align: center;
+  }
+
   .TextAreaBig {
     height: 100px;
   }
@@ -474,6 +486,26 @@ td {
         display: inline-block;
         zoom: 1;
       }
+    }
+  }
+
+  .FooterComponent {
+    padding: 20px;
+    p {
+      font-size: small;
+    }
+
+    .FooterContent {
+      display: block;
+    }
+
+    .Area {
+      text-align: left;
+    }
+
+    .TextArea, .SubmitButton {
+      width: 100%;
+      text-align: center;
     }
   }
 }
