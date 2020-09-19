@@ -1,6 +1,6 @@
 import React from 'react';
 import '../styles/GeneralStyles.scss';
-import {InfoManager, infoManager} from "../../info/InfoManager";
+import '../styles/AboutPageStyleResponsive.scss';
 import ToolbarComponent from "../common/ToolbarComponent";
 import BlueLineComponent from "../common/BlueLineComponent";
 import {FooterComponent} from "../common/FooterComponent";
@@ -32,17 +32,16 @@ export default function AboutMePageComponent() {
                         Api Based on (SpringBoot, Nest.js, Ktor) and Create A Mobile Application Using Latest Technologies in Android Development also there
                         is a good knowledge in Web Development With React.js</p>
 
-                    <h4 style={{ marginTop: "4em" }}><strong>Technologies & Tools</strong></h4>
-                    <ol style={{ paddingTop: "20px" }}>
+                    <h4 className={"Title"}><strong>Technologies & Tools</strong></h4>
+                    <ol style={{ paddingTop: "10px" }}>
                         <li>Android Development</li>
                         <li>Html / S-CSS</li>
                         <li>React.js (Type/Javascript)</li>
                         <li>SpringBoot (Java/Kotlin)</li>
                         <li>Nest.js</li>
                     </ol>
-                    <br/>
 
-                    <h4 style={{ marginTop: "4em" }}><strong>Work Experience</strong></h4>
+                    <h4 className={"Title"}><strong>Work Experience</strong></h4>
                     <br/>
                     {VerticalTabs()}
                 </div>
@@ -123,7 +122,7 @@ export function VerticalTabs() {
                 <Tab label="Zunbarak" {...a11yProps(2)} />
             </Tabs>
             <TabPanel value={value} index={0}>
-                <div className={"OpensooqContainer"}>
+                <div className={"ItemContainer"}>
                     <p style={{ display: "flex" }}>
                         <span style={{ paddingRight: "1em", display: "inline", whiteSpace: "nowrap" }}>Android Developer</span>
                         <span><a className={"CompanyLink"} href="https://opensooq.com">@Opensooq</a></span>
@@ -135,7 +134,7 @@ export function VerticalTabs() {
                 </div>
             </TabPanel>
             <TabPanel value={value} index={1}>
-                <div className={"OpensooqContainer"}>
+                <div className={"ItemContainer"}>
                     <p style={{ display: "flex" }}>
                         <span style={{ paddingRight: "1em", display: "inline", whiteSpace: "nowrap" }}>Android Developer</span>
                         <span><a className={"CompanyLink"} href="https://noventapp.com">@NoventApp</a></span>
@@ -152,7 +151,7 @@ export function VerticalTabs() {
                 </div>
             </TabPanel>
             <TabPanel value={value} index={2}>
-                <div className={"OpensooqContainer"}>
+                <div className={"ItemContainer"}>
                     <p style={{ display: "flex" }}>
                         <span style={{ paddingRight: "1em", display: "inline", whiteSpace: "nowrap" }}>Junior Android Developer</span>
                         <span><a className={"CompanyLink"} href="https://zunbarak.com">@Zunbarak</a></span>
