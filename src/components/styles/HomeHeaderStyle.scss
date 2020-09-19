@@ -71,3 +71,38 @@
     justify-items: center;
   }
 }
+
+.Container {
+  display: flex;
+}
+
+@media screen and (max-width: 700px) {
+  .HomeHeaderComponentContainer {
+    padding: 20px;
+    margin-bottom: 5em;
+    .Container {
+      display: block;
+    }
+
+    #Section {
+      margin-top: 0%;
+    }
+
+    .HomePhonesImage {
+      width: 350px;
+      object-fit: contain;
+      text-align: center;
+    }
+
+    .Description {
+      margin-right: 0;
+      width: 100%;
+      font-size: small;
+    }
+
+    .MainName2 {
+      font-size: medium;
+    }
+  }
+}
+

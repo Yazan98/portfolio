@@ -6,6 +6,7 @@ import {InfoManager, infoManager} from "../../info/InfoManager";
 import {ServiceComponent} from "../fragments/ServiceComponent";
 import TechnologiesComponent from "../fragments/TechnologiesComponent";
 import {FooterComponent} from "../common/FooterComponent";
+import '../styles/GeneralStyles.scss';
 
 export default function HomePageComponent() {
     return (
@@ -18,16 +19,8 @@ export default function HomePageComponent() {
             <div className="ProjectsSection" style={{
                 marginBottom: "10em"
             }}>
-                <h4 style={{
-                    color: InfoManager.BLUE_COLOR,
-                    marginLeft: "60px"
-                }}>What Can I Do</h4>
-                <div className="row" style={{
-                    paddingLeft: "40px",
-                    paddingRight: "40px",
-                    paddingBottom: "40px",
-                    width: "80%"
-                }}>
+                <h4 className={"Item"}>What Can I Do</h4>
+                <div id={"ServicesItem"} className="row">
                     {
                         infoManager.getPersonalServices().map((item , index) => {
                             return <div className="col-md-3">

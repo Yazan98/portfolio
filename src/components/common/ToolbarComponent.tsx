@@ -3,7 +3,6 @@ import {infoManager, InfoManager} from "../../info/InfoManager";
 import '../styles/ToolbarStyle.scss';
 import { NavLink } from "react-router-dom";
 
-
 export default function ToolbarComponent() {
     return (
         <header className="ToolbarComponent">

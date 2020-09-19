@@ -8,7 +8,7 @@ import { NavLink } from "react-router-dom";
 export default function HomeHeaderComponent() {
     return (
         <div className="HomeHeaderComponentContainer">
-            <div className="row">
+            <div className="Container">
                 <div className="col" id="Section">
                     <p>
                         <TextLoop springConfig={{ stiffness: 180, damping: 8 }}>
