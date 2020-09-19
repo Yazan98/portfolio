@@ -23,8 +23,8 @@ export default function AboutMePageComponent() {
                 <p className={"Hint"}>A code-minded front-end software engineer focused on Design Full Applications From Backend to Frontend Via Some Platforms, Frameworks, Languages</p>
                 <div className={"ResumeContainer"}>
                     <NavLink to="/resume" className="ResumeButtonCustom">View Resume</NavLink>
+                    <a style={{ marginLeft: "1em" }} className="ResumeButtonCustom" href="https://github.com/Yazan98">View Github</a>
                 </div>
-
 
                 <div className={"AboutMeContainer"}>
                     <h4><strong>About Me</strong></h4>
@@ -32,6 +32,15 @@ export default function AboutMePageComponent() {
                         Api Based on (SpringBoot, Nest.js, Ktor) and Create A Mobile Application Using Latest Technologies in Android Development also there
                         is a good knowledge in Web Development With React.js</p>
 
+                    <h4 style={{ marginTop: "4em" }}><strong>Technologies & Tools</strong></h4>
+                    <ol style={{ paddingTop: "20px" }}>
+                        <li>Android Development</li>
+                        <li>Html / S-CSS</li>
+                        <li>React.js (Type/Javascript)</li>
+                        <li>SpringBoot (Java/Kotlin)</li>
+                        <li>Nest.js</li>
+                    </ol>
+                    <br/>
 
                     <h4 style={{ marginTop: "4em" }}><strong>Work Experience</strong></h4>
                     <br/>
@@ -138,6 +147,7 @@ export function VerticalTabs() {
                         <p style={{ paddingRight: "1em", whiteSpace: "nowrap" }}>3. Create Good Base Code With Kotlin Language</p>
                         <p style={{ paddingRight: "1em", whiteSpace: "nowrap" }}>4. Create Applications In Logistic System</p>
                         <p style={{ paddingRight: "1em", whiteSpace: "nowrap" }}>5. Implemented Clean Architecture Using Latest Technologies</p>
+                        <p style={{ paddingRight: "1em", whiteSpace: "nowrap" }}>6. Implement Features In Backend (Restful Api)</p>
                     </div>
                 </div>
             </TabPanel>

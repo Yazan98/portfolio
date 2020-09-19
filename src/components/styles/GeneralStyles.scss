@@ -357,16 +357,6 @@ td {
       margin-top: 2em;
     }
 
-    .ResumeButtonCustom {
-      background-color: #2962ff;
-      padding: 1em;
-      color: white;
-      margin-top: 2em;
-      text-decoration: none;
-      border-radius: 0.4em;
-      font-size: small;
-    }
-
     .AboutMeContainer {
       margin-top: 8em;
     }
@@ -385,4 +375,41 @@ td {
     }
   }
 
+}
+
+.ResumeButtonCustom {
+  background-color: #2962ff;
+  padding: 1em;
+  color: white;
+  margin-top: 2em;
+  text-decoration: none;
+  border-radius: 0.4em;
+  font-size: small;
+}
+
+.ResumeButtonCustom:hover {
+  color: white;
+  text-decoration: none;
+}
+
+.shadowed {
+  -webkit-filter: drop-shadow(5px 5px 5px #222);
+  filter: drop-shadow(5px 5px 8px #222);
+}
+
+.ThemeContent {
+  position: relative;
+  .ThemeContentProvider {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.DenamoContainer {
+  .ThemeContent {
+    padding: 3rem;
+    background-color: rgb(18, 22, 32);
+  }
 }

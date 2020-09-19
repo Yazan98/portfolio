@@ -7,6 +7,7 @@ import ArchivePageComponent from "./components/pages/ArchiveProjectsPage";
 import ResumePageComponent from "./components/pages/ResumePageComponent";
 import ProjectPageComponent from "./components/pages/ProjectPageComponent";
 import AboutMePageComponent from "./components/pages/AboutMePageComponent";
+import DenamoPageComponent from "./components/pages/DenamoPageCompoenent";
 
 function App() {
     return (
@@ -19,6 +20,7 @@ function App() {
                     <Route exact path="/resume" component={ResumePageComponent}/>
                     <Route exact path="/project/:name" component={ProjectPageComponent}/>
                     <Route exact path="/about" component={AboutMePageComponent}/>
+                    <Route exact path="/tools/denamo" component={DenamoPageComponent}/>
                 </Switch>
             </Router>
         </div>

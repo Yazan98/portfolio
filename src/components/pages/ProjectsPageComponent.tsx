@@ -31,6 +31,48 @@ export default function ProjectsPageComponent() {
                 }
             </div>
 
+            <div style={{ paddingBottom: "50px" }} className="ProjectsTitle">
+                <h2>Some Tools I've Built</h2>
+            </div>
+
+            <div className={"Themes"}>
+                <div style={{ display: "flex" }} className={"Container"}>
+                        <img className={"shadowed"} src={"https://user-images.githubusercontent.com/29167110/93529777-57ad3f80-f8f1-11ea-9d1a-103c8bbc93ab.jpg"}
+                         style={{ objectFit: "contain", flex: "1" }}
+                         width={"720px"}
+                         height={"480px"}/>
+
+                         <div  style={{ objectFit: "contain", flex: "1" }} className={"ThemeContent"}>
+                             <div className={"ThemeContentProvider"}>
+                                 <h4><strong style={{ color: InfoManager.BLUE_COLOR }}>Denamo Theme</strong></h4>
+                                 <p>This Theme is a Dark Theme To Build Typescript Apps With This Blue Color Effect and Dark Theme to give the developer a nice environment to work</p>
+                                 <div style={{ marginTop: "1em" }}>
+                                     <NavLink to={"/tools/denamo"} style={{ textDecoration: "none" }} className="ResumeButtonCustom">Download Theme</NavLink>
+                                 </div>
+                             </div>
+                         </div>
+                </div>
+            </div>
+
+            <div className={"Themes"}>
+                <div style={{ display: "flex", marginTop: "2rem" }} className={"Container"}>
+                    <div  style={{ objectFit: "contain", flex: "1" }} className={"ThemeContent"}>
+                        <div className={"ThemeContentProvider"}>
+                            <h4><strong style={{ color: InfoManager.BLUE_COLOR }}>Thentrom Theme</strong></h4>
+                            <p>Intellij Theme To Make The Ide Looks Like Orange, Yellow Color For Kotlin Developers</p>
+                            <div style={{ marginTop: "1em" }}>
+                                <a style={{ textDecoration: "none" }} className="ResumeButtonCustom" href="https://github.com/Yazan98/Thentrom">Download Theme</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <img className={"shadowed"} src={"https://user-images.githubusercontent.com/29167110/72718353-b2797600-3b6d-11ea-9b71-0bb98ad2d3c7.png"}
+                         style={{ objectFit: "contain", flex: "1" }}
+                         width={"720px"}
+                         height={"480px"}/>
+                </div>
+            </div>
+
             <div className="ProjectsTitle">
                 <h2>Other Noteworthy Projects</h2>
                 <NavLink to="/projects/archive"><a href="">View The Archive</a></NavLink>
