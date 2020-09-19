@@ -338,3 +338,51 @@ td {
   color: #2962ff;
   margin-top: 1em;
 }
+
+.AboutMeSectionContainer {
+
+  .PageContent {
+    color: black;
+    padding: 5rem;
+    p, h3, h4 {
+      padding: 0%;
+      margin: 0%;
+    }
+
+    p {
+      width: 60%;
+    }
+
+    .ResumeContainer {
+      margin-top: 2em;
+    }
+
+    .ResumeButtonCustom {
+      background-color: #2962ff;
+      padding: 1em;
+      color: white;
+      margin-top: 2em;
+      text-decoration: none;
+      border-radius: 0.4em;
+      font-size: small;
+    }
+
+    .AboutMeContainer {
+      margin-top: 8em;
+    }
+
+    .Hint {
+      color: gray;
+    }
+
+    .SeperatedTitle {
+      margin-top: 3em;
+    }
+
+    .CompanyLink {
+      color: #2962ff;
+      text-decoration: none;
+    }
+  }
+
+}

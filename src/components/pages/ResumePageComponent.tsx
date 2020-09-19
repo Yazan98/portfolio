@@ -6,6 +6,7 @@ import {FooterComponent} from "../common/FooterComponent";
 import Grid from "@material-ui/core/Grid";
 import {infoManager, InfoManager} from "../../info/InfoManager";
 import {ExpItem} from "../../info/Entities";
+
 export default function ResumePageComponent() {
     return (
         <div className="ResumePageComponentContainer">
