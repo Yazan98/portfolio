@@ -409,16 +409,6 @@ td {
   filter: drop-shadow(5px 5px 8px #222);
 }
 
-.ThemeContent {
-  position: relative;
-  .ThemeContentProvider {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-}
-
 .DenamoContainer {
   .ThemeContent {
     padding: 3rem;
@@ -454,6 +444,13 @@ td {
     margin-top: 0;
   }
 
+  .ArchiveContainer {
+    text-align: center;
+    .ViewArchive {
+      width: 100%;
+    }
+  }
+
   .MobileItem {
     display: flex;
     .MobileRowItem {
@@ -473,7 +470,42 @@ td {
   }
 }
 
+.ProjectsPageContainer {
+  .ProjectsSectionGithub {
+    margin-bottom: 10em;
+    padding-right: 250px;
+    padding-left: 250px;
+  }
 
+  .Themes {
+    .Container {
+      display: flex;
+
+      .ThemeContent {
+        .ThemeContentProvider {
+          width: 80%;
+          margin-top: 15%;
+          margin-left: 15%;
+        }
+      }
+
+      .shadowed {
+        width: 720px;
+        height: 480px;
+        object-fit: contain;
+      }
+
+      img {
+        object-fit: contain;
+        margin-left: 20px;
+      }
+
+      .ThemeItem {
+        flex: 1;
+      }
+    }
+  }
+}
 
 @media only screen and (min-device-width: 411px) and (max-device-width: 700px) {
 
@@ -481,6 +513,62 @@ td {
     .ProjectsTitle {
       font-size: small;
       margin-top: 20px;
+    }
+
+    .ProjectsSectionGithub {
+      display: none;
+    }
+
+    .ArchiveContainer {
+      text-align: center;
+      padding-bottom: 10px;
+
+      .ViewArchive {
+        font-size: small;
+        width: 100%;
+      }
+    }
+
+    .Themes {
+      .Container {
+        display: block;
+        width: 100%;
+
+        .ThemeContent {
+          width: 100%;
+          font-size: small;
+          padding: 10px;
+
+          .ThemeContentProvider {
+            width: 100%;
+            margin-top: 0;
+            margin-left: 0;
+            padding: 10px;
+            p {
+              font-size: small;
+            }
+
+            .ResumeButtonCustom {
+              font-size: small;
+            }
+          }
+        }
+
+        .shadowed {
+          width: 380px;
+          object-fit: contain;
+          text-align: center;
+          height: auto;
+          margin-top: 20px;
+          margin-bottom: 20px;
+        }
+
+        img {
+          object-fit: contain;
+          margin-left: 15px;
+        }
+
+      }
     }
 
     .MobileItem {
