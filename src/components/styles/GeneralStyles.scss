@@ -128,7 +128,7 @@ p {
 .ProjectsTitle {
   text-align: center;
   color: #2962ff;
-  margin-top: 10rem;
+  margin-top: 5em;
 }
 
 .GithubProjectItem {
@@ -449,7 +449,67 @@ td {
   font-size: 20px;
 }
 
+.ProjectsPageContainer {
+  .ProjectsTitle {
+    margin-top: 0;
+  }
+
+  .MobileItem {
+    display: flex;
+    .MobileRowItem {
+      flex: 1;
+
+      .DescriptionContent {
+        padding: 20px;
+        height: auto;
+        width: 60%;
+        margin-top: 20%;
+        margin-left: 25%;
+        h2 {
+          font-size: medium;
+        }
+      }
+    }
+  }
+}
+
+
+
 @media only screen and (min-device-width: 411px) and (max-device-width: 700px) {
+
+  .ProjectsPageContainer {
+    .ProjectsTitle {
+      font-size: small;
+      margin-top: 20px;
+    }
+
+    .MobileItem {
+      display: block;
+      .MobileRowItem {
+        margin-top: 0;
+
+        img {
+          width: 400px;
+          text-align: center;
+          object-fit: contain;
+          margin-right: 0;
+        }
+
+        .DescriptionContent {
+          padding: 20px;
+          width: 100%;
+          margin-left: 0;
+          margin-top: 0;
+          height: auto;
+          font-size: small;
+
+          h2 {
+            font-size: medium;
+          }
+        }
+      }
+    }
+  }
 
   .HomePageContainer {
     .ItemProjectTitle {

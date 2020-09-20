@@ -12,14 +12,12 @@ import '../styles/GeneralStyles.scss';
 
 export default function ProjectsPageComponent() {
     return (
-        <div className="HomePageContainer">
+        <div className="ProjectsPageContainer">
 
             <BlueLineComponent/>
             <ToolbarComponent/>
 
-            <div className="ProjectsTitle">
-                <h2>Some Apps I've Built</h2>
-            </div>
+            <h2 className="ProjectsTitle">Some Apps I've Built</h2>
 
             <div className="MobileProjects" style={{ marginTop: "5rem" }}>
                 {
@@ -31,9 +29,7 @@ export default function ProjectsPageComponent() {
                 }
             </div>
 
-            <div style={{ paddingBottom: "50px" }} className="ProjectsTitle">
-                <h2>Some Tools I've Built</h2>
-            </div>
+            <h2 className="ProjectsTitle">Some Tools I've Built</h2>
 
             <div className={"Themes"}>
                 <div style={{ display: "flex" }} className={"Container"}>
