@@ -507,6 +507,24 @@ td {
   }
 }
 
+.DenamoContainer {
+  .ThemeContent {
+    .Title {
+      margin-top: 4rem;
+      color: white;
+    }
+  }
+}
+
+
+.ArchiveContainer {
+  margin: 5em 50px;
+
+  .ArchiveTable {
+    width: 80%;
+  }
+}
+
 @media only screen and (min-device-width: 411px) and (max-device-width: 700px) {
 
   .ProjectsPageContainer {
@@ -555,7 +573,7 @@ td {
         }
 
         .shadowed {
-          width: 380px;
+          width: 90%;
           object-fit: contain;
           text-align: center;
           height: auto;
@@ -577,7 +595,7 @@ td {
         margin-top: 0;
 
         img {
-          width: 400px;
+          width: 100%;
           text-align: center;
           object-fit: contain;
           margin-right: 0;
@@ -648,6 +666,61 @@ td {
         object-fit: contain;
         display: inline-block;
         zoom: 1;
+      }
+    }
+  }
+
+  .DenamoContainer {
+    .ThemeContent {
+      padding: 20px;
+
+      img {
+        width: 100%;
+        object-fit: contain;
+        margin-left: 0;
+        margin-right: 0;
+        height: auto;
+      }
+
+      .Title {
+        margin-top: 20px;
+        color: white;
+        margin-left: 0;
+        font-size: small;
+      }
+    }
+  }
+
+  .ArchiveContainer {
+    margin: 20px;
+
+    h3 {
+      font-size: small;
+      text-align: left;
+      margin-top: 20px;
+      margin-bottom: 0;
+    }
+
+    p {
+      font-size: small;
+      text-align: left;
+      margin-bottom: 20px;
+    }
+
+    table {
+      border-collapse: collapse;
+      border-spacing: 0;
+      width: 100%;
+    }
+
+    .ArchiveTable {
+      div{
+        overflow-x: auto;
+      }
+
+      width: 80%;
+      td, th {
+        font-size: 10px;
       }
     }
   }

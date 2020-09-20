@@ -4,12 +4,6 @@ import ToolbarComponent from "../common/ToolbarComponent";
 import {FooterComponent} from "../common/FooterComponent";
 import {infoManager, InfoManager} from "../../info/InfoManager";
 import '../styles/GeneralStyles.scss';
-import Logo from "../images/google_play.png";
-import GithubLogo from '../images/github.png';
-import {ArchiveEntity, LinkItem} from "../../info/Entities";
-import index from "react-github-contribution-calendar";
-import ReactDOM from 'react-dom';
-
 
 export default function ArchivePageComponent() {
     const baz =infoManager.getArchiveList();
@@ -20,13 +14,13 @@ export default function ArchivePageComponent() {
             <BlueLineComponent />
             <ToolbarComponent />
 
-            <div className={"ArchiveContainer"} style={{ marginRight: "50px", marginLeft: "50px", marginTop: "5em", marginBottom: "5em" }}>
+            <div className={"ArchiveContainer"}>
                 <h3 style={{
                     color: InfoManager.BLUE_COLOR
                 }}>Projects Archive</h3>
                 <p>List Of My Projects I Built (Open / Closed) Source Project</p>
 
-                <table style={{width: "80%"}}>
+                <table className={"ArchiveTable"}>
                     <tr>
                         <th>Year</th>
                         <th>Title</th>
@@ -46,7 +40,7 @@ export default function ArchivePageComponent() {
 
                             return (<tr>
                                 <td>{item.year}</td>
-                                <td><strong style={{color: InfoManager.BLUE_COLOR}}>{item.title}</strong></td>
+                                <td className={"Container"}><strong className={"ItemTitle"} style={{color: InfoManager.BLUE_COLOR}}>{item.title}</strong></td>
                                 <td>{item.madeAt}</td>
                                 <td>{item.builtWith}</td>
                                 <td>{type}</td>

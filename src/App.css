@@ -16,3 +16,7 @@ body {
   overflow-x: hidden;
   overflow-y: scroll;
 }
+
+.App {
+  overflow-x: hidden;
+}
