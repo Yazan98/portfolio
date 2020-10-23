@@ -1,0 +1,150 @@
+@import "../base";
+
+footer {
+  background-color: $greyColor;
+  margin-top: 5em;
+
+  .TechSection {
+    padding: 1em 2em;
+
+    .TechSectionComponentContainer {
+      display: flex;
+      justify-items: center;
+      align-items: center;
+
+      .Item {
+        flex: 1;
+        display: flex;
+        justify-content: space-around;
+
+        .Logo {
+          img {
+            width: 3em;
+            -webkit-filter: grayscale(100%);
+            transition: 1s;
+          }
+        }
+
+        .Logo:hover {
+          img {
+            -webkit-filter: grayscale(0%);
+          }
+        }
+
+        .Description {
+          flex: 1;
+          margin-left: 1em;
+          max-width: 40%;
+          display: none;
+
+          p {
+            font-size: small;
+          }
+
+          .Des {
+            font-size: x-small;
+          }
+        }
+      }
+    }
+
+  }
+
+  .AboutProjectsContainer {
+    display: flex;
+    margin-top: 4em;
+    padding-bottom: 4em;
+
+    .AboutContent {
+      flex: 1;
+      padding: 4em;
+
+      h5 {
+        color: $primaryColor;
+      }
+
+      p {
+        max-width: 80%;
+      }
+
+      .Copyright {
+        margin-top: 2em;
+        font-size: small;
+        color: black;
+        font-weight: bold;
+      }
+    }
+
+    .ContactMeContainer {
+      flex: 1;
+      text-align: center;
+
+      .Content {
+        max-width: 80%;
+        text-align: center;
+        display: block;
+
+        .EmailHolder {
+          width: 70%;
+          background-color: white;
+          color: black;
+          border-width: 0px;
+          text-decoration: none;
+          border-radius: 5px;
+          padding: 15px 16px;
+          display: inline-flex;
+          font-weight: 600;
+          font-size: 12px;
+          cursor: pointer;
+          text-align: start;
+        }
+
+        textarea {
+          width: 70%;
+          margin-top: 1em;
+          background-color: white;
+          color: black;
+          border-width: 0px;
+          text-decoration: none;
+          border-radius: 5px;
+          padding: 15px 16px;
+          display: inline-flex;
+          font-weight: 600;
+          font-size: 12px;
+          cursor: pointer;
+          text-align: start;
+          max-height: 15em;
+          height: 10em;
+          resize: none;
+        }
+
+        .Button {
+          text-align: center;
+
+          a {
+            background-color: $primaryColor;
+            border: none;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 7px;
+            padding: 15px 16px;
+            display: inline-block;
+            font-weight: 600;
+            font-size: 12px;
+            cursor: pointer;
+            width: 70%;
+            margin-top: 1em;
+          }
+
+        }
+
+      }
+    }
+  }
+
+}
+
+textarea:focus, input:focus{
+  outline: none;
+}

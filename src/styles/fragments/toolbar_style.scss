@@ -52,6 +52,11 @@
         color: black;
         font-size: small;
         display: flex;
+        transition: 1s;
+      }
+
+      .ToolbarLink:hover {
+        color: $primaryColor;
       }
     }
   }

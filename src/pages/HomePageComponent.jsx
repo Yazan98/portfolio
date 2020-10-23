@@ -3,6 +3,8 @@ import {BlueLine} from "../components/BlueLineComponent";
 import '../styles/pages/home_style.scss';
 import HomeHeaderComponent from "../components/HomeHeaderComponent";
 import ToolbarComponent from "../components/ToolbarComponent";
+import HomeServicesComponent from "../components/HomeServicesComponent";
+import FooterComponent from "../components/FooterComponent";
 
 export default class HomePageComponent extends React.Component {
     render() {
@@ -11,16 +13,12 @@ export default class HomePageComponent extends React.Component {
                 <header>
                     <BlueLine />
                     <ToolbarComponent />
-                    <HomeHeaderComponent />
+                    <main>
+                        <HomeHeaderComponent />
+                    </main>
                 </header>
-
-                <main>
-
-                </main>
-
-                <footer>
-                    <BlueLine />
-                </footer>
+                <HomeServicesComponent />
+                <FooterComponent />
             </div>
         );
     }

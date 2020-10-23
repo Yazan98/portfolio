@@ -1,2 +1,66 @@
 @import "../base";
+@import "../utils";
 
+.HomeServicesComponentContainer {
+  margin-top: 7em;
+  padding: 4em;
+
+  .ItemsContainer {
+    display: grid;
+    grid-template-columns: 18em 18em 18em;
+    max-width: 70%;
+    grid-column-gap: 2em;
+    grid-row-gap: 1em;
+
+    .ServiceItem {
+      margin-top: 1em;
+      padding: 0;
+
+      .ProjectComponentContainer:hover {
+        z-index: 1000;
+      }
+
+      .ProjectComponentContainer .ProjectItem {
+        border-radius: 20px;
+        padding: 20px;
+        border: 5px solid #000;
+        background-color: $whiteColor;
+        transform: scale(1);
+        height: 13em;
+        width: 18em;
+      }
+
+
+      .ProjectItem {
+        transition: .4s ease-in-out;
+        color: #1b1f23;
+
+        h5 {
+          font-size: medium;
+        }
+
+        .Description {
+          margin-top: 5em;
+        }
+
+        p {
+          padding: 0;
+          margin: 0;
+          font-size: x-small;
+        }
+      }
+
+      .ProjectItem:hover {
+        color: #1b1f23;
+        border: 5px solid $primaryColor;
+        transform: scale(1.1);
+        z-index: 10;
+
+        h5 {
+          color: $primaryColor;
+        }
+      }
+
+    }
+  }
+}
