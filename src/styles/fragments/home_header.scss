@@ -1,0 +1,101 @@
+@import "../base";
+
+.HomeHeaderContainer {
+  height: 80vh;
+  width: 100vw;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+
+  .Container {
+    display: flex;
+
+    #Image {
+      flex: 1;
+    }
+
+    .Item {
+      display: flex;
+      justify-items: center;
+      align-items: center;
+      padding-left: 2em;
+      padding-right: 2em;
+
+      img {
+        width: 80%;
+        object-fit: contain;
+      }
+
+      .TextContent {
+        padding: 2em;
+
+        .ButtonsContainer {
+          display: flex;
+
+          .ResumeButton {
+            margin-top: 1em;
+            background-color: $greyColor;
+            border: none;
+            text-align: center;
+            border-radius: 20px;
+            padding: 10px 18px;
+            display: inline-flex;
+            font-weight: 600;
+            font-size: 12px;
+            cursor: pointer;
+            transition: 1s;
+
+            .Link {
+              color: $primaryColor;
+              text-decoration: none;
+              transition: 2s;
+            }
+          }
+
+          .SecondButton {
+            margin-left: 2em;
+          }
+
+          .ResumeButton:hover {
+            margin-top: 1em;
+            background-color: $primaryColor;
+            border: none;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 20px;
+            padding: 10px 18px;
+            display: inline-flex;
+            font-weight: 600;
+            font-size: 12px;
+            cursor: pointer;
+
+            .Link {
+              color: $whiteColor;
+              text-decoration: none;
+            }
+          }
+        }
+
+
+        .Features {
+          display: flex;
+          justify-items: center;
+          align-items: center;
+          margin-top: 2em;
+
+          span {
+            margin-right: 1em;
+            font-size: small;
+          }
+        }
+
+        p {
+          max-width: 80%;
+        }
+      }
+    }
+  }
+}

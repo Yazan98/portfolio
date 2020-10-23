@@ -1,0 +1,21 @@
+@import "styles/animations";
+@import "styles/base";
+@import "styles/variables";
+@import "styles/utils";
+@import "styles/mixins";
+@import "styles/pages/home_style";
+@import "styles/fragments/toolbar_style";
+
+* , *:after, *:before {
+  margin: 0;
+  padding: 0;
+  font-family: 'Noto Sans SC', sans-serif;
+  scroll-behavior: smooth;
+}
+
+.App {
+  height: 100%;
+  width: 100%;
+  scroll-behavior: smooth;
+  overflow-x: hidden; //horizontal
+}

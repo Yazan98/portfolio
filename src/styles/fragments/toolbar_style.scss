@@ -1,0 +1,59 @@
+@import "../base";
+
+.ToolbarComponentContainer {
+
+  .Content {
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+    justify-items: center;
+    align-items: center;
+
+    .Logo {
+      flex: 1;
+      justify-items: center;
+      align-items: center;
+
+      .Logo {
+        color: $primaryColor;
+        font-size: medium;
+      }
+
+    }
+
+    .Links {
+      display: flex;
+      justify-items: center;
+      align-items: center;
+
+      .PwaButton {
+        background-color: $greyColor;
+        border: none;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        border-radius: 20px;
+        margin-left: 24px;
+        padding: 8px 16px;
+        display: inline-flex;
+        font-weight: 600;
+        font-size: 12px;
+        cursor: pointer;
+
+        img {
+          height: 16px;
+          object-fit: contain;
+        }
+      }
+
+      .ToolbarLink {
+        margin-left: 1.5em;
+        text-decoration: none;
+        color: black;
+        font-size: small;
+        display: flex;
+      }
+    }
+  }
+
+}

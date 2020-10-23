@@ -1,0 +1,29 @@
+@import "variables";
+.Line {
+  background-color: $primaryColor;
+  height: 0.3em;
+  width: 100vw;
+}
+
+.title {
+  color: $primaryColor;
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.Ball {
+  display: block;
+  background: $primaryColor;
+  border-radius: 50%;
+  margin: 0;
+}
+
+.small {
+  width: 0.5em;
+  height: 0.5em;
+}
