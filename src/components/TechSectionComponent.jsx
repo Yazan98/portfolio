@@ -15,7 +15,7 @@ class TechSectionComponent extends Component {
 
                 <div className={"Item"}>
                     <div className={"Logo"}>
-                        <img src={AndroidImage} />
+                        <img alt={"Android Logo"} src={AndroidImage} />
                     </div>
                     <div className={"Description"}>
                         <p>Android Applications</p>
@@ -25,7 +25,7 @@ class TechSectionComponent extends Component {
 
                 <div className={"Item"}>
                     <div className={"Logo"}>
-                        <img src={JavaScriptLanguage} />
+                        <img alt={"Javascript Language"} src={JavaScriptLanguage} />
                     </div>
                     <div className={"Description"}>
                         <p>Javascript Apps</p>
@@ -35,7 +35,7 @@ class TechSectionComponent extends Component {
 
                 <div className={"Item"}>
                     <div className={"Logo"}>
-                        <img src={KotlinLogo} />
+                        <img alt={"Kotlin"} src={KotlinLogo} />
                     </div>
                     <div className={"Description"}>
                         <p>Kotlin Language</p>
@@ -45,7 +45,7 @@ class TechSectionComponent extends Component {
 
                 <div className={"Item"}>
                     <div className={"Logo"}>
-                        <img src={JavaLogo} />
+                        <img alt={"Java"} src={JavaLogo} />
                     </div>
                     <div className={"Description"}>
                         <p>Java Language</p>
@@ -55,7 +55,7 @@ class TechSectionComponent extends Component {
 
                 <div className={"Item"}>
                     <div className={"Logo"}>
-                        <img src={ReactLogo} />
+                        <img alt={"React Logo"} src={ReactLogo} />
                     </div>
                     <div className={"Description"}>
                         <p>React.js Framework</p>
@@ -65,7 +65,7 @@ class TechSectionComponent extends Component {
 
                 <div className={"Item"}>
                     <div className={"Logo"}>
-                        <img src={GitLogo} />
+                        <img alt={"Git Logo"} src={GitLogo} />
                     </div>
                     <div className={"Description"}>
                         <p>Version Control (GIT)</p>
@@ -75,7 +75,7 @@ class TechSectionComponent extends Component {
 
                 <div className={"Item"}>
                     <div className={"Logo"}>
-                        <img src={SpringLogo} />
+                        <img alt={"Spring Logo"} src={SpringLogo} />
                     </div>
                     <div className={"Description"}>
                         <p>Spring Boot Framework</p>

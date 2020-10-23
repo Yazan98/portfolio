@@ -1,6 +1,7 @@
 {
-  "short_name": "Yazan Portfolio",
-  "name": "Yazan98 Website",
+  "short_name": "Portfolio",
+  "name": "Yazan Portfolio",
+  "description": "Personal Website For Yazan Tarifi",
   "icons": [
     {
       "src": "favicon.ico",
@@ -19,9 +20,9 @@
     }
   ],
   "start_url": "/",
-  "scope": "/",
+  "background_color": "#FFFFFF",
   "display": "standalone",
-  "orientation": "portrait-primary",
-  "theme_color": "#2962ff",
-  "background_color": "#2962ff"
+  "scope": "/",
+  "theme_color": "#E53012",
+  "orientation": "portrait"
 }

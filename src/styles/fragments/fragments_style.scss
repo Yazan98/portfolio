@@ -64,3 +64,59 @@
     }
   }
 }
+
+.ThemesSectionComponent {
+  padding: 4em;
+
+  .Item {
+    display: flex;
+
+    .Icon {
+      flex: 1;
+
+      img {
+        width: 900px;
+        -webkit-filter: drop-shadow(5px 5px 5px #222);
+        filter: drop-shadow(5px 5px 5px #222);
+        object-fit: contain;
+      }
+    }
+
+    .Description {
+      display: flex;
+      justify-items: center;
+      align-items: center;
+
+      h4 {
+        color: $primaryColor;
+      }
+
+      p {
+        margin: 0;
+        font-size: small;
+        max-width: 70%;
+      }
+
+      .Button {
+        margin-top: 1em;
+
+        a {
+          background-color: $primaryColor;
+          color: white;
+          text-align: center;
+          text-decoration: none;
+          border-radius: 7px;
+          padding: 15px 16px;
+          display: inline-block;
+          font-weight: 600;
+          font-size: 12px;
+          cursor: pointer;
+        }
+
+      }
+
+    }
+
+  }
+
+}
