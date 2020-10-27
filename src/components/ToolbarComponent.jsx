@@ -27,6 +27,7 @@ class ToolbarComponent extends Component {
 
     onPwaButtonClicked(e) {
         let deferredPrompt;
+        console.log("Pwa Click Button")
         window.addEventListener('beforeinstallprompt', (e) => {
             // Prevent Chrome 67 and earlier from automatically showing the prompt
             e.preventDefault();

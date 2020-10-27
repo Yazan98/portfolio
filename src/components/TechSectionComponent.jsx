@@ -18,7 +18,7 @@ class TechSectionComponent extends Component {
                         <img alt={"Android Logo"} src={AndroidImage} />
                     </div>
                     <div className={"Description"}>
-                        <p>Android Applications</p>
+                        <p className={"Name"}>Android Applications</p>
                         <p className={"Des"}>Create, Maintain Android Applications With Java / Kotlin Languages , Latest Technologies</p>
                     </div>
                 </div>
@@ -28,7 +28,7 @@ class TechSectionComponent extends Component {
                         <img alt={"Javascript Language"} src={JavaScriptLanguage} />
                     </div>
                     <div className={"Description"}>
-                        <p>Javascript Apps</p>
+                        <p className={"Name"}>Javascript Apps</p>
                         <p className={"Des"}>Create Web Apps With Node.js Based on Javascript with React.js Websites</p>
                     </div>
                 </div>
@@ -38,7 +38,7 @@ class TechSectionComponent extends Component {
                         <img alt={"Kotlin"} src={KotlinLogo} />
                     </div>
                     <div className={"Description"}>
-                        <p>Kotlin Language</p>
+                        <p className={"Name"}>Kotlin Language</p>
                         <p className={"Des"}>Ktor Web Apps Based on Kotlin Language With Android Apps</p>
                     </div>
                 </div>
@@ -48,7 +48,7 @@ class TechSectionComponent extends Component {
                         <img alt={"Java"} src={JavaLogo} />
                     </div>
                     <div className={"Description"}>
-                        <p>Java Language</p>
+                        <p className={"Name"}>Java Language</p>
                         <p className={"Des"}>Create Web Apps With Spring Boot Framework and Android Apps</p>
                     </div>
                 </div>
@@ -58,7 +58,7 @@ class TechSectionComponent extends Component {
                         <img alt={"React Logo"} src={ReactLogo} />
                     </div>
                     <div className={"Description"}>
-                        <p>React.js Framework</p>
+                        <p className={"Name"}>React.js Framework</p>
                         <p className={"Des"}>Create Websites With React.js (Javascript / Typescript) , Jsx , SCSS</p>
                     </div>
                 </div>
@@ -68,7 +68,7 @@ class TechSectionComponent extends Component {
                         <img alt={"Git Logo"} src={GitLogo} />
                     </div>
                     <div className={"Description"}>
-                        <p>Version Control (GIT)</p>
+                        <p className={"Name"}>Version Control (GIT)</p>
                         <p className={"Des"}>Create Repositories, Branches, Pull requests, Merge, (Github / Bitbucket / Gitlab)</p>
                     </div>
                 </div>
@@ -78,7 +78,7 @@ class TechSectionComponent extends Component {
                         <img alt={"Spring Logo"} src={SpringLogo} />
                     </div>
                     <div className={"Description"}>
-                        <p>Spring Boot Framework</p>
+                        <p className={"Name"}>Spring Boot Framework</p>
                         <p className={"Des"}>Create Web Apps With Rest Api Using java / Kotlin Language With Mysql, Mongo</p>
                     </div>
                 </div>

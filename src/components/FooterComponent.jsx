@@ -20,10 +20,13 @@ class FooterComponent extends Component {
                     </div>
                     <div className={"ContactMeContainer"}>
                         <div className={"Content"}>
-                            <input className={"EmailHolder"} type={"text"} placeholder={"Please Enter Your Email"}/>
-                            <textarea placeholder={"Please Enter Your Message"} />
-                            <div className={"Button"}>
-                                <a href={"/"}>Submit</a>
+                            <h5>Contact Section</h5>
+                            <div className={"Fields"}>
+                                <input className={"EmailHolder"} type={"text"} placeholder={"Please Enter Your Email"}/>
+                                <textarea placeholder={"Please Enter Your Message"} />
+                                <div className={"Button"}>
+                                    <a href={"/"}>Submit</a>
+                                </div>
                             </div>
                         </div>
                     </div>

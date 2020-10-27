@@ -43,7 +43,9 @@ class HomeHeaderComponent extends Component {
                         </div>
                     </div>
                     <div className={"Item"}>
-                        <img className={"ImageHeader"} src={HeaderImage} alt={"AppsHeaderImage"} />
+                        <div className={"Container"}>
+                            <img className={"ImageHeader"} src={HeaderImage} alt={"AppsHeaderImage"} />
+                        </div>
                     </div>
                 </div>
             </div>

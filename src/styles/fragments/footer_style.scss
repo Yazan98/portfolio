@@ -99,6 +99,10 @@ footer {
           text-align: start;
         }
 
+        h5 {
+          color: $primaryColor;
+        }
+
         textarea {
           width: 70%;
           margin-top: 1em;
@@ -139,6 +143,109 @@ footer {
 
         }
 
+      }
+    }
+  }
+
+  @include layoutManager($phone) {
+    .TechSection {
+      padding: 1em 2em;
+
+      .TechSectionComponentContainer {
+        display: block;
+        width: 80%;
+        max-width: 100%;
+        padding-top: 2em;
+
+        .Item {
+          display: flex;
+          width: 100%;
+          max-width: 100%;
+          justify-content: left;
+          margin-bottom: 1em;
+
+          .Logo {
+            flex: 0;
+            img {
+              width: 3em;
+              -webkit-filter: grayscale(0%);
+              transition: 1s;
+            }
+          }
+
+          .Description {
+            flex: 1;
+            display: inline-block;
+            width: 100%;
+            max-width: 100%;
+
+            .Name {
+              color: $primaryColor;
+            }
+
+            p {
+              font-size: small;
+            }
+
+            .Des {
+              width: 100%;
+              max-width: 100%;
+              font-size: x-small;
+            }
+          }
+        }
+      }
+
+    }
+
+    .AboutProjectsContainer {
+      display: block;
+
+      .ContactMeContainer {
+        .Content {
+          text-align: start;
+          padding: 2em;
+          width: 100%;
+          max-width: 100%;
+          margin: 0;
+
+          h5 {
+            color: $primaryColor;
+          }
+
+          textarea {
+            width: 100%;
+          }
+
+          .EmailHolder {
+            width: 100%;
+          }
+
+          .Button {
+            text-align: center;
+
+            a {
+              width: 100%;
+            }
+          }
+        }
+      }
+
+      .AboutContent {
+        width: 100%;
+        padding: 2em;
+        margin: 0;
+
+        .Copyright {
+          font-size: x-small;
+        }
+
+        p {
+          margin: 0;
+          width: 100%;
+          max-width: 100%;
+          font-size: small;
+        }
       }
     }
   }
