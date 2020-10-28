@@ -4,4 +4,56 @@
   .MainSection {
     padding: 4em;
   }
+
+  @include layoutManager($phone) {
+    .HomeHeaderContainer  {
+      margin-top: 0;
+
+      .Container {
+        display: block;
+        text-align: center;
+        padding: 0;
+
+        .Item {
+          padding-left: 0;
+          padding-right: 0;
+          text-align: center;
+          margin-top: 10px;
+
+          img {
+            width: 90%;
+            object-fit: contain;
+            text-align: center;
+            display: table;
+            margin: 0 auto;
+          }
+
+          .TextContent {
+            text-align: start;
+
+            .ButtonsContainer {
+              display: block;
+
+              .ResumeButton {
+                width: 80%;
+                margin: 1em 0 0;
+              }
+            }
+
+            .Features {
+              span {
+                margin-right: 10px;
+                font-size: xx-small;
+              }
+            }
+
+            p {
+              max-width: 90%;
+              font-size: small;
+            }
+          }
+        }
+      }
+    }
+  }
 }

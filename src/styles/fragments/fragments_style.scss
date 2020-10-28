@@ -118,3 +118,64 @@
   }
 
 }
+
+.WebsitesContainer {
+  padding: 4em;
+
+  .Content {
+
+    .Item {
+      text-align: center;
+      display: flex;
+      margin-top: 6em;
+
+      .TextContent {
+        display: flex;
+        justify-items: center;
+        align-items: center;
+
+        .Content {
+          text-align: start;
+
+          .Tags {
+            display: flex;
+            margin-top: 1em;
+            width: 100%;
+
+            span {
+              margin-right: 10px;
+              color: white;
+              background-color: $primaryColor;
+              border: none;
+              text-align: center;
+              text-decoration: none;
+              border-radius: 20px;
+              padding: 10px 1em;
+
+            }
+          }
+
+          h4 {
+            color: $primaryColor;
+          }
+          p {
+            margin: 0;
+            font-size: small;
+            max-width: 70%;
+          }
+        }
+
+      }
+    }
+
+    .Icon {
+      flex: 1;
+
+      .Image {
+        object-fit: contain;
+        width: 60%;
+      }
+    }
+
+  }
+}

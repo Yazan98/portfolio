@@ -6,6 +6,7 @@ import '../styles/pages/projects_style.scss';
 import AppsProjectsComponent from "../components/AppsProjectsComponent";
 import ProjectsHeaderComponent from "../components/ProjectsHeaderComponent";
 import ThemesSectionComponent from "../components/ThemesSectionComponent";
+import WebsitesSectionComponent from "../components/WebsitesSectionComponent";
 
 class ProjectsPageComponent extends Component {
     render() {
@@ -20,6 +21,7 @@ class ProjectsPageComponent extends Component {
                     <ProjectsHeaderComponent />
                     <section className={"MainSection"}>
                         <AppsProjectsComponent />
+                        <WebsitesSectionComponent />
                         <ThemesSectionComponent />
                     </section>
                 </main>

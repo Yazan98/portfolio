@@ -1,0 +1,70 @@
+@import "../base";
+
+.NotFoundContainer {
+  main {
+    height: 100vh;
+    background-color: $primaryColor;
+
+    .Content {
+      display: flex;
+      justify-items: center;
+      align-items: center;
+
+      .TextContainer {
+        flex: 1;
+        color: white;
+
+        p {
+          width: 80%;
+          margin-top: 2em;
+          font-size: small;
+          max-width: 80%;
+        }
+      }
+
+      .Items {
+        flex: 1;
+        display: grid;
+        grid-column-gap: 2.2em;
+        grid-row-gap: 0;
+        grid-template-columns: 2em 2em 2em 2em 2em 2em 2em 2em 2em;
+
+        .ItemContainerCounter {
+          padding: 1em;
+          width: 4em;
+          height: 4em;
+          display: flex;
+          justify-items: center;
+          align-items: center;
+          margin-top: 5px;
+          text-align: center;
+          background-color: rgb(13, 60, 181);
+
+          p {
+            text-align: center;
+            color: white;
+            width: 4em;
+            display: flex;
+            justify-items: center;
+            align-items: center;
+            text-transform: uppercase;
+            font-size: large;
+            height: 4em;
+            padding-left: 8px;
+
+          }
+        }
+      }
+    }
+
+    header {
+      .ToolbarComponentContainer .Links .ToolbarLink {
+        color: white;
+      }
+
+      .ToolbarComponentContainer .Content .Logo .Logo {
+        color: white;
+      }
+    }
+  }
+}
