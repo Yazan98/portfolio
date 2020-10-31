@@ -6,6 +6,12 @@
   }
 
   @include layoutManager($phone) {
+    main {
+      .MainSection {
+        padding: 1em;
+      }
+    }
+
     .HomeHeaderContainer  {
       margin-top: 0;
 

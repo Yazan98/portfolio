@@ -7,6 +7,12 @@ class WebsitesSectionComponent extends Component {
     render() {
         return (
             <section className={"WebsitesContainer"}>
+
+                <div className={"Title"}>
+                    <h4>Websites Section</h4>
+                    <p>Here are some of the Websites I've worked on</p>
+                </div>
+
                 <div className={"Content"}>
                     <div className={"Item"}>
                         <div className={"Icon"}>

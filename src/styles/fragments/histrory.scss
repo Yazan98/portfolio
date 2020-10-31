@@ -1,0 +1,31 @@
+@import "../base";
+
+#ContentTabs {
+
+  .Content {
+    width: 60vw;
+    ol li {
+      font-size: small;
+    }
+
+    ol {
+      margin-left: 1em;
+    }
+
+    .Small {
+      font-size: small;
+      color: gray;
+    }
+
+    .Titlepanel {
+
+      a {
+        color: $primaryColor;
+      }
+
+      span {
+        margin-right: 1em;
+      }
+    }
+  }
+}

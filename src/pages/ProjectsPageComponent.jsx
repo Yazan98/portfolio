@@ -7,6 +7,7 @@ import AppsProjectsComponent from "../components/AppsProjectsComponent";
 import ProjectsHeaderComponent from "../components/ProjectsHeaderComponent";
 import ThemesSectionComponent from "../components/ThemesSectionComponent";
 import WebsitesSectionComponent from "../components/WebsitesSectionComponent";
+import ProjectsSectionComponents from "../components/ProjectsSectionComponents";
 
 class ProjectsPageComponent extends Component {
     render() {
@@ -22,6 +23,7 @@ class ProjectsPageComponent extends Component {
                     <section className={"MainSection"}>
                         <AppsProjectsComponent />
                         <WebsitesSectionComponent />
+                        <ProjectsSectionComponents />
                         <ThemesSectionComponent />
                     </section>
                 </main>

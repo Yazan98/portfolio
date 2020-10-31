@@ -4,6 +4,7 @@ import Wintrop from '../images/projects/wintrop.png';
 import Github from '../images/projects/github.png';
 import Destiny from '../images/projects/destiny.png';
 import Drasati from '../images/projects/drasati.png';
+import Mwarrid from '../images/projects/mwarrid.png';
 import {NavLink} from "react-router-dom";
 
 class AppsProjectsComponent extends Component {
@@ -29,6 +30,21 @@ class AppsProjectsComponent extends Component {
                                         <p>Android Application</p>
                                         <h4>Autohub</h4>
                                         <p>An Github Client Built To Test Vortex Infrastructure For Android Applications With A Lot Of Features To Manage Github Accounts Personal Accounts, Repositories, Search Repository, Popular Repos, Orgs, Gists, Github Auth, With Kotlin Programming Language</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className={"ItemContainer"}>
+                            <div className={"PrimaryItem"}>
+                                <img src={Mwarrid}/>
+                            </div>
+                            <div className={"HoverItems"}>
+                                <div className={"ItemsContainer"}>
+                                    <div className={"Components"}>
+                                        <p>Android Application</p>
+                                        <h4>Mwarrid</h4>
+                                        <p>An integrated electronic marketing platform from a website and an application on smartphones and tablets help to connect the food sector suppliers in all their fields with restaurants, cafes, hotels, wedding hall and all those involved in selling food in the retail sector and soon individuals. So that suppliers periodically display their products, set their prices, and market them, to help our customers follow the market, view the latest offers, instant order, and track order status through the supplier's online platform.</p>
                                     </div>
                                 </div>
                             </div>

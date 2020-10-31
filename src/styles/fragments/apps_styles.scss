@@ -29,6 +29,8 @@
         display: inline-block;
         overflow: hidden;
         position: relative;
+        border: 0px solid red;
+        border-radius: 25px;
 
         .HoverItems {
           position: absolute;
@@ -96,6 +98,56 @@
         }
       }
     }
+  }
+
+  @include layoutManager($phone) {
+    .Title {
+      margin-bottom: 1em;
+
+      h4 {
+        font-size: medium;
+      }
+
+      p {
+        font-size: x-small;
+      }
+    }
+
+    .GridItemContainer {
+      .GridContainer {
+        text-align: center;
+        display: grid;
+        grid-template-columns: 100%;
+        grid-gap: 1em;
+
+        .ItemContainer {
+          .HoverItems {
+            .ItemsContainer {
+              .Components {
+                h4 {
+                  font-size: small;
+                }
+
+                p {
+                  font-size: x-small;
+                }
+              }
+            }
+          }
+
+          .PrimaryItem {
+            width: auto;
+
+            img {
+              width: 100%;
+              object-fit: cover;
+              transition: 0.4s;
+            }
+          }
+        }
+      }
+    }
+
   }
 
 }
