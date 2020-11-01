@@ -25,81 +25,93 @@ class ShillsPageComponent extends Component {
         );
     }
 
+
     renderContent() {
 
-        document.addEventListener("DOMContentLoaded", function() {
-            $(document).ready(function () {
-                var entries = [
-                    {label: "HTML"},
-                    {label: "CSS"},
-                    {label: "SCSS"},
-                    {label: "Java"},
-                    {label: "Javascript"},
-                    {label: "Node.js"},
-                    {label: "React.js"},
-                    {label: "Kotlin"},
-                    {label: "Typescript"},
-                    {label: "Jenkins"},
-                    {label: "Fastlane"},
-                    {label: "Multi Modular Apps"},
-                    {label: "RxJava"},
-                    {label: "Redux"},
-                    {label: "React Hooks"},
-                    {label: "Dependency Injection"},
-                    {label: "Navigation"},
-                    {label: "UI"},
-                    {label: "UX"},
-                    {label: "Mvp"},
-                    {label: "mvvm"},
-                    {label: "mvi"},
-                    {label: "Firebase"},
-                    {label: "Firestore"},
-                    {label: "Notifications"},
-                    {label: "Version Control"},
-                    {label: "React Components"},
-                    {label: "Next.js"},
-                    {label: "Nest.js"},
-                    {label: "Spring Boot"},
-                    {label: "Google Domains"},
-                    {label: "Clean Code"},
-                ];
+        $(document).ready(function () {
+            var entries = [
+                {label: "HTML"},
+                {label: "CSS"},
+                {label: "SCSS"},
+                {label: "Java"},
+                {label: "Javascript"},
+                {label: "Node.js"},
+                {label: "React.js"},
+                {label: "Kotlin"},
+                {label: "Typescript"},
+                {label: "Jenkins"},
+                {label: "Fastlane"},
+                {label: "Multi Modular Apps"},
+                {label: "RxJava"},
+                {label: "RxKotlin"},
+                {label: "Redux"},
+                {label: "React Hooks"},
+                {label: "Dependency Injection"},
+                {label: "Navigation"},
+                {label: "UI"},
+                {label: "UX"},
+                {label: "Mvp"},
+                {label: "Github"},
+                {label: "Gitlab"},
+                {label: "Bitbucket"},
+                {label: "Sonar Cube"},
+                {label: "Photoshop"},
+                {label: "After Effects"},
+                {label: "Gradle"},
+                {label: "Maven"},
+                {label: "mvvm"},
+                {label: "mvi"},
+                {label: "Firebase"},
+                {label: "Firestore"},
+                {label: "Notifications"},
+                {label: "Version Control"},
+                {label: "React Components"},
+                {label: "Next.js"},
+                {label: "Nest.js"},
+                {label: "Spring Boot"},
+                {label: "MySql"},
+                {label: "NoSql"},
+                {label: "Authentication"},
+                {label: "Json"},
+                {label: "Socket.io"},
+                {label: "Postman"},
+            ];
 
-                var settings = {
+            var settings = {
 
-                    entries: entries,
-                    radius: '65%',
-                    width: 800,
-                    height: 800,
-                    radiusMin: 75,
-                    bgDraw: true,
-                    bgColor: '#000',
-                    opacityOver: 1,
-                    opacityOut: 0.5,
-                    opacitySpeed: 1,
-                    fov: 800,
-                    speed: 0.1,
-                    fontFamily: 'Oswald, Arial, sans-serif',
-                    fontSize: '15',
-                    fontColor: '#fff',
-                    fontWeight: 'normal',//bold
-                    fontStyle: 'normal',//italic
-                    fontStretch: 'normal',//wider, narrower, ultra-condensed, extra-condensed, condensed, semi-condensed, semi-expanded, expanded, extra-expanded, ultra-expanded
-                    fontToUpperCase: true,
-                    tooltipFontFamily: 'Oswald, Arial, sans-serif',
-                    tooltipFontSize: '11',
-                    tooltipFontColor: '#fff',
-                    tooltipFontWeight: 'normal',//bold
-                    tooltipFontStyle: 'normal',//italic
-                    tooltipFontStretch: 'normal',//wider, narrower, ultra-condensed, extra-condensed, condensed, semi-condensed, semi-expanded, expanded, extra-expanded, ultra-expanded
-                    tooltipFontToUpperCase: false,
-                    tooltipTextAnchor: 'left',
-                    tooltipDiffX: 0,
-                    tooltipDiffY: 10
+                entries: entries,
+                radius: '65%',
+                width: 800,
+                height: 800,
+                radiusMin: 75,
+                bgDraw: true,
+                bgColor: '#000',
+                opacityOver: 1,
+                opacityOut: 0.5,
+                opacitySpeed: 1,
+                fov: 800,
+                speed: 0.1,
+                fontFamily: 'Oswald, Arial, sans-serif',
+                fontSize: '15',
+                fontColor: '#fff',
+                fontWeight: 'normal',//bold
+                fontStyle: 'normal',//italic
+                fontStretch: 'normal',//wider, narrower, ultra-condensed, extra-condensed, condensed, semi-condensed, semi-expanded, expanded, extra-expanded, ultra-expanded
+                fontToUpperCase: true,
+                tooltipFontFamily: 'Oswald, Arial, sans-serif',
+                tooltipFontSize: '11',
+                tooltipFontColor: '#fff',
+                tooltipFontWeight: 'normal',//bold
+                tooltipFontStyle: 'normal',//italic
+                tooltipFontStretch: 'normal',//wider, narrower, ultra-condensed, extra-condensed, condensed, semi-condensed, semi-expanded, expanded, extra-expanded, ultra-expanded
+                tooltipFontToUpperCase: false,
+                tooltipTextAnchor: 'left',
+                tooltipDiffX: 0,
+                tooltipDiffY: 10
 
-                };
-                $( '#tag' ).svg3DTagCloud( settings );
-            })
-        });
+            };
+            $( '#tag' ).svg3DTagCloud( settings );
+        })
     }
 }
 

@@ -5,7 +5,6 @@ import Github from '../images/projects/github.png';
 import Destiny from '../images/projects/destiny.png';
 import Drasati from '../images/projects/drasati.png';
 import Mwarrid from '../images/projects/mwarrid.png';
-import {NavLink} from "react-router-dom";
 
 class AppsProjectsComponent extends Component {
     render() {

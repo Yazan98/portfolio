@@ -15,7 +15,8 @@ class ToolbarComponent extends Component {
                         <NavLink className={"ToolbarLink"} to={"/"}>Home</NavLink>
                         <NavLink className={"ToolbarLink"} to={"/projects"}>Projects</NavLink>
                         <NavLink className={"ToolbarLink"} to={"/about"}>About</NavLink>
-                        <NavLink className={"ToolbarLink"} to={"/services"}>Services</NavLink>
+                        <NavLink className={"ToolbarLink"} to={"/skills"}>Skills</NavLink>
+                        <NavLink className={"ToolbarLink"} to={"/archive"}>Archive</NavLink>
                         <div className={"PwaButton"} onClick={(e) => this.onPwaButtonClicked(e)}>
                             <img alt={"Pwa Logo"} src={PwaLogo} />
                         </div>

@@ -6,6 +6,8 @@ import ProjectsPageComponent from "./pages/ProjectsPageComponent";
 import NotFoundPageComponent from "./pages/NotFoundPageComponent";
 import AboutPageComponent from "./pages/AboutPageComponent";
 import ShillsPageComponent from "./components/SkillsComponent";
+import ResumePageComponent from "./pages/ResumePageComponent";
+import ArchiveProjectsPage from "./pages/ArchiveProjectsPage";
 
 function App() {
     return (
@@ -15,6 +17,8 @@ function App() {
                     <Route exact path="/" component={HomePageComponent}/>
                     <Route exact path="/projects" component={ProjectsPageComponent}/>
                     <Route exact path="/skills" component={ShillsPageComponent}/>
+                    <Route exact path="/resume" component={ResumePageComponent}/>
+                    <Route exact path="/archive" component={ArchiveProjectsPage}/>
                     <Route exact path="/about" component={AboutPageComponent}/>
                     <Route path='*' exact={true} component={NotFoundPageComponent} />
                 </Switch>

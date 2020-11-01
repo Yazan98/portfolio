@@ -1,0 +1,56 @@
+@import "../base";
+
+.ArchiveProjectsPage {
+  main {
+    .Content {
+      padding: 4em;
+
+      h3 {
+        color: $primaryColor;
+      }
+
+      p {
+        margin: 0;
+        font-size: small;
+      }
+
+      table {
+        margin-top: 2em;
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+
+        tr {
+          .Title {
+            color: $primaryColor;
+          }
+        }
+      }
+
+      td, th {
+        text-align: left;
+        padding: 8px;
+      }
+
+    }
+  }
+
+  @include layoutManager($phone) {
+    p, td, tr {
+      font-size: x-small;
+    }
+
+    main {
+      .Content {
+        h3 {
+          font-size: medium;
+        }
+
+        p {
+          font-size: small;
+        }
+        padding: 1em;
+      }
+    }
+  }
+}

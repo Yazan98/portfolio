@@ -43,9 +43,6 @@ class AboutPageComponent extends Component {
                             <p>Continuous Integration</p>
                         </div>
 
-                        <h4 className={"Title"}>Work History</h4>
-                        <VerticalTabs  />
-
                     </main>
 
                 </div>

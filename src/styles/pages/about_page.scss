@@ -48,4 +48,48 @@
     }
   }
 
+  @include layoutManager($phone) {
+    padding: 1em;
+
+    h4, h6 {
+      font-size: medium;
+    }
+
+    p {
+      width: 100%;
+      max-width: 100%;
+      font-size: small;
+    }
+
+    .Short {
+      font-size: x-small;
+    }
+
+    .Grid p {
+      font-size: x-small;
+    }
+
+    .ContentTabs {
+      span, a, p, li {
+        font-size: x-small;
+      }
+    }
+
+    main {
+      .Buttons {
+        display: grid;
+        padding-top: 10px;
+        a {
+          margin-top: 10px;
+          width: 40%;
+        }
+      }
+    }
+
+    main .Buttons .Button {
+      font-size: x-small;
+    }
+
+  }
+
 }
