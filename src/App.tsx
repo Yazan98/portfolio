@@ -8,6 +8,7 @@ import AboutPageComponent from "./pages/AboutPageComponent";
 import ShillsPageComponent from "./components/SkillsComponent";
 import ResumePageComponent from "./pages/ResumePageComponent";
 import ArchiveProjectsPage from "./pages/ArchiveProjectsPage";
+import AppPageComponent from "./pages/AppPageComponent";
 
 function App() {
     return (
@@ -18,6 +19,7 @@ function App() {
                     <Route exact path="/projects" component={ProjectsPageComponent}/>
                     <Route exact path="/skills" component={ShillsPageComponent}/>
                     <Route exact path="/resume" component={ResumePageComponent}/>
+                    <Route exact path="/app/:id" component={AppPageComponent}/>
                     <Route exact path="/archive" component={ArchiveProjectsPage}/>
                     <Route exact path="/about" component={AboutPageComponent}/>
                     <Route path='*' exact={true} component={NotFoundPageComponent} />

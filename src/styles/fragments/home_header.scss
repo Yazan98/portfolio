@@ -13,18 +13,20 @@
     display: flex;
 
     #Image {
-      flex: 1;
+      flex: 0.8;
     }
 
     .Item {
+      flex: 1;
       display: flex;
       justify-items: center;
       align-items: center;
-      padding-left: 2em;
-      padding-right: 2em;
+      padding-left: 1em;
+      padding-right: 1em;
 
       img {
-        width: 80%;
+        width: 100%;
+        padding: 5em;
         object-fit: contain;
       }
 

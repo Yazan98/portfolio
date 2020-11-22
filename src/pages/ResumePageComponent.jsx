@@ -12,6 +12,12 @@ import ExploreIcon from '@material-ui/icons/Explore';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 
 class ResumePageComponent extends Component {
+
+    componentDidMount() {
+        window.scrollTo(0, 0)
+        document.title = "Resume Page - Portfolio";
+    }
+
     render() {
         return (
             <div className={"ResumePageContainer"}>

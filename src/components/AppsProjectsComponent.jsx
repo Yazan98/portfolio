@@ -5,6 +5,7 @@ import Github from '../images/projects/github.png';
 import Destiny from '../images/projects/destiny.png';
 import Drasati from '../images/projects/drasati.png';
 import Mwarrid from '../images/projects/mwarrid.png';
+import {NavLink} from "react-router-dom";
 
 class AppsProjectsComponent extends Component {
     render() {
@@ -29,6 +30,7 @@ class AppsProjectsComponent extends Component {
                                         <p>Android Application</p>
                                         <h4>Autohub</h4>
                                         <p>An Github Client Built To Test Vortex Infrastructure For Android Applications With A Lot Of Features To Manage Github Accounts Personal Accounts, Repositories, Search Repository, Popular Repos, Orgs, Gists, Github Auth, With Kotlin Programming Language</p>
+                                        <NavLink to={"/app/autohub"}>Application Info</NavLink>
                                     </div>
                                 </div>
                             </div>

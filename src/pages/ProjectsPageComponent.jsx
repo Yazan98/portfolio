@@ -10,6 +10,12 @@ import WebsitesSectionComponent from "../components/WebsitesSectionComponent";
 import ProjectsSectionComponents from "../components/ProjectsSectionComponents";
 
 class ProjectsPageComponent extends Component {
+
+    componentDidMount() {
+        window.scrollTo(0, 0)
+        document.title = "Projects Page - Portfolio";
+    }
+
     render() {
         return (
             <div className={"ProjectsPageComponentContainer"}>

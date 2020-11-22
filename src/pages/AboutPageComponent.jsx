@@ -3,10 +3,15 @@ import ToolbarComponent from "../components/ToolbarComponent";
 import FooterComponent from "../components/FooterComponent";
 import {BlueLine} from "../components/BlueLineComponent";
 import '../styles/pages/about_page.scss';
-import VerticalTabs from "../components/WorkHistoryComponent";
 import {NavLink} from "react-router-dom";
 
 class AboutPageComponent extends Component {
+
+    componentDidMount() {
+        document.title = "About Page - Portfolio";
+        window.scrollTo(0, 0)
+    }
+
     render() {
         return (
             <div>

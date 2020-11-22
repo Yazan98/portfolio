@@ -5,6 +5,12 @@ import FooterComponent from "../components/FooterComponent";
 import '../styles/fragments/archive.scss';
 
 class ArchiveProjectsPage extends Component {
+
+    componentDidMount() {
+        window.scrollTo(0, 0)
+        document.title = "Archive Page - Portfolio";
+    }
+
     render() {
         return (
             <div className={"ArchiveProjectsPage"}>

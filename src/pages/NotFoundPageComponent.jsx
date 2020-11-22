@@ -4,6 +4,12 @@ import FooterComponent from "../components/FooterComponent";
 import '../styles/pages/not_found_style.scss';
 
 class NotFoundPageComponent extends Component {
+
+    componentDidMount() {
+        window.scrollTo(0, 0)
+        document.title = "404 Page - Portfolio";
+    }
+
     render() {
         return (
             <div className={"NotFoundContainer"}>

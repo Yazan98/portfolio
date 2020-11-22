@@ -86,6 +86,7 @@ function registerValidSW(swUrl: string, config?: Config) {
                             if (config && config.onUpdate) {
                                 config.onUpdate(registration);
                             }
+
                         } else {
                             // At this point, everything has been precached.
                             // It's the perfect time to display a
@@ -127,6 +128,7 @@ function checkValidServiceWorker(swUrl: string, config?: Config) {
             } else {
                 // Service worker found. Proceed as normal.
                 registerValidSW(swUrl, config);
+
             }
         })
         .catch(() => {
