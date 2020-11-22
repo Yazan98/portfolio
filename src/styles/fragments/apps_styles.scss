@@ -30,17 +30,15 @@
         overflow: hidden;
         position: relative;
         border: 0px solid red;
-        border-radius: 25px;
+        border-radius: 5px;
 
         .HoverItems:hover {
           background-color: white;
-          opacity: 80%;
           width: 100%;
           z-index: 1000;
 
           .ItemsContainer {
             width: 100%;
-            opacity: 100%;
           }
         }
 
@@ -62,12 +60,13 @@
             align-items: center;
             text-align: center;
             padding: 5%;
-            opacity: 0;
             transition: 0.5s;
 
             .Components {
               display: block;
               text-align: start;
+              width: 0%;
+              overflow: hidden;
 
               p {
                 font-size: small;
@@ -81,7 +80,6 @@
 
           .ItemsContainer:hover {
             width: 100%;
-            opacity: 100%;
           }
         }
 
@@ -97,6 +95,7 @@
       }
 
       .ItemContainer:hover {
+
         .PrimaryItem {
           img {
             transform: scale(1.1);
@@ -105,13 +104,16 @@
 
         .HoverItems {
           background-color: white;
-          opacity: 80%;
           width: 100%;
           z-index: 1000;
+          display: block;
 
           .ItemsContainer {
             width: 100%;
-            opacity: 100%;
+
+            .Components {
+              width: 100%;
+            }
           }
         }
       }

@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.scss';
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import {BrowserRouter as Router, HashRouter, Route, Switch} from "react-router-dom";
 import HomePageComponent from "./pages/HomePageComponent";
 import ProjectsPageComponent from "./pages/ProjectsPageComponent";
 import NotFoundPageComponent from "./pages/NotFoundPageComponent";
@@ -13,7 +13,7 @@ import AppPageComponent from "./pages/AppPageComponent";
 function App() {
     return (
         <div className="App">
-            <Router>
+            <HashRouter>
                 <Switch>
                     <Route exact path="/" component={HomePageComponent}/>
                     <Route exact path="/projects" component={ProjectsPageComponent}/>
@@ -24,7 +24,7 @@ function App() {
                     <Route exact path="/about" component={AboutPageComponent}/>
                     <Route path='*' exact={true} component={NotFoundPageComponent} />
                 </Switch>
-            </Router>
+            </HashRouter>
         </div>
     );
 }

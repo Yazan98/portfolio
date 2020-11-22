@@ -4,18 +4,21 @@
   "description": "Personal Website For Yazan Tarifi",
   "icons": [
     {
-      "src": "favicon.ico",
+      "src": "port_logo.png",
       "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/x-icon"
+      "type": "image/png",
+      "purpose": "maskable"
     },
     {
-      "src": "logo192.png",
+      "src": "port_logo_192.png",
       "type": "image/png",
+      "purpose": "maskable",
       "sizes": "192x192"
     },
     {
-      "src": "logo512.png",
+      "src": "port_logo_512.png",
       "type": "image/png",
+      "purpose": "maskable",
       "sizes": "512x512"
     }
   ],
