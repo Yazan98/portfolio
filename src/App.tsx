@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.scss';
-import {BrowserRouter as Router, HashRouter, Route, Switch} from "react-router-dom";
+import {HashRouter, Route, Switch} from "react-router-dom";
 import HomePageComponent from "./pages/HomePageComponent";
 import ProjectsPageComponent from "./pages/ProjectsPageComponent";
 import NotFoundPageComponent from "./pages/NotFoundPageComponent";
@@ -22,7 +22,7 @@ function App() {
                     <Route exact path="/app/:id" component={AppPageComponent}/>
                     <Route exact path="/archive" component={ArchiveProjectsPage}/>
                     <Route exact path="/about" component={AboutPageComponent}/>
-                    <Route path='*' exact={true} component={NotFoundPageComponent} />
+                    <Route path='*' exact={true} component={NotFoundPageComponent}/>
                 </Switch>
             </HashRouter>
         </div>

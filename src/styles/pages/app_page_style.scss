@@ -1,0 +1,104 @@
+@import "../base";
+
+.AppPageComponent {
+  .Content {
+    .Container {
+      padding: 2em;
+      display: flex;
+
+      .Content {
+        flex: 1;
+        padding: 3em;
+
+        .Header {
+          display: flex;
+          justify-items: center;
+          align-items: center;
+
+          h6 {
+            margin-top: 0;
+            font-size: small;
+            margin-right: 1em;
+          }
+
+          a {
+            margin-right: 10px;
+            background-color: $primaryColor;
+            border: none;
+            color: white;
+            margin-left: 1em;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 20px;
+            padding: 8px 15px;
+            display: inline-flex;
+            font-size: x-small;
+          }
+
+        }
+
+        .Logo {
+          height: 100px;
+          object-fit: contain;
+        }
+
+        .TagsContainer {
+          display: flex;
+          width: 100%;
+          max-width: 100%;
+          margin-bottom: 1em;
+
+          span {
+            margin-right: 10px;
+            background-color: $primaryColor;
+            border: none;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 20px;
+            padding: 10px 15px;
+            display: inline-flex;
+            font-size: x-small;
+          }
+        }
+
+        .Images {
+          display: flex;
+          flex: 1;
+          text-align: center;
+          justify-content: center;
+          overflow: hidden;
+          justify-items: center;
+          margin-top: 2em;
+
+          img {
+            margin-right: 1em;
+            flex: 1;
+            display: flex;
+            object-fit: contain;
+            justify-content: space-around;
+          }
+        }
+
+        h4 {
+          color: $primaryColor;
+          margin-bottom: 0;
+        }
+
+        p {
+          font-size: small;
+          max-width: 60%;
+        }
+      }
+
+      .Image {
+        flex: 1;
+
+         img {
+           height: 500px;
+           object-fit: contain;
+         }
+      }
+    }
+  }
+}

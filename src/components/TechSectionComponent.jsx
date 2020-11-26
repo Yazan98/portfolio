@@ -45,16 +45,6 @@ class TechSectionComponent extends Component {
 
                 <div className={"Item"}>
                     <div className={"Logo"}>
-                        <img alt={"Java"} src={JavaLogo} />
-                    </div>
-                    <div className={"Description"}>
-                        <p className={"Name"}>Java Language</p>
-                        <p className={"Des"}>Create Web Apps With Spring Boot Framework and Android Apps</p>
-                    </div>
-                </div>
-
-                <div className={"Item"}>
-                    <div className={"Logo"}>
                         <img alt={"React Logo"} src={ReactLogo} />
                     </div>
                     <div className={"Description"}>
@@ -80,6 +70,16 @@ class TechSectionComponent extends Component {
                     <div className={"Description"}>
                         <p className={"Name"}>Spring Boot Framework</p>
                         <p className={"Des"}>Create Web Apps With Rest Api Using java / Kotlin Language With Mysql, Mongo</p>
+                    </div>
+                </div>
+
+                <div className={"Item"}>
+                    <div className={"Logo"}>
+                        <img alt={"Java"} src={JavaLogo} />
+                    </div>
+                    <div className={"Description"}>
+                        <p className={"Name"}>Java Language</p>
+                        <p className={"Des"}>Create Web Apps With Spring Boot Framework and Android Apps</p>
                     </div>
                 </div>
 
