@@ -13,7 +13,9 @@ export class InfoManager {
                 "https://user-images.githubusercontent.com/29167110/100000124-03ea2700-2d76-11eb-8d0a-3cc6a763c394.png",
                 ["MVVM", "Vortex", "Kotlin", "Reftofit", "RxJava", "Kotlin Courotines", "Multi Modular App"], [
                     "https://user-images.githubusercontent.com/29167110/100293604-1bbdd880-2f39-11eb-90ce-dbfcbb29c2ba.png",
-                    "https://user-images.githubusercontent.com/29167110/100293615-29735e00-2f39-11eb-84e3-dcf838b1acc7.png"
+                    "https://user-images.githubusercontent.com/29167110/100293615-29735e00-2f39-11eb-84e3-dcf838b1acc7.png",
+                    "https://user-images.githubusercontent.com/29167110/100562669-3792e880-3271-11eb-95ba-6294abe05a20.png",
+                    "https://user-images.githubusercontent.com/29167110/100562806-8fc9ea80-3271-11eb-9417-fc7ab6c623c4.png"
                 ]),
             new App("Mwarrid", "An integrated electronic marketing platform from a website and an application on smartphones and tablets help to connect the food sector suppliers in all their fields with restaurants, cafes, hotels, wedding hall and all those involved in selling food in the retail sector and soon individuals. So that suppliers periodically display their products, set their prices, and market them, to help our customers follow the market, view the latest offers, instant order, and track order status through the supplier's online platform.",
                 "https://user-images.githubusercontent.com/29167110/89157146-e2440600-d520-11ea-95ed-bf2a9836148d.png",
