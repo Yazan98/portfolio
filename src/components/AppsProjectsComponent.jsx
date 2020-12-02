@@ -92,6 +92,7 @@ class AppsProjectsComponent extends Component {
                                             link them with audible lessons by providing a tree plan with the possibility
                                             to speak with teachers if a difference occurs on a certain point with the
                                             support feature of all classes</p>
+                                        <NavLink to={"/app/Drasati"}>Application Info</NavLink>
                                     </div>
                                 </div>
                             </div>

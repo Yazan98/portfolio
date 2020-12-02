@@ -36,6 +36,16 @@ export class InfoManager {
                     "https://user-images.githubusercontent.com/29167110/100294103-9cc99f80-2f3a-11eb-846a-c1994082a989.png",
                     "https://user-images.githubusercontent.com/29167110/100294123-a8b56180-2f3a-11eb-9c0f-a011d3f6fe16.png",
                     "https://user-images.githubusercontent.com/29167110/100294148-b23ec980-2f3a-11eb-9c8b-747469a7a5ce.png"
+                ]),
+            new App("Drasati", "An organizing platform for school students that aims to gather students and link them with audible lessons by providing a tree plan with the possibility to speak with teachers if a difference occurs on a certain point with the support feature of all classes\n" +
+                "\n",
+                "https://user-images.githubusercontent.com/29167110/100681109-e134b100-3327-11eb-94de-3ccc6a567a36.png", "- 2019", "https://github.com/Yazan98",
+                "https://user-images.githubusercontent.com/29167110/100680950-8733eb80-3327-11eb-933c-7f8e8b32417b.png", [
+                    "MVP", "Kotlin", "Firebase", "Realtime Chat"
+                ], [
+                    "https://user-images.githubusercontent.com/29167110/100680843-52c02f80-3327-11eb-92b8-8598bcce10ca.png",
+                    "https://user-images.githubusercontent.com/29167110/100680863-5f448800-3327-11eb-9464-b252a4763740.png",
+                    "https://user-images.githubusercontent.com/29167110/100680895-708d9480-3327-11eb-87ae-3ec0c8df2496.png"
                 ])
         ];
     }
