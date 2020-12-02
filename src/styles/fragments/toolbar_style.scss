@@ -1,3 +1,4 @@
+
 @import "../base";
 
 .ToolbarComponentContainer {
@@ -127,6 +128,8 @@
   transition: 1s;
   background-color:rgba(0, 0, 0, 0.3);
   outline: none;
+  -webkit-animation: fadein .3s linear forwards;
+  animation: fadein .3s linear forwards;
 
   .DrawerContent {
     width: 80%;
@@ -185,5 +188,6 @@
     }
 
   }
+
 
 }
