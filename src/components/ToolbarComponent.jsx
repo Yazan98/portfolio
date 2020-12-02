@@ -2,11 +2,32 @@ import React, {Component} from 'react';
 import '../styles/fragments/toolbar_style.scss';
 import {NavLink} from "react-router-dom";
 import PwaLogo from '../images/pwalogo.svg';
+import ToolbarDrawerComponent from "./ToolbarDrawerComponent";
 
 class ToolbarComponent extends Component {
+
+    constructor(props) {
+        super(props);
+        this.state = {
+            isDrawerOpened: false
+        };
+    }
+
+    handleClick = () => {
+        this.setState({
+            isDrawerOpened: false
+        })
+    }
+
     render() {
         return (
             <div className={"ToolbarComponentContainer"}>
+                {this.state.isDrawerOpened ? <ToolbarDrawerComponent handleClick={() => this.handleClick()} /> : null}
+                <div className={"Drawer"} onClick={() => { this.setState({ isDrawerOpened: !this.state.isDrawerOpened }) }}>
+                    <div className={"Line"} style={{ width: "2em" }} />
+                    <div className={"Line"} style={{ width: "1.5em" }} />
+                    <div className={"Line"} style={{ width: "1em" }} />
+                </div>
                 <div className={"Content"}>
                     <div className={"Logo"}>
                         <h5 className={"Logo"}>Yazan Tarifi</h5>
