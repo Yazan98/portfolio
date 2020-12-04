@@ -9,6 +9,7 @@ import ShillsPageComponent from "./components/SkillsComponent";
 import ResumePageComponent from "./pages/ResumePageComponent";
 import ArchiveProjectsPage from "./pages/ArchiveProjectsPage";
 import AppPageComponent from "./pages/AppPageComponent";
+import {AllProjectsComponent} from "./pages/AllProjectsPageComponent";
 
 function App() {
     return (
@@ -22,6 +23,7 @@ function App() {
                     <Route exact path="/app/:id" component={AppPageComponent}/>
                     <Route exact path="/archive" component={ArchiveProjectsPage}/>
                     <Route exact path="/about" component={AboutPageComponent}/>
+                    <Route exact path="/projects/all" component={AllProjectsComponent}/>
                     <Route path='*' exact={true} component={NotFoundPageComponent}/>
                 </Switch>
             </HashRouter>

@@ -40,6 +40,9 @@ class AppPageComponent extends Component {
                         })}
                     </p>
                     <p>{targetApp.description}</p>
+                    <div className={"Image2"}>
+                        <img src={targetApp.mainImageLink} alt={"Autohub Main Image"}/>
+                    </div>
                     <div className={"Images"}>
                         {targetApp.images.map(item => {
                             return <img src={item} width={"155px"} height={"310px"} alt={"Item"} />

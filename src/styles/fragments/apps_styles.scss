@@ -3,6 +3,10 @@
 .Container {
   margin-top: 5em;
 
+  @include layoutManager($phone) {
+    margin-top: 1em;
+  }
+
   .Title {
     margin-bottom: 2em;
 

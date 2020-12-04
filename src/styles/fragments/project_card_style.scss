@@ -1,0 +1,79 @@
+@import "../base";
+
+.ProjectCardContainer {
+  background-color: rgb(255, 255, 255);
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgba(0, 0, 0, 0.12);
+  border-bottom-left-radius: 0px;
+  border-top-left-radius: 0px;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  width: 300px;
+  padding: 1em;
+  margin: 0.5em;
+
+  img {
+    margin-bottom: 1em;
+    object-fit: contain;
+  }
+
+  label {
+    width: 230px;
+    height: 50px;
+    line-height: 28px;
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+    justify-content: left;
+    font-weight: 500;
+    align-items: center;
+  }
+
+  .Description {
+    line-height: 20px;
+    margin: 0px;
+    width: 100%;
+    font-size: 14px;
+    font-weight: normal;
+    color: rgb(102, 102, 102);
+    font-family: system-ui, "Helvetica Neue", Arial, sans-serif;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+  }
+
+  .Filter {
+    margin-bottom: 5px;
+    cursor: default;
+    height: 24px;
+    color: rgb(51, 51, 51);
+    border-radius: 12px;
+    background-color: rgb(240, 240, 240);
+    font-size: 12px;
+    box-sizing: border-box;
+    line-height: 20px;
+    border-style: solid;
+    padding-right: 12px;
+    padding-left: 12px;
+    border-width: 0px;
+    display: inline-flex;
+    outline: none;
+    align-items: center;
+    font-weight: 500;
+    justify-content: space-between;
+    margin-top: 2em;
+    margin-right: 1em;
+  }
+
+  .Links {
+    margin-top: 1em;
+    display: flex;
+
+    a {
+      margin-right: 1em;
+    }
+  }
+}

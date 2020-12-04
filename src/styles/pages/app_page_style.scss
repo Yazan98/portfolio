@@ -91,13 +91,69 @@
         }
       }
 
-      .Image {
+      .Image, .Image2 {
         flex: 1;
 
          img {
            height: 500px;
            object-fit: contain;
          }
+      }
+
+      .Image2 {
+        display: none;
+      }
+    }
+  }
+
+  @include layoutManager($phone) {
+    .Content {
+
+      .Image {
+        display: none;
+      }
+
+      .Container {
+        padding: 10px;
+        display: block;
+
+        .Content {
+          flex: 1;
+          padding: 0.5em;
+
+          .Image2 {
+            display: block;
+          }
+
+          .TagsContainer {
+            white-space: nowrap;
+            position: relative;
+            overflow-x: scroll;
+            -webkit-overflow-scrolling: touch;
+            overflow-y: scroll;
+            padding-right: 17px;
+            box-sizing: content-box;
+          }
+
+          .Images {
+            display: grid;
+            text-align: center;
+            justify-content: center;
+            justify-items: center;
+            margin-top: 2em;
+
+            img {
+              display: block;
+              text-align: center;
+              margin-top: 20px;
+            }
+          }
+
+            p {
+            width: 100%;
+            max-width: 100%;
+          }
+        }
       }
     }
   }

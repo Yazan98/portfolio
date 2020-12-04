@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 import '../styles/fragments/projects_style.scss';
+import {NavLink} from "react-router-dom";
+import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
 
 class ProjectsSectionComponents extends Component {
     render() {
@@ -72,6 +74,12 @@ class ProjectsSectionComponents extends Component {
                             </div>
 
                         </div>
+
+
+                        <NavLink to={"/projects/all"}><p className={"AllProjectsLink"}>
+                            <span>View All Projects </span>
+                            <span><ArrowForwardIcon /></span>
+                        </p></NavLink>
                     </div>
                 </div>
             </div>
