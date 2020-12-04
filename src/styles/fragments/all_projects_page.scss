@@ -27,6 +27,13 @@
       width: 300px;
     }
 
+    h1 {
+      line-height: 68px;
+      font-size: 52px;
+      font-weight: 500;
+      font-family: system-ui, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
+
   }
 
   .ProjectsContainer {
@@ -38,4 +45,18 @@
     display: grid;
     justify-content: center;
   }
+
+  @include layoutManager($phone) {
+    .ProjectsContainer, .MainContent {
+      grid-template-columns: repeat(1, auto);
+      width: 100%;
+
+      .SearchFields {
+        padding: 0.2em;
+      }
+    }
+
+  }
+
+
 }

@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import '../styles/fragments/home_header.scss';
 import HeaderImage from '../images/header.png';
 import TextLoop from "react-text-loop/lib";
+import {NavLink} from "react-router-dom";
 
 class ProjectsHeaderComponent extends Component {
     render() {
@@ -29,6 +30,9 @@ class ProjectsHeaderComponent extends Component {
                             </p>
 
                             <p>This Section has Almost of my Projects i worked on from Android Applications , Web Applications , Websites Using Several Languages With All Information about Each Project</p>
+                            <a className={"ButtonsContainer"}>
+                                <NavLink className={"ResumeButton"} to={"/projects/all"}>All Projects</NavLink>
+                            </a>
                         </div>
                     </div>
                     <div className={"Item"}>
