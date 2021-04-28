@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import '../styles/pages/resume_style.scss';
-import {BlueLine} from "../components/BlueLineComponent";
+import { BlueLineComponent} from "../components/BlueLineComponent";
 import ToolbarComponent from "../components/ToolbarComponent";
 import FooterComponent from "../components/FooterComponent";
 import MailOutlineIcon from '@material-ui/icons/MailOutline';
@@ -21,7 +21,7 @@ class ResumePageComponent extends Component {
     render() {
         return (
             <div className={"ResumePageContainer"}>
-                <BlueLine />
+                <BlueLineComponent />
                 <ToolbarComponent />
 
                 <main>

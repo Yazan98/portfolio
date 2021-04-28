@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
 import ToolbarComponent from "../components/ToolbarComponent";
 import FooterComponent from "../components/FooterComponent";
-import {BlueLine} from "../components/BlueLineComponent";
 import '../styles/pages/about_page.scss';
 import {NavLink} from "react-router-dom";
+import {BlueLineComponent} from "../components/BlueLineComponent";
 
 class AboutPageComponent extends Component {
 
@@ -15,7 +15,7 @@ class AboutPageComponent extends Component {
     render() {
         return (
             <div>
-                <BlueLine />
+                <BlueLineComponent />
                 <ToolbarComponent />
 
                 <div className={"AboutPageComponentContainer"}>

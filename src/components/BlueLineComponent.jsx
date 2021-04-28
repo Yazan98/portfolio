@@ -1,6 +1,6 @@
 import React from 'react';
 import '../styles/utils.scss';
 
-export const BlueLine = () => {
+export const BlueLineComponent = () => {
     return <div className={"Line"} />
 }

@@ -3,7 +3,19 @@
   "version": "0.1.0",
   "homepage": "http://www.yazantarifi.com",
   "private": true,
+  "description": "My Personal Website (Portfolio) V2",
+  "author": "Yazan Tarifi <yazantarifi98@gmail.com>",
+  "license": "MIT",
+  "keywords": [
+    "Personal Website",
+    "React",
+    "React.js",
+    "Next.js",
+    "CV",
+    "Portfolio"
+  ],
   "dependencies": {
+    "@babel/runtime": "^7.13.17",
     "@material-ui/core": "^4.11.1",
     "@material-ui/icons": "^4.9.1",
     "@testing-library/jest-dom": "^4.2.4",
@@ -16,6 +28,7 @@
     "@types/react-router-dom": "^5.1.6",
     "@types/react-tabs": "^2.3.2",
     "@types/styled-components": "^5.1.4",
+    "babel": "^6.23.0",
     "css-loader": "^4.3.0",
     "gsap": "^3.5.1",
     "jquery": "^3.5.1",
@@ -23,26 +36,21 @@
     "react": "^16.14.0",
     "react-calendar-heatmap": "^1.8.1",
     "react-dom": "^16.14.0",
-    "react-github-calendar": "^2.0.1",
-    "react-github-contribution-calendar": "^2.0.0",
     "react-icons": "^3.10.0",
     "react-router": "^5.2.0",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "3.4.3",
+    "react-scripts": "^3.4.3",
     "react-syntax-highlighter": "^13.5.3",
-    "react-tabs": "^3.1.1",
-    "react-text-loop": "^2.3.0",
-    "react-tooltip": "^4.2.11",
-    "react-transition-group": "^4.4.1",
+    "sass": "^1.32.11",
     "sass-loader": "^9.0.3",
-    "styled-components": "^5.2.1",
     "typescript": "~3.7.2"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "lint": "./node_modules/.bin/eslint"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -60,6 +68,20 @@
     ]
   },
   "devDependencies": {
+    "@babel/cli": "^7.13.16",
+    "@babel/core": "^7.13.16",
+    "@babel/preset-env": "^7.13.15",
+    "@zeit/next-css": "^1.0.1",
+    "autoprefixer": "^9.8.6",
+    "cross-env": "^7.0.3",
+    "eslint": "^7.2.0",
+    "eslint-config-airbnb": "18.2.1",
+    "eslint-plugin-import": "2.22.1",
+    "eslint-plugin-jsx-a11y": "6.4.1",
+    "eslint-plugin-react": "7.21.5",
+    "eslint-plugin-react-hooks": "1.7.0",
+    "postcss": "^7.0.35",
+    "rimraf": "^3.0.2",
     "style-loader": "^1.3.0"
   }
 }

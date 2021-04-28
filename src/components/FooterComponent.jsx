@@ -1,16 +1,11 @@
 import React, {Component} from 'react';
 import '../styles/fragments/footer_style.scss';
-import {BlueLine} from "./BlueLineComponent";
-import TechSectionComponent from "./TechSectionComponent";
+import {BlueLineComponent} from "./BlueLineComponent";
 
 class FooterComponent extends Component {
     render() {
         return (
             <footer>
-                <div className={"TechSection"}>
-                    <TechSectionComponent />
-                </div>
-
                 <div className={"AboutProjectsContainer"}>
                     <div className={"AboutContent"}>
                         <h5>About My Projects</h5>
@@ -31,7 +26,7 @@ class FooterComponent extends Component {
                         </div>
                     </div>
                 </div>
-                <BlueLine />
+                <BlueLineComponent />
             </footer>
         );
     }

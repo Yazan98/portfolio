@@ -1,65 +1,106 @@
 @import "../base";
 
-.ProjectsPageComponentContainer {
-  .MainSection {
-    padding: 4em;
-  }
+.ProjectsContainer {
+  .Toolbar_Container {
+    .Content {
+      .Link {
+        color: black;
+      }
 
-  @include layoutManager($phone) {
-    main {
-      .MainSection {
-        padding: 1em;
+      .active {
+        color: $primaryColor;
+      }
+
+      .Link:hover {
+        color: $primaryColor;
+      }
+
+      #rounded {
+        color: black;
+        border-color: black;
       }
     }
+  }
+}
 
-    .HomeHeaderContainer  {
-      margin-top: 0;
+.ProjectsComponent {
+  padding: 2em;
+  text-align: center;
+  min-height: 100vh;
 
-      .Container {
-        display: block;
-        text-align: center;
-        padding: 0;
+  .ProjectsContainer {
+    margin-top: 2em;
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(28vw,.1fr));
 
-        .Item {
-          padding-left: 0;
-          padding-right: 0;
-          text-align: center;
-          margin-top: 10px;
+    .ProjectPreviewComponent {
+      width: 100%;
+      height: 100%;
+      justify-items: center;
+      align-items: center;
+      padding: 5%;
+      text-align: start;
+      display: inline-block;
+      overflow: hidden;
+      position: relative;
+      border: 0 solid red;
+      border-radius: 5px;
 
-          img {
-            width: 90%;
-            padding: 0;
-            object-fit: contain;
-            text-align: center;
-            display: table;
-            margin: 0 auto;
-          }
+      .ImageContainer {
+        display: inline-block;
+        overflow: hidden;
+        border: 0 solid red;
+        border-radius: 5px;
+      }
 
-          .TextContent {
-            text-align: start;
+      .Texts {
+        z-index: 1000;
+      }
 
-            .ButtonsContainer {
-              display: block;
+      .Content {
+        overflow: hidden;
+        border: 0 solid red;
+        border-radius: 5px;
+      }
 
-              .ResumeButton {
-                width: 80%;
-                margin: 1em 0 0;
-              }
-            }
+      img {
+        border-radius: 5px;
+        cursor: pointer;
+        transform: scale(1);
+        width: 23vw;
+        height: auto;
+        object-fit: cover;
+        transition: .4s;
+        vertical-align: middle;
+        border-style: none;
+        display: inline-block;
+        overflow: hidden;
+      }
 
-            .Features {
-              span {
-                margin-right: 10px;
-                font-size: xx-small;
-              }
-            }
+      img:hover {
+        transform: scale(1.1);
+      }
 
-            p {
-              max-width: 90%;
-              font-size: small;
-            }
-          }
-        }
+      .Date {
+        font-size: small;
+      }
+    }
+  }
+
+  .Title {
+    text-align: start;
+
+    .Links {
+      display: flex;
+      label {
+        margin-right: 1em;
+        font-size: small;
+        cursor: pointer;
+      }
+
+      label:hover {
+        color: $primaryColor;
+        transition-duration: 1s;
       }
     }
   }
