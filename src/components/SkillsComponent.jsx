@@ -1,732 +1,371 @@
-import React, {Component} from 'react';
-import { BlueLineComponent} from "./BlueLineComponent";
-import ToolbarComponent from "./ToolbarComponent";
-import FooterComponent from "./FooterComponent";
-import '../styles/fragments/skills_style.scss';
-import $ from 'jquery';
+import React from 'react';
+import { PersonalPagesViewComponent } from './layouts/PersonalPagesComponent';
+import '../styles/pages/skills.scss';
+import { ToolbarViewComponent } from './ToolbarComponent';
 
-class ShillsPageComponent extends Component {
-    render() {
-        return (
-            <div className={"SkillsComponentContainer"}>
-                <BlueLineComponent />
-                <ToolbarComponent />
+export default function SkillsComponent() {
+  return (
+    <PersonalPagesViewComponent className="SkillsContainer" title="Yazan Tarifi - Portfolio - Skills">
+      <ToolbarViewComponent />
+      <div className="SkillsContainer">
+        <div className="SkillsPageContainer">
+          <h2>Skills</h2>
+          <p>
+            Languages, Frameworks Im Working on
+          </p>
 
-                <main>
-                    <div className={"Content"}>
-                        <div id={"tag"} />
-                    </div>
-                </main>
+          <ul className="Components">
+            <div className="Item">
+              <div className="Content">
+                <img alt="Kotlin" src="https://raw.githubusercontent.com/Yazan98/portfolio/master/src/images/kotlin.webp" loading="eager" width="50px" height="50px" />
+                <h3>Kotlin Language</h3>
+              </div>
 
-                {this.renderContent()}
+              <div className="Description">
+                <p>
+                  Build Kotlin Projects With Android Studio To Build Android Apps, Libraries
+                  or Kotlin Multi Platform and Gradle Plugins With Kotlin Also
+                  This is My Favourite Language Because as a Android
+                  Developer This is The Main Language im Working On
+                </p>
+              </div>
 
-                <FooterComponent />
+              <div className="Tags">
+                <p>Android</p>
+                <p>Ktor Framework</p>
+                <p>Spring Boot</p>
+                <p>Gradle Plugins</p>
+              </div>
             </div>
-        );
-    }
 
+            <div className="Item">
+              <div className="Content">
+                <img alt="Javascript" src="https://raw.githubusercontent.com/Yazan98/portfolio/master/src/images/js.webp" loading="eager" width="50px" height="50px" />
+                <h3>Javascript Language</h3>
+              </div>
 
-    renderContent() {
+              <div className="Description">
+                <p>
+                  JavaScript Used To Create Websites Built on React.js, Next.js Also Most Of Javascript Files
+                  Written With Jsx (ECMA +6) And The Backend Side With Express.js To Build Restful Api
+                </p>
+              </div>
 
-        $(document).ready(function () {
-            var entries = [
-                {label: "HTML"},
-                {label: "CSS"},
-                {label: "SCSS"},
-                {label: "Java"},
-                {label: "Javascript"},
-                {label: "Node.js"},
-                {label: "React.js"},
-                {label: "Kotlin"},
-                {label: "Typescript"},
-                {label: "Jenkins"},
-                {label: "Fastlane"},
-                {label: "Multi Modular Apps"},
-                {label: "RxJava"},
-                {label: "RxKotlin"},
-                {label: "Redux"},
-                {label: "React Hooks"},
-                {label: "Dependency Injection"},
-                {label: "Navigation"},
-                {label: "UI"},
-                {label: "UX"},
-                {label: "Mvp"},
-                {label: "Github"},
-                {label: "Gitlab"},
-                {label: "Bitbucket"},
-                {label: "Sonar Cube"},
-                {label: "Photoshop"},
-                {label: "After Effects"},
-                {label: "Gradle"},
-                {label: "Maven"},
-                {label: "mvvm"},
-                {label: "mvi"},
-                {label: "Firebase"},
-                {label: "Firestore"},
-                {label: "Notifications"},
-                {label: "Version Control"},
-                {label: "React Components"},
-                {label: "Next.js"},
-                {label: "Nest.js"},
-                {label: "Spring Boot"},
-                {label: "MySql"},
-                {label: "NoSql"},
-                {label: "Authentication"},
-                {label: "Json"},
-                {label: "Socket.io"},
-                {label: "Postman"},
-            ];
+              <div className="Tags">
+                <p>React.js</p>
+                <p>Next.js</p>
+                <p>Express.js</p>
+              </div>
+            </div>
 
-            var settings = {
+            <div className="Item">
+              <div className="Content">
+                <img alt="Java" src="https://raw.githubusercontent.com/Yazan98/portfolio/master/src/images/java.webp" loading="eager" width="50px" height="50px" />
+                <h3>Java Language</h3>
+              </div>
 
-                entries: entries,
-                radius: '65%',
-                width: 800,
-                height: 800,
-                radiusMin: 75,
-                bgDraw: true,
-                bgColor: '#000',
-                opacityOver: 1,
-                opacityOut: 0.5,
-                opacitySpeed: 1,
-                fov: 800,
-                speed: 0.1,
-                fontFamily: 'Oswald, Arial, sans-serif',
-                fontSize: '15',
-                fontColor: '#fff',
-                fontWeight: 'normal',//bold
-                fontStyle: 'normal',//italic
-                fontStretch: 'normal',//wider, narrower, ultra-condensed, extra-condensed, condensed, semi-condensed, semi-expanded, expanded, extra-expanded, ultra-expanded
-                fontToUpperCase: true,
-                tooltipFontFamily: 'Oswald, Arial, sans-serif',
-                tooltipFontSize: '11',
-                tooltipFontColor: '#fff',
-                tooltipFontWeight: 'normal',//bold
-                tooltipFontStyle: 'normal',//italic
-                tooltipFontStretch: 'normal',//wider, narrower, ultra-condensed, extra-condensed, condensed, semi-condensed, semi-expanded, expanded, extra-expanded, ultra-expanded
-                tooltipFontToUpperCase: false,
-                tooltipTextAnchor: 'left',
-                tooltipDiffX: 0,
-                tooltipDiffY: 10
+              <div className="Description">
+                <p>
+                  Java Language is My First Language i Learnt To Build Api Via Spring Boot
+                  and Learn Object Oriented Programming and Design Patterns While
+                  Building Applications also To Build Android Apps With Java Language
+                </p>
+              </div>
 
-            };
-            $( '#tag' ).svg3DTagCloud( settings );
-        })
-    }
+              <div className="Tags">
+                <p>Android</p>
+                <p>Spring Boot</p>
+                <p>Jar Files</p>
+                <p>War Files</p>
+                <p>Tomcat</p>
+              </div>
+            </div>
+
+            <div className="Item">
+              <div className="Content">
+                <img alt="Ruby" src="https://raw.githubusercontent.com/Yazan98/portfolio/master/src/images/ruby.webp" loading="eager" width="50px" height="50px" />
+                <h3>Ruby Language</h3>
+              </div>
+
+              <div className="Description">
+                <p>
+                  Ruby Language is The Main Language i Use When i Need to Build Command Line Interface
+                  To Do Some Tasks That Need Third Party Api Communications And Multi Threading Task
+                  also Build Fastlane Plugins Mainly For Android
+                </p>
+              </div>
+
+              <div className="Tags">
+                <p>CLI</p>
+                <p>Fastlane</p>
+                <p>Build Gems</p>
+              </div>
+            </div>
+
+            <div className="Item">
+              <div className="Content">
+                <img alt="Typescript" src="https://raw.githubusercontent.com/Yazan98/portfolio/master/src/images/ts.webp" loading="eager" width="50px" height="50px" />
+                <h3>Typescript Language</h3>
+              </div>
+
+              <div className="Description">
+                <p>
+                  Typescript Used When i Want To Work on Node Projects With OOP and More Like
+                  Java Applications I Make Because Ts has a lot Of Common Keywords like Java
+                  and The Main Framework im Working On is Nest.js With Typescript
+                  To Build Socket.io Implementation and Mongo Database Storage
+                </p>
+              </div>
+
+              <div className="Tags">
+                <p>Mongo</p>
+                <p>Socket.io</p>
+                <p>Nest.js</p>
+              </div>
+            </div>
+
+            <div className="Item">
+              <div className="Content">
+                <img alt="PHP" src="https://raw.githubusercontent.com/Yazan98/portfolio/master/src/images/pgp.webp" loading="eager" width="50px" height="50px" />
+                <h3>PHP Language</h3>
+              </div>
+
+              <div className="Description">
+                <p>
+                  Beginner Level In PHP and Laravel Mainly Im Currently Learning PHP To Build
+                  Restful Api's on Laravel With Mysql, Swagger, Auth, Return Html, Css Views From Api
+                  With Different Response Types
+                </p>
+              </div>
+
+              <div className="Tags">
+                <p>Laravel</p>
+                <p>Mysql</p>
+                <p>Auth</p>
+              </div>
+            </div>
+
+            <div className="Item">
+              <div className="Content">
+                <img alt="Gradle" src="https://raw.githubusercontent.com/Yazan98/portfolio/master/src/images/gradle.webp" loading="eager" width="50px" height="50px" />
+                <h3>Gradle</h3>
+              </div>
+
+              <div className="Description">
+                <p>
+                  Im Using Grovvy, Kotlin To Build Gradle Plugins To Configure Android
+                  projects or Spring Boot Projects Also Deploy Plugins On
+                  Gradle Portal Mainly The Plugins For Configuring Dynamic Tasks Or Libraries
+                </p>
+              </div>
+
+              <div className="Tags">
+                <p>Gradle Portal</p>
+                <p>Groovy</p>
+                <p>Dependencies Plugins</p>
+              </div>
+            </div>
+
+            <div className="Item">
+              <div className="Content">
+                <img alt="Git" src="https://raw.githubusercontent.com/Yazan98/portfolio/master/src/images/git.webp" loading="eager" width="50px" height="50px" />
+                <h3>Version Control</h3>
+              </div>
+
+              <div className="Description">
+                <p>
+                  Git is My Favourite Tool Im Using Git Everyday To Manage My Projects Via
+                  Github, Bitbucket, Gitlab and Configure Local Git Hooks To Manage
+                  Development Phase With Specific Actions, Tasks Via Git Hooks
+                  and Configure CI With Git Hooks Also Im Using Git To
+                  Create Branches, Commits, Releases and Publish Projects On Github
+                </p>
+              </div>
+
+              <div className="Tags">
+                <p>Github</p>
+                <p>Gitlab</p>
+                <p>Git Hooks</p>
+                <p>Source Tree</p>
+              </div>
+            </div>
+
+            <div className="Item">
+              <div className="Content">
+                <img alt="React.js" src="https://raw.githubusercontent.com/Yazan98/portfolio/master/src/images/react.webp" loading="eager" width="50px" height="50px" />
+                <h3>React.js</h3>
+              </div>
+
+              <div className="Description">
+                <p>
+                  Im Using React.js To Build Websites Mainly Depends on SPA, PWA
+                  And The Websites Has Ability To Install On Mobile Device as Android Application
+                  and Caching, Offline Experience Via Service Worker and Save Values in Cookies,
+                  With Full User Interactive Interface Via React Hooks
+                </p>
+              </div>
+
+              <div className="Tags">
+                <p>React.js</p>
+                <p>React Hooks</p>
+                <p>Responsive Design</p>
+                <p>PWA</p>
+              </div>
+            </div>
+
+            <div className="Item">
+              <div className="Content">
+                <img alt="Next.js" src="https://raw.githubusercontent.com/Yazan98/portfolio/master/src/images/next.webp" loading="eager" width="50px" height="50px" />
+                <h3>Next.js</h3>
+              </div>
+
+              <div className="Description">
+                <p>
+                  Im Using Next.js To Build Websites Above React Library To Perform
+                  SEO, SSR, SSG Like My Portfolio This Website Built
+                  To Be Server Side Rendering Also Next is Better Choice
+                  To Build Static Websites Like CV or Portfolio
+                </p>
+              </div>
+
+              <div className="Tags">
+                <p>Next.js</p>
+                <p>React.js</p>
+                <p>React Hooks</p>
+                <p>SASS</p>
+              </div>
+            </div>
+
+            <div className="Item">
+              <div className="Content">
+                <img alt="Spring Boot" src="https://raw.githubusercontent.com/Yazan98/portfolio/master/src/images/spring.webp" loading="eager" width="50px" height="50px" />
+                <h3>Spring Boot</h3>
+              </div>
+
+              <div className="Description">
+                <p>
+                  When I Need To Build Backend Restful Api The First Framework i Use Is Spring Boot
+                  With Kotlin or Java as a Main Language of The Current Project
+                  Also Im Using Mysql, NoSql, Spring Hibernate, JPA Data, Autowired Injection
+                  To Inject Everything and Spring Security With Bearer Tokens and Firebase Admin SDK
+                </p>
+              </div>
+
+              <div className="Tags">
+                <p>Spring Boot</p>
+                <p>Spring Starter</p>
+                <p>Firebase Admin</p>
+                <p>JPA, Hibernate</p>
+              </div>
+            </div>
+
+            <div className="Item">
+              <div className="Content">
+                <img alt="Nest.js" src="https://raw.githubusercontent.com/Yazan98/portfolio/master/src/images/nest.webp" loading="eager" width="50px" height="50px" />
+                <h3>Nest.js</h3>
+              </div>
+
+              <div className="Description">
+                <p>
+                  Nest.js Is The Main Framework I Use To Build Api In Typescript Language
+                  and Im Using This Framework When i Need To Implement Socket.io Implementation
+                  and Chat Rooms Logic With MongoDB Queries
+                </p>
+              </div>
+
+              <div className="Tags">
+                <p>Nest.js</p>
+                <p>Socket.io</p>
+                <p>Json</p>
+              </div>
+            </div>
+
+            <div className="Item">
+              <div className="Content">
+                <img alt="Sass" src="https://raw.githubusercontent.com/Yazan98/portfolio/master/src/images/sass.webp" loading="eager" width="50px" height="50px" />
+                <h3>Sass</h3>
+              </div>
+
+              <div className="Description">
+                <p>
+                  Sass is The Main Styling Files For React and Next i use For Amazing Syntax, Extends, Features
+                  That Not Exists in CSS Files, Also Better When Using Mixins
+                </p>
+              </div>
+
+              <div className="Tags">
+                <p>SCSS</p>
+                <p>SASS</p>
+                <p>Website Styling</p>
+              </div>
+            </div>
+
+            <div className="Item">
+              <div className="Content">
+                <img alt="Mysql" src="https://raw.githubusercontent.com/Yazan98/portfolio/master/src/images/mysql.webp" loading="eager" width="50px" height="50px" />
+                <h3>Databases</h3>
+              </div>
+
+              <div className="Description">
+                <p>
+                  Databases For Backend Is Just 2 (Mysql and Mongo) and When i Implement Backend Api
+                  Mysql is The Chosen One When Multiple Api's Has Relations With Each Others
+                  Like Complex Api's But When Each Table Has it's Own Implementation Mongo is Better Choice
+                </p>
+              </div>
+
+              <div className="Tags">
+                <p>Mongoos</p>
+                <p>Mysql</p>
+                <p>InnoDB</p>
+              </div>
+            </div>
+
+            <div className="Item">
+              <div className="Content">
+                <img alt="Jenkins" src="https://raw.githubusercontent.com/Yazan98/portfolio/master/src/images/jenkins.webp" loading="eager" width="50px" height="50px" />
+                <h3>Jenkins CI</h3>
+              </div>
+
+              <div className="Description">
+                <p>
+                  Continues Integration For Android To Run Jobs On Specific Branches With Gradle
+                  Configuration and Create Pipelines, Jobs, and Fastlane For Android And Execute
+                  Lanes With Ruby Syntax and Manage Gems In App
+                </p>
+              </div>
+
+              <div className="Tags">
+                <p>CI</p>
+                <p>Fastlane</p>
+              </div>
+            </div>
+
+            <div className="Item">
+              <div className="Content">
+                <img alt="Android" src="https://raw.githubusercontent.com/Yazan98/portfolio/master/src/images/android.webp" loading="eager" width="50px" height="50px" />
+                <h3>Android</h3>
+              </div>
+
+              <div className="Description">
+                <p>
+                  Create Android Applications With Kotlin and Gradle DSL With Latest Android Technologies
+                  Like Hilt, Jetpack Compose, Esspresso, Single Activity Applications,
+                  Multi Modular Apps, Deal With Offline Caching
+                  Experience and Familiar With MVVM, MVI, MVP, MVC, VIPER, Firebase, RxJava
+                </p>
+              </div>
+
+              <div className="Tags">
+                <p>Optimized Apps</p>
+                <p>Android Apps</p>
+              </div>
+            </div>
+          </ul>
+        </div>
+      </div>
+    </PersonalPagesViewComponent>
+  );
 }
 
-export default ShillsPageComponent;
-
-function SVG3DTagCloud( element, params ) {
-
-    var settings = {
-
-        entries: [],
-        width: 480,
-        height: 480,
-        radius: '70%',
-        radiusMin: 75,
-        bgDraw: true,
-        bgColor: '#000',
-        opacityOver: 1.00,
-        opacityOut: 0.05,
-        opacitySpeed: 2,
-        fov: 800,
-        speed: 50,
-        fontFamily: 'Arial, sans-serif',
-        fontSize: '15',
-        fontColor: '#fff',
-        fontWeight: 'normal',//bold
-        fontStyle: 'normal',//italic
-        fontStretch: 'normal',//wider, narrower, ultra-condensed, extra-condensed, condensed, semi-condensed, semi-expanded, expanded, extra-expanded, ultra-expanded
-        fontToUpperCase: false,
-        tooltipFontFamily: 'Arial, sans-serif',
-        tooltipFontSize: '15',
-        tooltipFontColor: '#fff',
-        tooltipFontWeight: 'normal',//bold
-        tooltipFontStyle: 'normal',//italic
-        tooltipFontStretch: 'normal',//wider, narrower, ultra-condensed, extra-condensed, condensed, semi-condensed, semi-expanded, expanded, extra-expanded, ultra-expanded
-        tooltipFontToUpperCase: false,
-        tooltipTextAnchor: 'left',
-        tooltipDiffX: 0,
-        tooltipDiffY: 10
-
-    };
-
-    //---
-
-    if ( params !== undefined )
-        for ( var prop in params )
-            if ( params.hasOwnProperty( prop ) && settings.hasOwnProperty( prop ) )
-                settings[ prop ] = params[ prop ];
-
-    //---
-
-    if ( !settings.entries.length )
-        return false;
-
-    //---
-
-    var entryHolder = [];
-    var tooltip;
-
-    var radius;
-    var diameter;
-
-    var mouseReact = true;
-    var mousePos = { x: 0, y: 0 };
-
-    var center2D;
-    var center3D = { x: 0, y: 0, z: 0 };
-
-    var speed = { x: 0, y: 0 };
-
-    var position = { sx: 0, cx: 0, sy: 0, cy: 0 };
-
-    var MATHPI180 = Math.PI / 180;
-
-    var svg;
-    var svgNS = 'http://www.w3.org/2000/svg';
-
-    var bg;
-
-    //---
-
-    function init() {
-
-        svg = document.createElementNS( svgNS, 'svg' );
-        svg.addEventListener( 'mousemove', mouseMoveHandler );
-
-        element.appendChild( svg );
-
-        if ( settings.bgDraw ) {
-
-            bg = document.createElementNS( svgNS, 'rect' );
-            bg.setAttribute( 'x', 0 );
-            bg.setAttribute( 'y', 0 );
-            bg.setAttribute( 'fill', settings.bgColor );
-
-            svg.appendChild( bg );
-
-        }
-
-        //---
-
-        addEntries();
-        reInit();
-        animloop();
-
-        //---
-
-        window.addEventListener( 'resize', resizeHandler );
-
-    };
-
-    function reInit() {
-
-        var windowWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-        var windowHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
-
-        var svgWidth = windowWidth;
-        var svgHeight = windowHeight;
-
-        if ( settings.width.toString().indexOf( '%' ) > 0 || settings.height.toString().indexOf( '%' ) > 0 ) {
-
-            svgWidth = Math.round( element.offsetWidth / 100 * parseInt( settings.width ) );
-            svgHeight = Math.round( svgWidth / 100 * parseInt( settings.height ) );
-
-        } else {
-
-            svgWidth = parseInt( settings.width );
-            svgHeight = parseInt( settings.height );
-
-        }
-
-        if ( windowWidth <= svgWidth )
-            svgWidth = windowWidth;
-
-        if ( windowHeight <= svgHeight )
-            svgHeight = windowHeight;
-
-        //---
-
-        center2D = { x: svgWidth / 2, y: svgHeight / 2 };
-
-        speed.x = settings.speed / center2D.x;
-        speed.y = settings.speed / center2D.y;
-
-        if ( svgWidth >= svgHeight )
-            diameter = svgHeight / 100 * parseInt( settings.radius );
-        else
-            diameter = svgWidth / 100 * parseInt( settings.radius );
-
-        if ( diameter < 1 )
-            diameter = 1;
-
-        radius = diameter / 2;
-
-        if ( radius < settings.radiusMin ) {
-
-            radius = settings.radiusMin;
-            diameter = radius * 2;
-
-        }
-
-        //---
-
-        svg.setAttribute( 'width', svgWidth );
-        svg.setAttribute( 'height', svgHeight );
-
-        if ( settings.bgDraw ) {
-
-            bg.setAttribute( 'width', svgWidth );
-            bg.setAttribute( 'height', svgHeight );
-
-        }
-
-        //---
-
-        setEntryPositions( radius );
-
-    };
-
-    //---
-
-    function setEntryPositions( radius ) {
-
-        for ( var i = 0, l = entryHolder.length; i < l; i++ ) {
-
-            setEntryPosition( entryHolder[ i ], radius );
-
-        }
-
-    };
-
-    function setEntryPosition( entry, radius ) {
-
-        var dx = entry.vectorPosition.x - center3D.x;
-        var dy = entry.vectorPosition.y - center3D.y;
-        var dz = entry.vectorPosition.z - center3D.z;
-
-        var length = Math.sqrt( dx * dx + dy * dy + dz * dz );
-
-        entry.vectorPosition.x /= length;
-        entry.vectorPosition.y /= length;
-        entry.vectorPosition.z /= length;
-
-        entry.vectorPosition.x *= radius;
-        entry.vectorPosition.y *= radius;
-        entry.vectorPosition.z *= radius;
-
-    };
-
-    function addEntry( index, entryObj, x, y, z ) {
-
-        var entry = {};
-
-        if ( typeof entryObj.label != 'undefined' ) {
-
-            entry.element = document.createElementNS( svgNS, 'text' );
-            entry.element.setAttribute( 'x', 0 );
-            entry.element.setAttribute( 'y', 0 );
-            entry.element.setAttribute( 'fill', settings.fontColor );
-            entry.element.setAttribute( 'font-family', settings.fontFamily );
-            entry.element.setAttribute( 'font-size', settings.fontSize );
-            entry.element.setAttribute( 'font-weight', settings.fontWeight );
-            entry.element.setAttribute( 'font-style', settings.fontStyle );
-            entry.element.setAttribute( 'font-stretch', settings.fontStretch );
-            entry.element.setAttribute( 'text-anchor', 'middle' );
-            entry.element.textContent = settings.fontToUpperCase ? entryObj.label.toUpperCase() : entryObj.label;
-
-        } else if ( typeof entryObj.image != 'undefined' ) {
-
-            entry.element = document.createElementNS( svgNS, 'image' );
-            entry.element.setAttribute( 'x', 0 );
-            entry.element.setAttribute( 'y', 0 );
-            entry.element.setAttribute( 'width', entryObj.width );
-            entry.element.setAttribute( 'height', entryObj.height );
-            entry.element.setAttribute( 'id', 'image_' + index );
-
-            entry.diffX = entryObj.width / 2;
-            entry.diffY = entryObj.height / 2;
-
-        }
-
-        entry.link = document.createElementNS( svgNS, 'a' );
-        entry.link.setAttribute( 'target', entryObj.target );
-        entry.link.addEventListener( 'mouseover', mouseOverHandler, true );
-        entry.link.addEventListener( 'mouseout', mouseOutHandler, true );
-        entry.link.appendChild( entry.element );
-
-        if ( typeof entryObj.tooltip != 'undefined' ) {
-
-            entry.tooltip = true;
-            entry.tooltipLabel = settings.tooltipFontToUpperCase ? entryObj.tooltip.toUpperCase() : entryObj.tooltip;;
-
-        } else {
-
-            entry.tooltip = false;
-
-        }
-
-        entry.index = index;
-        entry.mouseOver = false;
-
-        entry.vectorPosition = { x:x, y:y, z:z };
-        entry.vector2D = { x:0, y:0 };
-
-        svg.appendChild( entry.link );
-
-        return entry;
-
-    };
-
-    function addEntries() {
-
-        var tooltip = false;
-
-        for ( var i = 1, l = settings.entries.length + 1; i < l; i++ ) {
-
-            var phi = Math.acos( -1 + ( 2 * i ) / l );
-            var theta = Math.sqrt( l * Math.PI ) * phi;
-
-            var x = Math.cos( theta ) * Math.sin( phi );
-            var y = Math.sin( theta ) * Math.sin( phi );
-            var z = Math.cos( phi );
-
-            var entry = addEntry( i - 1, settings.entries[ i - 1 ], x, y, z );
-
-            entryHolder.push( entry );
-
-            if ( typeof settings.entries[ i - 1 ].tooltip != 'undefined' ) {
-
-                tooltip = true;
-
-            }
-
-        }
-
-        if ( tooltip ) {
-
-            addTooltip();
-
-        }
-
-    };
-
-    function addTooltip() {
-
-        tooltip = document.createElementNS( svgNS, 'text' );
-        tooltip.setAttribute( 'x', 0 );
-        tooltip.setAttribute( 'y', 0 );
-        tooltip.setAttribute( 'fill', settings.tooltipFontColor );
-        tooltip.setAttribute( 'font-family', settings.tooltipFontFamily );
-        tooltip.setAttribute( 'font-size', settings.tooltipFontSize );
-        tooltip.setAttribute( 'font-weight', settings.tooltipFontWeight );
-        tooltip.setAttribute( 'font-style', settings.tooltipFontStyle );
-        tooltip.setAttribute( 'font-stretch', settings.tooltipFontStretch );
-        tooltip.setAttribute( 'text-anchor', settings.tooltipTextAnchor );
-        tooltip.textContent = '';
-
-        svg.appendChild( tooltip );
-
-    };
-
-    function getEntryByElement( element ) {
-
-        for ( var i = 0, l = entryHolder.length; i < l; i++ ) {
-
-            var entry = entryHolder[ i ];
-
-            if ( entry.element.getAttribute( 'x' ) === element.getAttribute( 'x' ) &&
-                entry.element.getAttribute( 'y' ) === element.getAttribute( 'y' ) ) {
-
-                return entry;
-
-            }
-
-        }
-
-        return;
-
-    };
-
-    function highlightEntry( entry ) {
-
-        for ( var i = 0, l = entryHolder.length; i < l; i++ ) {
-
-            var e = entryHolder[ i ];
-
-            if ( e.index === entry.index ) {
-
-                e.mouseOver = true;
-
-            } else {
-
-                e.mouseOver = false;
-
-            }
-
-        }
-
-    };
-
-    //---
-
-    function showTooltip( entry ) {
-
-        if ( entry.tooltip ) {
-
-            tooltip.setAttribute( 'x', entry.vector2D.x - settings.tooltipDiffX );
-            tooltip.setAttribute( 'y', entry.vector2D.y - settings.tooltipDiffY );
-
-            tooltip.textContent = settings.tooltipFontToUpperCase ? entry.tooltipLabel.toUpperCase() : entry.tooltipLabel;
-
-            tooltip.setAttribute( 'opacity', 1.0 );
-
-        }
-
-    };
-
-    function hideTooltip( entry ) {
-
-        tooltip.setAttribute( 'opacity', 0.0 );
-
-    };
-
-    //---
-
-    function render() {
-
-        var fx = speed.x * mousePos.x - settings.speed;
-        var fy = settings.speed - speed.y * mousePos.y;
-
-        var angleX = fx * MATHPI180;
-        var angleY = fy * MATHPI180;
-
-        position.sx = Math.sin( angleX );
-        position.cx = Math.cos( angleX );
-        position.sy = Math.sin( angleY );
-        position.cy = Math.cos( angleY );
-
-        //---
-
-        for ( var i = 0, l = entryHolder.length; i < l; i++ ) {
-
-            var entry = entryHolder[ i ];
-
-            //---
-
-            if ( mouseReact ) {
-
-                var rx = entry.vectorPosition.x;
-                var rz = entry.vectorPosition.y * position.sy + entry.vectorPosition.z * position.cy;
-
-                entry.vectorPosition.x = rx * position.cx + rz * position.sx;
-                entry.vectorPosition.y = entry.vectorPosition.y * position.cy + entry.vectorPosition.z * -position.sy;
-                entry.vectorPosition.z = rx * -position.sx + rz * position.cx;
-
-            }
-
-            //---
-
-            var scale = settings.fov / ( settings.fov + entry.vectorPosition.z );
-
-            entry.vector2D.x = entry.vectorPosition.x * scale + center2D.x;
-            entry.vector2D.y = entry.vectorPosition.y * scale + center2D.y;
-
-            //---
-
-            if ( entry.diffX && entry.diffY ) {
-
-                entry.vector2D.x -= entry.diffX;
-                entry.vector2D.y -= entry.diffY;
-
-            }
-
-            //---
-
-            entry.element.setAttribute( 'x', entry.vector2D.x );
-            entry.element.setAttribute( 'y', entry.vector2D.y );
-
-            //---
-
-            var opacity;
-
-            if ( mouseReact ) {
-
-                opacity = ( radius - entry.vectorPosition.z ) / diameter;
-
-                if ( opacity < settings.opacityOut ) {
-
-                    opacity = settings.opacityOut;
-
-                }
-
-            } else {
-
-                opacity = parseFloat( entry.element.getAttribute( 'opacity' ) );
-
-                if ( entry.mouseOver ) {
-
-                    opacity += ( settings.opacityOver - opacity ) / settings.opacitySpeed;
-
-                } else {
-
-                    opacity += ( settings.opacityOut - opacity ) / settings.opacitySpeed;
-
-                }
-
-            }
-
-            entry.element.setAttribute( 'opacity', opacity );
-
-        }
-
-        //---
-
-        entryHolder = entryHolder.sort( function( a, b ) {
-
-            return ( b.vectorPosition.z - a.vectorPosition.z );
-
-        } );
-
-    };
-
-    //---
-
-    window.requestAnimFrame = ( function() {
-
-        return  window.requestAnimationFrame       ||
-            window.webkitRequestAnimationFrame ||
-            window.mozRequestAnimationFrame    ||
-            function( callback ) {
-                window.setTimeout( callback, 1000 / 60 );
-            };
-
-    } )();
-
-    function animloop() {
-
-        window.requestAnimFrame( animloop );
-
-        render();
-
-    };
-
-    //---
-
-    function mouseOverHandler( event ) {
-
-        mouseReact = false;
-
-        //---
-
-        var entry = getEntryByElement( event.target );
-
-        highlightEntry( entry );
-
-        if ( entry.tooltip ) {
-
-            showTooltip( entry );
-
-        }
-
-    };
-
-    function mouseOutHandler( event ) {
-
-        mouseReact = true;
-
-        //---
-
-        var entry = getEntryByElement( event.target );
-
-        if ( entry.tooltip ) {
-
-            hideTooltip( entry );
-
-        }
-
-    };
-
-    //---
-
-    function mouseMoveHandler( event ) {
-
-        mousePos = getMousePos( svg, event );
-
-    };
-
-    function getMousePos( svg, event ) {
-
-        var rect = svg.getBoundingClientRect();
-
-        return {
-
-            x: event.clientX - rect.left,
-            y: event.clientY - rect.top
-
-        };
-
-    };
-
-    //---
-
-    function resizeHandler( event ) {
-
-        reInit();
-
-    };
-
-    //---
-
-    init();
-
-};
-
-( function() {
-
-
-
-    window.SVG3DTagCloud = SVG3DTagCloud;
-
-} () );
-
-if ( typeof jQuery !== 'undefined' ) {
-
-    ( function( $ ) {
-
-        $.fn.svg3DTagCloud = function( params ) {
-
-            var args = arguments;
-
-            return this.each( function() {
-
-                if ( !$.data( this, 'plugin_SVG3DTagCloud' ) ) {
-
-                    $.data( this, 'plugin_SVG3DTagCloud', new SVG3DTagCloud( this, params ) );
-
-                } else {
-
-                    var plugin = $.data( this, 'plugin_SVG3DTagCloud' );
-
-                    if ( plugin[ params ] ) {
-
-                        plugin[ params ].apply( this, Array.prototype.slice.call( args, 1 ) );
-
-                    } else {
-
-                        // $.error( 'Method ' +  params + ' does not exist on jQuery.svg3DTagCloud' );
-
-                    }
-
-                }
-
-            } );
-
-        };
-
-    } ( $ ) );
-
-}
+export const SkillsViewComponent = React.memo(SkillsComponent);

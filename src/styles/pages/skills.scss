@@ -1,0 +1,85 @@
+@import "../base";
+
+.SkillsContainer {
+  .Toolbar_Container {
+    .Content {
+      .Link {
+        color: black;
+      }
+
+      .active {
+        color: $primaryColor;
+      }
+
+      .Link:hover {
+        color: $primaryColor;
+      }
+
+      #rounded {
+        color: black;
+        border-color: black;
+      }
+    }
+  }
+}
+
+.SkillsPageContainer {
+  padding: 2em;
+  min-height: 100vh;
+
+  h2 {
+    color: $primaryColor;
+    font-size: 40px;
+  }
+
+  p {
+    max-width: 50%;
+  }
+
+  .Components {
+    margin-top: 3em;
+    grid-auto-columns: max-content;
+    gap: 10px;
+    grid-template-columns: repeat(3, auto);
+    width: 100%;
+    justify-items: center;
+    display: grid;
+    justify-content: center;
+
+    .Item {
+      display: flex;
+      -webkit-box-pack: justify;
+      justify-content: space-between;
+      -webkit-box-align: center;
+      flex-direction: column;
+      align-items: flex-start;
+      position: relative;
+      height: 100%;
+      padding: 2rem 1.75rem;
+      border-radius: 4px;
+      background-color: #343844;
+      transition: 1s;
+      width: 20vw;
+
+      .Tags {
+        margin-top: 2em;
+
+        p {
+          font-size: x-small;
+          margin-right: 1em;
+          color: #9ca3ad;
+        }
+      }
+
+      .Description {
+        margin-top: 1em;
+
+        p {
+          max-width: 100%;
+          font-size: small;
+          color: #9ca3ad;
+        }
+      }
+    }
+  }
+}

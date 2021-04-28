@@ -17,7 +17,7 @@ export default function ToolbarComponent() {
           <NavLink to="/skills" className={currentPath === '/skills' ? 'active' : 'Link'}>Skills</NavLink>
           <NavLink to="/archive" className={currentPath === '/archive' ? 'active' : 'Link'}>Archive</NavLink>
           <NavLink to="/resume" id="rounded" className={currentPath === '/resume' ? 'active' : 'Link'}>Resume</NavLink>
-          <NavLink to="" id="rounded" className="FilledLink">Dark Mode</NavLink>
+          <NavLink to="" id="filled-rounded" className="rounded">Dark Mode</NavLink>
         </div>
       </div>
     </div>

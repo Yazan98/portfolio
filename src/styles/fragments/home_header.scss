@@ -41,8 +41,6 @@
 .Toolbar_Container .Content .Links > #filled-rounded {
   border-radius: 30px;
   padding: 5px 10px;
-  background-color: white;
-  color: $primaryColor;
   border: 1px solid white;
   font-size: small;
   transition: 1s;
@@ -233,6 +231,7 @@ span {
 
     img {
       margin-bottom: 1em;
+      cursor: pointer;
     }
   }
 }

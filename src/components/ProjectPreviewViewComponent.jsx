@@ -13,7 +13,7 @@ export default function ProjectPreviewComponent({
       <div className="ProjectPreviewComponent">
         <div className="Content">
           <div className="ImageContainer">
-            <img src="/src/images/all_preview.webp" ref={imageRef} height="400" alt={name} loading="eager" onClick={() => callback(name)} />
+            <img src={image} ref={imageRef} height="400" alt={name} loading="eager" onClick={() => callback(name)} />
           </div>
           <div className="Texts">
             <p className="Date">
