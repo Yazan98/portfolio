@@ -1,41 +1,61 @@
-import React, {Component} from 'react';
-import FooterComponent from "../components/FooterComponent";
-import ToolbarComponent from "../components/ToolbarComponent";
+import React, { useMemo } from 'react';
 import '../styles/pages/projects_style.scss';
-import AppsProjectsComponent from "../components/AppsProjectsComponent";
-import ThemesSectionComponent from "../components/ThemesSectionComponent";
-import WebsitesSectionComponent from "../components/WebsitesSectionComponent";
-import ProjectsSectionComponents from "../components/ProjectsSectionComponents";
-import {BlueLineComponent} from "../components/BlueLineComponent";
+import { getProjectsList, getProjectsListByFilter } from '../info/ProfileInformation';
+import { PersonalPagesViewComponent } from '../components/layouts/PersonalPagesComponent';
+import { ProjectPreviewViewComponent } from '../components/ProjectPreviewViewComponent';
+import { ToolbarViewComponent } from '../components/ToolbarComponent';
 
-class ProjectsPageComponent extends Component {
+export default function ProjectsComponent() {
+  const [filter, setFilter] = React.useState('all');
+  const [projects, setProjects] = React.useState([]);
+  // const router = useRouter();
 
-    componentDidMount() {
-        window.scrollTo(0, 0)
-        document.title = "Projects Page - Portfolio";
+  const onProjectClicked = (name) => {
+    // if (name === 'All Projects') {
+    //   router.push('/projects/all').catch((error) => console.error(error));
+    // } else {
+    //   router.push(`/project?name=${name}`).catch((error) => console.error(error));
+    // }
+  };
+
+  useMemo(() => {
+    if (filter === 'all') {
+      setProjects(getProjectsList());
+    } else {
+      setProjects(getProjectsListByFilter(filter));
     }
+  }, [filter]);
 
-    render() {
-        return (
-            <div className={"ProjectsPageComponentContainer"}>
-                <header>
-                    <BlueLineComponent />
-                    <ToolbarComponent />
-                </header>
+  return (
+    <PersonalPagesViewComponent className="ProjectsContainer" title="Yazan Tarifi - Projects">
+      <ToolbarViewComponent />
+      <div className="ProjectsComponent">
+        <div className="Title">
+          <h2>Portfolio</h2>
+          <p>This is List of Some Projects I Built</p>
+          <div className="Links">
+            <label className={filter === 'all' ? 'active' : ''} onClick={() => setFilter('all')}>All Projects</label>
+            <label className={filter === 'android' ? 'active' : ''} onClick={() => setFilter('android')}>Android Apps</label>
+            <label className={filter === 'web' ? 'active' : ''} onClick={() => setFilter('web')}>Websites</label>
+            <label className={filter === 'api' ? 'active' : ''} onClick={() => setFilter('api')}>Web Apps</label>
+            <label className={filter === 'opensource' ? 'active' : ''} onClick={() => setFilter('opensource')}>Filtered Projects</label>
+          </div>
 
-                <main>
-                    <section className={"MainSection"}>
-                        <AppsProjectsComponent />
-                        <WebsitesSectionComponent />
-                        <ProjectsSectionComponents />
-                        <ThemesSectionComponent />
-                    </section>
-                </main>
-
-                <FooterComponent />
-            </div>
-        );
-    }
+          <div className="ProjectsContainer">
+            {projects ? projects.map((item) => (
+              (
+                <ProjectPreviewViewComponent
+                  image={item.previewImage}
+                  name={item.name}
+                  createdAt={item.createdAt}
+                  preview={item.typeText}
+                  onClickCallback={onProjectClicked}
+                />
+              )
+            )) : null}
+          </div>
+        </div>
+      </div>
+    </PersonalPagesViewComponent>
+  );
 }
-
-export default ProjectsPageComponent;
