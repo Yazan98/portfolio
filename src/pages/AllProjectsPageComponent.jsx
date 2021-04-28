@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import ToolbarComponent from "../components/ToolbarComponent";
 import FooterComponent from "../components/FooterComponent";
-import {BlueLine} from "../components/BlueLineComponent";
+import {BlueLineComponent} from "../components/BlueLineComponent";
 import '../styles/fragments/all_projects_page.scss';
 import TextField from "@material-ui/core/TextField";
 import {findProjectByFilterType, findProjectByName, Projects} from "../info/ProjectsDetails";
@@ -27,7 +27,7 @@ export const AllProjectsComponent = () => {
 
     return (
         <div className={"AllProjectsContainer"}>
-            <BlueLine/>
+            <BlueLineComponent/>
             <ToolbarComponent/>
             <div className={"MainContent"}>
                 <h1>Projects</h1>

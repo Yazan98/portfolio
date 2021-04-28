@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
-import {BlueLine} from "../components/BlueLineComponent";
 import ToolbarComponent from "../components/ToolbarComponent";
 import FooterComponent from "../components/FooterComponent";
 import {InfoManager} from "../info/InfoManager";
 import '../styles/pages/app_page_style.scss';
+import {BlueLineComponent} from "../components/BlueLineComponent";
 
 class AppPageComponent extends Component {
 
@@ -11,7 +11,7 @@ class AppPageComponent extends Component {
         let params = this.props.location.pathname
         return (
             <div className={"AppPageComponent"}>
-                <BlueLine/>
+                <BlueLineComponent/>
                 <ToolbarComponent/>
 
                 <div className={"Content"}>

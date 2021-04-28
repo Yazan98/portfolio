@@ -1,13 +1,12 @@
 import React, {Component} from 'react';
 import FooterComponent from "../components/FooterComponent";
 import ToolbarComponent from "../components/ToolbarComponent";
-import {BlueLine} from "../components/BlueLineComponent";
 import '../styles/pages/projects_style.scss';
 import AppsProjectsComponent from "../components/AppsProjectsComponent";
-import ProjectsHeaderComponent from "../components/ProjectsHeaderComponent";
 import ThemesSectionComponent from "../components/ThemesSectionComponent";
 import WebsitesSectionComponent from "../components/WebsitesSectionComponent";
 import ProjectsSectionComponents from "../components/ProjectsSectionComponents";
+import {BlueLineComponent} from "../components/BlueLineComponent";
 
 class ProjectsPageComponent extends Component {
 
@@ -20,12 +19,11 @@ class ProjectsPageComponent extends Component {
         return (
             <div className={"ProjectsPageComponentContainer"}>
                 <header>
-                    <BlueLine />
+                    <BlueLineComponent />
                     <ToolbarComponent />
                 </header>
 
                 <main>
-                    <ProjectsHeaderComponent />
                     <section className={"MainSection"}>
                         <AppsProjectsComponent />
                         <WebsitesSectionComponent />

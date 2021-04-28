@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {BlueLine} from "../components/BlueLineComponent";
+import { BlueLineComponent} from "../components/BlueLineComponent";
 import ToolbarComponent from "../components/ToolbarComponent";
 import FooterComponent from "../components/FooterComponent";
 import '../styles/fragments/archive.scss';
@@ -14,7 +14,7 @@ class ArchiveProjectsPage extends Component {
     render() {
         return (
             <div className={"ArchiveProjectsPage"}>
-                <BlueLine />
+                <BlueLineComponent />
                 <ToolbarComponent />
 
                 <main>

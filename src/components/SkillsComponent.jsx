@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {BlueLine} from "./BlueLineComponent";
+import { BlueLineComponent} from "./BlueLineComponent";
 import ToolbarComponent from "./ToolbarComponent";
 import FooterComponent from "./FooterComponent";
 import '../styles/fragments/skills_style.scss';
@@ -9,7 +9,7 @@ class ShillsPageComponent extends Component {
     render() {
         return (
             <div className={"SkillsComponentContainer"}>
-                <BlueLine />
+                <BlueLineComponent />
                 <ToolbarComponent />
 
                 <main>

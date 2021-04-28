@@ -1,54 +1,69 @@
 import React, {Component} from 'react';
 import '../styles/fragments/home_header.scss';
+import ComponentLayout from "./layouts/ComponentLayout";
+import {ToolbarViewComponent} from "./ToolbarComponent";
+import {getProfileInfo} from "../info/ProfileInformation";
 import HeaderImage from '../images/header.png';
-import TextLoop from "react-text-loop/lib";
-import {NavLink} from "react-router-dom";
 
 class HomeHeaderComponent extends Component {
     render() {
         return (
-            <div className={"HomeHeaderContainer"}>
-                <div className={"Container"}>
-                    <div className={"Item"} id={"Image"}>
-                        <div className={"TextContent"}>
+            <ComponentLayout>
+                <div className="PageHeaderComponent">
+                    <ToolbarViewComponent />
+                    <div className="HomeHeaderContainer">
+                        <div className="HeaderLinks">
+                            <div className="Content">
+                                <img src="/github.svg" width="25px" height="25px" loading="eager" />
+                                <img src="/github.svg" width="25px" height="25px" loading="eager" />
+                                <img src="/github.svg" width="25px" height="25px" loading="eager" />
+                                <img src="/github.svg" width="25px" height="25px" loading="eager" />
+                                <div className="LineContainer">
+                                    <hr width="1" size="100" />
+                                </div>
+                            </div>
+                        </div>
+                        <div className="Description">
+                            <div className="Content">
+                                <p className="SubTitle">Software Engineer</p>
+                                <label>{getProfileInfo().Name}</label>
 
-                            <p>
-                                <TextLoop springConfig={{ stiffness: 180, damping: 8 }}>
-                                    <span>Android</span>
-                                    <span>Web</span>
-                                    <span>Backend (SpringBoot) </span>
-                                    <span>Backend (Nest.js) </span>
-                                    <span>Backend (Ktor) </span>
-                                </TextLoop>{" "}
-                                Developer
-                            </p>
+                                <div className="BigArea">
+                                    <p className="Tags">
+                                        <div id="Item" className="Circle" />
+                                        <span id="Item">Android Apps</span>
+                                        <div id="Item" className="Circle" />
+                                        <span id="Item">Restful Api</span>
+                                        <div id="Item" className="Circle" />
+                                        <span id="Item">Websites</span>
+                                    </p>
+                                    <p className="DescriptionText">{getProfileInfo().Description}</p>
+                                </div>
 
-                            <p>Hi, my name is</p>
-                            <h2 className={"title"}>Yazan Tarifi</h2>
+                                <p className="TechTitle">Few technologies I&apos;ve been working with</p>
+                                <div className="Technologies">
+                                    <ul className="Technologies">
+                                        <li>Android - Kotlin</li>
+                                        <li>React, Next.js</li>
+                                        <li>Spring Boot</li>
+                                        <li>Laravel</li>
+                                        <li>Node.js (Nest)</li>
+                                        <li>Terminal Tools (Ruby)</li>
+                                    </ul>
+                                </div>
 
-                            <p className={"Features"}>
-                                <span>Android Apps</span>
-                                <span className={"Ball small"}/>
-                                <span>Frontend (React Apps)</span>
-                                <span className={"Ball small"}/>
-                                <span>Web Apps (Spring Boot)</span>
-                            </p>
-
-                            <p>A code-minded front-end software engineer focused on building beautiful interfaces & experiences and Convert Ideas, Design To System With Frontend Side (Android Apps, React Websites) also The Backend Side With (SpringBoot, Ktor, Nest.js)</p>
-                            <a className={"ButtonsContainer"}>
-                                <NavLink className={"ResumeButton"} to={"/resume"}>Resume</NavLink>
-                                <a className={"ResumeButton SecondButton Link"} href={"https://github.com/Yazan98"} target="_blank">Github</a>
-                            </a>
-
+                                <div className="Buttons">
+                                    <a className="HeaderButton" href="https://www.github.com/Yazan98">Github</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="Image">
+                            <img loading="eager" src={HeaderImage} alt="Header" width="711.2px" height="468.3px" />
                         </div>
                     </div>
-                    <div className={"Item"}>
-                        <div className={"Container"}>
-                            <img className={"ImageHeader"} src={HeaderImage} alt={"AppsHeaderImage"} />
-                        </div>
-                    </div>
+
                 </div>
-            </div>
+            </ComponentLayout>
         );
     }
 }
