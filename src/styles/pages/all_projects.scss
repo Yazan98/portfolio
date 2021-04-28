@@ -1,0 +1,147 @@
+@import "../base";
+
+.AllProjectsContainer {
+  min-height: 100vh;
+
+  .MainContent {
+    margin-top: 3em;
+    grid-auto-columns: max-content;
+    gap: 10px;
+    grid-template-columns: repeat(3, auto);
+    width: 100%;
+    justify-items: center;
+    display: grid;
+    justify-content: center;
+
+    .SearchFields {
+      display: flex;
+      text-align: center;
+      padding: 1em;
+
+      .SelectorController {
+        margin-left: 1em;
+        text-align: left;
+      }
+    }
+
+    h1, div {
+      width: 300px;
+    }
+
+    h1 {
+      line-height: 68px;
+      font-size: 52px;
+      font-weight: 500;
+      font-family: system-ui, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
+
+    .Title {
+      p {
+        font-size: small;
+      }
+    }
+
+  }
+
+  .ProjectsContainer {
+    grid-auto-columns: max-content;
+    gap: 10px;
+    grid-template-columns: repeat(3, auto);
+    width: 100%;
+    justify-items: center;
+    display: grid;
+    justify-content: center;
+    padding-bottom: 2em;
+    margin-top: 2em;
+  }
+
+  @include layoutManager($phone) {
+    .ProjectsContainer, .MainContent {
+      grid-template-columns: repeat(1, auto);
+      width: 100%;
+
+      .SearchFields {
+        padding: 0.2em;
+      }
+    }
+
+  }
+}
+
+
+.ProjectCardContainer {
+  background-color: white;
+  border: 1px solid #b8b8b8;
+  border-radius: 5px;
+  text-align: left;
+  flex: 1 1;
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow .2s ease,border .2s ease;
+  width: 300px;
+  padding: 1em;
+  margin: 0.5em;
+
+  img {
+    margin-bottom: 1em;
+    object-fit: contain;
+  }
+
+  label {
+    width: 230px;
+    height: 50px;
+    line-height: 28px;
+    font-size: 20px;
+    color: black;
+    justify-content: left;
+    font-weight: 500;
+    align-items: center;
+  }
+
+  .Description {
+    line-height: 20px;
+    margin: 0px;
+    width: 100%;
+    font-size: 14px;
+    font-weight: normal;
+    color: #9ca3ad;
+    font-family: system-ui, "Helvetica Neue", Arial, sans-serif;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+  }
+
+  .Filter {
+    margin-bottom: 5px;
+    cursor: default;
+    height: 24px;
+    color: white;
+    border-radius: 12px;
+    background-color: $primaryColor;
+    font-size: 12px;
+    box-sizing: border-box;
+    line-height: 20px;
+    border-style: solid;
+    padding-right: 12px;
+    padding-left: 12px;
+    border-width: 0px;
+    display: inline-flex;
+    outline: none;
+    align-items: center;
+    font-weight: 500;
+    justify-content: space-between;
+    margin-top: 2em;
+    margin-right: 1em;
+  }
+
+  .Links {
+    margin-top: 1em;
+    display: flex;
+
+    a {
+      margin-right: 1em;
+    }
+  }
+}

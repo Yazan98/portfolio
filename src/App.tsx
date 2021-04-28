@@ -2,13 +2,13 @@ import React from 'react';
 import './App.scss';
 import {HashRouter, Route, Switch} from "react-router-dom";
 import ProjectsPageComponent from "./pages/ProjectsPageComponent";
-import NotFoundPageComponent from "./pages/NotFoundPageComponent";
+import  {NotFoundPageViewComponent} from "./pages/NotFoundPageComponent";
 import AboutPageComponent from "./pages/AboutPageComponent";
 import {SkillsViewComponent} from "./components/SkillsComponent";
 import ResumePageComponent from "./pages/ResumePageComponent";
 import ArchiveProjectsPage from "./pages/ArchiveProjectsPage";
 import AppPageComponent from "./pages/AppPageComponent";
-import {AllProjectsComponent} from "./pages/AllProjectsPageComponent";
+import {AllProjectsViewComponent} from "./pages/AllProjectsPageComponent";
 import HomePageComponent from "./pages/HomePageComponent";
 
 function App() {
@@ -23,8 +23,8 @@ function App() {
                     <Route exact path="/app/:id" component={AppPageComponent}/>
                     <Route exact path="/archive" component={ArchiveProjectsPage}/>
                     <Route exact path="/about" component={AboutPageComponent}/>
-                    <Route exact path="/projects/all" component={AllProjectsComponent}/>
-                    <Route path='*' exact={true} component={NotFoundPageComponent}/>
+                    <Route exact path="/projects/all" component={AllProjectsViewComponent}/>
+                    <Route path='*' exact={true} component={NotFoundPageViewComponent}/>
                 </Switch>
             </HashRouter>
         </div>

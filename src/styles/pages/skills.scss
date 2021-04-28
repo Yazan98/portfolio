@@ -37,7 +37,7 @@
   }
 
   .Components {
-    margin-top: 3em;
+    margin-top: 5em;
     grid-auto-columns: max-content;
     gap: 10px;
     grid-template-columns: repeat(3, auto);
@@ -45,6 +45,7 @@
     justify-items: center;
     display: grid;
     justify-content: center;
+    margin-bottom: 2em;
 
     .Item {
       display: flex;
@@ -57,7 +58,10 @@
       height: 100%;
       padding: 2rem 1.75rem;
       border-radius: 4px;
-      background-color: #343844;
+      border-color: #9b9b9b;
+      border-style: solid;
+      border-width: 1px;
+      background-color: #ffffff;
       transition: 1s;
       width: 20vw;
 

@@ -1,5 +1,6 @@
 import React, { useMemo } from 'react';
 import '../styles/pages/projects_style.scss';
+import { useHistory } from 'react-router-dom';
 import { getProjectsList, getProjectsListByFilter } from '../info/ProfileInformation';
 import { PersonalPagesViewComponent } from '../components/layouts/PersonalPagesComponent';
 import { ProjectPreviewViewComponent } from '../components/ProjectPreviewViewComponent';
@@ -8,14 +9,14 @@ import { ToolbarViewComponent } from '../components/ToolbarComponent';
 export default function ProjectsComponent() {
   const [filter, setFilter] = React.useState('all');
   const [projects, setProjects] = React.useState([]);
-  // const router = useRouter();
+  const history = useHistory();
 
   const onProjectClicked = (name) => {
-    // if (name === 'All Projects') {
-    //   router.push('/projects/all').catch((error) => console.error(error));
-    // } else {
-    //   router.push(`/project?name=${name}`).catch((error) => console.error(error));
-    // }
+    if (name === 'All Projects') {
+      history.push('/projects/all');
+    } else {
+      history.push(`/project?name=${name}`);
+    }
   };
 
   useMemo(() => {
