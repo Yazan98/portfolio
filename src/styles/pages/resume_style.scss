@@ -1,5 +1,25 @@
 @import "../base";
 
+
+.ResumePageContainer {
+  .Toolbar_Container {
+    .Content {
+      .Link {
+        color: black;
+      }
+
+      .Link:hover {
+        color: $primaryColor;
+      }
+
+      .rounded {
+        color: black;
+        border-color: black;
+      }
+    }
+  }
+}
+
 .ResumePageContainer {
 
   h4 {
