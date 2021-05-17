@@ -164,3 +164,25 @@
     }
   }
 }
+
+@include layoutManager($phone) {
+
+  .Container {
+    .PageHeaderComponent {
+      .HomeHeaderContainer {
+        display: block;
+
+        .Description {
+          height: 20vh;
+        }
+
+        .Image {
+          height: 30vh;
+        }
+      }
+
+
+    }
+  }
+
+}
