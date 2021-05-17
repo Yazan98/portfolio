@@ -2,27 +2,29 @@ import React from 'react';
 import { PersonalPagesViewComponent } from './layouts/PersonalPagesComponent';
 import '../styles/pages/skills.scss';
 import { ToolbarViewComponent } from './ToolbarComponent';
+import { isApplicationLightTheme } from '../info/ThemeInfo';
 
 export default function SkillsComponent() {
+  const [theme, setTheme] = React.useState(isApplicationLightTheme());
   return (
     <PersonalPagesViewComponent className="SkillsContainer" title="Yazan Tarifi - Portfolio - Skills">
       <ToolbarViewComponent />
       <div className="SkillsContainer">
         <div className="SkillsPageContainer">
           <h2>Skills</h2>
-          <p>
+          <p className={`${theme ? 'TextDescriptionBlack' : 'TextDescriptionLight'}`}>
             Languages, Frameworks Im Working on
           </p>
 
           <ul className="Components">
-            <div className="Item">
+            <div className={`Item ${theme ? 'BlackBorder' : 'LightBorder'}`}>
               <div className="Content">
                 <img alt="Kotlin" src="https://raw.githubusercontent.com/Yazan98/portfolio/master/src/images/kotlin.webp" loading="eager" width="50px" height="50px" />
-                <h3>Kotlin Language</h3>
+                <h3 className={`${theme ? 'TextTitleBlack' : 'TextTitleLight'}`}>Kotlin Language</h3>
               </div>
 
               <div className="Description">
-                <p>
+                <p className={`${theme ? 'TextDescriptionBlack' : 'TextDescriptionLight'}`}>
                   Build Kotlin Projects With Android Studio To Build Android Apps, Libraries
                   or Kotlin Multi Platform and Gradle Plugins With Kotlin Also
                   This is My Favourite Language Because as a Android
@@ -31,41 +33,41 @@ export default function SkillsComponent() {
               </div>
 
               <div className="Tags">
-                <p>Android</p>
-                <p>Ktor Framework</p>
-                <p>Spring Boot</p>
-                <p>Gradle Plugins</p>
+                <p className={`${theme ? 'TextDescriptionBlack' : 'TextDescriptionLight'}`}>Android</p>
+                <p className={`${theme ? 'TextDescriptionBlack' : 'TextDescriptionLight'}`}>Ktor Framework</p>
+                <p className={`${theme ? 'TextDescriptionBlack' : 'TextDescriptionLight'}`}>Spring Boot</p>
+                <p className={`${theme ? 'TextDescriptionBlack' : 'TextDescriptionLight'}`}>Gradle Plugins</p>
               </div>
             </div>
 
-            <div className="Item">
+            <div className={`Item ${theme ? 'BlackBorder' : 'LightBorder'}`}>
               <div className="Content">
                 <img alt="Javascript" src="https://raw.githubusercontent.com/Yazan98/portfolio/master/src/images/js.webp" loading="eager" width="50px" height="50px" />
-                <h3>Javascript Language</h3>
+                <h3 className={`${theme ? 'TextTitleBlack' : 'TextTitleLight'}`}>Javascript Language</h3>
               </div>
 
               <div className="Description">
-                <p>
+                <p className={`${theme ? 'TextDescriptionBlack' : 'TextDescriptionLight'}`}>
                   JavaScript Used To Create Websites Built on React.js, Next.js Also Most Of Javascript Files
                   Written With Jsx (ECMA +6) And The Backend Side With Express.js To Build Restful Api
                 </p>
               </div>
 
               <div className="Tags">
-                <p>React.js</p>
-                <p>Next.js</p>
-                <p>Express.js</p>
+                <p className={`${theme ? 'TextDescriptionBlack' : 'TextDescriptionLight'}`}>React.js</p>
+                <p className={`${theme ? 'TextDescriptionBlack' : 'TextDescriptionLight'}`}>Next.js</p>
+                <p className={`${theme ? 'TextDescriptionBlack' : 'TextDescriptionLight'}`}>Express.js</p>
               </div>
             </div>
 
-            <div className="Item">
+            <div className={`Item ${theme ? 'BlackBorder' : 'LightBorder'}`}>
               <div className="Content">
                 <img alt="Java" src="https://raw.githubusercontent.com/Yazan98/portfolio/master/src/images/java.webp" loading="eager" width="50px" height="50px" />
-                <h3>Java Language</h3>
+                <h3 className={`${theme ? 'TextTitleBlack' : 'TextTitleLight'}`}>Java Language</h3>
               </div>
 
               <div className="Description">
-                <p>
+                <p className={`${theme ? 'TextDescriptionBlack' : 'TextDescriptionLight'}`}>
                   Java Language is My First Language i Learnt To Build Api Via Spring Boot
                   and Learn Object Oriented Programming and Design Patterns While
                   Building Applications also To Build Android Apps With Java Language
@@ -73,22 +75,22 @@ export default function SkillsComponent() {
               </div>
 
               <div className="Tags">
-                <p>Android</p>
-                <p>Spring Boot</p>
-                <p>Jar Files</p>
-                <p>War Files</p>
-                <p>Tomcat</p>
+                <p className={`${theme ? 'TextDescriptionBlack' : 'TextDescriptionLight'}`}>Android</p>
+                <p className={`${theme ? 'TextDescriptionBlack' : 'TextDescriptionLight'}`}>Spring Boot</p>
+                <p className={`${theme ? 'TextDescriptionBlack' : 'TextDescriptionLight'}`}>Jar Files</p>
+                <p className={`${theme ? 'TextDescriptionBlack' : 'TextDescriptionLight'}`}>War Files</p>
+                <p className={`${theme ? 'TextDescriptionBlack' : 'TextDescriptionLight'}`}>Tomcat</p>
               </div>
             </div>
 
-            <div className="Item">
+            <div className={`Item ${theme ? 'BlackBorder' : 'LightBorder'}`}>
               <div className="Content">
                 <img alt="Ruby" src="https://raw.githubusercontent.com/Yazan98/portfolio/master/src/images/ruby.webp" loading="eager" width="50px" height="50px" />
-                <h3>Ruby Language</h3>
+                <h3 className={`${theme ? 'TextTitleBlack' : 'TextTitleLight'}`}>Ruby Language</h3>
               </div>
 
               <div className="Description">
-                <p>
+                <p className={`${theme ? 'TextDescriptionBlack' : 'TextDescriptionLight'}`}>
                   Ruby Language is The Main Language i Use When i Need to Build Command Line Interface
                   To Do Some Tasks That Need Third Party Api Communications And Multi Threading Task
                   also Build Fastlane Plugins Mainly For Android
@@ -96,20 +98,20 @@ export default function SkillsComponent() {
               </div>
 
               <div className="Tags">
-                <p>CLI</p>
-                <p>Fastlane</p>
-                <p>Build Gems</p>
+                <p className={`${theme ? 'TextDescriptionBlack' : 'TextDescriptionLight'}`}>CLI</p>
+                <p className={`${theme ? 'TextDescriptionBlack' : 'TextDescriptionLight'}`}>Fastlane</p>
+                <p className={`${theme ? 'TextDescriptionBlack' : 'TextDescriptionLight'}`}>Build Gems</p>
               </div>
             </div>
 
-            <div className="Item">
+            <div className={`Item ${theme ? 'BlackBorder' : 'LightBorder'}`}>
               <div className="Content">
                 <img alt="Typescript" src="https://raw.githubusercontent.com/Yazan98/portfolio/master/src/images/ts.webp" loading="eager" width="50px" height="50px" />
-                <h3>Typescript Language</h3>
+                <h3 className={`${theme ? 'TextTitleBlack' : 'TextTitleLight'}`}>Typescript Language</h3>
               </div>
 
               <div className="Description">
-                <p>
+                <p className={`${theme ? 'TextDescriptionBlack' : 'TextDescriptionLight'}`}>
                   Typescript Used When i Want To Work on Node Projects With OOP and More Like
                   Java Applications I Make Because Ts has a lot Of Common Keywords like Java
                   and The Main Framework im Working On is Nest.js With Typescript
@@ -118,20 +120,20 @@ export default function SkillsComponent() {
               </div>
 
               <div className="Tags">
-                <p>Mongo</p>
-                <p>Socket.io</p>
-                <p>Nest.js</p>
+                <p className={`${theme ? 'TextDescriptionBlack' : 'TextDescriptionLight'}`}>Mongo</p>
+                <p className={`${theme ? 'TextDescriptionBlack' : 'TextDescriptionLight'}`}>Socket.io</p>
+                <p className={`${theme ? 'TextDescriptionBlack' : 'TextDescriptionLight'}`}>Nest.js</p>
               </div>
             </div>
 
-            <div className="Item">
+            <div className={`Item ${theme ? 'BlackBorder' : 'LightBorder'}`}>
               <div className="Content">
                 <img alt="PHP" src="https://raw.githubusercontent.com/Yazan98/portfolio/master/src/images/pgp.webp" loading="eager" width="50px" height="50px" />
-                <h3>PHP Language</h3>
+                <h3 className={`${theme ? 'TextTitleBlack' : 'TextTitleLight'}`}>PHP Language</h3>
               </div>
 
               <div className="Description">
-                <p>
+                <p className={`${theme ? 'TextDescriptionBlack' : 'TextDescriptionLight'}`}>
                   Beginner Level In PHP and Laravel Mainly Im Currently Learning PHP To Build
                   Restful Api's on Laravel With Mysql, Swagger, Auth, Return Html, Css Views From Api
                   With Different Response Types
@@ -139,20 +141,20 @@ export default function SkillsComponent() {
               </div>
 
               <div className="Tags">
-                <p>Laravel</p>
-                <p>Mysql</p>
-                <p>Auth</p>
+                <p className={`${theme ? 'TextDescriptionBlack' : 'TextDescriptionLight'}`}>Laravel</p>
+                <p className={`${theme ? 'TextDescriptionBlack' : 'TextDescriptionLight'}`}>Mysql</p>
+                <p className={`${theme ? 'TextDescriptionBlack' : 'TextDescriptionLight'}`}>Auth</p>
               </div>
             </div>
 
-            <div className="Item">
+            <div className={`Item ${theme ? 'BlackBorder' : 'LightBorder'}`}>
               <div className="Content">
                 <img alt="Gradle" src="https://raw.githubusercontent.com/Yazan98/portfolio/master/src/images/gradle.webp" loading="eager" width="50px" height="50px" />
-                <h3>Gradle</h3>
+                <h3 className={`${theme ? 'TextTitleBlack' : 'TextTitleLight'}`}>Gradle</h3>
               </div>
 
               <div className="Description">
-                <p>
+                <p className={`${theme ? 'TextDescriptionBlack' : 'TextDescriptionLight'}`}>
                   Im Using Grovvy, Kotlin To Build Gradle Plugins To Configure Android
                   projects or Spring Boot Projects Also Deploy Plugins On
                   Gradle Portal Mainly The Plugins For Configuring Dynamic Tasks Or Libraries
@@ -160,20 +162,20 @@ export default function SkillsComponent() {
               </div>
 
               <div className="Tags">
-                <p>Gradle Portal</p>
-                <p>Groovy</p>
-                <p>Dependencies Plugins</p>
+                <p className={`${theme ? 'TextDescriptionBlack' : 'TextDescriptionLight'}`}>Gradle Portal</p>
+                <p className={`${theme ? 'TextDescriptionBlack' : 'TextDescriptionLight'}`}>Groovy</p>
+                <p className={`${theme ? 'TextDescriptionBlack' : 'TextDescriptionLight'}`}>Dependencies Plugins</p>
               </div>
             </div>
 
-            <div className="Item">
+            <div className={`Item ${theme ? 'BlackBorder' : 'LightBorder'}`}>
               <div className="Content">
                 <img alt="Git" src="https://raw.githubusercontent.com/Yazan98/portfolio/master/src/images/git.webp" loading="eager" width="50px" height="50px" />
-                <h3>Version Control</h3>
+                <h3 className={`${theme ? 'TextTitleBlack' : 'TextTitleLight'}`}>Version Control</h3>
               </div>
 
               <div className="Description">
-                <p>
+                <p className={`${theme ? 'TextDescriptionBlack' : 'TextDescriptionLight'}`}>
                   Git is My Favourite Tool Im Using Git Everyday To Manage My Projects Via
                   Github, Bitbucket, Gitlab and Configure Local Git Hooks To Manage
                   Development Phase With Specific Actions, Tasks Via Git Hooks
@@ -183,21 +185,21 @@ export default function SkillsComponent() {
               </div>
 
               <div className="Tags">
-                <p>Github</p>
-                <p>Gitlab</p>
-                <p>Git Hooks</p>
-                <p>Source Tree</p>
+                <p className={`${theme ? 'TextDescriptionBlack' : 'TextDescriptionLight'}`}>Github</p>
+                <p className={`${theme ? 'TextDescriptionBlack' : 'TextDescriptionLight'}`}>Gitlab</p>
+                <p className={`${theme ? 'TextDescriptionBlack' : 'TextDescriptionLight'}`}>Git Hooks</p>
+                <p className={`${theme ? 'TextDescriptionBlack' : 'TextDescriptionLight'}`}>Source Tree</p>
               </div>
             </div>
 
-            <div className="Item">
+            <div className={`Item ${theme ? 'BlackBorder' : 'LightBorder'}`}>
               <div className="Content">
                 <img alt="React.js" src="https://raw.githubusercontent.com/Yazan98/portfolio/master/src/images/react.webp" loading="eager" width="50px" height="50px" />
-                <h3>React.js</h3>
+                <h3 className={`${theme ? 'TextTitleBlack' : 'TextTitleLight'}`}>React.js</h3>
               </div>
 
               <div className="Description">
-                <p>
+                <p className={`${theme ? 'TextDescriptionBlack' : 'TextDescriptionLight'}`}>
                   Im Using React.js To Build Websites Mainly Depends on SPA, PWA
                   And The Websites Has Ability To Install On Mobile Device as Android Application
                   and Caching, Offline Experience Via Service Worker and Save Values in Cookies,
@@ -206,21 +208,21 @@ export default function SkillsComponent() {
               </div>
 
               <div className="Tags">
-                <p>React.js</p>
-                <p>React Hooks</p>
-                <p>Responsive Design</p>
-                <p>PWA</p>
+                <p className={`${theme ? 'TextDescriptionBlack' : 'TextDescriptionLight'}`}>React.js</p>
+                <p className={`${theme ? 'TextDescriptionBlack' : 'TextDescriptionLight'}`}>React Hooks</p>
+                <p className={`${theme ? 'TextDescriptionBlack' : 'TextDescriptionLight'}`}>Responsive Design</p>
+                <p className={`${theme ? 'TextDescriptionBlack' : 'TextDescriptionLight'}`}>PWA</p>
               </div>
             </div>
 
-            <div className="Item">
+            <div className={`Item ${theme ? 'BlackBorder' : 'LightBorder'}`}>
               <div className="Content">
                 <img alt="Next.js" src="https://raw.githubusercontent.com/Yazan98/portfolio/master/src/images/next.webp" loading="eager" width="50px" height="50px" />
-                <h3>Next.js</h3>
+                <h3 className={`${theme ? 'TextTitleBlack' : 'TextTitleLight'}`}>Next.js</h3>
               </div>
 
               <div className="Description">
-                <p>
+                <p className={`${theme ? 'TextDescriptionBlack' : 'TextDescriptionLight'}`}>
                   Im Using Next.js To Build Websites Above React Library To Perform
                   SEO, SSR, SSG Like My Portfolio This Website Built
                   To Be Server Side Rendering Also Next is Better Choice
@@ -229,21 +231,21 @@ export default function SkillsComponent() {
               </div>
 
               <div className="Tags">
-                <p>Next.js</p>
-                <p>React.js</p>
-                <p>React Hooks</p>
-                <p>SASS</p>
+                <p className={`${theme ? 'TextDescriptionBlack' : 'TextDescriptionLight'}`}>Next.js</p>
+                <p className={`${theme ? 'TextDescriptionBlack' : 'TextDescriptionLight'}`}>React.js</p>
+                <p className={`${theme ? 'TextDescriptionBlack' : 'TextDescriptionLight'}`}>React Hooks</p>
+                <p className={`${theme ? 'TextDescriptionBlack' : 'TextDescriptionLight'}`}>SASS</p>
               </div>
             </div>
 
-            <div className="Item">
+            <div className={`Item ${theme ? 'BlackBorder' : 'LightBorder'}`}>
               <div className="Content">
                 <img alt="Spring Boot" src="https://raw.githubusercontent.com/Yazan98/portfolio/master/src/images/spring.webp" loading="eager" width="50px" height="50px" />
-                <h3>Spring Boot</h3>
+                <h3 className={`${theme ? 'TextTitleBlack' : 'TextTitleLight'}`}>Spring Boot</h3>
               </div>
 
               <div className="Description">
-                <p>
+                <p className={`${theme ? 'TextDescriptionBlack' : 'TextDescriptionLight'}`}>
                   When I Need To Build Backend Restful Api The First Framework i Use Is Spring Boot
                   With Kotlin or Java as a Main Language of The Current Project
                   Also Im Using Mysql, NoSql, Spring Hibernate, JPA Data, Autowired Injection
@@ -252,21 +254,21 @@ export default function SkillsComponent() {
               </div>
 
               <div className="Tags">
-                <p>Spring Boot</p>
-                <p>Spring Starter</p>
-                <p>Firebase Admin</p>
-                <p>JPA, Hibernate</p>
+                <p className={`${theme ? 'TextDescriptionBlack' : 'TextDescriptionLight'}`}>Spring Boot</p>
+                <p className={`${theme ? 'TextDescriptionBlack' : 'TextDescriptionLight'}`}>Spring Starter</p>
+                <p className={`${theme ? 'TextDescriptionBlack' : 'TextDescriptionLight'}`}>Firebase Admin</p>
+                <p className={`${theme ? 'TextDescriptionBlack' : 'TextDescriptionLight'}`}>JPA, Hibernate</p>
               </div>
             </div>
 
-            <div className="Item">
+            <div className={`Item ${theme ? 'BlackBorder' : 'LightBorder'}`}>
               <div className="Content">
                 <img alt="Nest.js" src="https://raw.githubusercontent.com/Yazan98/portfolio/master/src/images/nest.webp" loading="eager" width="50px" height="50px" />
-                <h3>Nest.js</h3>
+                <h3 className={`${theme ? 'TextTitleBlack' : 'TextTitleLight'}`}>Nest.js</h3>
               </div>
 
               <div className="Description">
-                <p>
+                <p className={`${theme ? 'TextDescriptionBlack' : 'TextDescriptionLight'}`}>
                   Nest.js Is The Main Framework I Use To Build Api In Typescript Language
                   and Im Using This Framework When i Need To Implement Socket.io Implementation
                   and Chat Rooms Logic With MongoDB Queries
@@ -274,40 +276,40 @@ export default function SkillsComponent() {
               </div>
 
               <div className="Tags">
-                <p>Nest.js</p>
-                <p>Socket.io</p>
-                <p>Json</p>
+                <p className={`${theme ? 'TextDescriptionBlack' : 'TextDescriptionLight'}`}>Nest.js</p>
+                <p className={`${theme ? 'TextDescriptionBlack' : 'TextDescriptionLight'}`}>Socket.io</p>
+                <p className={`${theme ? 'TextDescriptionBlack' : 'TextDescriptionLight'}`}>Json</p>
               </div>
             </div>
 
-            <div className="Item">
+            <div className={`Item ${theme ? 'BlackBorder' : 'LightBorder'}`}>
               <div className="Content">
                 <img alt="Sass" src="https://raw.githubusercontent.com/Yazan98/portfolio/master/src/images/sass.webp" loading="eager" width="50px" height="50px" />
-                <h3>Sass</h3>
+                <h3 className={`${theme ? 'TextTitleBlack' : 'TextTitleLight'}`}>Sass</h3>
               </div>
 
               <div className="Description">
-                <p>
+                <p className={`${theme ? 'TextDescriptionBlack' : 'TextDescriptionLight'}`}>
                   Sass is The Main Styling Files For React and Next i use For Amazing Syntax, Extends, Features
                   That Not Exists in CSS Files, Also Better When Using Mixins
                 </p>
               </div>
 
               <div className="Tags">
-                <p>SCSS</p>
-                <p>SASS</p>
-                <p>Website Styling</p>
+                <p className={`${theme ? 'TextDescriptionBlack' : 'TextDescriptionLight'}`}>SCSS</p>
+                <p className={`${theme ? 'TextDescriptionBlack' : 'TextDescriptionLight'}`}>SASS</p>
+                <p className={`${theme ? 'TextDescriptionBlack' : 'TextDescriptionLight'}`}>Website Styling</p>
               </div>
             </div>
 
-            <div className="Item">
+            <div className={`Item ${theme ? 'BlackBorder' : 'LightBorder'}`}>
               <div className="Content">
                 <img alt="Mysql" src="https://raw.githubusercontent.com/Yazan98/portfolio/master/src/images/mysql.webp" loading="eager" width="50px" height="50px" />
-                <h3>Databases</h3>
+                <h3 className={`${theme ? 'TextTitleBlack' : 'TextTitleLight'}`}>Databases</h3>
               </div>
 
               <div className="Description">
-                <p>
+                <p className={`${theme ? 'TextDescriptionBlack' : 'TextDescriptionLight'}`}>
                   Databases For Backend Is Just 2 (Mysql and Mongo) and When i Implement Backend Api
                   Mysql is The Chosen One When Multiple Api's Has Relations With Each Others
                   Like Complex Api's But When Each Table Has it's Own Implementation Mongo is Better Choice
@@ -315,20 +317,20 @@ export default function SkillsComponent() {
               </div>
 
               <div className="Tags">
-                <p>Mongoos</p>
-                <p>Mysql</p>
-                <p>InnoDB</p>
+                <p className={`${theme ? 'TextDescriptionBlack' : 'TextDescriptionLight'}`}>Mongoos</p>
+                <p className={`${theme ? 'TextDescriptionBlack' : 'TextDescriptionLight'}`}>Mysql</p>
+                <p className={`${theme ? 'TextDescriptionBlack' : 'TextDescriptionLight'}`}>InnoDB</p>
               </div>
             </div>
 
-            <div className="Item">
+            <div className={`Item ${theme ? 'BlackBorder' : 'LightBorder'}`}>
               <div className="Content">
                 <img alt="Jenkins" src="https://raw.githubusercontent.com/Yazan98/portfolio/master/src/images/jenkins.webp" loading="eager" width="50px" height="50px" />
-                <h3>Jenkins CI</h3>
+                <h3 className={`${theme ? 'TextTitleBlack' : 'TextTitleLight'}`}>Jenkins CI</h3>
               </div>
 
               <div className="Description">
-                <p>
+                <p className={`${theme ? 'TextDescriptionBlack' : 'TextDescriptionLight'}`}>
                   Continues Integration For Android To Run Jobs On Specific Branches With Gradle
                   Configuration and Create Pipelines, Jobs, and Fastlane For Android And Execute
                   Lanes With Ruby Syntax and Manage Gems In App
@@ -336,19 +338,19 @@ export default function SkillsComponent() {
               </div>
 
               <div className="Tags">
-                <p>CI</p>
-                <p>Fastlane</p>
+                <p className={`${theme ? 'TextDescriptionBlack' : 'TextDescriptionLight'}`}>CI</p>
+                <p className={`${theme ? 'TextDescriptionBlack' : 'TextDescriptionLight'}`}>Fastlane</p>
               </div>
             </div>
 
-            <div className="Item">
+            <div className={`Item ${theme ? 'BlackBorder' : 'LightBorder'}`}>
               <div className="Content">
                 <img alt="Android" src="https://raw.githubusercontent.com/Yazan98/portfolio/master/src/images/android.webp" loading="eager" width="50px" height="50px" />
-                <h3>Android</h3>
+                <h3 className={`${theme ? 'TextTitleBlack' : 'TextTitleLight'}`}>Android</h3>
               </div>
 
               <div className="Description">
-                <p>
+                <p className={`${theme ? 'TextDescriptionBlack' : 'TextDescriptionLight'}`}>
                   Create Android Applications With Kotlin and Gradle DSL With Latest Android Technologies
                   Like Hilt, Jetpack Compose, Esspresso, Single Activity Applications,
                   Multi Modular Apps, Deal With Offline Caching
@@ -357,8 +359,8 @@ export default function SkillsComponent() {
               </div>
 
               <div className="Tags">
-                <p>Optimized Apps</p>
-                <p>Android Apps</p>
+                <p className={`${theme ? 'TextDescriptionBlack' : 'TextDescriptionLight'}`}>Optimized Apps</p>
+                <p className={`${theme ? 'TextDescriptionBlack' : 'TextDescriptionLight'}`}>Android Apps</p>
               </div>
             </div>
           </ul>

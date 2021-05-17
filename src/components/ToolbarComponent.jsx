@@ -5,6 +5,7 @@ import { NavLink } from 'react-router-dom';
 import { BlueLineComponent } from './BlueLineComponent';
 import LightImage from '../images/icons/light.svg';
 import DarkImage from '../images/icons/dark.svg';
+import LightDotsImage from '../images/icons/white_dots.svg';
 import { isApplicationLightTheme, setApplicationToDarkTheme, setApplicationToLightTheme } from '../info/ThemeInfo';
 
 export default function ToolbarComponent({ isNormalPage = true }) {
@@ -35,6 +36,7 @@ export default function ToolbarComponent({ isNormalPage = true }) {
             {theme ? <img src={DarkImage} alt="Dark Theme" className="ThemeImage" /> : <img alt="White Theme" src={LightImage} className="ThemeImage" /> }
           </div>
         </div>
+        <img src={LightDotsImage} alt="Mobile Options" className="ThemeImage MobileOptions" />
       </div>
     </div>
   );

@@ -34,6 +34,12 @@
   cursor: pointer;
 }
 
+.Toolbar_Container .Content .MobileOptions {
+  width: 1.3em;
+  height: 1.3em;
+  display: none;
+}
+
 #rounded {
   border-radius: 30px;
   padding: 5px 10px;
@@ -87,5 +93,20 @@ a:hover {
         border-width: 1px;
       }
     }
+  }
+}
+
+@include layoutManager($phone) {
+  .Toolbar_Container .Content .MobileOptions {
+    display: block;
+  }
+
+  .Toolbar_Container .Content .Links {
+    visibility: hidden;
+    clear: both;
+    float: left;
+    margin: 10px auto 5px 20px;
+    width: 28%;
+    display: none;
   }
 }

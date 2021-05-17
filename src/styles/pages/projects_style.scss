@@ -82,3 +82,44 @@
     }
   }
 }
+
+@include layoutManager($phone) {
+  .ProjectsComponent {
+    padding: 1em;
+
+    p {
+      font-size: small;
+    }
+
+    .Title {
+      .Links {
+        label {
+          font-size: xx-small;
+          margin-right: 10px;
+        }
+      }
+
+      .ProjectsContainer {
+        grid-template-columns: repeat(auto-fill,minmax(45vw,.1fr));
+
+        .Container {
+          .Texts {
+            p {
+              font-size: x-small;
+            }
+
+            h3 {
+              font-size: medium;
+            }
+          }
+
+          .ImageContainer {
+            img {
+              width: 38vw;
+            }
+          }
+        }
+      }
+    }
+  }
+}

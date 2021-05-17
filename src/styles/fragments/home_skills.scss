@@ -106,3 +106,38 @@
   max-width: 60%;
   font-style: italic;
 }
+
+@include layoutManager($phone) {
+  .HomeSkillsViewComponent {
+    margin-top: 2em;
+    margin-bottom: 2em;
+    padding: 1em;
+    display: block;
+
+    .SkillsContent {
+      margin-top: 1em;
+      padding: 0.5em;
+
+      .Item {
+        h4 {
+          font-size: small;
+        }
+
+        p {
+          font-size: x-small;
+        }
+      }
+    }
+
+    .Title {
+      width: 90vw;
+      .Content {
+        width: 90vw;
+
+        .Des {
+          font-size: small;
+        }
+      }
+    }
+  }
+}

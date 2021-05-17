@@ -10,12 +10,14 @@ import { PersonalPagesViewComponent } from '../components/layouts/PersonalPagesC
 import { findProjectByFilterType, findProjectByName } from '../info/ProjectsDetails';
 import { findProjectByFilterTypeAndLanguage } from '../info/ProjectsList';
 import { ToolbarViewComponent } from '../components/ToolbarComponent';
+import { isApplicationLightTheme } from '../info/ThemeInfo';
 
 export default function AllProjectsComponent() {
   const [search, setSearch] = useState('');
   const [filterType, setFilterType] = useState('All');
   const [projects, setProjects] = useState([]);
   const [language, setLanguage] = useState('');
+  const [theme, setTheme] = useState(isApplicationLightTheme());
   useMemo(() => {
     if (search) {
       setProjects(findProjectByName(search, filterType));
@@ -32,8 +34,8 @@ export default function AllProjectsComponent() {
       <div className="AllProjectsContainer">
         <div className="MainContent">
           <div className="Title">
-            <h1>Projects</h1>
-            <p>A Big List of My Projects Open Source and Available To Show</p>
+            <h1 className={`${theme ? 'TextTitleBlack' : 'TextTitleLight'}`}>Projects</h1>
+            <p className={`${theme ? 'TextDescriptionBlack' : 'TextDescriptionLight'}`}>A Big List of My Projects Open Source and Available To Show</p>
           </div>
           <div />
           <div />
@@ -84,6 +86,7 @@ export default function AllProjectsComponent() {
               description={item.description}
               filter={item.filter}
               icons={item.links}
+              theme={theme}
               isOpenSource={item.isOpenSource}
             />
           ))}

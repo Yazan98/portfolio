@@ -3,11 +3,11 @@ import GithubImage from '../images/github-logo.svg';
 import LinkImage from '../images/link.svg';
 
 export const ProjectCardComponent = ({
-  icon, name, description, filter, icons = [], isOpenSource,
+  icon, name, description, filter, icons = [], isOpenSource, theme,
 }) => (
-  <div className="ProjectCardContainer">
+  <div className={`ProjectCardContainer ${theme ? 'BlackBorder' : 'LightBorder'}`}>
     <img alt={name} loading="eager" src={icon} width="40px" height="40px" />
-    <label htmlFor="first-name">{name}</label>
+    <h3 className={`${theme ? 'TextTitleBlack' : 'TextTitleLight'}`}>{name}</h3>
     <p className="Description">{description}</p>
     <div className="Filters">
       <p className="Filter">{filter}</p>

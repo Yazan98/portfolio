@@ -172,12 +172,61 @@
       .HomeHeaderContainer {
         display: block;
 
+        .HeaderLinks {
+          .Content {
+            visibility: hidden;
+            clear: both;
+            float: left;
+            margin: 10px auto 5px 20px;
+            width: 28%;
+            display: none;
+          }
+        }
+
         .Description {
-          height: 20vh;
+          margin-top: 5em;
+          .Content {
+            .SubTitle {
+              font-size: xx-small;
+            }
+
+            .HeaderButton {
+              font-size: x-small;
+            }
+
+            .Technologies {
+              visibility: hidden;
+              clear: both;
+              float: left;
+              margin: 10px auto 5px 20px;
+              width: 28%;
+              display: none;
+            }
+
+            label {
+              font-size: large;
+            }
+          }
+
+          .Tags {
+            span {
+              font-size: xx-small;
+            }
+          }
+
+          font-size: xx-small;
+          width: 80vw;
+          height: 30vh;
         }
 
         .Image {
-          height: 30vh;
+          height: 50vh;
+        }
+
+        img {
+          width: 80vw;
+          height: 50vh;
+          object-fit: contain;
         }
       }
 
