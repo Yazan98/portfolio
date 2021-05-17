@@ -28,7 +28,7 @@ export default function AllProjectsComponent() {
 
   return (
     <PersonalPagesViewComponent title="Yazan Tarifi - All Projects">
-      <ToolbarViewComponent />
+      <ToolbarViewComponent isNormalPage />
       <div className="AllProjectsContainer">
         <div className="MainContent">
           <div className="Title">

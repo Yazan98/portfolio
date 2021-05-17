@@ -5,10 +5,12 @@ import { getProjectsList, getProjectsListByFilter } from '../info/ProfileInforma
 import { PersonalPagesViewComponent } from '../components/layouts/PersonalPagesComponent';
 import { ProjectPreviewViewComponent } from '../components/ProjectPreviewViewComponent';
 import { ToolbarViewComponent } from '../components/ToolbarComponent';
+import { isApplicationLightTheme } from '../info/ThemeInfo';
 
 export default function ProjectsComponent() {
   const [filter, setFilter] = React.useState('all');
   const [projects, setProjects] = React.useState([]);
+  const [theme, setTheme] = React.useState(isApplicationLightTheme());
   const history = useHistory();
 
   const onProjectClicked = (name) => {
@@ -32,14 +34,14 @@ export default function ProjectsComponent() {
       <ToolbarViewComponent />
       <div className="ProjectsComponent">
         <div className="Title">
-          <h2>Portfolio</h2>
-          <p>This is List of Some Projects I Built</p>
+          <h2 className={theme ? 'TextTitleBlack' : 'TextTitleLight'}>Portfolio</h2>
+          <p className={`${theme ? 'TextDescriptionBlack' : 'TextDescriptionLight'}`}>This is List of Some Projects I Built</p>
           <div className="Links">
-            <label className={filter === 'all' ? 'active' : ''} onClick={() => setFilter('all')}>All Projects</label>
-            <label className={filter === 'android' ? 'active' : ''} onClick={() => setFilter('android')}>Android Apps</label>
-            <label className={filter === 'web' ? 'active' : ''} onClick={() => setFilter('web')}>Websites</label>
-            <label className={filter === 'api' ? 'active' : ''} onClick={() => setFilter('api')}>Web Apps</label>
-            <label className={filter === 'opensource' ? 'active' : ''} onClick={() => setFilter('opensource')}>Filtered Projects</label>
+            <label className={`${theme ? 'TextTitleBlack' : 'TextTitleLight'}`} onClick={() => setFilter('all')}>All Projects</label>
+            <label className={`${theme ? 'TextTitleBlack' : 'TextTitleLight'}`} onClick={() => setFilter('android')}>Android Apps</label>
+            <label className={`${theme ? 'TextTitleBlack' : 'TextTitleLight'}`} onClick={() => setFilter('web')}>Websites</label>
+            <label className={`${theme ? 'TextTitleBlack' : 'TextTitleLight'}`} onClick={() => setFilter('api')}>Web Apps</label>
+            <label className={`${theme ? 'TextTitleBlack' : 'TextTitleLight'}`} onClick={() => setFilter('opensource')}>Filtered Projects</label>
           </div>
 
           <div className="ProjectsContainer">
@@ -50,6 +52,7 @@ export default function ProjectsComponent() {
                   name={item.name}
                   createdAt={item.createdAt}
                   preview={item.typeText}
+                  theme={theme}
                   onClickCallback={onProjectClicked}
                 />
               )

@@ -1,24 +1,5 @@
 @import "../base";
 
-.SkillsContainer {
-  .Toolbar_Container {
-    .Content {
-      .Link {
-        color: black;
-      }
-
-      .Link:hover {
-        color: $primaryColor;
-      }
-
-      .rounded {
-        color: black;
-        border-color: black;
-      }
-    }
-  }
-}
-
 .SkillsPageContainer {
   padding: 2em;
   min-height: 100vh;

@@ -2,7 +2,7 @@ import React from 'react';
 import ComponentLayout from './layouts/ComponentLayout';
 
 export default function ProjectPreviewComponent({
-  image = '', name = '', preview = '', createdAt = '', onClickCallback,
+  image = '', name = '', preview = '', createdAt = '', onClickCallback, theme,
 }) {
   const imageRef = React.useRef(null);
   const callback = React.useCallback((targetName = '') => {
@@ -16,12 +16,12 @@ export default function ProjectPreviewComponent({
             <img src={image} ref={imageRef} height="400" alt={name} loading="eager" onClick={() => callback(name)} />
           </div>
           <div className="Texts">
-            <p className="Date">
+            <p className={`Date ${theme ? 'TextDescriptionBlack' : 'TextDescriptionLight'}`}>
               Created At :
               {createdAt}
             </p>
-            <h3>{name}</h3>
-            <p>{preview}</p>
+            <h3 className={`${theme ? 'TextTitleBlack' : 'TextTitleLight'}`}>{name}</h3>
+            <p className={`${theme ? 'TextDescriptionBlack' : 'TextDescriptionLight'}`}>{preview}</p>
           </div>
         </div>
       </div>

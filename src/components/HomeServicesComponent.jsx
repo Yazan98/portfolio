@@ -1,7 +1,9 @@
 import React from 'react';
 import '../styles/fragments/fragments_style.scss';
+import { isApplicationLightTheme } from '../info/ThemeInfo';
 
 export default function HomeServicesComponent() {
+  const [theme, setTheme] = React.useState(isApplicationLightTheme());
   return (
     <div className="HomeServicesComponentContainer">
       <h4 className="title">What Can I Do</h4>
@@ -9,10 +11,10 @@ export default function HomeServicesComponent() {
 
         <div className="ServiceItem">
           <div className="ProjectComponentContainer">
-            <div className="ProjectItem">
-              <p>Frontend Side</p>
-              <h5>Android Development</h5>
-              <p className="Description">
+            <div className={`ProjectItem ${theme ? 'BlackBorder' : 'LightBorder'}`}>
+              <p className={`${theme ? 'TextDescriptionBlack' : 'TextDescriptionLight'}`}>Frontend Side</p>
+              <h5 className={theme ? 'TextTitleBlack' : 'TextTitleLight'}>Android Development</h5>
+              <p className={`Description ${theme ? 'TextDescriptionBlack' : 'TextDescriptionLight'}`}>
                 Firebase, Bintray, MVVM, Single Activity Apps, Jetpack Component
                 , Room Database, ADB Terminal, Fragments, Custom Views, Multi
                 Modular Apps, Google Play Console, Android Profiler, Leak Canary
@@ -23,10 +25,10 @@ export default function HomeServicesComponent() {
 
         <div className="ServiceItem">
           <div className="ProjectComponentContainer">
-            <div className="ProjectItem">
-              <p>Backend Side</p>
-              <h5>SpringBoot Web Apps</h5>
-              <p className="Description">
+            <div className={`ProjectItem ${theme ? 'BlackBorder' : 'LightBorder'}`}>
+              <p className={`${theme ? 'TextDescriptionBlack' : 'TextDescriptionLight'}`}>Backend Side</p>
+              <h5 className={theme ? 'TextTitleBlack' : 'TextTitleLight'}>SpringBoot Web Apps</h5>
+              <p className={`Description ${theme ? 'TextDescriptionBlack' : 'TextDescriptionLight'}`}>
                 AWS Deployment, Digital Ocean, Nginx Load Balancer,
                 Mysql (RDS), S3 Storage, Firebase, Socket IO Via Nest.js, Laravel,
                 Spring Boot
@@ -37,10 +39,10 @@ export default function HomeServicesComponent() {
 
         <div className="ServiceItem">
           <div className="ProjectComponentContainer">
-            <div className="ProjectItem">
-              <p>Frontend Side</p>
-              <h5>Web Development</h5>
-              <p className="Description">
+            <div className={`ProjectItem ${theme ? 'BlackBorder' : 'LightBorder'}`}>
+              <p className={`${theme ? 'TextDescriptionBlack' : 'TextDescriptionLight'}`}>Frontend Side</p>
+              <h5 className={theme ? 'TextTitleBlack' : 'TextTitleLight'}>Web Development</h5>
+              <p className={`Description ${theme ? 'TextDescriptionBlack' : 'TextDescriptionLight'}`}>
                 Eslint Code Management With Airbnb Style, Webstorm, VSCode
                 , Reusable Components, React Hooks, Mixins Queries In
                 SASS Styles, Material UI
@@ -51,10 +53,10 @@ export default function HomeServicesComponent() {
 
         <div className="ServiceItem">
           <div className="ProjectComponentContainer">
-            <div className="ProjectItem">
-              <p>Configuration</p>
-              <h5>Tools Development</h5>
-              <p className="Description">
+            <div className={`ProjectItem ${theme ? 'BlackBorder' : 'LightBorder'}`}>
+              <p className={`${theme ? 'TextDescriptionBlack' : 'TextDescriptionLight'}`}>Configuration</p>
+              <h5 className={theme ? 'TextTitleBlack' : 'TextTitleLight'}>Tools Development</h5>
+              <p className={`Description ${theme ? 'TextDescriptionBlack' : 'TextDescriptionLight'}`}>
                 Jenkins, Fastlane, ADB, Photoshop, Design Simple Animations
                 In After Effects To App Splash Screen, Git, Github,
                 Gitlab, Bitbucket, Linux Terminal
@@ -65,10 +67,10 @@ export default function HomeServicesComponent() {
 
         <div className="ServiceItem">
           <div className="ProjectComponentContainer">
-            <div className="ProjectItem">
-              <p>Frontend Side</p>
-              <h5>Design</h5>
-              <p className="Description">
+            <div className={`ProjectItem ${theme ? 'BlackBorder' : 'LightBorder'}`}>
+              <p className={`${theme ? 'TextDescriptionBlack' : 'TextDescriptionLight'}`}>Frontend Side</p>
+              <h5 className={theme ? 'TextTitleBlack' : 'TextTitleLight'}>Design</h5>
+              <p className={`Description ${theme ? 'TextDescriptionBlack' : 'TextDescriptionLight'}`}>
                 Design Application Interface , Logos With Adobe Photoshop, After
                 Effects For Simple Animation (Beginner Level), Adobe XD
               </p>

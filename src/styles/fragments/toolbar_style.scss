@@ -28,6 +28,12 @@
   height: auto;
 }
 
+.Toolbar_Container .Content .Links .ThemeIcon .ThemeImage {
+  width: 1.3em;
+  height: 1.3em;
+  cursor: pointer;
+}
+
 #rounded {
   border-radius: 30px;
   padding: 5px 10px;
@@ -65,4 +71,21 @@ a:hover {
 
 #rounded:hover {
   color: white;
+}
+
+.NormalView {
+  .Content {
+    .Links {
+
+      .Link:hover {
+        color: $primaryColor;
+      }
+
+      .rounded {
+        color: black;
+        border-color: black;
+        border-width: 1px;
+      }
+    }
+  }
 }

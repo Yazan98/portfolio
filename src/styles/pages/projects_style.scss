@@ -1,25 +1,5 @@
 @import "../base";
 
-
-.ProjectsContainer {
-  .Toolbar_Container {
-    .Content {
-      .Link {
-        color: black;
-      }
-
-      .Link:hover {
-        color: $primaryColor;
-      }
-
-      .rounded {
-        color: black;
-        border-color: black;
-      }
-    }
-  }
-}
-
 .ProjectsComponent {
   padding: 2em;
   text-align: center;

@@ -19,6 +19,40 @@ body {
   background-color: white;
 }
 
+.TextTitleBlack {
+  color: $lightTitleColor;
+}
+
+.TextDescriptionBlack {
+  color: $lightSecondColor;
+}
+
+.TextTitleLight {
+  color: $darkTitleColor;
+}
+
+.TextDescriptionLight {
+  color: $darkSecondColor;
+}
+
+.ContainerBackgroundLight {
+  background-color: $lightBackgroundColor;
+}
+
+.ContainerBackgroundLight {
+  background-color: $darkBackgroundColor;
+}
+
+.LightBorder {
+  border-color: white;
+  color: white;
+}
+
+.BlackBorder {
+  border-color: black;
+  color: black;
+}
+
 a,.Link {
   color: inherit;
   text-decoration: none;
@@ -26,16 +60,13 @@ a,.Link {
 
 * {
   box-sizing: border-box;
+  transition-duration: 1s;
+  transition: 1s;
 }
 
 a, p, h1, h2, h3, h4, h5, label {
   margin: 0;
   padding: 0;
-  color: black;
-}
-
-a {
-  color: white;
 }
 
 ul {

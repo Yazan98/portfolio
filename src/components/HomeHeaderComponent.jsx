@@ -30,7 +30,7 @@ export default function HomeHeaderComponent() {
   return (
     <ComponentLayout>
       <header className="PageHeaderComponent">
-        <ToolbarViewComponent />
+        <ToolbarViewComponent isNormalPage={false} />
         <div className="HomeHeaderContainer">
           <div className="HeaderLinks">
             <div className="Content">

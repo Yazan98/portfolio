@@ -1,4 +1,5 @@
 @import "variables";
+
 .Line {
   background-color: $primaryColor;
   height: 0.3em;
@@ -26,4 +27,20 @@ p {
 .small {
   width: 0.5em;
   height: 0.5em;
+}
+
+.TextTitleBlack {
+  color: $lightTitleColor;
+}
+
+.TextDescriptionBlack {
+  color: $lightSecondColor;
+}
+
+.TextTitleLight {
+  color: $darkTitleColor;
+}
+
+.TextDescriptionLight {
+  color: $darkSecondColor;
 }

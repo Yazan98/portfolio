@@ -1,26 +1,5 @@
 @import "../base";
 
-
-.ArchiveProjectsPage {
-  .Toolbar_Container {
-    .Content {
-
-      .Link:hover {
-        color: $primaryColor;
-      }
-
-      .rounded {
-        color: black;
-        border-color: black;
-      }
-
-      .Link {
-        color: black;
-      }
-    }
-  }
-}
-
 .ArchiveProjectsPage {
   main {
     .Content {

@@ -22,8 +22,7 @@
       .ProjectComponentContainer .ProjectItem {
         border-radius: 20px;
         padding: 20px;
-        border: 5px solid #000;
-        background-color: $whiteColor;
+        border: 5px solid;
         transform: scale(1);
         height: 13em;
         margin: 0 !important;
@@ -31,7 +30,6 @@
 
       .ProjectItem {
         transition: .4s ease-in-out;
-        color: #1b1f23;
 
         h5 {
           font-size: medium;
