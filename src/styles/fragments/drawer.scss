@@ -1,0 +1,18 @@
+@import "../base";
+
+.ToolbarDrawerComponent {
+  display: flex;
+  min-height: 100vh;
+  justify-content: center;
+  place-items: center center;
+  text-align: center;
+
+  .Content {
+    display: grid;
+    grid-template-columns: repeat(1, auto);
+
+    a {
+      margin-top: 1em;
+    }
+  }
+}

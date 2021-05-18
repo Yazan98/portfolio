@@ -10,6 +10,7 @@ import {AppPageViewComponent} from "./pages/AppPageComponent";
 import {AllProjectsViewComponent} from "./pages/AllProjectsPageComponent";
 import HomePageComponent from "./pages/HomePageComponent";
 import {ResumePageViewComponent} from "./pages/ResumePageComponent";
+import {ToolbarDrawerViewComponent} from "./components/ToolbarDrawerComponent";
 
 function App() {
     return (
@@ -17,6 +18,7 @@ function App() {
             <HashRouter>
                 <Switch>
                     <Route exact path="/" component={HomePageComponent}/>
+                    <Route exact path="/drawer" component={ToolbarDrawerViewComponent}/>
                     <Route exact path="/projects" component={ProjectsPageComponent}/>
                     <Route exact path="/skills" component={SkillsViewComponent}/>
                     <Route exact path="/resume" component={ResumePageViewComponent}/>

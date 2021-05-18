@@ -1,7 +1,7 @@
 import React from 'react';
 import '../styles/fragments/toolbar_style.scss';
 import '../styles/fragments/home_header.scss';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useHistory } from 'react-router-dom';
 import { BlueLineComponent } from './BlueLineComponent';
 import LightImage from '../images/icons/light.svg';
 import LightDarkIcon from '../images/icons/light_dark.svg';
@@ -21,6 +21,12 @@ function getDarkModeIcons(theme) {
 
 export default function ToolbarComponent({ isNormalPage = true }) {
   const [theme, setTheme] = React.useState(isApplicationLightTheme());
+  const history = useHistory();
+
+  const showPopupWindow = () => {
+    history.push('/drawer');
+  };
+
   return (
     <div className={`Toolbar_Container ${isNormalPage ? 'NormalView' : ''}`}>
       <BlueLineComponent />
@@ -47,7 +53,9 @@ export default function ToolbarComponent({ isNormalPage = true }) {
             { isNormalPage ? (theme ? getLightModeIcons(theme) : getDarkModeIcons(theme)) : getDarkModeIcons(theme) }
           </div>
         </div>
-        {isNormalPage ? <img src={theme ? DotsImage : LightDotsImage} alt="Mobile Options" className="ThemeImage MobileOptions" /> : <img src={LightDotsImage} alt="Mobile Options" className="ThemeImage MobileOptions" />}
+        <div className="DotsContainer" onClick={() => showPopupWindow()}>
+          {isNormalPage ? <img src={theme ? DotsImage : LightDotsImage} alt="Mobile Options" className="ThemeImage MobileOptions" /> : <img src={LightDotsImage} alt="Mobile Options" className="ThemeImage MobileOptions" />}
+        </div>
       </div>
     </div>
   );

@@ -149,7 +149,7 @@ export default function SkillsComponent() {
 
             <div className={`Item ${theme ? 'BlackBorder' : 'LightBorder'}`}>
               <div className="Content">
-                <img alt="Gradle" src="https://raw.githubusercontent.com/Yazan98/portfolio/master/src/images/gradle.webp" loading="eager" width="50px" height="50px" />
+                <img alt="Gradle" src={theme ? 'https://raw.githubusercontent.com/Yazan98/portfolio/master/src/images/gradle_dark.webp' : 'https://raw.githubusercontent.com/Yazan98/portfolio/master/src/images/gradle.webp'} loading="eager" width="50px" height="50px" />
                 <h3 className={`${theme ? 'TextTitleBlack' : 'TextTitleLight'}`}>Gradle</h3>
               </div>
 
@@ -217,7 +217,7 @@ export default function SkillsComponent() {
 
             <div className={`Item ${theme ? 'BlackBorder' : 'LightBorder'}`}>
               <div className="Content">
-                <img alt="Next.js" src="https://raw.githubusercontent.com/Yazan98/portfolio/master/src/images/next.webp" loading="eager" width="50px" height="50px" />
+                <img alt="Next.js" src={theme ? 'https://raw.githubusercontent.com/Yazan98/portfolio/master/src/images/next_dark.webp' : 'https://raw.githubusercontent.com/Yazan98/portfolio/master/src/images/next.webp'} loading="eager" width="50px" height="50px" />
                 <h3 className={`${theme ? 'TextTitleBlack' : 'TextTitleLight'}`}>Next.js</h3>
               </div>
 
