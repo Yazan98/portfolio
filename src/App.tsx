@@ -5,11 +5,11 @@ import ProjectsPageComponent from "./pages/ProjectsPageComponent";
 import  {NotFoundPageViewComponent} from "./pages/NotFoundPageComponent";
 import AboutPageComponent from "./pages/AboutPageComponent";
 import {SkillsViewComponent} from "./components/SkillsComponent";
-import ResumePageComponent from "./pages/ResumePageComponent";
 import {ArchiveProjectsView} from "./pages/ArchiveProjectsPage";
 import {AppPageViewComponent} from "./pages/AppPageComponent";
 import {AllProjectsViewComponent} from "./pages/AllProjectsPageComponent";
 import HomePageComponent from "./pages/HomePageComponent";
+import {ResumePageViewComponent} from "./pages/ResumePageComponent";
 
 function App() {
     return (
@@ -19,7 +19,7 @@ function App() {
                     <Route exact path="/" component={HomePageComponent}/>
                     <Route exact path="/projects" component={ProjectsPageComponent}/>
                     <Route exact path="/skills" component={SkillsViewComponent}/>
-                    <Route exact path="/resume" component={ResumePageComponent}/>
+                    <Route exact path="/resume" component={ResumePageViewComponent}/>
                     <Route exact path="/app/:id" component={AppPageViewComponent}/>
                     <Route exact path="/archive" component={ArchiveProjectsView}/>
                     <Route exact path="/about" component={AboutPageComponent}/>

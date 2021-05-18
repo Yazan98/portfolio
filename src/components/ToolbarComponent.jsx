@@ -4,9 +4,20 @@ import '../styles/fragments/home_header.scss';
 import { NavLink } from 'react-router-dom';
 import { BlueLineComponent } from './BlueLineComponent';
 import LightImage from '../images/icons/light.svg';
+import LightDarkIcon from '../images/icons/light_dark.svg';
+import DarkDarkIcon from '../images/icons/dark_dark.svg';
 import DarkImage from '../images/icons/dark.svg';
 import LightDotsImage from '../images/icons/white_dots.svg';
+import DotsImage from '../images/icons/dots.svg';
 import { isApplicationLightTheme, setApplicationToDarkTheme, setApplicationToLightTheme } from '../info/ThemeInfo';
+
+function getLightModeIcons(theme) {
+  return theme ? <img src={DarkDarkIcon} alt="Dark Theme" className="ThemeImage" /> : <img alt="White Theme" src={LightDarkIcon} className="ThemeImage" />;
+}
+
+function getDarkModeIcons(theme) {
+  return theme ? <img src={DarkImage} alt="Dark Theme" className="ThemeImage" /> : <img alt="White Theme" src={LightImage} className="ThemeImage" />;
+}
 
 export default function ToolbarComponent({ isNormalPage = true }) {
   const [theme, setTheme] = React.useState(isApplicationLightTheme());
@@ -33,10 +44,10 @@ export default function ToolbarComponent({ isNormalPage = true }) {
               window.location.reload();
             }}
           >
-            {theme ? <img src={DarkImage} alt="Dark Theme" className="ThemeImage" /> : <img alt="White Theme" src={LightImage} className="ThemeImage" /> }
+            { isNormalPage ? (theme ? getLightModeIcons(theme) : getDarkModeIcons(theme)) : getDarkModeIcons(theme) }
           </div>
         </div>
-        <img src={LightDotsImage} alt="Mobile Options" className="ThemeImage MobileOptions" />
+        {isNormalPage ? <img src={theme ? DotsImage : LightDotsImage} alt="Mobile Options" className="ThemeImage MobileOptions" /> : <img src={LightDotsImage} alt="Mobile Options" className="ThemeImage MobileOptions" />}
       </div>
     </div>
   );
