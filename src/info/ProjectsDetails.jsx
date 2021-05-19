@@ -19,7 +19,7 @@ export const Projects = () => [
   {
     name: 'Autohub',
     isOpenSource: true,
-    logo: 'https://user-images.githubusercontent.com/29167110/99999892-ab1a8e80-2d75-11eb-9398-2cfe70a22fcb.png',
+    logo: 'https://raw.githubusercontent.com/Yazan98/portfolio/9a1a3aa86f18d86a266e4d16d024a186276acf4e/src/images/github-logo_light.svg',
     description: 'An Github Client Built To Test Vortex Infrastructure For Android Applications With A Lot Of Features To Manage Github Accounts Personal Accounts',
     filter: 'Android',
     links: [
