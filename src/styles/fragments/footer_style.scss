@@ -1,7 +1,28 @@
+@import "../base";
 
 footer {
-  background-color: #bebebe;
   padding: 2em;
   text-align: center;
-  color: #9ca3ad;
+
+  .Links {
+    display: none;
+    img {
+      margin-right: 1em;
+    }
+  }
+}
+
+@include layoutManager($phone) {
+  footer {
+    p {
+      font-size: x-small;
+    }
+    .Links {
+      display: flex;
+      text-align: center;
+      justify-content: center;
+      margin-top: 1em;
+      place-items: center center;
+    }
+  }
 }

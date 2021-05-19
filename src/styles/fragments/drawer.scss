@@ -11,6 +11,17 @@
     display: grid;
     grid-template-columns: repeat(1, auto);
 
+    .ThemeIcon .ThemeImage {
+      width: 1.3em;
+      height: 1.3em;
+      cursor: pointer;
+      position: fixed;
+      top: 0;
+      right: 0;
+      margin: 2em;
+    }
+
+
     a {
       margin-top: 1em;
     }

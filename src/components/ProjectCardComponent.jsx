@@ -1,6 +1,8 @@
 import React from 'react';
 import GithubImage from '../images/github-logo.svg';
+import GithubImageLight from '../images/github-logo_light.svg';
 import LinkImage from '../images/link.svg';
+import LinkImageLight from '../images/link_light.svg';
 
 export const ProjectCardComponent = ({
   icon, name, description, filter, icons = [], isOpenSource, theme,
@@ -17,9 +19,9 @@ export const ProjectCardComponent = ({
       {icons.map((item) => {
         let iconLink;
         if (item.type === 'Github') {
-          iconLink = GithubImage;
+          iconLink = theme ? GithubImage : GithubImageLight;
         } else {
-          iconLink = LinkImage;
+          iconLink = theme ? LinkImage : LinkImageLight;
         }
         return <a target="_blank" rel="noreferrer" href={item.link}><img alt="Link" height="20px" width="20px" src={iconLink} /></a>;
       })}
