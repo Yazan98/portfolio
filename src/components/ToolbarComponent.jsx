@@ -31,7 +31,7 @@ export default function ToolbarComponent({ isNormalPage = true }) {
     <div className={`Toolbar_Container ${isNormalPage ? 'NormalView' : ''}`}>
       <BlueLineComponent />
       <div className="Content">
-        <h3 className>Yazan Tarifi</h3>
+        <NavLink to="/" className="h3">Yazan Tarifi</NavLink>
         <div className="Links">
           <NavLink to="/" className={`Link ${isNormalPage ? (theme ? 'TextTitleBlack' : 'TextTitleLight') : 'TextTitleLight'}`}>Home</NavLink>
           <NavLink to="/projects" className={`Link ${isNormalPage ? (theme ? 'TextTitleBlack' : 'TextTitleLight') : 'TextTitleLight'}`}>Projects</NavLink>

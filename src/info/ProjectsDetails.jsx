@@ -1,3 +1,6 @@
+import { isApplicationLightTheme } from './ThemeInfo';
+
+const theme = isApplicationLightTheme();
 export const Projects = () => [
   {
     name: 'Vortex',
@@ -130,7 +133,7 @@ export const Projects = () => [
   {
     name: 'Groupy',
     isOpenSource: true,
-    logo: 'https://user-images.githubusercontent.com/29167110/101137835-44427400-35c4-11eb-86f2-89600483b26f.png',
+    logo: theme ? 'https://user-images.githubusercontent.com/29167110/101137835-44427400-35c4-11eb-86f2-89600483b26f.png' : 'https://github.com/Yazan98/portfolio/blob/master/src/images/groupy_white.png?raw=true',
     description: 'Graduation Project Powered By Firebase, Realtime Chat, Kotlin Language, MVP, Graduation Projects Management, Task Management, Admin App',
     filter: 'Android',
     links: [
@@ -169,7 +172,7 @@ export const Projects = () => [
   {
     name: 'Exposer',
     isOpenSource: true,
-    logo: 'https://user-images.githubusercontent.com/29167110/101141952-d1d49280-35c9-11eb-97e5-939657ecb086.png',
+    logo: theme ? 'https://user-images.githubusercontent.com/29167110/101141952-d1d49280-35c9-11eb-97e5-939657ecb086.png' : 'https://github.com/Yazan98/portfolio/blob/master/src/images/exposer_white.png?raw=true',
     description: 'Kotlin Multiplatform Project to Lead The Domain Layer for Android, IOS based on RxJava, Use Cases',
     filter: 'Android',
     links: [
@@ -182,7 +185,7 @@ export const Projects = () => [
   {
     name: 'Actor',
     isOpenSource: true,
-    logo: 'https://user-images.githubusercontent.com/29167110/101142216-27a93a80-35ca-11eb-91e9-94401815b829.png',
+    logo: theme ? 'https://user-images.githubusercontent.com/29167110/101142216-27a93a80-35ca-11eb-91e9-94401815b829.png' : 'https://github.com/Yazan98/portfolio/blob/master/src/images/actor_white.png?raw=true',
     description: 'Kotlin Spring Boot Controller Generation to Generate PostMan Collections based on Spring Controllers and Json Builder',
     filter: 'Web Apps',
     links: [
@@ -234,7 +237,7 @@ export const Projects = () => [
   {
     name: 'Bookie',
     isOpenSource: true,
-    logo: 'https://user-images.githubusercontent.com/29167110/101142907-14e33580-35cb-11eb-922b-30b3fb55a578.png',
+    logo: theme ? 'https://user-images.githubusercontent.com/29167110/101142907-14e33580-35cb-11eb-922b-30b3fb55a578.png' : 'https://github.com/Yazan98/portfolio/blob/master/src/images/bookie_white.png?raw=true',
     description: 'Spring Boot Restful Api Powered by SpringBoot, Swagger-ui, MySql, Error Handling, JWT Tokens, etc',
     filter: 'Web Apps',
     links: [
@@ -247,7 +250,7 @@ export const Projects = () => [
   {
     name: 'Bump Api',
     isOpenSource: true,
-    logo: 'https://user-images.githubusercontent.com/29167110/101143357-a18df380-35cb-11eb-98b3-868f0a72faa2.png',
+    logo: theme ? 'https://user-images.githubusercontent.com/29167110/101143357-a18df380-35cb-11eb-98b3-868f0a72faa2.png' : 'https://github.com/Yazan98/portfolio/blob/master/src/images/bump_white.png?raw=true',
     description: 'Spring Boot Restful Api (Secured Api) Configured for AWS (Beanstalk, RDS) for Games Store Website, Radis Caching',
     filter: 'Web Apps',
     links: [
@@ -260,7 +263,7 @@ export const Projects = () => [
   {
     name: 'Atto',
     isOpenSource: true,
-    logo: 'https://user-images.githubusercontent.com/29167110/101143829-50caca80-35cc-11eb-804c-e7dcc6243626.png',
+    logo: theme ? 'https://user-images.githubusercontent.com/29167110/101143829-50caca80-35cc-11eb-804c-e7dcc6243626.png' : 'https://github.com/Yazan98/portfolio/blob/master/src/images/random_white.png?raw=true',
     description: 'Mvp Structure to Build Multi Modular Apps With Ready Application Operations (Deprecated)',
     filter: 'Android',
     links: [
@@ -273,7 +276,7 @@ export const Projects = () => [
   {
     name: 'Ktor Example',
     isOpenSource: true,
-    logo: 'https://user-images.githubusercontent.com/29167110/101143829-50caca80-35cc-11eb-804c-e7dcc6243626.png',
+    logo: theme ? 'https://user-images.githubusercontent.com/29167110/101143829-50caca80-35cc-11eb-804c-e7dcc6243626.png' : 'https://github.com/Yazan98/portfolio/blob/master/src/images/random_white.png?raw=true',
     description: 'Ktor Framework Project to Build Restful Api with Mongo Database, Firebase, Netty Server, Error Handling, Routers',
     filter: 'Web Apps',
     links: [
@@ -286,7 +289,7 @@ export const Projects = () => [
   {
     name: 'Thentrom',
     isOpenSource: true,
-    logo: 'https://user-images.githubusercontent.com/29167110/101143829-50caca80-35cc-11eb-804c-e7dcc6243626.png',
+    logo: theme ? 'https://user-images.githubusercontent.com/29167110/101143829-50caca80-35cc-11eb-804c-e7dcc6243626.png' : 'https://github.com/Yazan98/portfolio/blob/master/src/images/random_white.png?raw=true',
     description: 'Intellij Plugin To Give Intellij Yellow, Orange Theme While Building Kotlin Projects, Web Apps Theme Not Good to Mobile xD',
     filter: 'Plugin',
     links: [

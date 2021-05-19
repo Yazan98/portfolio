@@ -48,7 +48,14 @@ export function register(config?: Config) {
 
                 // Add some additional logging to localhost, pointing developers to the
                 // service worker/PWA documentation.
-                navigator.serviceWorker.ready.then(() => {
+                navigator.serviceWorker.ready.then((reg) => {
+                    // reg.installing; // the installing worker, or undefined
+                    // reg.waiting; // the waiting worker, or undefined
+                    // reg.active; // the active worker, or undefined
+                    if (reg.waiting != null) {
+                        reg.waiting.postMessage({ type: 'SKIP_WAITING' });
+                    }
+
                     console.log(
                         'This web app is being served cache-first by a service ' +
                         'worker. To learn more, visit https://bit.ly/CRA-PWA'
@@ -74,6 +81,7 @@ function registerValidSW(swUrl: string, config?: Config) {
                 installingWorker.onstatechange = () => {
                     if (installingWorker.state === 'installed') {
                         if (navigator.serviceWorker.controller) {
+
                             // At this point, the updated precached content has been fetched,
                             // but the previous service worker will still serve the older
                             // content until all client tabs are closed.
@@ -82,9 +90,32 @@ function registerValidSW(swUrl: string, config?: Config) {
                                 'tabs for this page are closed. See https://bit.ly/CRA-PWA.'
                             );
 
+                            navigator.serviceWorker.ready.then((reg) => {
+                                if (reg.waiting != null) {
+                                    reg.waiting.postMessage({ type: 'SKIP_WAITING' });
+                                }
+                            }).catch((e) => console.log(e))
                             // Execute callback
                             if (config && config.onUpdate) {
                                 config.onUpdate(registration);
+                                navigator.serviceWorker.ready.then((reg) => {
+                                    // reg.installing; // the installing worker, or undefined
+                                    // reg.waiting; // the waiting worker, or undefined
+                                    if (reg.waiting != null) {
+                                        reg.waiting.postMessage({ type: 'SKIP_WAITING' });
+                                    }
+
+                                    if (reg.active != null) {
+                                        reg.active.addEventListener('active', (e) => {
+
+                                        });
+                                    }
+
+                                    console.log(
+                                        'This web app is being served cache-first by a service ' +
+                                        'worker. To learn more, visit https://bit.ly/CRA-PWA'
+                                    );
+                                });
                             }
 
                         } else {

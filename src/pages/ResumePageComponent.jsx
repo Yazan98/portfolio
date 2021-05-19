@@ -7,7 +7,6 @@ import GitHubIcon from '@material-ui/icons/GitHub';
 import ArrowRightIcon from '@material-ui/icons/ArrowRight';
 import ExploreIcon from '@material-ui/icons/Explore';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
-import FooterComponent from '../components/FooterComponent';
 import ToolbarComponent from '../components/ToolbarComponent';
 import { BlueLineComponent } from '../components/BlueLineComponent';
 import { PersonalPagesViewComponent } from '../components/layouts/PersonalPagesComponent';
@@ -48,12 +47,12 @@ export const ResumePageComponent = () => {
 
             <p className={`FlexElement ${theme ? 'TextDescriptionBlack' : 'TextDescriptionLight'}`}>
               <span><GitHubIcon /></span>
-              <span><a href="https://www.github.com/Yazan98" target="_blank">github.com/Yazan98</a></span>
+              <span><a href="https://www.github.com/Yazan98" target="_blank" rel="noreferrer">github.com/Yazan98</a></span>
             </p>
 
             <p className={`FlexElement ${theme ? 'TextDescriptionBlack' : 'TextDescriptionLight'}`}>
               <span><LinkedInIcon /></span>
-              <span><a href="https://www.linkedin.com/in/yazan-tarifi-106282192/" target="_blank">linkedin.com/yazan-tarifi</a></span>
+              <span><a href="https://www.linkedin.com/in/yazan-tarifi-106282192/" target="_blank" rel="noreferrer">linkedin.com/yazan-tarifi</a></span>
             </p>
           </div>
 
@@ -63,32 +62,32 @@ export const ResumePageComponent = () => {
               <div className="WorkElement">
                 <p className={`${theme ? 'TextTitleBlack' : 'TextTitleLight'}`}>
                   Android Developer -
-                  <span><a href="https://opensooq.com" target="_blank">@Opensooq</a></span>
+                  <span><a href="https://opensooq.com" target="_blank" rel="noreferrer">@Opensooq</a></span>
                 </p>
                 <p className={`Short ${theme ? 'TextDescriptionBlack' : 'TextDescriptionLight'}`}>Jun 2020 - Present</p>
                 <ul>
-                  <li>
+                  <li className={`${theme ? 'TextDescriptionBlack' : 'TextDescriptionLight'}`}>
                     <p className={`${theme ? 'TextDescriptionBlack' : 'TextDescriptionLight'}`}>
                       <span><ArrowRightIcon /></span>
                       {' '}
                       <span>Create , Maintain Features Android Application</span>
                     </p>
                   </li>
-                  <li>
+                  <li className={`${theme ? 'TextDescriptionBlack' : 'TextDescriptionLight'}`}>
                     <p className={`${theme ? 'TextDescriptionBlack' : 'TextDescriptionLight'}`}>
                       <span><ArrowRightIcon /></span>
                       {' '}
                       <span>Create Responsive Design , Clean Code</span>
                     </p>
                   </li>
-                  <li>
+                  <li className={`${theme ? 'TextDescriptionBlack' : 'TextDescriptionLight'}`}>
                     <p className={`${theme ? 'TextDescriptionBlack' : 'TextDescriptionLight'}`}>
                       <span><ArrowRightIcon /></span>
                       {' '}
                       <span>Create Good Base Code With Kotlin Language</span>
                     </p>
                   </li>
-                  <li>
+                  <li className={`${theme ? 'TextDescriptionBlack' : 'TextDescriptionLight'}`}>
                     <p className={`${theme ? 'TextDescriptionBlack' : 'TextDescriptionLight'}`}>
                       <span><ArrowRightIcon /></span>
                       {' '}
@@ -101,46 +100,49 @@ export const ResumePageComponent = () => {
               <div className="WorkElement">
                 <p className={`${theme ? 'TextTitleBlack' : 'TextTitleLight'}`}>
                   Android Developer -
-                  <span><a href="https://noventapp.com" target="_blank">@NoventApp</a></span>
+                  <span><a href="https://noventapp.com" target="_blank" rel="noreferrer">@NoventApp</a></span>
                 </p>
                 <p className={`Short ${theme ? 'TextDescriptionBlack' : 'TextDescriptionLight'}`}>Jun 2018 - December 2020</p>
                 <ul>
-                  <li>
+                  <li className={`${theme ? 'TextDescriptionBlack' : 'TextDescriptionLight'}`}>
                     <p className={`${theme ? 'TextDescriptionBlack' : 'TextDescriptionLight'}`}>
                       <span><ArrowRightIcon /></span>
                       {' '}
-                      <span>Responsible On Android Applications From Create Project To Deliver The Product To Customer</span>
+                      <span>
+                        Responsible On Android Applications
+                        From Create Project To Deliver The Product To Customer
+                      </span>
                     </p>
                   </li>
-                  <li>
+                  <li className={`${theme ? 'TextDescriptionBlack' : 'TextDescriptionLight'}`}>
                     <p className={`${theme ? 'TextDescriptionBlack' : 'TextDescriptionLight'}`}>
                       <span><ArrowRightIcon /></span>
                       {' '}
                       <span>Create Responsive Design , Clean Code</span>
                     </p>
                   </li>
-                  <li>
+                  <li className={`${theme ? 'TextDescriptionBlack' : 'TextDescriptionLight'}`}>
                     <p className={`${theme ? 'TextDescriptionBlack' : 'TextDescriptionLight'}`}>
                       <span><ArrowRightIcon /></span>
                       {' '}
                       <span>Create Good Base Code With Kotlin Language</span>
                     </p>
                   </li>
-                  <li>
+                  <li className={`${theme ? 'TextDescriptionBlack' : 'TextDescriptionLight'}`}>
                     <p className={`${theme ? 'TextDescriptionBlack' : 'TextDescriptionLight'}`}>
                       <span><ArrowRightIcon /></span>
                       {' '}
                       <span>Create Applications In Logistic System</span>
                     </p>
                   </li>
-                  <li>
+                  <li className={`${theme ? 'TextDescriptionBlack' : 'TextDescriptionLight'}`}>
                     <p className={`${theme ? 'TextDescriptionBlack' : 'TextDescriptionLight'}`}>
                       <span><ArrowRightIcon /></span>
                       {' '}
                       <span>Implemented Clean Architecture Using Latest Technologies</span>
                     </p>
                   </li>
-                  <li>
+                  <li className={`${theme ? 'TextDescriptionBlack' : 'TextDescriptionLight'}`}>
                     <p className={`${theme ? 'TextDescriptionBlack' : 'TextDescriptionLight'}`}>
                       <span><ArrowRightIcon /></span>
                       {' '}
@@ -156,8 +158,8 @@ export const ResumePageComponent = () => {
                   Software Engineering -
                   <span><a href="https://hu.edu.jo" target="_blank">@Hashmite Univeristy</a></span>
                 </p>
-                <p className="Tags">2016 - 2020</p>
-                <p className="Tags">Bachelor of Software Engineering</p>
+                <p className={`${theme ? 'TextDescriptionBlack' : 'TextDescriptionLight'}`}>2016 - 2020</p>
+                <p className={`${theme ? 'TextDescriptionBlack' : 'TextDescriptionLight'}`}>Bachelor of Software Engineering</p>
               </div>
 
               <h4 className={`${theme ? 'TextTitleBlack' : 'TextTitleLight'}`}>Android Skills</h4>
@@ -174,14 +176,14 @@ export const ResumePageComponent = () => {
                 </p>
                 <p className={`${theme ? 'TextDescriptionBlack' : 'TextDescriptionLight'}`}><span className="Title">Technologies</span></p>
                 <ul>
-                  <li>Applications : Multi . Single Modular Applications</li>
-                  <li>Dependency Injection : Dagger . Koin . Hilt</li>
-                  <li>Android Jetpack : Navigation , Component Architecture</li>
-                  <li>Multi Threading With Kotlin coroutines . REST Api</li>
-                  <li>Architectures : MVC . MVP . MVVM . MVI . Viper . Redux</li>
-                  <li>Version Control : GIT Command Line . GUI</li>
-                  <li>Countinous Intergation : Fastlane . Jenkins</li>
-                  <li>Firebase : Firestore . Analytics . Auth . Notifications . Crashlytics . Hosting . Storage . App Distribution . Remote Config</li>
+                  <li className={`${theme ? 'TextDescriptionBlack' : 'TextDescriptionLight'}`}>Applications : Multi . Single Modular Applications</li>
+                  <li className={`${theme ? 'TextDescriptionBlack' : 'TextDescriptionLight'}`}>Dependency Injection : Dagger . Koin . Hilt</li>
+                  <li className={`${theme ? 'TextDescriptionBlack' : 'TextDescriptionLight'}`}>Android Jetpack : Navigation , Component Architecture</li>
+                  <li className={`${theme ? 'TextDescriptionBlack' : 'TextDescriptionLight'}`}>Multi Threading With Kotlin coroutines . REST Api</li>
+                  <li className={`${theme ? 'TextDescriptionBlack' : 'TextDescriptionLight'}`}>Architectures : MVC . MVP . MVVM . MVI . Viper . Redux</li>
+                  <li className={`${theme ? 'TextDescriptionBlack' : 'TextDescriptionLight'}`}>Version Control : GIT Command Line . GUI</li>
+                  <li className={`${theme ? 'TextDescriptionBlack' : 'TextDescriptionLight'}`}>Countinous Intergation : Fastlane . Jenkins</li>
+                  <li className={`${theme ? 'TextDescriptionBlack' : 'TextDescriptionLight'}`}>Firebase : Firestore . Analytics . Auth . Notifications . Crashlytics . Hosting . Storage . App Distribution . Remote Config</li>
                 </ul>
               </div>
 
@@ -199,11 +201,11 @@ export const ResumePageComponent = () => {
                 </p>
                 <p className={`${theme ? 'TextDescriptionBlack' : 'TextDescriptionLight'}`}><span className="Title">Technologies</span></p>
                 <ul>
-                  <li>Firebase Integration</li>
-                  <li>Mysql Database . Mongo Database</li>
-                  <li>Swagger UI . Spring Security . Error Handlers</li>
-                  <li>Delopyment: Heroku , Google App Engine</li>
-                  <li>MultiThreading : Kotlin Coroutines</li>
+                  <li className={`${theme ? 'TextDescriptionBlack' : 'TextDescriptionLight'}`}>Firebase Integration</li>
+                  <li className={`${theme ? 'TextDescriptionBlack' : 'TextDescriptionLight'}`}>Mysql Database . Mongo Database</li>
+                  <li className={`${theme ? 'TextDescriptionBlack' : 'TextDescriptionLight'}`}>Swagger UI . Spring Security . Error Handlers</li>
+                  <li className={`${theme ? 'TextDescriptionBlack' : 'TextDescriptionLight'}`}>Delopyment: Heroku , Google App Engine</li>
+                  <li className={`${theme ? 'TextDescriptionBlack' : 'TextDescriptionLight'}`}>MultiThreading : Kotlin Coroutines</li>
                 </ul>
               </div>
 
@@ -221,58 +223,58 @@ export const ResumePageComponent = () => {
                 </p>
                 <p className={`${theme ? 'TextDescriptionBlack' : 'TextDescriptionLight'}`}><span className="Title">Technologies</span></p>
                 <ul>
-                  <li>React.js</li>
-                  <li>Javascript (ES6 +)</li>
-                  <li>React.js Components (StateFul, StateLess, Pure Component)</li>
-                  <li>S-CSS</li>
-                  <li>React Hooks</li>
-                  <li>Restful Apis Via Axios</li>
-                  <li>React Context</li>
+                  <li className={`${theme ? 'TextDescriptionBlack' : 'TextDescriptionLight'}`}>React.js</li>
+                  <li className={`${theme ? 'TextDescriptionBlack' : 'TextDescriptionLight'}`}>Javascript (ES6 +)</li>
+                  <li className={`${theme ? 'TextDescriptionBlack' : 'TextDescriptionLight'}`}>React.js Components (StateFul, StateLess, Pure Component)</li>
+                  <li className={`${theme ? 'TextDescriptionBlack' : 'TextDescriptionLight'}`}>S-CSS</li>
+                  <li className={`${theme ? 'TextDescriptionBlack' : 'TextDescriptionLight'}`}>React Hooks</li>
+                  <li className={`${theme ? 'TextDescriptionBlack' : 'TextDescriptionLight'}`}>Restful Apis Via Axios</li>
+                  <li className={`${theme ? 'TextDescriptionBlack' : 'TextDescriptionLight'}`}>React Context</li>
                 </ul>
               </div>
 
             </div>
             <div className="SecondElement">
               <h4 className={`${theme ? 'TextTitleBlack' : 'TextTitleLight'}`}>Skills</h4>
-              <h6 className="Title">Programming Languages</h6>
-              <p className="Tags">Java, Javascript, Kotlin, JavaScript (ES6), TypeScript, CSS/Sass, Groovy, Xml, Gradle</p>
+              <h6 className={`${theme ? 'TextTitleBlack' : 'TextTitleLight'} Title`}>Programming Languages</h6>
+              <p className={`${theme ? 'TextDescriptionBlack' : 'TextDescriptionLight'}`}>Java, Javascript, Kotlin, JavaScript (ES6), TypeScript, CSS/Sass, Groovy, Xml, Gradle</p>
 
-              <h6 className="Title">Libraries & Frameworks</h6>
-              <p className="Tags">React.js, Node.js, Android Apps, RxJava, JQuery, Dagger, Hilt, Android Architecture Components</p>
+              <h6 className={`${theme ? 'TextTitleBlack' : 'TextTitleLight'} Title`}>Libraries & Frameworks</h6>
+              <p className={`${theme ? 'TextDescriptionBlack' : 'TextDescriptionLight'}`}>React.js, Node.js, Android Apps, RxJava, JQuery, Dagger, Hilt, Android Architecture Components</p>
 
-              <h6 className="Title">Tools & Platforms</h6>
-              <p className="Tags">Git, Netlify, Heroku, Firebase, Jenkins, Fastlane, Spring Boot, MySql, NoSql, Google Cloud Platform, Sonar Qube, Github Pages, Visual Studio, Slack, Postman</p>
+              <h6 className={`${theme ? 'TextTitleBlack' : 'TextTitleLight'} Title`}>Tools & Platforms</h6>
+              <p className={`${theme ? 'TextDescriptionBlack' : 'TextDescriptionLight'}`}>Git, Netlify, Heroku, Firebase, Jenkins, Fastlane, Spring Boot, MySql, NoSql, Google Cloud Platform, Sonar Qube, Github Pages, Visual Studio, Slack, Postman</p>
 
-              <h6 className="Title">Design</h6>
-              <p className="Tags">Photoshop, After Effects, Premiere, Adobe XD</p>
+              <h6 className={`${theme ? 'TextTitleBlack' : 'TextTitleLight'} Title`}>Design</h6>
+              <p className={`${theme ? 'TextDescriptionBlack' : 'TextDescriptionLight'}`}>Photoshop, After Effects, Premiere, Adobe XD</p>
 
-              <h6 className="Title">Languages</h6>
-              <p className="Tags">Arabic , English</p>
+              <h6 className={`${theme ? 'TextTitleBlack' : 'TextTitleLight'} Title`}>Languages</h6>
+              <p className={`${theme ? 'TextDescriptionBlack' : 'TextDescriptionLight'}`}>Arabic , English</p>
 
               <h4 className={`${theme ? 'TextTitleBlack' : 'TextTitleLight'}`}>Personal Projects</h4>
-              <h6>Vortex</h6>
-              <p className="Tags">Vortex is a Base Code to Build Multi modular android applications with common applications operations, latest technologies Like MVVM, RxJava, Kotlin Coroutines, Firebase, etc</p>
+              <h6 className={`${theme ? 'TextTitleBlack' : 'TextTitleLight'} Title`}>Vortex</h6>
+              <p className={`${theme ? 'TextDescriptionBlack' : 'TextDescriptionLight'}`}>Vortex is a Base Code to Build Multi modular android applications with common applications operations, latest technologies Like MVVM, RxJava, Kotlin Coroutines, Firebase, etc</p>
 
-              <h6>Drasati</h6>
-              <p className="Tags">An organizing platform for school students that aims to gather students and link them with audible lessons by providing a tree plan with the possibility to speak with teachers</p>
+              <h6 className={`${theme ? 'TextTitleBlack' : 'TextTitleLight'} Title`}>Drasati</h6>
+              <p className={`${theme ? 'TextDescriptionBlack' : 'TextDescriptionLight'}`}>An organizing platform for school students that aims to gather students and link them with audible lessons by providing a tree plan with the possibility to speak with teachers</p>
 
-              <h6>Destiny</h6>
-              <p className="Tags">Opensource Android Application / Spring Boot Api Powered By Koltin Lanague, Vortex Base Code, Mvvm</p>
+              <h6 className={`${theme ? 'TextTitleBlack' : 'TextTitleLight'} Title`}>Destiny</h6>
+              <p className={`${theme ? 'TextDescriptionBlack' : 'TextDescriptionLight'}`}>Opensource Android Application / Spring Boot Api Powered By Koltin Lanague, Vortex Base Code, Mvvm</p>
 
-              <h6>Netflix Clone</h6>
-              <p className="Tags">React.js Website Powered By MovieDB Api to Handle State, Api Requests, Typescript, Scss, etc</p>
+              <h6 className={`${theme ? 'TextTitleBlack' : 'TextTitleLight'} Title`}>Netflix Clone</h6>
+              <p className={`${theme ? 'TextDescriptionBlack' : 'TextDescriptionLight'}`}>React.js Website Powered By MovieDB Api to Handle State, Api Requests, Typescript, Scss, etc</p>
 
-              <h6>Groupy</h6>
-              <p className="Tags">Graduation Project Android Application Built With Kotlin Coroutines, Firebase Realtime Database, Firebase Auth, Notifications, Mvp</p>
+              <h6 className={`${theme ? 'TextTitleBlack' : 'TextTitleLight'} Title`}>Groupy</h6>
+              <p className={`${theme ? 'TextDescriptionBlack' : 'TextDescriptionLight'}`}>Graduation Project Android Application Built With Kotlin Coroutines, Firebase Realtime Database, Firebase Auth, Notifications, Mvp</p>
 
-              <h6>Denamo Theme</h6>
-              <p className="Tags">Visual Studio Code Theme To Build Typescript Projects with Blue Dark Theme</p>
+              <h6 className={`${theme ? 'TextTitleBlack' : 'TextTitleLight'} Title`}>Denamo Theme</h6>
+              <p className={`${theme ? 'TextDescriptionBlack' : 'TextDescriptionLight'}`}>Visual Studio Code Theme To Build Typescript Projects with Blue Dark Theme</p>
 
-              <h6>Autohub</h6>
-              <p className="Tags">Opensource Android Application Powered By Github Api, Kotlin, RxJava, Redux Saved State</p>
+              <h6 className={`${theme ? 'TextTitleBlack' : 'TextTitleLight'} Title`}>Autohub</h6>
+              <p className={`${theme ? 'TextDescriptionBlack' : 'TextDescriptionLight'}`}>Opensource Android Application Powered By Github Api, Kotlin, RxJava, Redux Saved State</p>
 
-              <h6>Wintrop</h6>
-              <p className="Tags">Opensource Android Application Powered By OpenWeather Api, Kotlin, RxJava</p>
+              <h6 className={`${theme ? 'TextTitleBlack' : 'TextTitleLight'} Title`}>Wintrop</h6>
+              <p className={`${theme ? 'TextDescriptionBlack' : 'TextDescriptionLight'}`}>Opensource Android Application Powered By OpenWeather Api, Kotlin, RxJava</p>
 
             </div>
           </div>

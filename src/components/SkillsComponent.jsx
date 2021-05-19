@@ -136,12 +136,13 @@ export default function SkillsComponent() {
                 <p className={`${theme ? 'TextDescriptionBlack' : 'TextDescriptionLight'}`}>
                   Beginner Level In PHP and Laravel Mainly Im Currently Learning PHP To Build
                   Restful Api's on Laravel With Mysql, Swagger, Auth, Return Html, Css Views From Api
-                  With Different Response Types
+                  With Different Response Types, also Yii2 Framework With Mysql Connection, Json Response
                 </p>
               </div>
 
               <div className="Tags">
                 <p className={`${theme ? 'TextDescriptionBlack' : 'TextDescriptionLight'}`}>Laravel</p>
+                <p className={`${theme ? 'TextDescriptionBlack' : 'TextDescriptionLight'}`}>Yii</p>
                 <p className={`${theme ? 'TextDescriptionBlack' : 'TextDescriptionLight'}`}>Mysql</p>
                 <p className={`${theme ? 'TextDescriptionBlack' : 'TextDescriptionLight'}`}>Auth</p>
               </div>
