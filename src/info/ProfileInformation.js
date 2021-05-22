@@ -176,18 +176,6 @@ export function getProjectsList() {
       ],
     },
     {
-      type: 'android',
-      name: 'Vortex',
-      typeText: 'Android Library - Closed Source',
-      description: 'Restaurant Application Powered By Vortex Infrastructure With Latest Technologies, Realm Database, Restful Api, Trainig Project and Testing For Vortex Testing',
-      link: 'https://github.com/Yazan98/Vortex',
-      createdAt: ' 2019',
-      mainImage: '',
-      previewImage: 'https://raw.githubusercontent.com/Yazan98/portfolio/master/src/images/mwarrid_preview.webp',
-      images: [],
-      tags: [],
-    },
-    {
       type: 'web',
       name: 'Netflix Clone',
       typeText: 'Website (React.js) - Open Source',
@@ -283,4 +271,9 @@ export function getProjectsListByFilter(filter = 'all') {
     }
   }
   return appsFiltered;
+}
+
+export function getProjectByName(name) {
+  const apps = getProjectsList();
+  return apps.filter((item) => item.name.toLowerCase().includes(name.toLowerCase()));
 }

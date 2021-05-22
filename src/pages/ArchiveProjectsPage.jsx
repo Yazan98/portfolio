@@ -1,5 +1,4 @@
 import React from 'react';
-import { BlueLineComponent } from '../components/BlueLineComponent';
 import ToolbarComponent from '../components/ToolbarComponent';
 import '../styles/fragments/archive.scss';
 import { PersonalPagesViewComponent } from '../components/layouts/PersonalPagesComponent';
@@ -11,7 +10,6 @@ export default function ArchiveProjectsPage() {
   return (
     <PersonalPagesViewComponent title="Archive Page - Portfolio">
       <div className="ArchiveProjectsPage">
-        <BlueLineComponent />
         <ToolbarComponent />
 
         <main>

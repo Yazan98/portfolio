@@ -17,7 +17,7 @@ export default function ProjectsComponent() {
     if (name === 'All Projects') {
       history.push('/projects/all');
     } else {
-      history.push(`/project?name=${name}`);
+      history.push(`/app/${name}`);
     }
   };
 

@@ -6,11 +6,11 @@ import  {NotFoundPageViewComponent} from "./pages/NotFoundPageComponent";
 import AboutPageComponent from "./pages/AboutPageComponent";
 import {SkillsViewComponent} from "./components/SkillsComponent";
 import {ArchiveProjectsView} from "./pages/ArchiveProjectsPage";
-import {AppPageViewComponent} from "./pages/AppPageComponent";
 import {AllProjectsViewComponent} from "./pages/AllProjectsPageComponent";
 import HomePageComponent from "./pages/HomePageComponent";
 import {ResumePageViewComponent} from "./pages/ResumePageComponent";
 import {ToolbarDrawerViewComponent} from "./components/ToolbarDrawerComponent";
+import {ProjectViewPage} from "./pages/ProjectPage";
 
 function App() {
     return (
@@ -22,7 +22,7 @@ function App() {
                     <Route exact path="/projects" component={ProjectsPageComponent}/>
                     <Route exact path="/skills" component={SkillsViewComponent}/>
                     <Route exact path="/resume" component={ResumePageViewComponent}/>
-                    <Route exact path="/app/:id" component={AppPageViewComponent}/>
+                    <Route exact path="/app/:id" component={ProjectViewPage}/>
                     <Route exact path="/archive" component={ArchiveProjectsView}/>
                     <Route exact path="/about" component={AboutPageComponent}/>
                     <Route exact path="/projects/all" component={AllProjectsViewComponent}/>

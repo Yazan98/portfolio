@@ -8,7 +8,6 @@ import ArrowRightIcon from '@material-ui/icons/ArrowRight';
 import ExploreIcon from '@material-ui/icons/Explore';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import ToolbarComponent from '../components/ToolbarComponent';
-import { BlueLineComponent } from '../components/BlueLineComponent';
 import { PersonalPagesViewComponent } from '../components/layouts/PersonalPagesComponent';
 import { isApplicationLightTheme } from '../info/ThemeInfo';
 
@@ -17,7 +16,6 @@ export const ResumePageComponent = () => {
   const [theme, setTheme] = React.useState(isApplicationLightTheme());
   return (
     <PersonalPagesViewComponent title="Yazan Tarifi - Resume" className="ResumePageContainer">
-      <BlueLineComponent />
       <ToolbarComponent />
 
       <main>

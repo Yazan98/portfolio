@@ -17,17 +17,6 @@ export class InfoManager {
                     "https://user-images.githubusercontent.com/29167110/100562669-3792e880-3271-11eb-95ba-6294abe05a20.png",
                     "https://user-images.githubusercontent.com/29167110/100562806-8fc9ea80-3271-11eb-9417-fc7ab6c623c4.png"
                 ]),
-            new App("Mwarrid", "An integrated electronic marketing platform from a website and an application on smartphones and tablets help to connect the food sector suppliers in all their fields with restaurants, cafes, hotels, wedding hall and all those involved in selling food in the retail sector and soon individuals. So that suppliers periodically display their products, set their prices, and market them, to help our customers follow the market, view the latest offers, instant order, and track order status through the supplier's online platform.",
-                "https://user-images.githubusercontent.com/29167110/89157146-e2440600-d520-11ea-95ed-bf2a9836148d.png",
-                "NoventApp - 2019",
-                "https://play.google.com/store/apps/details?id=com.mwarrid.mwarrid",
-                "https://user-images.githubusercontent.com/29167110/84553819-119e7980-ad0d-11ea-9ca6-352a9dab3151.png",
-                ["MVVM", "Room", "Kotlin", "Retrofit", "RxJava", "Kotlin Courotines", "Multi Modular App", "Dagger"], [
-                    "https://user-images.githubusercontent.com/29167110/89159145-f3424680-d523-11ea-8dcc-837c65103a37.png",
-                    "https://user-images.githubusercontent.com/29167110/89159661-a7dc6800-d524-11ea-846a-d8f136210f7d.png",
-                    "https://user-images.githubusercontent.com/29167110/89159719-bd519200-d524-11ea-9a1d-2b922798fc2a.png",
-                    "https://user-images.githubusercontent.com/29167110/89159770-d22e2580-d524-11ea-8e17-5e96542ac62f.png"
-                ]),
             new App("Wintrop", "This Application has Two Screens and One Fragment The First Screen is The Splash Screen To Show The User Application Info With Logo THe Second Screen is The Main Screen Store All Fragments At One Screen But at this example just one fragment at the main screen",
                 "https://user-images.githubusercontent.com/29167110/100293783-a69ed300-2f39-11eb-821d-8e432378643b.png", "Github - 2019", "https://github.com/Yazan98/Wintrop",
                 "https://user-images.githubusercontent.com/29167110/100294357-67718180-2f3b-11eb-98b0-196493dfba71.png", [
