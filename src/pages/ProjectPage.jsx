@@ -47,9 +47,11 @@ export function ProjectPage() {
             <img alt={projectEntity.name} src={projectEntity.previewImage} loading="lazy" />
           </div>
         </div>
-        <div className="ProjectImages">
-          <h1>HEHEHE</h1>
-        </div>
+        {projectEntity.images ? (
+          <div className="ProjectImages">
+            {projectEntity.images.map((item) => <img alt={projectEntity.name} src={require(`../images${item}`)} loading="lazy" />)}
+          </div>
+        ) : null}
       </div>
     </PersonalPagesViewComponent>
   );

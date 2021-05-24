@@ -4,6 +4,16 @@
   min-height: 100vh;
 
   .Content {
+
+    .ProjectImages {
+      margin: 2em;
+
+      img {
+        height: 300px;
+        margin-right: 2em;
+      }
+    }
+
     .ProjectContent {
       display: flex;
       text-align: center;
