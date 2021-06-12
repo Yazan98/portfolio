@@ -14,6 +14,7 @@ import { isApplicationLightTheme } from '../info/ThemeInfo';
 export const ResumePageComponent = () => {
   window.scrollTo(0, 0);
   const [theme, setTheme] = React.useState(isApplicationLightTheme());
+  window.scrollTo(0, 0);
   return (
     <PersonalPagesViewComponent title="Yazan Tarifi - Resume" className="ResumePageContainer">
       <ToolbarComponent />

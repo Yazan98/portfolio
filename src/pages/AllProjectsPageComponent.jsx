@@ -18,6 +18,7 @@ export default function AllProjectsComponent() {
   const [projects, setProjects] = useState([]);
   const [language, setLanguage] = useState('');
   const [theme, setTheme] = useState(isApplicationLightTheme());
+  window.scrollTo(0, 0);
   useMemo(() => {
     if (search) {
       setProjects(findProjectByName(search, filterType));

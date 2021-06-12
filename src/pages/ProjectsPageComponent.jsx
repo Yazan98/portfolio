@@ -29,6 +29,7 @@ export default function ProjectsComponent() {
     }
   }, [filter]);
 
+  window.scrollTo(0, 0);
   return (
     <PersonalPagesViewComponent className="ProjectsContainer" title="Yazan Tarifi - Projects">
       <ToolbarViewComponent />

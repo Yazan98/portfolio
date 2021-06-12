@@ -3,7 +3,6 @@ import './App.scss';
 import {HashRouter, Route, Switch} from "react-router-dom";
 import ProjectsPageComponent from "./pages/ProjectsPageComponent";
 import  {NotFoundPageViewComponent} from "./pages/NotFoundPageComponent";
-import AboutPageComponent from "./pages/AboutPageComponent";
 import {SkillsViewComponent} from "./components/SkillsComponent";
 import {ArchiveProjectsView} from "./pages/ArchiveProjectsPage";
 import {AllProjectsViewComponent} from "./pages/AllProjectsPageComponent";
@@ -24,7 +23,6 @@ function App() {
                     <Route exact path="/resume" component={ResumePageViewComponent}/>
                     <Route exact path="/app/:id" component={ProjectViewPage}/>
                     <Route exact path="/archive" component={ArchiveProjectsView}/>
-                    <Route exact path="/about" component={AboutPageComponent}/>
                     <Route exact path="/projects/all" component={AllProjectsViewComponent}/>
                     <Route path='*' exact={true} component={NotFoundPageViewComponent}/>
                 </Switch>

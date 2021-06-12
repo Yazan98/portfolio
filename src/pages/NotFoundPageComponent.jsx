@@ -4,6 +4,7 @@ import { PersonalPagesViewComponent } from '../components/layouts/PersonalPagesC
 import { ToolbarViewComponent } from '../components/ToolbarComponent';
 
 export default function NotFoundPageComponent() {
+  window.scrollTo(0, 0);
   return (
     <PersonalPagesViewComponent title="Yazan Tarifi Portfolio - Not Found">
       <div className="BlueBackground">

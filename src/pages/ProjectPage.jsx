@@ -10,7 +10,7 @@ export function ProjectPage() {
   const [theme, setTheme] = React.useState(isApplicationLightTheme());
   const componentUrl = window.location.href;
   const splittedUrl = componentUrl.split('/');
-  const projectName = splittedUrl[splittedUrl.length - 1];
+  const projectName = splittedUrl[splittedUrl.length - 1].replace('%20', ' ');
   const projectEntity = getProjectByName(projectName)[0];
   const history = useHistory();
   if (!projectEntity) {
@@ -18,6 +18,7 @@ export function ProjectPage() {
     return null;
   }
 
+  window.scrollTo(0, 0);
   return (
     <PersonalPagesViewComponent title="Yazan Tarifi - Portfolio - Project Page" className="ProjectPageContainer">
       <ToolbarViewComponent />
