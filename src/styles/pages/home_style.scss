@@ -5,7 +5,7 @@
   .PageHeaderComponent {
     height: 100vh;
     background: rgb(238, 205, 163);
-    background: linear-gradient(61deg, rgba(238, 205, 163, 1) 0%, rgba(239, 98, 159, 1) 100%);
+    background: linear-gradient(61deg, rgb(238, 205, 163) 0%, rgb(239, 98, 159) 100%);
 
     .HomeHeaderContainer {
       display: flex;
