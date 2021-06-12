@@ -25,6 +25,15 @@ export default function ArchiveProjectsPage() {
                 <th className={`${theme ? 'TextDescriptionBlack' : 'TextDescriptionLight'}`}>Built with</th>
                 <th className={`${theme ? 'TextDescriptionBlack' : 'TextDescriptionLight'}`}>Type</th>
               </tr>
+
+              <tr>
+                <td className={`${theme ? 'TextDescriptionBlack' : 'TextDescriptionLight'}`}>2021</td>
+                <td className={`Title ${theme ? 'TextDescriptionBlack' : 'TextDescriptionLight'}`}>Portfolio V2</td>
+                <td className={`${theme ? 'TextDescriptionBlack' : 'TextDescriptionLight'}`}>Github</td>
+                <td className={`${theme ? 'TextDescriptionBlack' : 'TextDescriptionLight'}`}>React.js, JSX, PWA, Responsive Design</td>
+                <td className={`${theme ? 'TextDescriptionBlack' : 'TextDescriptionLight'}`}>Open Source</td>
+              </tr>
+
               <tr>
                 <td className={`${theme ? 'TextDescriptionBlack' : 'TextDescriptionLight'}`}>2020</td>
                 <td className={`Title ${theme ? 'TextDescriptionBlack' : 'TextDescriptionLight'}`}>Opensooq</td>

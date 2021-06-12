@@ -170,6 +170,19 @@ export const Projects = () => [
     ],
   },
   {
+    name: 'Android Template V2',
+    isOpenSource: true,
+    logo: 'https://user-images.githubusercontent.com/29167110/101138342-ec583d00-35c4-11eb-8e51-81108dfbfc47.png',
+    description: 'Project Configuration With Gradle Kotlin DSL And All Common Libraries, Plugins, Application Info Configured Just To Copy - Paste With Your New Project',
+    filter: 'Android',
+    links: [
+      {
+        type: 'Github',
+        link: 'https://github.com/Yazan98/Android-Template',
+      },
+    ],
+  },
+  {
     name: 'Exposer',
     isOpenSource: true,
     logo: theme ? 'https://user-images.githubusercontent.com/29167110/101141952-d1d49280-35c9-11eb-97e5-939657ecb086.png' : 'https://github.com/Yazan98/portfolio/blob/master/src/images/exposer_white.png?raw=true',
@@ -248,19 +261,6 @@ export const Projects = () => [
     ],
   },
   {
-    name: 'Bump Api',
-    isOpenSource: true,
-    logo: theme ? 'https://user-images.githubusercontent.com/29167110/101143357-a18df380-35cb-11eb-98b3-868f0a72faa2.png' : 'https://github.com/Yazan98/portfolio/blob/master/src/images/bump_white.png?raw=true',
-    description: 'Spring Boot Restful Api (Secured Api) Configured for AWS (Beanstalk, RDS) for Games Store Website, Radis Caching',
-    filter: 'Web Apps',
-    links: [
-      {
-        type: 'Github',
-        link: 'https://github.com/Yazan98/BumbApi',
-      },
-    ],
-  },
-  {
     name: 'Atto',
     isOpenSource: true,
     logo: theme ? 'https://user-images.githubusercontent.com/29167110/101143829-50caca80-35cc-11eb-804c-e7dcc6243626.png' : 'https://github.com/Yazan98/portfolio/blob/master/src/images/random_white.png?raw=true',
@@ -269,7 +269,7 @@ export const Projects = () => [
     links: [
       {
         type: 'Github',
-        link: 'https://github.com/vortex-io/Vortex',
+        link: 'https://github.com/Yazan98/Atto',
       },
     ],
   },

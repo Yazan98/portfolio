@@ -84,3 +84,71 @@
     }
   }
 }
+
+
+@include layoutManager($phone) {
+  .ProjectPageContainer {
+
+    .Content {
+
+
+
+      .ProjectContent {
+        display: grid;
+        text-align: center;
+        grid-template-columns: auto;
+        padding: 10px;
+        min-height: 80vh;
+        font-size: x-small;
+
+        .Image {
+
+          img {
+            height: auto;
+            width: 85vw;
+            margin-right: 2em;
+          }
+        }
+
+        .Description {
+          display: grid;
+          text-align: center;
+          grid-template-columns: auto;
+
+          .Content {
+            text-align: center;
+
+            .Tags {
+              margin: 1em;
+              flex-wrap: wrap;
+              flex-direction: row;
+              overflow-x: auto;
+
+              .Item {
+                font-size: xx-small;
+                margin-top: 0.5em;
+              }
+            }
+
+            .Name {
+              display: grid;
+              text-align: center;
+              grid-template-columns: auto;
+              margin: 2em;
+              font-size: small;
+
+            }
+
+            p {
+              margin: 0;
+              width: 100vw;
+              max-width: 100vw;
+            }
+          }
+        }
+      }
+
+    }
+  }
+
+}
