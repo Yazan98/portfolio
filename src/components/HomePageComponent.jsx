@@ -5,6 +5,7 @@ import HomePageCoverComponent from './home/HomePageCoverComponent';
 import './styles/pages/HomePageStyle.scss';
 import HomeSkillsSectionComponent from './home/HomeSkillsSectionComponent';
 import HomeTechnologiesSectionComponent from './home/HomeTechnologiesSectionComponent';
+import FooterComponent from './common/FooterComponent';
 
 export default function HomePageComponent() {
   return (
@@ -12,6 +13,7 @@ export default function HomePageComponent() {
       <HomePageCoverComponent />
       <HomeSkillsSectionComponent />
       <HomeTechnologiesSectionComponent />
+      <FooterComponent />
     </ScreenContainerComponent>
   );
 }

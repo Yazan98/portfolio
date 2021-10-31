@@ -1,0 +1,79 @@
+@import "../../../styles/base";
+
+footer {
+  padding: 4em;
+  background: $footerBackground;
+
+  hr {
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+
+  .FooterEnd {
+    display: flex;
+    justify-content: space-between;
+    font-size: smaller;
+    color: $descriptionColor;
+
+    .Links {
+      display: flex;
+      p {
+        margin-left: 1em;
+      }
+    }
+  }
+
+  .FooterContent {
+    display: flex;
+    justify-content: space-evenly;
+    place-items: center center;
+
+    .LinksContent {
+      height: 250px;
+      display: flex;
+
+      .Links {
+        margin-right: 1em;
+        display: block;
+
+        .Links {
+          li {
+            margin-top: 0.5em;
+          }
+        }
+
+        .Item {
+          width: 100%;
+          color: $descriptionColor;
+          margin-top: 1em;
+        }
+      }
+
+      .LinksInformation {
+        .Links {
+          li {
+            margin-top: 0.5em;
+          }
+        }
+
+        .Item {
+          width: 100%;
+          color: $descriptionColor;
+          margin-top: 1em;
+        }
+      }
+    }
+
+    .Logo {
+      height: 250px;
+      p {
+        font-size: smaller;
+        color: $descriptionColor;
+      }
+
+      h2 {
+        color: $primaryColor;
+      }
+    }
+  }
+}
