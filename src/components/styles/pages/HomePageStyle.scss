@@ -1,0 +1,86 @@
+@import "../../../styles/base";
+
+.HomePageContainer {
+  height: 100vh;
+  width: 100vw;
+  background: rgb(238, 205, 163);
+  background: linear-gradient(61deg, rgb(238, 205, 163) 0%, rgb(239, 98, 159) 100%);
+
+  .HomePageContentContainer {
+    padding: 1em;
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(49vw,.1fr));
+
+    .Text {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      place-items: center center;
+      height: 90vh;
+
+      .Content {
+        max-width: 60%;
+
+        .SmallText {
+          font-size: small;
+        }
+
+        .Title {
+          color: $primaryColor;
+        }
+
+        p {
+          color: $whiteColor;
+        }
+
+        .TitleSection {
+          margin-top: 2em;
+          color: $primaryColor;
+        }
+
+        .Description {
+          max-width: 80%;
+        }
+
+        ul {
+          display: grid;
+          margin-top: 0.3em;
+          grid-template-columns: repeat(2, minmax(140px, 150px));
+          padding: 0px;
+          overflow: hidden;
+          list-style: none;
+          grid-row-gap: 5px;
+
+          li {
+            color: $whiteColor;
+            font-size: small;
+          }
+        }
+
+        .RoundedButton {
+          margin-top: 2em;
+          color: $whiteColor;
+          border-color: $whiteColor;
+          border-style: solid;
+          border-width: 1px;
+          text-align: center;
+          width: 7vw;
+          padding-top: 1em;
+          padding-bottom: 1em;
+          border-radius: 100px;
+        }
+      }
+    }
+
+    .Icon {
+      img {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        place-items: center center;
+        height: 90vh;
+        object-fit: contain;
+      }
+    }
+  }
+}

@@ -1,0 +1,25 @@
+@import "../../../styles/base";
+
+.InnerToolbarComponentContainer {
+  padding: 1em;
+  display: flex;
+  justify-content: space-between;
+
+  .Logo {
+    color: $primaryColor;
+
+    .Title {
+      font-size: large;
+    }
+  }
+
+  .Links {
+    color: $whiteColor;
+
+    .NavItem {
+      margin-left: 1em;
+      font-size: medium;
+    }
+  }
+
+}
