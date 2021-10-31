@@ -1,0 +1,60 @@
+@import "../../../styles/base";
+
+.HomeTechnologiesSectionComponent {
+  padding: 4em;
+
+  h3 {
+    color: $primaryColor;
+  }
+
+  .Items {
+    display: grid;
+    margin-top: 0.3em;
+    grid-template-columns: repeat(3, minmax(140px, 380px));
+    padding: 1em;
+    overflow: hidden;
+    list-style: none;
+    grid-row-gap: 5px;
+
+    .Item:hover {
+      color: #1b1f23;
+      border: 5px solid #2962ff;
+      -webkit-transform: scale(1.1);
+      transform: scale(1.1);
+      z-index: 10;
+    }
+
+    .Item {
+      margin-top: 1em;
+      margin-bottom: 1em;
+      margin-right: 2em;
+      border-radius: 25px;
+      border-width: 4px;
+      border-style: solid;
+      border-color: $blackColor;
+      padding: 2em;
+      position: relative;
+      height: 220px;
+      -webkit-transform: scale(1);
+      transform: scale(1);
+      transition: .4s ease-in-out;
+
+      p {
+        color: $descriptionColor;
+        font-size: x-small;
+      }
+
+      .Description {
+        color: $descriptionColor;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        padding: 3em;
+      }
+
+      h4 {
+        color: $primaryColor;
+      }
+    }
+  }
+}

@@ -1,0 +1,67 @@
+@import "../../../styles/base";
+
+.HomeSkillsContainer {
+  padding: 4em;
+
+  .Content {
+    display: flex;
+
+    .Text {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      place-items: center center;
+      height: 50vh;
+
+      .TextContainer {
+        width: 45%;
+
+        p {
+          color: $descriptionColor;
+        }
+
+        h2 {
+          color: $primaryColor;
+        }
+      }
+    }
+
+    .GridSkillsContainer {
+      flex: 1;
+      justify-content: center;
+      align-content: center;
+      place-items: center center;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(140px, 400px));
+      overflow: hidden;
+      list-style: none;
+      grid-column-gap: 2em;
+      padding: 5em;
+
+      .LineDivider {
+        margin-bottom: 2em;
+        height: 1px;
+        width: 100%;
+        background: $blackColor;
+      }
+
+      .Item {
+        margin-bottom: 2em;
+
+        p {
+          max-lines: 4;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          display: -webkit-box;
+          -webkit-line-clamp: 4; /* number of lines to show */
+          -webkit-box-orient: vertical;
+          color: $descriptionColor;
+        }
+
+        h3 {
+          color: $primaryColor;
+        }
+      }
+    }
+  }
+}
