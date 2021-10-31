@@ -3,8 +3,6 @@
 @import "styles/variables";
 @import "styles/utils";
 @import "styles/mixins";
-@import "styles/pages/home_style";
-@import "styles/fragments/toolbar_style";
 
 html,
 body {
@@ -17,40 +15,6 @@ body {
   line-height: 1.56;
   color: black;
   background-color: white;
-}
-
-.TextTitleBlack {
-  color: $lightTitleColor;
-}
-
-.TextDescriptionBlack {
-  color: $lightSecondColor;
-}
-
-.TextTitleLight {
-  color: $darkTitleColor;
-}
-
-.TextDescriptionLight {
-  color: $darkSecondColor;
-}
-
-.ContainerBackgroundLight {
-  background-color: $lightBackgroundColor;
-}
-
-.ContainerBackgroundLight {
-  background-color: $darkBackgroundColor;
-}
-
-.LightBorder {
-  border-color: white;
-  color: white;
-}
-
-.BlackBorder {
-  border-color: black;
-  color: black;
 }
 
 a,.Link {
@@ -69,10 +33,6 @@ a, p, h1, h2, h3, h4, h5, label {
 
 ul {
   list-style: none;
-}
-
-section {
-  padding: 40px 0;
 }
 
 * , *:after, *:before {
