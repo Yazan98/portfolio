@@ -1,0 +1,22 @@
+@import "../../../styles/base";
+
+.ItemFilter {
+  cursor: pointer;
+  transition: 1s;
+  font-size: small;
+  text-align: center;
+}
+
+.ItemFilter:hover {
+  color: $primaryColor;
+}
+
+.ProjectsDescription {
+  color: $descriptionColor;
+  margin-bottom: 1em;
+  font-style: normal;
+}
+
+.ProjectsContainer {
+  padding: 2em;
+}
