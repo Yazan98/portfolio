@@ -1,12 +1,22 @@
 import React from 'react';
 import '../styles/components/HomeTechnologiesStyle.scss';
+import { Grid } from '@material-ui/core';
 
 export default function HomeTechnologiesSectionComponent() {
   return (
     <section className="HomeTechnologiesSectionComponent">
       <h3>What Can I Do</h3>
-      <div className="Items">
-        <div className="Item">
+      <Grid
+        container
+        justifyContent="center"
+        alignItems="flex-start"
+        justify="flex-start"
+        spacing={2}
+        xs={12}
+        className="Items"
+        style={{ maxWidth: '70vw' }}
+      >
+        <Grid item xs={3} className="Item">
           <p>Frontend Side</p>
           <h4>Android Development</h4>
           <p className="Description">
@@ -15,8 +25,8 @@ export default function HomeTechnologiesSectionComponent() {
             Terminal, Fragments, Custom Views, Multi Modular
             Apps, Google Play Console, Android Profiler, Leak Canary, Maven Central
           </p>
-        </div>
-        <div className="Item">
+        </Grid>
+        <Grid item xs={3} className="Item">
           <p>Backend Side</p>
           <h4>Web Apps</h4>
           <p className="Description">
@@ -24,8 +34,8 @@ export default function HomeTechnologiesSectionComponent() {
             Mysql (RDS), S3 Storage, Firebase, Socket IO Via
             Nest.js, Laravel, Spring Boot
           </p>
-        </div>
-        <div className="Item">
+        </Grid>
+        <Grid item xs={3} className="Item">
           <p>Frontend Side</p>
           <h4>Web Development</h4>
           <p className="Description">
@@ -33,8 +43,8 @@ export default function HomeTechnologiesSectionComponent() {
             Webstorm, VSCode , Reusable Components,
             React Hooks, Mixins Queries In SASS Styles, Material UI
           </p>
-        </div>
-        <div className="Item">
+        </Grid>
+        <Grid item xs={3} className="Item">
           <p>Configuration</p>
           <h4>Tools Development</h4>
           <p className="Description">
@@ -42,8 +52,8 @@ export default function HomeTechnologiesSectionComponent() {
             Animations In After Effects To App Splash Screen,
             Git, Github, Gitlab, Bitbucket, Linux Terminal
           </p>
-        </div>
-        <div className="Item">
+        </Grid>
+        <Grid item xs={3} className="Item">
           <p>Frontend Side</p>
           <h4>Design</h4>
           <p className="Description">
@@ -51,8 +61,8 @@ export default function HomeTechnologiesSectionComponent() {
             Photoshop, After Effects For Simple Animation
             (Beginner Level), Adobe XD
           </p>
-        </div>
-        <div className="Item">
+        </Grid>
+        <Grid item xs={3} className="Item">
           <p>Configuration</p>
           <h4>Plugins Development</h4>
           <p className="Description">
@@ -60,8 +70,8 @@ export default function HomeTechnologiesSectionComponent() {
             IntelliJ Plugins to Communicate With Android Devices
             Via ADB
           </p>
-        </div>
-      </div>
+        </Grid>
+      </Grid>
     </section>
   );
 }
