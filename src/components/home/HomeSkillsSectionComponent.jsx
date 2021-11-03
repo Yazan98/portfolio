@@ -1,11 +1,12 @@
 import React from 'react';
 import '../styles/components/HomeSkillsStyle.scss';
+import { Grid } from '@material-ui/core';
 
 export default function HomeSkillsSectionComponent() {
   return (
     <section className="HomeSkillsContainer">
-      <div className="Content">
-        <div className="Text">
+      <Grid className="Content" rowSpacing={1} columns={{ xs: 6, sm: 8, md: 12 }} container>
+        <Grid item xs={6} columns={{ xs: 6, sm: 12, md: 12 }} className="Text">
           <div className="TextContainer">
             <h2>Skills</h2>
             <p>
@@ -14,9 +15,20 @@ export default function HomeSkillsSectionComponent() {
               Thing Inside Full System
             </p>
           </div>
-        </div>
-        <div className="GridSkillsContainer">
-          <div className="Item">
+        </Grid>
+        <Grid
+          item
+          xs={6}
+          container
+          spacing={3}
+          direction="row"
+          justifyContent="center"
+          alignItems="center"
+          justify="center"
+          className="GridSkillsContainer"
+          columns={{ xs: 6, sm: 12, md: 12 }}
+        >
+          <Grid item xs={6} className="Item">
             <h3>Android Development</h3>
             <p>
               Build Android Apps With Java, Kotlin, Gradle DSL,
@@ -24,8 +36,10 @@ export default function HomeSkillsSectionComponent() {
               Jetpack Component, RxJava, Kotlin Coroutines, Multi Modular Apps,
               MVVM, Firebase
             </p>
-          </div>
-          <div className="Item">
+            <br />
+            <hr />
+          </Grid>
+          <Grid item xs={6} className="Item">
             <h3>Web Development</h3>
             <p>
               Design Websites With React.js, React Hooks,
@@ -33,27 +47,27 @@ export default function HomeSkillsSectionComponent() {
               PWA, JSX, Typescript, Javascript (ES6+),
               Mobile Responsive, Static Site Generation (Next.js)
             </p>
-          </div>
-          <div className="LineDivider" />
-          <div className="LineDivider" />
-          <div className="Item">
+            <br />
+            <hr />
+          </Grid>
+          <Grid item xs={6} className="Item">
             <h3>Backend Development</h3>
             <p>
               Build Restful Api With Java, Javascript, PHP Using
               (SpringBoot (Java, Kotlin), Nest.js, Laravel) Based
               on Json Response, Auth, Mysql, NoSql
             </p>
-          </div>
-          <div className="Item">
+          </Grid>
+          <Grid item xs={6} className="Item">
             <h3>Tools Development</h3>
             <p>
               Build Gradle Plugins For Android, IDE Plugins,
               CLI's To Execute Environment Jobs Depends on
               OS With (Kotlin, Ruby, Groovy)
             </p>
-          </div>
-        </div>
-      </div>
+          </Grid>
+        </Grid>
+      </Grid>
     </section>
   );
 }
