@@ -20,3 +20,16 @@
 .ProjectsContainer {
   padding: 2em;
 }
+
+.Description {
+  max-lines: 3;
+  max-width: 90%;
+  font-size: small;
+  color: $descriptionColor;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* number of lines to show */
+  -webkit-box-orient: vertical;
+  height: 80px;
+}

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Grid } from '@material-ui/core';
 import { DESCRIPTION_COLOR } from '../../info/ColorUtils';
+import '../styles/pages/ProjectsPageStyle.scss';
 
 export default function ProjectViewComponent({ projectView }) {
   return (
@@ -14,6 +15,7 @@ export default function ProjectViewComponent({ projectView }) {
           borderRadius: '10px',
           borderStyle: 'solid',
           borderWidth: '0px',
+          cursor: 'pointer',
         }}
         alt={projectView.name}
         loading="eager"
@@ -21,7 +23,7 @@ export default function ProjectViewComponent({ projectView }) {
       />
       <p style={{ color: DESCRIPTION_COLOR }}>{projectView.createdAt}</p>
       <h2>{projectView.name}</h2>
-      <p style={{ color: DESCRIPTION_COLOR, fontSize: 'small', maxWidth: '70%' }}>{projectView.description}</p>
+      <p className="Description">{projectView.description}</p>
     </Grid>
   );
 }
