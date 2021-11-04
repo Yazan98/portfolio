@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Grid } from '@material-ui/core';
 import ScreenContainerComponent from './common/ScreenContainerComponent';
 import FooterComponent from './common/FooterComponent';
@@ -17,7 +17,7 @@ export default function ProjectsPageComponent() {
   const [filterType, setFilterType] = React.useState(ALL_FILTER_TYPE);
   const [projectsList, setProjectsList] = React.useState(getProjectsList());
 
-  React.useEffect(() => {
+  useEffect(() => {
     if (filterType === ALL_FILTER_TYPE) {
       setProjectsList(getProjectsList());
     } else {
@@ -32,23 +32,27 @@ export default function ProjectsPageComponent() {
         <h2 style={{ color: PRIMARY_COLOR }}>Projects</h2>
         <p className="ProjectsDescription">This is List of Some Projects I Built</p>
         <Grid style={{ maxWidth: '30vw' }} justify="center" alignItems="center" alignContent="center" container xs={12}>
-          <Grid onClick={() => setFilterType(ALL_FILTER_TYPE)} className="Item" item xs={2}>
-            <p className="ItemFilter">All Projects</p>
+          <Grid className="Item" item xs={2}>
+            <p onClick={() => setFilterType(ALL_FILTER_TYPE)} className="ItemFilter">
+              All Projects
+            </p>
           </Grid>
-          <Grid onClick={() => setFilterType(ANDROID_FILTER_TYPE)} className="Item" item xs={2}>
-            <p className="ItemFilter">Android Apps</p>
+          <Grid className="Item" item xs={2}>
+            <p onClick={() => setFilterType(ANDROID_FILTER_TYPE)} className="ItemFilter">
+              Android Apps
+            </p>
           </Grid>
-          <Grid onClick={() => setFilterType(WEBSITES_FILTER_TYPE)} className="Item" item xs={2}>
-            <p className="ItemFilter">Websites</p>
+          <Grid className="Item" item xs={2}>
+            <p onClick={() => setFilterType(WEBSITES_FILTER_TYPE)} className="ItemFilter">Websites</p>
           </Grid>
-          <Grid onClick={() => setFilterType(WEB_APPS_FILTER_TYPE)} className="Item" item xs={2}>
-            <p className="ItemFilter">Web Apps</p>
+          <Grid className="Item" item xs={2}>
+            <p onClick={() => setFilterType(WEB_APPS_FILTER_TYPE)} className="ItemFilter">Web Apps</p>
           </Grid>
-          <Grid onClick={() => setFilterType(TOOLS_FILTER_TYPE)} className="Item" item xs={2}>
-            <p className="ItemFilter">Tools</p>
+          <Grid className="Item" item xs={2}>
+            <p onClick={() => setFilterType(TOOLS_FILTER_TYPE)} className="ItemFilter">Tools</p>
           </Grid>
-          <Grid onClick={() => setFilterType(FILTERED_PROJECTS_FILTER_TYPE)} className="Item" item xs={2}>
-            <p className="ItemFilter">Filtered Projects</p>
+          <Grid className="Item" item xs={2}>
+            <p onClick={() => setFilterType(FILTERED_PROJECTS_FILTER_TYPE)} className="ItemFilter">Filtered Projects</p>
           </Grid>
         </Grid>
 

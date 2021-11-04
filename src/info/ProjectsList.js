@@ -88,5 +88,5 @@ export default function getProjectsList() {
 }
 
 export function getProjectsListByFilter(filter) {
-  return getProjectsList((el) => el.type === filter);
+  return getProjectsList().filter((e) => e.type === filter);
 }

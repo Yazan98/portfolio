@@ -1,21 +1,39 @@
 import React from 'react';
+import Toolbar from '@material-ui/core/Toolbar';
+import Box from '@material-ui/core/Box';
+import Typography from '@material-ui/core/Typography';
 import { NavLink } from 'react-router-dom';
-import '../styles/components/ToolbarStyle.scss';
+import { Grid } from '@material-ui/core';
+import { PRIMARY_COLOR } from '../../info/ColorUtils';
 
 export default function InnerToolbarComponent() {
   return (
-    <nav className="InnerToolbarComponentContainer">
-      <div className="Logo">
-        <NavLink className="Title" to="/">Yazan Tarifi</NavLink>
-      </div>
-      <div className="Links">
-        <NavLink to="/" className="NavItem" id="activated">Home</NavLink>
-        <NavLink to="/projects" className="NavItem" id="activated">Projects</NavLink>
-        <NavLink to="/skills" className="NavItem" id="activated">Skills</NavLink>
-        <NavLink to="/archive" className="NavItem" id="activated">Archive</NavLink>
-        <NavLink to="/about" className="NavItem" id="activated">About</NavLink>
-        <NavLink to="/resume" className="NavItem" id="activated">Resume</NavLink>
-      </div>
+    <nav>
+      <Box sx={{ flexGrow: 1 }}>
+        <Toolbar>
+          <Grid
+            justify="space-between"
+            container
+            spacing={24}
+          >
+            <Grid item>
+              <Typography variant="h6" style={{ color: PRIMARY_COLOR }} component="div" sx={{ flexGrow: 1 }}>
+                Yazan Tarifi
+              </Typography>
+            </Grid>
+            <Grid item>
+              <div>
+                <NavLink style={{ marginLeft: '1em', color: 'white' }} to="/">Home</NavLink>
+                <NavLink style={{ marginLeft: '1em', color: 'white' }} to="/projects">Projects</NavLink>
+                <NavLink style={{ marginLeft: '1em', color: 'white' }} to="/skills">Skills</NavLink>
+                <NavLink style={{ marginLeft: '1em', color: 'white' }} to="/about">About</NavLink>
+                <NavLink style={{ marginLeft: '1em', color: 'white' }} to="/archive">Archive</NavLink>
+                <NavLink style={{ marginLeft: '1em', color: 'white' }} to="/resume">Resume</NavLink>
+              </div>
+            </Grid>
+          </Grid>
+        </Toolbar>
+      </Box>
     </nav>
   );
 }
