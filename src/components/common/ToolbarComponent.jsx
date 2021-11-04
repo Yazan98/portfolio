@@ -27,11 +27,11 @@ export default function ToolbarComponent() {
             <Grid item>
               <div>
                 <NavLink style={{ marginLeft: '1em' }} to="/">Home</NavLink>
-                <NavLink style={{ marginLeft: '1em' }} to="/">Projects</NavLink>
-                <NavLink style={{ marginLeft: '1em' }} to="/">Skills</NavLink>
-                <NavLink style={{ marginLeft: '1em' }} to="/">About</NavLink>
-                <NavLink style={{ marginLeft: '1em' }} to="/">Archive</NavLink>
-                <NavLink style={{ marginLeft: '1em' }} to="/">Resume</NavLink>
+                <NavLink style={{ marginLeft: '1em' }} to="/projects">Projects</NavLink>
+                <NavLink style={{ marginLeft: '1em' }} to="/skills">Skills</NavLink>
+                <NavLink style={{ marginLeft: '1em' }} to="/about">About</NavLink>
+                <NavLink style={{ marginLeft: '1em' }} to="/archive">Archive</NavLink>
+                <NavLink style={{ marginLeft: '1em' }} to="/resume">Resume</NavLink>
               </div>
             </Grid>
           </Grid>
