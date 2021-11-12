@@ -8,6 +8,7 @@ export default function ProjectViewComponent({ projectView }) {
     <Grid
       item
       xs={4}
+      sm={6}
       style={{ marginBottom: '1em' }}
     >
       <img
@@ -18,7 +19,7 @@ export default function ProjectViewComponent({ projectView }) {
           cursor: 'pointer',
         }}
         alt={projectView.name}
-        loading="eager"
+        loading="lazy"
         src={projectView.image}
       />
       <p style={{ color: DESCRIPTION_COLOR }}>{projectView.createdAt}</p>

@@ -17,7 +17,7 @@ export default function SkillsPageComponent() {
         <h2 style={{ color: PRIMARY_COLOR }}>Skills</h2>
         <p className="ProjectsDescription">Languages, Frameworks in Working on</p>
         <div style={{ justifyContent: 'center', display: 'flex', marginTop: '2em' }}>
-          <Grid className="ProjectsContainer" spacing={2} container xs={9} justify="flex-start" alignContent="center" alignItems="center">
+          <Grid className="ProjectsContainer" spacing={4} container xs={12} sm={12} justify="flex-start" alignContent="center" alignItems="center">
             {list.map((item) => <SkillsViewComponent skillItem={item} />)}
           </Grid>
         </div>

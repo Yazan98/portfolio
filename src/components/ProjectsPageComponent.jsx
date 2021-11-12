@@ -57,7 +57,7 @@ export default function ProjectsPageComponent() {
         </Grid>
 
         {projectsList ? (
-          <Grid className="ProjectsContainer" spacing={2} container xs={12} justify="flex-start" alignContent="center" alignItems="center">
+          <Grid className="ProjectsContainer" spacing={2} container xs={12} sm={12} justify="flex-start" alignContent="center" alignItems="center">
             {projectsList.map((item) => <ProjectViewComponent projectView={item} />)}
           </Grid>
         ) : null}
