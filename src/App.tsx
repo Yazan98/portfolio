@@ -6,6 +6,7 @@ import NotFoundPageViewComponent from "./components/NotFoundPageViewComponent";
 import ProjectsPageComponent from "./components/ProjectsPageComponent";
 import SkillsPageComponent from "./components/SkillsPageComponent";
 import ArchivePageComponent from "./components/ArchivePageComponent";
+import AllProjectsPageComponent from './components/AllProjectsPageComponent';
 
 function App() {
     return (
@@ -15,7 +16,8 @@ function App() {
                     <Route exact path="/" component={HomePageComponent}/>
                     <Route exact path="/projects" component={ProjectsPageComponent}/>
                     <Route exact path="/skills" component={SkillsPageComponent}/>
-                    <Route exact path="/archive" component={ArchivePageComponent}/>
+                    <Route exact path="/archive" component={ArchivePageComponent} />
+                    <Route exact path="/projects/all" component={AllProjectsPageComponent} />
                     <Route path='*' exact={true} component={NotFoundPageViewComponent}/>
                 </Switch>
             </HashRouter>

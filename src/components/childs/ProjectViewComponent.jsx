@@ -3,10 +3,11 @@ import { Grid } from '@material-ui/core';
 import { DESCRIPTION_COLOR } from '../../info/ColorUtils';
 import '../styles/pages/ProjectsPageStyle.scss';
 
-export default function ProjectViewComponent({ projectView }) {
+export default function ProjectViewComponent({ projectView, onClickListener }) {
   return (
     <Grid
       className="ProjectViewContainerItem"
+      onClick={() => onClickListener(projectView.id)}
       item
       xs={12}
       md={4}

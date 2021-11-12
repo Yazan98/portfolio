@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { Grid } from '@material-ui/core';
+import { useHistory } from 'react-router-dom';
 import ScreenContainerComponent from './common/ScreenContainerComponent';
 import FooterComponent from './common/FooterComponent';
 import ToolbarComponent from './common/ToolbarComponent';
@@ -9,13 +10,14 @@ import getProjectsList, {
   ALL_FILTER_TYPE, ANDROID_FILTER_TYPE,
   FILTERED_PROJECTS_FILTER_TYPE, getProjectsListByFilter,
   TOOLS_FILTER_TYPE,
-  WEB_APPS_FILTER_TYPE, WEBSITES_FILTER_TYPE,
+  WEB_APPS_FILTER_TYPE, WEBSITES_FILTER_TYPE, ALL_PROJECTS_ID,
 } from '../info/ProjectsList';
 import ProjectViewComponent from './childs/ProjectViewComponent';
 
 export default function ProjectsPageComponent() {
   const [filterType, setFilterType] = React.useState(ALL_FILTER_TYPE);
   const [projectsList, setProjectsList] = React.useState(getProjectsList());
+  const history = useHistory();
 
   useEffect(() => {
     if (filterType === ALL_FILTER_TYPE) {
@@ -24,6 +26,15 @@ export default function ProjectsPageComponent() {
       setProjectsList(getProjectsListByFilter(filterType));
     }
   }, [filterType]);
+
+  const onItemClicked = (id) => {
+    if (id == ALL_PROJECTS_ID) {
+      history.push('/projects/all');
+    } else {
+      history.push(`/projects/${id}`);
+    }
+  };
+
   return (
     <ScreenContainerComponent className="ProjectsPageComponent" title="Yazan Tarifi Portfolio - Projects">
       <ToolbarComponent />
@@ -58,7 +69,7 @@ export default function ProjectsPageComponent() {
 
         {projectsList ? (
           <Grid className="ProjectsContainer" spacing={2} container xs={12} sm={12} justify="flex-start" alignContent="center" alignItems="center">
-            {projectsList.map((item) => <ProjectViewComponent projectView={item} />)}
+            {projectsList.map((item) => <ProjectViewComponent key={item.id} onClickListener={onItemClicked} projectView={item} />)}
           </Grid>
         ) : null}
       </main>
