@@ -1,5 +1,38 @@
 @import "../../../styles/base";
 
+.ProjectsPageComponent {
+  min-height: 100vh;
+
+  img {
+    object-fit: contain;
+  }
+}
+
+.ImageContainer {
+  display: inline-block;
+  overflow: hidden;
+  border: 0 solid red;
+  border-radius: 5px;
+}
+
+.ProjectImageIcon {
+  transition: 1s;
+  overflow: hidden;
+  transition: .4s;
+  vertical-align: middle;
+  border-style: none;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.ProjectViewContainerItem {
+  overflow: hidden;
+}
+
+.ProjectImageIcon:hover {
+  transform: scale(1.1);
+}
+
 .ItemFilter {
   cursor: pointer;
   transition: 1s;
@@ -19,6 +52,7 @@
 
 .ProjectsContainer {
   padding: 2em;
+  overflow: hidden;
 }
 
 .Description {
@@ -32,4 +66,5 @@
   -webkit-line-clamp: 3; /* number of lines to show */
   -webkit-box-orient: vertical;
   height: 80px;
+  margin-bottom: 3em;
 }

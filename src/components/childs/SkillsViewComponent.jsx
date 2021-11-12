@@ -23,7 +23,8 @@ export default function SkillsViewComponent({ skillItem }) {
       >
         <img alt={skillItem.name} src={skillItem.icon} loading="lazy" width="50px" height="50px" />
         <h3 className="SkillsItemTitle">{skillItem.name}</h3>
-        <p className="SkillsItemDescriptionBig"
+        <p
+          className="SkillsItemDescriptionBig"
           style={{
             color: DESCRIPTION_COLOR,
             height: '150px',

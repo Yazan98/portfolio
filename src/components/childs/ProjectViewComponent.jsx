@@ -6,22 +6,26 @@ import '../styles/pages/ProjectsPageStyle.scss';
 export default function ProjectViewComponent({ projectView }) {
   return (
     <Grid
+      className="ProjectViewContainerItem"
       item
-      xs={4}
+      xs={12}
+      md={4}
+      lg={4}
       sm={6}
-      style={{ marginBottom: '1em' }}
+      xl={3}
     >
-      <img
-        style={{
-          borderRadius: '10px',
-          borderStyle: 'solid',
-          borderWidth: '0px',
-          cursor: 'pointer',
-        }}
-        alt={projectView.name}
-        loading="lazy"
-        src={projectView.image}
-      />
+      <div className="ImageContainer">
+        <img
+          className="ProjectImageIcon"
+          style={{
+            cursor: 'pointer',
+            width: '27vw',
+          }}
+          alt={projectView.name}
+          loading="lazy"
+          src={projectView.image}
+        />
+      </div>
       <p style={{ color: DESCRIPTION_COLOR }}>{projectView.createdAt}</p>
       <h2>{projectView.name}</h2>
       <p className="Description">{projectView.description}</p>
