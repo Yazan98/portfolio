@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-  Grid, FormControlLabel, FormGroup, Checkbox,
+  Grid, FormControlLabel, Radio, RadioGroup, FormControl, FormLabel,
 } from '@material-ui/core';
 import FooterComponent from './common/FooterComponent';
 import ScreenContainerComponent from './common/ScreenContainerComponent';
@@ -11,6 +11,12 @@ import GithubProjectViewComponent from './childs/GithubProjectViewComponent';
 
 export default function AllProjectsPageComponent() {
   const [projects, setProjects] = React.useState(getProjectsInformationList());
+  const [filterType, setFilterType] = React.useState('all');
+  React.useEffect(() => {
+    if (filterType === 'all') {
+      setProjects(getProjectsInformationList());
+    }
+  }, [filterType]);
 
   return (
     <ScreenContainerComponent className="AllProjectsPageComponent" title="Yazan Tarifi Portfolio - All Projects">
@@ -23,27 +29,34 @@ export default function AllProjectsPageComponent() {
         <Grid container xs={12} lg={12} md={12} spacing={1} className="ProjectsContainerList">
           <Grid item xs={2} lg={2} md={2} className="ProjectsFilter">
             <h3 style={{ marginTop: '1em', color: PRIMARY_COLOR }}>Filter By</h3>
-            <p style={{ color: DESCRIPTION_COLOR }}>Categories</p>
-            <FormGroup>
-              <FormControlLabel control={<Checkbox size="small" defaultChecked color="primary" />} label="Android Applications" />
-              <FormControlLabel control={<Checkbox size="small" color="primary" />} label="Web Applications" />
-              <FormControlLabel control={<Checkbox size="small" color="primary" />} label="Websites" />
-              <FormControlLabel control={<Checkbox size="small" color="primary" />} label="Tools" />
-            </FormGroup>
+            <FormControl component="fieldset" style={{ marginTop: '2em' }}>
+              <FormLabel component="legend" style={{ color: DESCRIPTION_COLOR }}>Categories</FormLabel>
+              <RadioGroup defaultValue="All">
+                <FormControlLabel control={<Radio size="small" color="primary" />} value="All" label="All" />
+                <FormControlLabel control={<Radio size="small" color="primary" />} value="Android Applications" label="Android Applications" />
+                <FormControlLabel control={<Radio size="small" color="primary" />} value="Web Applications" label="Web Applications" />
+                <FormControlLabel control={<Radio size="small" color="primary" />} value="Websites" label="Websites" />
+                <FormControlLabel control={<Radio size="small" color="primary" />} value="Typescript" label="Typescript" />
+                <FormControlLabel control={<Radio size="small" color="primary" />} value="Tools" label="Tools" />
+              </RadioGroup>
+            </FormControl>
 
-            <p style={{ color: DESCRIPTION_COLOR, marginTop: '2em' }}>Languages</p>
-            <FormGroup>
-              <FormControlLabel control={<Checkbox size="small" color="primary" defaultChecked />} label="Kotlin" />
-              <FormControlLabel control={<Checkbox size="small" color="primary" />} label="Java" />
-              <FormControlLabel control={<Checkbox size="small" color="primary" />} label="Javascript" />
-              <FormControlLabel control={<Checkbox size="small" color="primary" />} label="Typescript" />
-              <FormControlLabel control={<Checkbox size="small" color="primary" />} label="Ruby" />
-              <FormControlLabel control={<Checkbox size="small" color="primary" />} label="PHP" />
-            </FormGroup>
+            <FormControl component="fieldset" style={{ marginTop: '2em' }}>
+              <FormLabel component="legend" style={{ color: DESCRIPTION_COLOR }}>Languages</FormLabel>
+              <RadioGroup defaultValue="All">
+                <FormControlLabel control={<Radio size="small" color="primary" />} value="All" label="All" />
+                <FormControlLabel control={<Radio size="small" color="primary" />} value="Kotlin" label="Kotlin" />
+                <FormControlLabel control={<Radio size="small" color="primary" />} value="Java" label="Java" />
+                <FormControlLabel control={<Radio size="small" color="primary" />} value="Javascript" label="Javascript" />
+                <FormControlLabel control={<Radio size="small" color="primary" />} value="Typescript" label="Typescript" />
+                <FormControlLabel control={<Radio size="small" color="primary" />} value="Ruby" label="Ruby" />
+                <FormControlLabel control={<Radio size="small" color="primary" />} value="PHP" label="PHP" />
+              </RadioGroup>
+            </FormControl>
 
           </Grid>
           <Grid item xs={10} lg={10} md={10} className="Projects">
-            <Grid container xs={12} lg={12} md={12}>
+            <Grid container xs={12} lg={12} md={12} justify="center">
               {projects ? projects.map((item) => (
                 <GithubProjectViewComponent
                   project={item}

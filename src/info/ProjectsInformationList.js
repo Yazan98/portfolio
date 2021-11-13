@@ -209,7 +209,7 @@ export default function getProjectsInformationList() {
       id: 23,
       name: 'Shake Reporter Kt',
       description: 'Android Library to Report Exceptions, HTTP Requests In Android Apps Via Shake (View Application History of Crashes, Network Requests)',
-      hint: 'Android . Exceptions . Kotlin . Open Source',
+      hint: 'Android . Exceptions . Open Source',
       links: [
         'https://github.com/Yazan98/Shake-Reporter-Kt',
       ],
@@ -236,7 +236,7 @@ export default function getProjectsInformationList() {
       id: 26,
       name: 'Cloner Js',
       description: 'CLI To Clone Repos From Users, Orgs, Repos One Time When You want To Clone A lot Of Projects (One Time)',
-      hint: 'CLI . JavaScript . Github API . Open Source',
+      hint: 'CLI . JavaScript . Open Source',
       links: [
         'https://github.com/Yazan98/cloner-js',
       ],
@@ -254,7 +254,7 @@ export default function getProjectsInformationList() {
       id: 28,
       name: 'Shopie Api',
       description: 'Laravel Api to Manage Users, Shops, Items with JWT, Mysql, Restful Api With Json Response',
-      hint: 'PHP . Laravel . MySql . JWT . Open Source',
+      hint: 'PHP . Laravel . MySql . Open Source',
       links: [
         'https://github.com/Yazan98/shop-api',
       ],
@@ -272,7 +272,7 @@ export default function getProjectsInformationList() {
       id: 30,
       name: 'Github Clone',
       description: 'React.js Project To Build Simple Github Profile Page',
-      hint: 'React.js . React Hooks . Github Api . Open Source',
+      hint: 'React.js . React Hooks . Open Source',
       links: [
         'https://github.com/Yazan98/github-clone',
         'https://github-clone-ac510.web.app/#/',
