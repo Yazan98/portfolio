@@ -7,6 +7,7 @@ export default function ProjectViewComponent({ projectView, onClickListener }) {
   return (
     <Grid
       className="ProjectViewContainerItem"
+      justify="flex-start"
       onClick={() => onClickListener(projectView.name)}
       item
       xs={12}

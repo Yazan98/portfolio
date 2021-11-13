@@ -6,17 +6,38 @@ import FooterComponent from './common/FooterComponent';
 import ScreenContainerComponent from './common/ScreenContainerComponent';
 import ToolbarComponent from './common/ToolbarComponent';
 import { DESCRIPTION_COLOR, PRIMARY_COLOR } from '../info/ColorUtils';
-import getProjectsInformationList from '../info/ProjectsInformationList';
+import getProjectsInformationList, {
+  getProjectsInfoListByCategory,
+  getProjectsInfoListByLanguage,
+} from '../info/ProjectsInformationList';
 import GithubProjectViewComponent from './childs/GithubProjectViewComponent';
 
 export default function AllProjectsPageComponent() {
   const [projects, setProjects] = React.useState(getProjectsInformationList());
   const [filterType, setFilterType] = React.useState('all');
+  const [filterCategory, setFilterCategory] = React.useState('categories');
   React.useEffect(() => {
-    if (filterType === 'all') {
+    if (filterType === 'All' || filterType === 'all') {
       setProjects(getProjectsInformationList());
+      return;
     }
-  }, [filterType]);
+
+    if (filterCategory === 'categories') {
+      setProjects(getProjectsInfoListByCategory(filterType));
+    } else {
+      setProjects(getProjectsInfoListByLanguage(filterType));
+    }
+  }, [filterType, filterCategory]);
+
+  const onCategoryChanged = (item) => {
+    setFilterCategory('categories');
+    setFilterType(item.target.value);
+  };
+
+  const onLanguageChanged = (item) => {
+    setFilterCategory('language');
+    setFilterType(item.target.value);
+  };
 
   return (
     <ScreenContainerComponent className="AllProjectsPageComponent" title="Yazan Tarifi Portfolio - All Projects">
@@ -31,19 +52,18 @@ export default function AllProjectsPageComponent() {
             <h3 style={{ marginTop: '1em', color: PRIMARY_COLOR }}>Filter By</h3>
             <FormControl component="fieldset" style={{ marginTop: '2em' }}>
               <FormLabel component="legend" style={{ color: DESCRIPTION_COLOR }}>Categories</FormLabel>
-              <RadioGroup defaultValue="All">
+              <RadioGroup defaultValue="All" onChange={(item) => onCategoryChanged(item)}>
                 <FormControlLabel control={<Radio size="small" color="primary" />} value="All" label="All" />
-                <FormControlLabel control={<Radio size="small" color="primary" />} value="Android Applications" label="Android Applications" />
-                <FormControlLabel control={<Radio size="small" color="primary" />} value="Web Applications" label="Web Applications" />
+                <FormControlLabel control={<Radio size="small" color="primary" />} value="Android" label="Android Applications" />
+                <FormControlLabel control={<Radio size="small" color="primary" />} value="WebApps" label="Web Applications" />
                 <FormControlLabel control={<Radio size="small" color="primary" />} value="Websites" label="Websites" />
-                <FormControlLabel control={<Radio size="small" color="primary" />} value="Typescript" label="Typescript" />
                 <FormControlLabel control={<Radio size="small" color="primary" />} value="Tools" label="Tools" />
               </RadioGroup>
             </FormControl>
 
             <FormControl component="fieldset" style={{ marginTop: '2em' }}>
               <FormLabel component="legend" style={{ color: DESCRIPTION_COLOR }}>Languages</FormLabel>
-              <RadioGroup defaultValue="All">
+              <RadioGroup defaultValue="All" onChange={(item) => onLanguageChanged(item)}>
                 <FormControlLabel control={<Radio size="small" color="primary" />} value="All" label="All" />
                 <FormControlLabel control={<Radio size="small" color="primary" />} value="Kotlin" label="Kotlin" />
                 <FormControlLabel control={<Radio size="small" color="primary" />} value="Java" label="Java" />
@@ -56,7 +76,7 @@ export default function AllProjectsPageComponent() {
 
           </Grid>
           <Grid item xs={10} lg={10} md={10} className="Projects">
-            <Grid container xs={12} lg={12} md={12} justify="center">
+            <Grid container xs={12} lg={12} md={12} justify={projects.length === 3 ? 'center' : (projects.length <= 4 ? 'flex-start' : 'center')}>
               {projects ? projects.map((item) => (
                 <GithubProjectViewComponent
                   project={item}

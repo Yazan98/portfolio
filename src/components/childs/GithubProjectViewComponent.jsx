@@ -8,7 +8,7 @@ function getSingleLinkItem(link) {
   return (
     <Grid item xs={1} justify="flex-end">
       <a href={link} target="_blank" rel="noreferrer">
-        <img src={LinkIcon} alt="Github Repo" width="20px" height="20px" loading="lazy" style={{ marginLeft: '10px', cursor: 'pointer' }} />
+        <img src={link.includes('github.com') ? GithubIcon : LinkIcon} alt="Github Repo" width="20px" height="20px" loading="lazy" style={{ marginLeft: '10px', cursor: 'pointer' }} />
       </a>
     </Grid>
   );

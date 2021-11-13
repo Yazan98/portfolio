@@ -28,7 +28,6 @@ export default function ProjectsPageComponent() {
   }, [filterType]);
 
   const onItemClicked = (id) => {
-    console.log(id);
     if (id === ALL_PROJECTS_ID) {
       history.push('/projects/all');
     } else {
