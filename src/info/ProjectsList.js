@@ -5,7 +5,7 @@ export const WEB_APPS_FILTER_TYPE = 'webApps';
 export const TOOLS_FILTER_TYPE = 'tools';
 export const FILTERED_PROJECTS_FILTER_TYPE = 'filtered';
 
-export const ALL_PROJECTS_ID = 11;
+export const ALL_PROJECTS_ID = 'All Projects';
 
 export default function getProjectsList() {
   return [

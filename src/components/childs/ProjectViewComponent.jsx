@@ -7,13 +7,13 @@ export default function ProjectViewComponent({ projectView, onClickListener }) {
   return (
     <Grid
       className="ProjectViewContainerItem"
-      onClick={() => onClickListener(projectView.id)}
+      onClick={() => onClickListener(projectView.name)}
       item
       xs={12}
       md={4}
       lg={4}
       sm={6}
-      xl={3}
+      xl={4}
     >
       <div className="ImageContainer">
         <img

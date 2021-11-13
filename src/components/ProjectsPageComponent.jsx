@@ -28,7 +28,8 @@ export default function ProjectsPageComponent() {
   }, [filterType]);
 
   const onItemClicked = (id) => {
-    if (id == ALL_PROJECTS_ID) {
+    console.log(id);
+    if (id === ALL_PROJECTS_ID) {
       history.push('/projects/all');
     } else {
       history.push(`/projects/${id}`);
@@ -69,7 +70,13 @@ export default function ProjectsPageComponent() {
 
         {projectsList ? (
           <Grid className="ProjectsContainer" spacing={2} container xs={12} sm={12} justify="flex-start" alignContent="center" alignItems="center">
-            {projectsList.map((item) => <ProjectViewComponent key={item.id} onClickListener={onItemClicked} projectView={item} />)}
+            {projectsList.map((item) => (
+              <ProjectViewComponent
+                key={item.id}
+                onClickListener={onItemClicked}
+                projectView={item}
+              />
+            ))}
           </Grid>
         ) : null}
       </main>
