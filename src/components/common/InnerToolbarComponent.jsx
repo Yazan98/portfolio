@@ -6,7 +6,7 @@ import { NavLink } from 'react-router-dom';
 import { Grid } from '@material-ui/core';
 import { PRIMARY_COLOR } from '../../info/ColorUtils';
 
-export default function InnerToolbarComponent() {
+export default function InnerToolbarComponent({ isTitleWhite }) {
   return (
     <nav>
       <Box sx={{ flexGrow: 1 }}>
@@ -17,7 +17,7 @@ export default function InnerToolbarComponent() {
             spacing={24}
           >
             <Grid item>
-              <Typography variant="h6" style={{ color: PRIMARY_COLOR }} component="div" sx={{ flexGrow: 1 }}>
+              <Typography variant="h6" style={{ color: isTitleWhite ? 'white' : PRIMARY_COLOR }} component="div" sx={{ flexGrow: 1 }}>
                 Yazan Tarifi
               </Typography>
             </Grid>
