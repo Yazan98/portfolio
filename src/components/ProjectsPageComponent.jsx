@@ -60,9 +60,6 @@ export default function ProjectsPageComponent() {
             <p onClick={() => setFilterType(WEB_APPS_FILTER_TYPE)} className="ItemFilter">Web Apps</p>
           </Grid>
           <Grid className="Item" item xs={2} lg={2} md={2}>
-            <p onClick={() => setFilterType(TOOLS_FILTER_TYPE)} className="ItemFilter">Tools</p>
-          </Grid>
-          <Grid className="Item" item xs={2} lg={2} md={2}>
             <p onClick={() => setFilterType(FILTERED_PROJECTS_FILTER_TYPE)} className="ItemFilter">Filtered Projects</p>
           </Grid>
         </Grid>

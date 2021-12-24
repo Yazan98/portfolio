@@ -76,7 +76,7 @@ export default function AllProjectsPageComponent() {
 
           </Grid>
           <Grid item xs={10} lg={10} md={10} className="Projects">
-            <Grid container xs={12} lg={12} md={12} justify={projects.length === 3 ? 'center' : (projects.length <= 4 ? 'flex-start' : 'center')}>
+            <Grid container xs={12} lg={12} md={12} justify={'center'}>
               {projects ? projects.map((item) => (
                 <GithubProjectViewComponent
                   project={item}

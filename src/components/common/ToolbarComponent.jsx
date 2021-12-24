@@ -21,7 +21,7 @@ export default function ToolbarComponent() {
           >
             <Grid item>
               <Typography variant="h6" style={{ color: PRIMARY_COLOR }} component="div" sx={{ flexGrow: 1 }}>
-                Yazan Tarifi
+                <NavLink to={"/"}>Yazan Tarifi</NavLink>
               </Typography>
             </Grid>
             <Grid item>
