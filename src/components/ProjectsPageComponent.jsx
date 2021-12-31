@@ -42,25 +42,22 @@ export default function ProjectsPageComponent() {
       <main style={{ padding: '3em' }}>
         <h2 style={{ color: PRIMARY_COLOR }}>Projects</h2>
         <p className="ProjectsDescription">This is List of Some Projects I Built</p>
-        <Grid style={{ maxWidth: '40vw' }} justify="center" alignItems="center" alignContent="center" container xs={12} md={12} lg={12}>
-          <Grid className="Item" item xs={2} lg={2} md={2}>
-            <p onClick={() => setFilterType(ALL_FILTER_TYPE)} className="ItemFilter">
+        <Grid justify="flex-start" alignItems="center" alignContent="center" container xs={12} md={12} lg={12}>
+          <Grid className="Item" item>
+            <p onClick={() => setFilterType(ALL_FILTER_TYPE)} className="ItemFilter" style={{ paddingRight: "13px" }}>
               All Projects
             </p>
           </Grid>
-          <Grid className="Item" item xs={2} lg={2} md={2}>
+          <Grid className="Item" item  style={{ paddingRight: "13px" }}>
             <p onClick={() => setFilterType(ANDROID_FILTER_TYPE)} className="ItemFilter">
               Android Apps
             </p>
           </Grid>
-          <Grid className="Item" item xs={2} lg={2} md={2}>
+          <Grid className="Item" item style={{ paddingRight: "13px" }}>
             <p onClick={() => setFilterType(WEBSITES_FILTER_TYPE)} className="ItemFilter">Websites</p>
           </Grid>
-          <Grid className="Item" item xs={2} lg={2} md={2}>
+          <Grid className="Item" item style={{ paddingRight: "13px" }}>
             <p onClick={() => setFilterType(WEB_APPS_FILTER_TYPE)} className="ItemFilter">Web Apps</p>
-          </Grid>
-          <Grid className="Item" item xs={2} lg={2} md={2}>
-            <p onClick={() => setFilterType(FILTERED_PROJECTS_FILTER_TYPE)} className="ItemFilter">Filtered Projects</p>
           </Grid>
         </Grid>
 
