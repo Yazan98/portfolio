@@ -5,23 +5,15 @@ import '../styles/pages/ProjectsPageStyle.scss';
 
 export default function ProjectViewComponent({ projectView, onClickListener }) {
   return (
-    <Grid
-      className="ProjectViewContainerItem"
-      justify="flex-start"
+    <div
+      className="ProjectViewContainerItem justify-center"
       onClick={() => onClickListener(projectView.name)}
-      item
-      xs={12}
-      md={4}
-      lg={4}
-      sm={6}
-      xl={4}
     >
       <div className="ImageContainer">
         <img
-          className="ProjectImageIcon"
+          className="ProjectImageIcon w-5/6 h-5/6 sm:w-3/4 sm:h-3/4 md:w-full md:h-full"
           style={{
-            cursor: 'pointer',
-            width: '27vw',
+            cursor: 'pointer'
           }}
           alt={projectView.name}
           loading="lazy"
@@ -31,6 +23,6 @@ export default function ProjectViewComponent({ projectView, onClickListener }) {
       <p style={{ color: DESCRIPTION_COLOR }}>{projectView.createdAt}</p>
       <h2>{projectView.name}</h2>
       <p className="Description">{projectView.description}</p>
-    </Grid>
+    </div>
   );
 }

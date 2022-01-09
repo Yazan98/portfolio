@@ -38,39 +38,25 @@ export default function ProjectsPageComponent() {
   return (
     <ScreenContainerComponent className="ProjectsPageComponent" title="Yazan Tarifi Portfolio - Projects">
       <ToolbarComponent />
-
-      <main style={{ padding: '3em' }}>
+      <main className={"p-4 md:p-8 lg:p-8 xl:p-8"}>
         <h2 style={{ color: PRIMARY_COLOR }}>Projects</h2>
         <p className="ProjectsDescription">This is List of Some Projects I Built</p>
-        <Grid justify="flex-start" alignItems="center" alignContent="center" container xs={12} md={12} lg={12}>
-          <Grid className="Item" item>
-            <p onClick={() => setFilterType(ALL_FILTER_TYPE)} className="ItemFilter" style={{ paddingRight: "13px" }}>
-              All Projects
-            </p>
-          </Grid>
-          <Grid className="Item" item  style={{ paddingRight: "13px" }}>
-            <p onClick={() => setFilterType(ANDROID_FILTER_TYPE)} className="ItemFilter">
-              Android Apps
-            </p>
-          </Grid>
-          <Grid className="Item" item style={{ paddingRight: "13px" }}>
-            <p onClick={() => setFilterType(WEBSITES_FILTER_TYPE)} className="ItemFilter">Websites</p>
-          </Grid>
-          <Grid className="Item" item style={{ paddingRight: "13px" }}>
-            <p onClick={() => setFilterType(WEB_APPS_FILTER_TYPE)} className="ItemFilter">Web Apps</p>
-          </Grid>
-        </Grid>
-
+        <div className={"grid grid-cols-1 place-items-start gap-2 md:flex md:flex-start md:justify-start lg:flex lg:flex-start lg:justify-start"}>
+          <p onClick={() => setFilterType(ALL_FILTER_TYPE)} className="ItemFilter mr-5" style={{ paddingRight: "13px" }}>All Projects</p>
+          <p onClick={() => setFilterType(ANDROID_FILTER_TYPE)} className="ItemFilter mr-5">Android Apps</p>
+          <p onClick={() => setFilterType(WEBSITES_FILTER_TYPE)} className="ItemFilter mr-5">Websites</p>
+          <p onClick={() => setFilterType(WEB_APPS_FILTER_TYPE)} className="ItemFilter mr-5">Web Apps</p>
+        </div>
         {projectsList ? (
-          <Grid className="ProjectsContainer" spacing={2} container xs={12} sm={12} justify="flex-start" alignContent="center" alignItems="center">
-            {projectsList.map((item) => (
-              <ProjectViewComponent
-                key={item.id}
-                onClickListener={onItemClicked}
-                projectView={item}
-              />
-            ))}
-          </Grid>
+            <div className={"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 justify-start gap-5 items-center mt-10"}>
+              {projectsList.map((item) => (
+                  <ProjectViewComponent
+                      key={item.id}
+                      onClickListener={onItemClicked}
+                      projectView={item}
+                  />
+              ))}
+            </div>
         ) : null}
       </main>
 

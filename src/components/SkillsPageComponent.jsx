@@ -13,13 +13,13 @@ export default function SkillsPageComponent() {
     <ScreenContainerComponent className="SkillsPageComponent" title="Yazan Tarifi Portfolio - Skills">
       <ToolbarComponent />
 
-      <main style={{ padding: '3em' }}>
+      <main className={"p-4 md:p-8 lg:p-8 xl:p-8"}>
         <h2 style={{ color: PRIMARY_COLOR }}>Skills</h2>
         <p className="ProjectsDescription">Languages, Frameworks in Working on</p>
         <div style={{ justifyContent: 'center', display: 'flex', marginTop: '2em' }}>
-          <Grid className="ProjectsContainer" spacing={4} container xs={12} sm={12} justify="flex-start" alignContent="center" alignItems="center">
+          <div className={"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 justify-start gap-5 items-center mt-10"}>
             {list.map((item) => <SkillsViewComponent skillItem={item} />)}
-          </Grid>
+          </div>
         </div>
       </main>
 
