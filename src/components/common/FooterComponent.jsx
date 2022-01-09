@@ -1,57 +1,22 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
-import '../styles/pages/FooterStyle.scss';
+import StackOverFlowIcon from '../images/github1.webp';
 
 export default function FooterComponent() {
   return (
-    <footer>
-      <div className="FooterContent">
-        <div className="Logo">
-          <p>Personal Website</p>
-          <h2>Yazan Tarifi</h2>
-        </div>
-        <div className="LinksContent">
-          <div className="Links">
-            <h4>Links</h4>
-            <ul className="Links">
-              <li><NavLink className="Item" to="/">Home</NavLink></li>
-              <li><NavLink className="Item" to="/projects">Projects</NavLink></li>
-              <li>
-                <NavLink className="Item" to="/skills">Skills</NavLink>
-              </li>
-              <li>
-                <NavLink className="Item" to="/archive">Archive</NavLink>
-              </li>
-            </ul>
-          </div>
-          <div className="LinksInformation">
-            <h4>Information</h4>
-            <ul className="Links">
-              <li><NavLink className="Item" to="/">About</NavLink></li>
-              <li>
-                <NavLink className="Item" to="/">Resume</NavLink>
-              </li>
-              <li><a className="Item" href="">Articles</a></li>
-            </ul>
-          </div>
-        </div>
+    <footer className={"p-5 bg-gray-100"}>
+      <div className={"flex justify-center items-center p-5"}>
+        <a className={"p-3 cursor-pointer"}>Github</a>
+        <a className={"p-3 cursor-pointer"}>LinkedIn</a>
+        <a className={"p-3 cursor-pointer"}>Medium</a>
+        <a className={"p-3 cursor-pointer"}>Dev.to</a>
+        <a className={"p-3 cursor-pointer"}>Behance</a>
+        <a className={"p-3 cursor-pointer"}>OverFlowIcon</a>
       </div>
-      <hr />
-      <div className="FooterEnd">
-        <p>@ 2021 Personal Website</p>
-        <div className="Links">
-          <p>Github</p>
-          <p>Dev.to</p>
-          <p>Behance</p>
-          <p>Stackoverflow</p>
-        </div>
-      </div>
-      <div className="FooterEnd">
-        <p>
-          Website is Open Source (
-          <a href="https://github.com/Yazan98/portfolio">Website Url</a>
-          )
-        </p>
+      <br/>
+      <hr/>
+      <div className={"flex justify-between items-center h-16 text-gray-600 sm:block md:block lg:flex xl:flex"}>
+          <p>Yazan Tarifi - Copyright @ 2021 Personal Website</p>
+          <p>Website is Open Source (<a href="https://github.com/Yazan98/portfolio">Website Url</a>)</p>
       </div>
     </footer>
   );

@@ -9,7 +9,7 @@ import FooterComponent from './common/FooterComponent';
 
 export default function HomePageComponent() {
   return (
-    <ScreenContainerComponent className="HomePageContainer" title={HOME_PAGE_TITLE}>
+    <ScreenContainerComponent title={HOME_PAGE_TITLE}>
       <HomePageCoverComponent />
       <HomeSkillsSectionComponent />
       <HomeTechnologiesSectionComponent />
