@@ -41,10 +41,10 @@ export default function ProjectsPageComponent() {
         <h2 style={{ color: PRIMARY_COLOR }}>Projects</h2>
         <p className="ProjectsDescription">This is List of Some Projects I Built</p>
         <div className={"grid grid-cols-1 place-items-start gap-2 md:flex md:flex-start md:justify-start lg:flex lg:flex-start lg:justify-start"}>
-          <p onClick={() => setFilterType(ALL_FILTER_TYPE)} className="ItemFilter mr-5" style={{ paddingRight: "13px" }}>All Projects</p>
-          <p onClick={() => setFilterType(ANDROID_FILTER_TYPE)} className="ItemFilter mr-5">Android Apps</p>
-          <p onClick={() => setFilterType(WEBSITES_FILTER_TYPE)} className="ItemFilter mr-5">Websites</p>
-          <p onClick={() => setFilterType(WEB_APPS_FILTER_TYPE)} className="ItemFilter mr-5">Web Apps</p>
+          <p style={{ color: "white" }} onClick={() => setFilterType(ALL_FILTER_TYPE)} className={"ItemFilter mr-5 " + (filterType === ALL_FILTER_TYPE ? "bg-blue-500 text-white hover:bg-blue-700 hover:text-white font-bold py-2 px-4 rounded-full" : "bg-black hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full")}>All Projects</p>
+          <p style={{ color: "white" }} onClick={() => setFilterType(ANDROID_FILTER_TYPE)} className={"ItemFilter mr-5 " + (filterType === ANDROID_FILTER_TYPE ? "bg-blue-500 text-white hover:bg-blue-700 hover:text-white font-bold py-2 px-4 rounded-full" : "bg-black hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full")}>Android Apps</p>
+          <p style={{ color: "white" }} onClick={() => setFilterType(WEBSITES_FILTER_TYPE)} className={"ItemFilter mr-5 " + (filterType === WEBSITES_FILTER_TYPE ? "bg-blue-500 text-white hover:bg-blue-700 hover:text-white font-bold py-2 px-4 rounded-full" : "bg-black hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full")}>Websites</p>
+          <p style={{ color: "white" }} onClick={() => setFilterType(WEB_APPS_FILTER_TYPE)} className={"ItemFilter mr-5 " + (filterType === WEB_APPS_FILTER_TYPE ? "bg-blue-500 text-white hover:bg-blue-700 hover:text-white font-bold py-2 px-4 rounded-full" : "bg-black hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full")}>Web Apps</p>
         </div>
         {projectsList ? (
             <div className={"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 justify-start gap-5 items-center mt-10"}>
