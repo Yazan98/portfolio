@@ -13,7 +13,7 @@ export default function SkillsViewComponent({ skillItem }) {
         borderRadius: '10px',
       }}>
         <img alt={skillItem.name} src={skillItem.icon} loading="lazy" width="50px" height="50px" />
-        <h3 className="SkillsItemTitle">{skillItem.name}</h3>
+        <h3 className="SkillsItemTitle pt-5">{skillItem.name}</h3>
         <p
           className="SkillsItemDescriptionBig"
           style={{
@@ -24,7 +24,7 @@ export default function SkillsViewComponent({ skillItem }) {
           }}>
           {skillItem.description}
         </p>
-        <p className="SkillsItemDescription" style={{ color: DESCRIPTION_COLOR, fontSize: 'small' }}>{skillItem.tags}</p>
+        <p className="SkillsItemDescription truncate" style={{ color: DESCRIPTION_COLOR, fontSize: 'small' }}>{skillItem.tags}</p>
       </div>
     </div>
   );
