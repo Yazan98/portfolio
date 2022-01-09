@@ -20,7 +20,7 @@ export default function getProjectsInformationList() {
       description: 'An Github Client Built To Test Vortex Infrastructure For Android Applications With A Lot Of Features To Manage Github Accounts Personal Accounts',
       hint: 'Android . Open Source',
       links: [
-        '/projects/Autohub',
+        '/#/projects/Autohub',
         'https://github.com/Yazan98/Github-Client',
       ],
     },
@@ -32,7 +32,7 @@ export default function getProjectsInformationList() {
       description: 'Weather Application Powered By Vortex , Latest Android Technologies With Managed Structure To Show Weather Status For Amman, Irbid, Aqaba',
       hint: 'Android . Open Source',
       links: [
-        '/projects/Wintrop',
+        '/#/projects/Wintrop',
         'https://github.com/Yazan98/Wintrop',
       ],
     },
@@ -56,7 +56,7 @@ export default function getProjectsInformationList() {
       hint: 'Android . Open Source',
       links: [
         'https://github.com/Yazan98/Destiny',
-        '/projects/Destiny',
+        '/#/projects/Destiny',
       ],
     },
     {
@@ -79,7 +79,7 @@ export default function getProjectsInformationList() {
       hint: 'PWA . React . Open Source',
       links: [
         'https://github.com/Yazan98/Netflix-Clone',
-        '/projects/Netflix-Clone',
+        '/#/projects/Netflix-Clone',
       ],
     },
     {
@@ -168,7 +168,7 @@ export default function getProjectsInformationList() {
       description: 'An organizing platform for school students that aims to gather students and link them with audible lessons by providing a tree plan with the possibility to speak with teachers',
       hint: 'Android . MVP . Closed Source',
       links: [
-        '/projects/Drasati',
+        '/#/projects/Drasati',
       ],
     },
     {
