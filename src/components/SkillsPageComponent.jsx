@@ -1,5 +1,4 @@
 import React from 'react';
-import { Grid } from '@material-ui/core';
 import ScreenContainerComponent from './common/ScreenContainerComponent';
 import ToolbarComponent from './common/ToolbarComponent';
 import FooterComponent from './common/FooterComponent';

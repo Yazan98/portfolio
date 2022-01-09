@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-import { Grid } from '@material-ui/core';
 import { useHistory } from 'react-router-dom';
 import ScreenContainerComponent from './common/ScreenContainerComponent';
 import FooterComponent from './common/FooterComponent';
