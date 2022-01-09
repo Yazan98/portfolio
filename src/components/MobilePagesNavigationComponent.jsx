@@ -16,7 +16,6 @@ export default function MobilePagesNavigationComponent() {
                     <NavLink style={{ color: "white"}} className={"p-2"} to="/">Home</NavLink>
                     <NavLink style={{ color: "white"}} className={"p-2"} to="/projects">Projects</NavLink>
                     <NavLink style={{ color: "white"}} className={"p-2"} to="/skills">Skills</NavLink>
-                    <NavLink style={{ color: "white"}} className={"p-2"} to="/about">About</NavLink>
                     <NavLink style={{ color: "white"}} className={"p-2"} to="/archive">Archive</NavLink>
                     <NavLink style={{ color: "white"}} className={"p-2"} to="/resume">Resume</NavLink>
                 </div>
