@@ -11,7 +11,7 @@ export default function ProjectViewComponent({ projectView, onClickListener }) {
     >
       <div className="ImageContainer">
         <img
-          className="ProjectImageIcon w-5/6 h-5/6 sm:w-3/4 sm:h-3/4 md:w-full md:h-full"
+          className="ProjectImageIcon h-5/6 sm:w-3/4 sm:h-3/4 md:w-full md:h-full"
           style={{
             cursor: 'pointer'
           }}

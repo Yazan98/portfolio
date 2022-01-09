@@ -10,10 +10,10 @@ export default function HomePageCoverComponent() {
     }}>
       <InnerToolbarComponent />
       <div className="container flex flex-col-reverse lg:flex-row items-center gap-12 mt-14 lg:mt-28 text-white">
-        <div className="Text flex flex-1 flex-col items-center lg:items-start p-5">
+        <div className="Text flex flex-1 flex-col items-center lg:items-start md:p-5 lg:p-5 xl:p-5">
           <div className={"lg:pl-20 sm:p-5 md:p-5"}>
-            <p className="md:text-4 lg:text-5x1 text-center lg:text-left">Software Engineer</p>
-            <h2 className="text-3xl md:text-4 lg:text-5x1 text-center lg:text-left mb-2" style={{color: PRIMARY_COLOR}}>Yazan Tarifi</h2>
+            <p className="md:text-4 lg:text-5x1 lg:text-left">Software Engineer</p>
+            <h2 className="text-3xl md:text-4 lg:text-5x1 lg:text-left mb-2" style={{color: PRIMARY_COLOR}}>Yazan Tarifi</h2>
             <p className={"text-xs sm:text-base max-w-prose text-center lg:text-left mb-6 lg:text-md md:block hidden"}>
               A code-minded front-end software engineer focused on building
               beautiful interfaces & experiences and Convert Ideas, Design To

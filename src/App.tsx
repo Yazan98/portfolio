@@ -20,6 +20,7 @@ function App() {
                     <Route exact path="/archive" component={ArchivePageComponent} />
                     <Route exact path="/projects/all" component={AllProjectsPageComponent} />
                     <Route exact path="/nav" component={MobilePagesNavigationComponent} />
+                    <Route exact path="/projects/nav" component={MobilePagesNavigationComponent} />
                     <Route path='*' exact={true} component={NotFoundPageViewComponent}/>
                 </Switch>
             </HashRouter>
