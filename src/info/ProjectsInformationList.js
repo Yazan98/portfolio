@@ -79,7 +79,7 @@ export default function getProjectsInformationList() {
       hint: 'PWA . React . Open Source',
       links: [
         'https://github.com/Yazan98/Netflix-Clone',
-        '/#/projects/Netflix-Clone',
+        '/#/projects/Netflix Clone',
       ],
     },
     {
