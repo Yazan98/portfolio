@@ -8,6 +8,7 @@ import SkillsPageComponent from "./components/SkillsPageComponent";
 import ArchivePageComponent from "./components/ArchivePageComponent";
 import AllProjectsPageComponent from './components/AllProjectsPageComponent';
 import MobilePagesNavigationComponent from "./components/MobilePagesNavigationComponent";
+import ProjectViewPageComponent from "./components/ProjectViewPageComponent";
 
 function App() {
     return (
@@ -19,6 +20,7 @@ function App() {
                     <Route exact path="/skills" component={SkillsPageComponent}/>
                     <Route exact path="/archive" component={ArchivePageComponent} />
                     <Route exact path="/projects/all" component={AllProjectsPageComponent} />
+                    <Route exact path="/projects/:projectName" component={ProjectViewPageComponent} />
                     <Route exact path="/nav" component={MobilePagesNavigationComponent} />
                     <Route exact path="/projects/nav" component={MobilePagesNavigationComponent} />
                     <Route path='*' exact={true} component={NotFoundPageViewComponent}/>
