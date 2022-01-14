@@ -18,7 +18,6 @@ export default function InnerToolbarComponent({ isTitleWhite }) {
           <NavLink style={{ color: isTitleWhite ? "white": location.pathname === "/projects" ? PRIMARY_COLOR : ""}} className={"p-2"} to="/projects">Projects</NavLink>
           <NavLink style={{ color: isTitleWhite ? "white": location.pathname === "/skills" ? PRIMARY_COLOR : "" }} className={"p-2"} to="/skills">Skills</NavLink>
           <NavLink style={{ color: isTitleWhite ? "white": location.pathname === "/archive" ? PRIMARY_COLOR : "" }} className={"p-2"} to="/archive">Archive</NavLink>
-          <NavLink style={{ color: isTitleWhite ? "white": location.pathname === "/resume" ? PRIMARY_COLOR : "" }} className={"p-2"} to="/resume">Resume</NavLink>
         </div>
       </nav>
   );

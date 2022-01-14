@@ -19,7 +19,6 @@ export default function ToolbarComponent() {
         <NavLink style={{ color: location.pathname === "/projects" ? PRIMARY_COLOR : ""}} className={"p-2"} to="/projects">Projects</NavLink>
         <NavLink style={{ color: location.pathname === "/skills" ? PRIMARY_COLOR : "" }} className={"p-2"} to="/skills">Skills</NavLink>
         <NavLink style={{ color: location.pathname === "/archive" ? PRIMARY_COLOR : "" }} className={"p-2"} to="/archive">Archive</NavLink>
-        <NavLink style={{ color: location.pathname === "/resume" ? PRIMARY_COLOR : "" }} className={"p-2"} to="/resume">Resume</NavLink>
       </div>
     </nav>
   );
