@@ -1,5 +1,4 @@
 import React from 'react';
-import { Grid } from '@material-ui/core';
 import { DESCRIPTION_COLOR } from '../../info/ColorUtils';
 import GithubIcon from '../images/github-logo.svg';
 import LinkIcon from '../images/link.svg';
