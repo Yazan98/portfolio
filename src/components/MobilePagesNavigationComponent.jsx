@@ -17,13 +17,12 @@ export default function MobilePagesNavigationComponent() {
                     <NavLink style={{ color: "white"}} className={"p-2"} to="/projects">Projects</NavLink>
                     <NavLink style={{ color: "white"}} className={"p-2"} to="/skills">Skills</NavLink>
                     <NavLink style={{ color: "white"}} className={"p-2"} to="/archive">Archive</NavLink>
-                    <NavLink style={{ color: "white"}} className={"p-2"} to="/resume">Resume</NavLink>
                 </div>
             </div>
             <div className={"absolute inset-x-0 bottom-0 h-16"}>
                 <div className={"flex flex-col justify-center items-center text-white bottom-0 right-0 relative"}>
                     <h3>Yazan Tarifi - Personal Website</h3>
-                    <p>Version 3.0</p>
+                    <p>Version 3.0.1</p>
                 </div>
             </div>
         </div>
