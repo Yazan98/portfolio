@@ -1,15 +1,14 @@
 import React from 'react';
 import './App.scss';
 import {HashRouter, Route, Switch} from "react-router-dom";
-import ProjectsPageComponent from "./pages/ProjectsPageComponent";
-import  {NotFoundPageViewComponent} from "./pages/NotFoundPageComponent";
-import {SkillsViewComponent} from "./components/SkillsComponent";
-import {ArchiveProjectsView} from "./pages/ArchiveProjectsPage";
-import {AllProjectsViewComponent} from "./pages/AllProjectsPageComponent";
-import HomePageComponent from "./pages/HomePageComponent";
-import {ResumePageViewComponent} from "./pages/ResumePageComponent";
-import {ToolbarDrawerViewComponent} from "./components/ToolbarDrawerComponent";
-import {ProjectViewPage} from "./pages/ProjectPage";
+import HomePageComponent from "./components/HomePageComponent";
+import NotFoundPageViewComponent from "./components/NotFoundPageViewComponent";
+import ProjectsPageComponent from "./components/ProjectsPageComponent";
+import SkillsPageComponent from "./components/SkillsPageComponent";
+import ArchivePageComponent from "./components/ArchivePageComponent";
+import AllProjectsPageComponent from './components/AllProjectsPageComponent';
+import MobilePagesNavigationComponent from "./components/MobilePagesNavigationComponent";
+import ProjectViewPageComponent from "./components/ProjectViewPageComponent";
 
 function App() {
     return (
@@ -17,13 +16,13 @@ function App() {
             <HashRouter>
                 <Switch>
                     <Route exact path="/" component={HomePageComponent}/>
-                    <Route exact path="/drawer" component={ToolbarDrawerViewComponent}/>
                     <Route exact path="/projects" component={ProjectsPageComponent}/>
-                    <Route exact path="/skills" component={SkillsViewComponent}/>
-                    <Route exact path="/resume" component={ResumePageViewComponent}/>
-                    <Route exact path="/app/:id" component={ProjectViewPage}/>
-                    <Route exact path="/archive" component={ArchiveProjectsView}/>
-                    <Route exact path="/projects/all" component={AllProjectsViewComponent}/>
+                    <Route exact path="/skills" component={SkillsPageComponent}/>
+                    <Route exact path="/archive" component={ArchivePageComponent} />
+                    <Route exact path="/projects/all" component={AllProjectsPageComponent} />
+                    <Route exact path="/projects/:projectName" component={ProjectViewPageComponent} />
+                    <Route exact path="/nav" component={MobilePagesNavigationComponent} />
+                    <Route exact path="/projects/nav" component={MobilePagesNavigationComponent} />
                     <Route path='*' exact={true} component={NotFoundPageViewComponent}/>
                 </Switch>
             </HashRouter>

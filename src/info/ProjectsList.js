@@ -1,416 +1,256 @@
-export default function getProjectsPreviewList() {
+export const ALL_FILTER_TYPE = 'all';
+export const ANDROID_FILTER_TYPE = 'android';
+export const WEBSITES_FILTER_TYPE = 'Websites';
+export const WEB_APPS_FILTER_TYPE = 'webApps';
+export const TOOLS_FILTER_TYPE = 'tools';
+export const FILTERED_PROJECTS_FILTER_TYPE = 'filtered';
+
+export const ALL_PROJECTS_ID = 'All Projects';
+
+export default function getProjectsList() {
   return [
     {
-      name: 'Vortex',
-      isOpenSource: true,
-      language: 'Kotlin',
-      logo: 'https://user-images.githubusercontent.com/29167110/101130971-54088b00-35b9-11eb-8302-f88b2bcb8cd9.png',
-      description: 'Vortex is An Android Infrastructure to Build Multi Modular Android Applications with Generated Base Code and Handle State',
-      filter: 'Android',
-      links: [
-        {
-          type: 'Github',
-          link: 'https://github.com/vortex-io/Vortex',
-        },
-        {
-          type: 'Website',
-          link: 'https://vortex-io.github.io',
-        },
-      ],
-    },
-    {
+      id: 1,
       name: 'Autohub',
-      isOpenSource: true,
-      language: 'Kotlin',
-      logo: 'https://raw.githubusercontent.com/Yazan98/portfolio/9a1a3aa86f18d86a266e4d16d024a186276acf4e/src/images/github-logo_light.svg',
-      description: 'An Github Client Built To Test Vortex Infrastructure For Android Applications With A Lot Of Features To Manage Github Accounts Personal Accounts',
-      filter: 'Android',
-      links: [
-        {
-          type: 'Github',
-          link: 'https://github.com/Yazan98/Github-Client',
-        },
-        {
-          type: 'Website',
-          link: '/#/app/Autohub',
-        },
+      createdAt: 'Github : 2019',
+      description: 'Android Application : Open Source Built Based on MVVM, Vortex, Github Api V3, With Navigation Component',
+      longDescription: "Android Application is created to view Github Account Information with Authentication Basic Auth Username and Password Powered By Github Api V3 and the Base Structure of the Project is MVVM with Navigation Components and Kotlin Programming Language",
+      image: 'https://raw.githubusercontent.com/Yazan98/portfolio/master/src/images/autohub_preview.webp',
+      imageProject: "https://github.com/Yazan98/portfolio/blob/v3/src/components/images/autohub.png?raw=true",
+      type: ANDROID_FILTER_TYPE,
+      link: "https://github.com/Yazan98/Github-Client",
+      tags: [
+          "Kotlin Courotines",
+          "Multi Modular App",
+          "Vortex",
+          "MVVM",
+          "Github Api",
+          "Kotlin",
+          "Retrofit",
+          "RxJava 2"
       ],
+      images: [
+          "https://github.com/Yazan98/portfolio/blob/v3/src/components/images/autohub_1.png?raw=true",
+          "https://github.com/Yazan98/portfolio/blob/v3/src/components/images/autohub_2.png?raw=true",
+          "https://github.com/Yazan98/portfolio/blob/v3/src/components/images/autohub_3.png?raw=true",
+          "https://github.com/Yazan98/portfolio/blob/v3/src/components/images/autohub_4.png?raw=true"
+      ]
     },
     {
-      name: 'Github Clone',
-      isOpenSource: true,
-      language: 'JavaScript',
-      logo: 'https://raw.githubusercontent.com/Yazan98/portfolio/9a1a3aa86f18d86a266e4d16d024a186276acf4e/src/images/github-logo_light.svg',
-      description: 'React.js Project To Apply React Hooks How To Interact Via Several Components and SPA',
-      filter: 'PWA',
-      links: [
-        {
-          type: 'Github',
-          link: 'https://github.com/Yazan98/Github-Client',
-        },
-        {
-          type: 'Website',
-          link: '/#/app/Autohub',
-        },
+      id: 2,
+      name: 'Destiny',
+      createdAt: 'Github : 2019',
+      description: 'Android Application : Open Source Built Based on MVVM, Vortex, SpringBoot Api, With Navigation Component',
+      image: 'https://raw.githubusercontent.com/Yazan98/portfolio/master/src/images/destiny_preview.webp',
+      type: ANDROID_FILTER_TYPE,
+      longDescription: "Android Application Built to show Restaurants and Food Delivery App The Idea of this project is to Build a Food Delivery Api and see the Results on Mobile App and the Mobile App Built with Kotlin and MVVM",
+      imageProject: "https://raw.githubusercontent.com/Yazan98/portfolio/master/src/images/destiny_preview.webp",
+      tags: [
+        "Kotlin Courotines",
+        "Multi Modular App",
+        "Vortex",
+        "MVVM",
+        "Kotlin",
+        "Retrofit",
+        "RxJava 2"
       ],
+      images: [
+          "https://github.com/Yazan98/portfolio/blob/v3/src/components/images/destiny_1.png?raw=true",
+          "https://github.com/Yazan98/portfolio/blob/v3/src/components/images/destiny_2.png?raw=true",
+          "https://github.com/Yazan98/portfolio/blob/v3/src/components/images/destiny_3.png?raw=true",
+          "https://github.com/Yazan98/portfolio/blob/v3/src/components/images/destiny_4.png?raw=true"
+      ]
     },
     {
-      name: 'Wintrop',
-      isOpenSource: true,
-      language: 'Kotlin',
-      logo: 'https://user-images.githubusercontent.com/29167110/100293783-a69ed300-2f39-11eb-821d-8e432378643b.png',
-      description: 'Weather Application Powered By Vortex , Latest Android Technologies With Managed Structure To Show Weather Status For Amman, Irbid, Aqaba',
-      filter: 'Android',
-      links: [
-        {
-          type: 'Github',
-          link: 'https://github.com/Yazan98/Wintrop',
-        },
-        {
-          type: 'Website',
-          link: '/#/app/Wintrop',
-        },
-      ],
-    },
-    {
+      id: 3,
       name: 'Portfolio',
-      isOpenSource: true,
-      language: 'JavaScript',
-      logo: 'https://user-images.githubusercontent.com/29167110/101133349-6be20e00-35bd-11eb-917b-446fd92c0723.png',
-      description: 'This Project is React Website With PWA Integration To Add Some Projects I worked on with Description on each Project Info',
-      filter: 'PWA',
-      links: [
-        {
-          type: 'Github',
-          link: 'https://github.com/Yazan98/portfolio',
-        },
-        {
-          type: 'Website',
-          link: 'https://www.yazantarifi.com',
-        },
+      createdAt: 'Github : 2020',
+      description: 'My Personal Website Built With React.js, And Support PWAs and Some of SEO Techniques For Google Search Console and SPA with Typescript, Jsx, And SASS To Write Clear Css, React Router To Change Pages, Client Side Rendering Also Dark / White Mode Supported in All Pages Inside The Repository You Can Find The First and Second Version of The Website',
+      image: 'https://raw.githubusercontent.com/Yazan98/portfolio/master/src/images/portfolio_preview.webp',
+      type: WEBSITES_FILTER_TYPE,
+      longDescription: "My Personal Website Built With React.js, And Support PWAs and Some of SEO Techniques For Google Search Console and SPA with Typescript, Jsx, And SASS To Write Clear Css, React Router To Change Pages, Client Side Rendering Also Dark / White Mode Supported in All Pages Inside The Repository You Can Find The First and Second Version of The Website",
+      imageProject: "https://raw.githubusercontent.com/Yazan98/portfolio/master/src/images/portfolio_preview.webp",
+      link: "https://github.com/Yazan98/portfolio",
+      tags: [
+        "React.js",
+        "SASS Styling",
+        "React Hooks",
+        "Dark, White Mode",
+        "Responsive Design",
+        "Flex - Grid System",
+        "Material UI"
       ],
+      images: [
+          "https://github.com/Yazan98/portfolio/blob/v3/src/components/images/portfolio_1.png?raw=true",
+          "https://github.com/Yazan98/portfolio/blob/v3/src/components/images/portfolio_2.png?raw=true",
+          "https://github.com/Yazan98/portfolio/blob/v3/src/components/images/portfolio_3.png?raw=true"
+      ]
     },
     {
-      name: 'Portfolio V2',
-      isOpenSource: true,
-      language: 'JavaScript',
-      logo: 'https://user-images.githubusercontent.com/29167110/101133349-6be20e00-35bd-11eb-917b-446fd92c0723.png',
-      description: 'My Personal Website (Portfolio) Built With Next.js For SSR, SSG, SASS, SPA, React Hooks',
-      filter: 'PWA',
-      links: [
-        {
-          type: 'Github',
-          link: 'https://github.com/Yazan98/portfolio-next',
-        },
-        {
-          type: 'Website',
-          link: 'https://www.yazantarifi.com',
-        },
-      ],
-    },
-    {
-      name: 'Destiny App',
-      isOpenSource: true,
-      language: 'Kotlin',
-      logo: 'https://user-images.githubusercontent.com/29167110/73178745-d0188380-4109-11ea-949e-ac8805551551.png',
-      description: 'Android Application for Food Delivery, Vortex V1 Testing, Multi Modular Application, Realm Database Example, Kotlin Coroutines',
-      filter: 'Android',
-      links: [
-        {
-          type: 'Github',
-          link: 'https://github.com/Yazan98/Destiny',
-        },
-      ],
-    },
-    {
-      name: 'Destiny Api',
-      isOpenSource: true,
-      language: 'Kotlin',
-      logo: 'https://user-images.githubusercontent.com/29167110/73178745-d0188380-4109-11ea-949e-ac8805551551.png',
-      description: 'Restful Api Powered by SpringBoot, MySql (RDS), Kotlin Base Code, To manage Destiny App Logic with Secured Api',
-      filter: 'Web Apps',
-      links: [
-        {
-          type: 'Github',
-          link: 'https://github.com/Yazan98/Destiny-Api',
-        },
-      ],
-    },
-    {
-      name: 'Shopie',
-      isOpenSource: true,
-      language: 'PHP',
-      logo: 'https://user-images.githubusercontent.com/29167110/73178745-d0188380-4109-11ea-949e-ac8805551551.png',
-      description: 'Shops Api Built With Laravel , Json, MySql, Docker, Bearer Auth, PHP OOP, Json Response For Pages, Search, Phone Verification',
-      filter: 'Web Apps',
-      links: [
-        {
-          type: 'Github',
-          link: 'https://github.com/Yazan98/shops-api',
-        },
-      ],
-    },
-    {
-      name: 'Netflix Clone',
-      isOpenSource: true,
-      language: 'Typescript',
-      logo: 'https://www.freepnglogos.com/uploads/netflix-logo-circle-png-5.png',
-      description: 'PWA Training Project to Create Website with MovieDB Api, Typescripe, SPA Website Hosted on Firebase Hosting',
-      filter: 'PWA',
-      links: [
-        {
-          type: 'Github',
-          link: 'https://github.com/Yazan98/Netflix-Clone',
-        },
-        {
-          type: 'Website',
-          link: 'https://netflix-clone-38a7b.web.app/',
-        },
-      ],
-    },
-    {
-      name: 'Denamo',
-      isOpenSource: true,
-      language: 'Typescript',
-      logo: 'https://yazantarifi.gallerycdn.vsassets.io/extensions/yazantarifi/denamo/0.0.2/1600405273133/Microsoft.VisualStudio.Services.Icons.Default',
-      description: 'Visual Studio Code Blue/Dark Theme Plugin to Give VS-Code Nice Theme to Build Typescript Projects',
-      filter: 'Plugin',
-      links: [
-        {
-          type: 'Github',
-          link: 'https://github.com/Yazan98/Denamo',
-        },
-        {
-          type: 'Website',
-          link: 'https://marketplace.visualstudio.com/items?itemName=YazanTarifi.denamo',
-        },
-      ],
-    },
-    {
-      name: 'Groupy',
-      isOpenSource: true,
-      language: 'Kotlin',
-      logo: 'https://user-images.githubusercontent.com/29167110/101137835-44427400-35c4-11eb-86f2-89600483b26f.png',
-      description: 'Graduation Project Powered By Firebase, Realtime Chat, Kotlin Language, MVP, Graduation Projects Management, Task Management, Admin App',
-      filter: 'Android',
-      links: [
-        {
-          type: 'Github',
-          link: 'https://github.com/Yazan98/Groupy',
-        },
-      ],
-    },
-    {
-      name: 'Feature Flag Example',
-      isOpenSource: true,
-      language: 'Kotlin',
-      logo: 'https://user-images.githubusercontent.com/29167110/101138076-8c619680-35c4-11eb-9006-327fe90e2be0.png',
-      description: 'Restful Api Powered By Spring Boot to Build Feature Flag Api to Deliver Static Configuration to Android Apps',
-      filter: 'Web Apps',
-      links: [
-        {
-          type: 'Github',
-          link: 'https://github.com/Yazan98/Feature-Flag-Example',
-        },
-      ],
-    },
-    {
-      name: 'Android Template',
-      isOpenSource: true,
-      language: 'Kotlin',
-      logo: 'https://user-images.githubusercontent.com/29167110/101138342-ec583d00-35c4-11eb-8e51-81108dfbfc47.png',
-      description: 'A Ready Android Application template to Build Android Multi Modular Applications With Clean Architecture, Mvvm, Clone and Run Direct',
-      filter: 'Android',
-      links: [
-        {
-          type: 'Github',
-          link: 'https://github.com/Yazan98/AndroidTemplate',
-        },
-      ],
-    },
-    {
-      name: 'Exposer',
-      isOpenSource: true,
-      language: 'Kotlin',
-      logo: 'https://user-images.githubusercontent.com/29167110/101141952-d1d49280-35c9-11eb-97e5-939657ecb086.png',
-      description: 'Kotlin Multiplatform Project to Lead The Domain Layer for Android, IOS based on RxJava, Use Cases',
-      filter: 'Android',
-      links: [
-        {
-          type: 'Github',
-          link: 'https://github.com/Yazan98/Exposer',
-        },
-      ],
-    },
-    {
-      name: 'Actor',
-      isOpenSource: true,
-      language: 'Kotlin',
-      logo: 'https://user-images.githubusercontent.com/29167110/101142216-27a93a80-35ca-11eb-91e9-94401815b829.png',
-      description: 'Kotlin Spring Boot Controller Generation to Generate PostMan Collections based on Spring Controllers and Json Builder',
-      filter: 'Web Apps',
-      links: [
-        {
-          type: 'Github',
-          link: 'https://github.com/Yazan98/Actor',
-        },
-      ],
-    },
-    {
+      id: 4,
       name: 'Drasati',
-      isOpenSource: false,
-      language: 'Kotlin',
-      logo: 'https://user-images.githubusercontent.com/29167110/100681109-e134b100-3327-11eb-94de-3ccc6a567a36.png',
-      description: 'An organizing platform for school students that aims to gather students and link them with audible lessons by providing a tree plan with the possibility to speak with teachers if a difference occurs on a certain point with the support feature of all classes',
-      filter: 'Android',
-      links: [
-        {
-          type: 'Website',
-          link: '/#/app/Drasati',
-        },
+      createdAt: '2020',
+      description: 'Android Application : Closed Source An organizing platform for school students that aims to gather students and link them with audible lessons by providing a tree plan with the possibility to speak with teachers if a difference occurs on a certain point with the support feature of all classes',
+      image: 'https://raw.githubusercontent.com/Yazan98/portfolio/master/src/images/drasati_preview.webp',
+      type: ANDROID_FILTER_TYPE,
+      longDescription: "Android Application : Closed Source An organizing platform for school students that aims to gather students and link them with audible lessons by providing a tree plan Built With Java / Kotlin With MVP",
+      imageProject: "https://github.com/Yazan98/portfolio/blob/v3/src/components/images/drasati_main.png?raw=true",
+      tags: [
+        "Kotlin Courotines",
+        "Single Modular App",
+        "MVP",
+        "Kotlin",
+        "Retrofit",
+        "RxJava 2",
+        "Java",
+        "Firebase"
       ],
+      images: [
+        "https://github.com/Yazan98/portfolio/blob/v3/src/components/images/drasati_1.png?raw=true",
+        "https://github.com/Yazan98/portfolio/blob/v3/src/components/images/drasati_2.png?raw=true",
+        "https://github.com/Yazan98/portfolio/blob/v3/src/components/images/drasati_3.png?raw=true"
+      ]
     },
     {
-      name: 'Vortex Website',
-      isOpenSource: true,
-      language: 'Javascript',
-      logo: 'https://user-images.githubusercontent.com/29167110/101130971-54088b00-35b9-11eb-8302-f88b2bcb8cd9.png',
-      description: 'PWA Documentation for Vortex Library and Generators to Create Your Own App with Vortex Implementation',
-      filter: 'PWA',
-      links: [
-        {
-          type: 'Website',
-          link: 'https://www.vortex-io.github.io',
-        },
+      id: 5,
+      name: 'Wintrop',
+      createdAt: 'Github : 2019',
+      description: 'Android Application : Open Source Weather Application Powered By Vortex , Latest Android Technologies With Managed Structure To Show Weather Status For Amman, Irbid, Aqaba',
+      image: 'https://raw.githubusercontent.com/Yazan98/portfolio/master/src/images/wintrop_preview.webp',
+      type: ANDROID_FILTER_TYPE,
+      longDescription: "Android Application : Open Source Built to Communicate with Open Weather Api to check the Weather Status of current Country and list all the response Built with Kotlin Programming Language and Local Caching in Realm Database",
+      imageProject: "https://github.com/Yazan98/portfolio/blob/v3/src/components/images/wintrop_main.png?raw=true",
+      link: "https://github.com/Yazan98/Wintrop",
+      tags: [
+        "Kotlin Courotines",
+        "Realm Database",
+        "Multi Modular App",
+        "Retrofit",
+        "Kotlin"
       ],
+      images: [
+        "https://github.com/Yazan98/portfolio/blob/v3/src/components/images/wintrop_1.png?raw=true",
+        "https://github.com/Yazan98/portfolio/blob/v3/src/components/images/wintrop_2.png?raw=true",
+        "https://github.com/Yazan98/portfolio/blob/v3/src/components/images/wintrop_3.png?raw=true"
+      ]
     },
     {
-      name: 'Vortex Plugin',
-      isOpenSource: true,
-      language: 'Groovy',
-      logo: 'https://user-images.githubusercontent.com/29167110/101130971-54088b00-35b9-11eb-8302-f88b2bcb8cd9.png',
-      description: 'Gradle Plugin To Config Multi Modular Android Apps With Clean Architecture Modules, Dependencies',
-      filter: 'Plugin',
-      links: [
-        {
-          type: 'Website',
-          link: 'https://www.vortex-io.github.io',
-        },
-      ],
+      id: 6,
+      name: 'Shopie Api',
+      createdAt: 'Github : 2021',
+      description: 'Api - Open Source Api Built With PHP - Laravel To Calculate The Database Relations And Logic For Shop Application and Website to Manage Accounts, Recipes, Restaurants, Bearer Tokens, Phone Number Verification, User Addresses, Categories This Project Mainly Built to Apply PHP Skills into a Project in PHP Training Path',
+      image: 'https://raw.githubusercontent.com/Yazan98/portfolio/master/src/images/shopie_preview.webp',
+      longDescription: "Api - Open Source Api Built With PHP - Laravel To Calculate The Database Relations And Logic For Shop Application and Website to Manage Accounts, Recipes, Restaurants, Bearer Tokens, Phone Number Verification, User Addresses, Categories This Project Mainly Built to Apply PHP Skills into a Project in PHP Training Path",
+      type: WEB_APPS_FILTER_TYPE,
+      imageProject: "https://raw.githubusercontent.com/Yazan98/portfolio/master/src/images/shopie_preview.webp",
+      link: "https://github.com/Yazan98/shop-api",
+      tags: [
+        "PHP Laravel",
+        "Mysql Database",
+        "Json Response"
+      ]
     },
     {
-      name: 'Bookie',
-      isOpenSource: true,
-      language: 'Java',
-      logo: 'https://user-images.githubusercontent.com/29167110/101142907-14e33580-35cb-11eb-922b-30b3fb55a578.png',
-      description: 'Spring Boot Restful Api Powered by SpringBoot, Swagger-ui, MySql, Error Handling, JWT Tokens, etc',
-      filter: 'Web Apps',
-      links: [
-        {
-          type: 'Github',
-          link: 'https://github.com/Yazan98/Books-spring',
-        },
-      ],
+      id: 7,
+      name: 'Vortex',
+      createdAt: 'Github : 2019',
+      description: 'Android Library : Open Source Android Infrastructure To Build Android Applications With Latest Technologies and Ready State Handling with User Interface Implementation For The Android Common Cases This Library is Not Just Base Code it\'s also help you to get the target as soon as possible with ready techniques',
+      image: 'https://raw.githubusercontent.com/Yazan98/portfolio/master/src/images/vortex_preview.webp',
+      type: ANDROID_FILTER_TYPE,
+      longDescription: "Android Library : Open Source Android Infrastructure To Build Android Applications With Latest Technologies and Ready State Handling with User Interface Implementation For The Android Common Cases This Library is Not Just Base Code it\'s also help you to get the target as soon as possible with ready techniques",
+      imageProject: "https://raw.githubusercontent.com/Yazan98/portfolio/master/src/images/vortex_preview.webp",
+      link: "https://github.com/Yazan98/vortex",
+      tags: [
+        "Android Library",
+        "Multi Modular Library",
+        "MVVM Structure",
+        "Bintray (JCenter)",
+        "Utility Classes"
+      ]
     },
     {
-      name: 'Bump Api',
-      isOpenSource: true,
-      language: 'Java',
-      logo: 'https://user-images.githubusercontent.com/29167110/101143357-a18df380-35cb-11eb-98b3-868f0a72faa2.png',
-      description: 'Spring Boot Restful Api (Secured Api) Configured for AWS (Beanstalk, RDS) for Games Store Website, Radis Caching',
-      filter: 'Web Apps',
-      links: [
-        {
-          type: 'Github',
-          link: 'https://github.com/Yazan98/BumbApi',
-        },
+      id: 8,
+      name: 'Netflix Clone',
+      createdAt: 'Github : 2021',
+      description: 'Website - Open Source a React.js Project Built to show Movies Based on MoviesDB Api And React Hooks, Typescript',
+      image: 'https://raw.githubusercontent.com/Yazan98/portfolio/master/src/images/netflex_preview.webp',
+      type: WEBSITES_FILTER_TYPE,
+      longDescription: "Website Built with React.js and React Router with Movies Database and Training on Material UI, Firebase Deployment, Single Page Application and Introduction to Typescript Language and SASS Styling",
+      imageProject: "https://raw.githubusercontent.com/Yazan98/portfolio/master/src/images/netflex_preview.webp",
+      link: "https://github.com/Yazan98/Netflix-Clone",
+      tags: [
+        "Movies DB Database",
+        "React Router Dom",
+        "React.js",
+        "SASS Styling",
+        "Grid System",
+        "Flex System",
+        "Material UI"
       ],
+      images: [
+        "https://github.com/Yazan98/portfolio/blob/v3/src/components/images/netflex_1.png?raw=true",
+        "https://github.com/Yazan98/portfolio/blob/v3/src/components/images/netflex_2.png?raw=true",
+        "https://github.com/Yazan98/portfolio/blob/v3/src/components/images/netflex_3.png?raw=true"
+      ]
     },
     {
-      name: 'Atto',
-      isOpenSource: true,
-      language: 'Kotlin',
-      logo: 'https://user-images.githubusercontent.com/29167110/101143829-50caca80-35cc-11eb-804c-e7dcc6243626.png',
-      description: 'Mvp Structure to Build Multi Modular Apps With Ready Application Operations (Deprecated)',
-      filter: 'Android',
-      links: [
-        {
-          type: 'Github',
-          link: 'https://github.com/vortex-io/Vortex',
-        },
+      id: 9,
+      name: 'Github Clone',
+      createdAt: 'Github : 2021',
+      description: 'Website - Open Source a React.js Project With Github Api V3 Project To Show Popular Repos, PWA, Show Profile Repos, Information, Profile View With Github UserName, Grid - Linear List Toggle',
+      image: 'https://raw.githubusercontent.com/Yazan98/portfolio/master/src/images/github_preview.webp',
+      type: WEBSITES_FILTER_TYPE,
+      longDescription: "Website Built with React.js and React Router To Build Single Page Application with React Hooks and Grid / Flex System and Github Api V3, Axios",
+      imageProject: "https://raw.githubusercontent.com/Yazan98/portfolio/master/src/images/github_preview.webp",
+      link: "https://github.com/Yazan98/github-clone",
+      tags: [
+        "React.js",
+          "Firebase Deployment",
+          "Grid System",
+          "Flex System",
+          "React Hooks",
+          "Axios",
+          "Github Api V3"
       ],
+      images: [
+        "https://github.com/Yazan98/portfolio/blob/v3/src/components/images/github_1.png?raw=true",
+        "https://github.com/Yazan98/portfolio/blob/v3/src/components/images/github_2.png?raw=true",
+        "https://github.com/Yazan98/portfolio/blob/v3/src/components/images/github_3.png?raw=true"
+      ]
     },
     {
-      name: 'Atto Plugin',
-      isOpenSource: true,
-      language: 'Groovy',
-      logo: 'https://user-images.githubusercontent.com/29167110/101143829-50caca80-35cc-11eb-804c-e7dcc6243626.png',
-      description: 'Gradle Plugin To Implement Atto Library',
-      filter: 'Android',
-      links: [
-        {
-          type: 'Github',
-          link: 'https://github.com/Yazan98/Atto-Gradle-Plugin',
-        },
-      ],
+      id: 10,
+      name: 'Destiny Api',
+      createdAt: 'Github : 2021',
+      description: 'Api - Open Source Spring Boot Project To Manage Firebase Admin SDK, Mysql, JWT Tokens, Mainly To Manage Mobile Applications and Built With Kotlin, Kotlin-Jackson',
+      image: 'https://raw.githubusercontent.com/Yazan98/portfolio/master/src/images/destiny_api_preview.webp',
+      type: WEB_APPS_FILTER_TYPE,
+      longDescription: "Web Application Built with Spring Boot Framework to Manage Food Ordering System with Firebase Admin SDK and Mysql Database with OAuth JWT Authentication and Kotlin Programming Language, Firebase Realtime Database, Exception Handling",
+      imageProject: "https://raw.githubusercontent.com/Yazan98/portfolio/master/src/images/destiny_api_preview.webp",
+      link: "https://github.com/Yazan98/destiny-api",
+      tags: [
+        "Spring Boot Api",
+        "JWT Authentication",
+        "Json Response",
+        "MySql Database",
+        "Firebase Admin"
+      ]
     },
     {
-      name: 'Ktor Example',
-      isOpenSource: true,
-      language: 'Kotlin',
-      logo: 'https://user-images.githubusercontent.com/29167110/101143829-50caca80-35cc-11eb-804c-e7dcc6243626.png',
-      description: 'Ktor Framework Project to Build Restful Api with Mongo Database, Firebase, Netty Server, Error Handling, Routers',
-      filter: 'Web Apps',
-      links: [
-        {
-          type: 'Github',
-          link: 'https://github.com/Yazan98/Ktor-Example',
-        },
-      ],
-    },
-    {
-      name: 'Thentrom',
-      isOpenSource: true,
-      language: 'Kotlin',
-      logo: 'https://user-images.githubusercontent.com/29167110/101143829-50caca80-35cc-11eb-804c-e7dcc6243626.png',
-      description: 'Intellij Plugin To Give Intellij Yellow, Orange Theme While Building Kotlin Projects, Web Apps Theme Not Good to Mobile xD',
-      filter: 'Plugin',
-      links: [
-        {
-          type: 'Github',
-          link: 'https://github.com/Yazan98/Thentrom',
-        },
-      ],
-    },
-    {
-      name: 'Commiter',
-      isOpenSource: true,
-      language: 'Ruby',
-      logo: 'https://user-images.githubusercontent.com/29167110/101143829-50caca80-35cc-11eb-804c-e7dcc6243626.png',
-      description: 'Reject Bad Commit Messages When You Write Wrong Commit Message To Save Git History Via More Than 4 Validation Types Built In Ruby',
-      filter: 'Plugin',
-      links: [
-        {
-          type: 'Github',
-          link: 'https://github.com/Yazan98/commiter',
-        },
-      ],
+      id: 11,
+      name: 'All Projects',
+      createdAt: 'View All Projects Open, Closed Source',
+      description: 'Show All Projects In One List with All Links Required to Each Project with Description and More Filters',
+      image: 'https://raw.githubusercontent.com/Yazan98/portfolio/master/src/images/all_preview.webp',
+      type: FILTERED_PROJECTS_FILTER_TYPE,
     },
   ];
 }
 
-export function findProjectByFilterTypeAndLanguage(filterType, language) {
-  if (language === 'All') {
-    return getProjectsPreviewList();
-  }
-  return getProjectsPreviewList().filter((item) => (item.filter.includes(filterType) || item.language === language));
+export function getProjectsListByFilter(filter) {
+  return getProjectsList().filter((e) => e.type === filter);
 }
 
-export const findProjectByFilterType = (filterType) => {
-  if (filterType === 'All') {
-    return getProjectsPreviewList();
-  }
-  return getProjectsPreviewList().filter((item) => item.filter.includes(filterType));
-};
-
-export const findProjectByName = (name, filterType) => getProjectsPreviewList().filter((item) => item.name.toLowerCase().includes(name.toLowerCase()) || item.filter.toLowerCase().includes(filterType.toLowerCase()));
+export function getProjectsListByName(filter) {
+  return getProjectsList().filter((e) => e.name === filter);
+}
