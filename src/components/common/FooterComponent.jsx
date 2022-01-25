@@ -10,19 +10,19 @@ export default function FooterComponent() {
     <footer className={"p-5 bg-gray-100"}>
       <div className={"flex justify-center items-center p-5"}>
         <a target="_blank" rel="noreferrer" className={"p-3 cursor-pointer"} href={"https://github.com/Yazan98"}>
-            <img src={GithubIcon} alt={"Yazan Tarifi  - Github Account"} width={"30px"} height={"30px"} />
+            <img loading={"lazy"} src={GithubIcon} alt={"Yazan Tarifi  - Github Account"} width={"30px"} height={"30px"} />
         </a>
         <a target="_blank" rel="noreferrer" className={"p-3 cursor-pointer"} href={"https://www.linkedin.com/in/yazan-tarifi-106282192/"}>
-            <img src={LinkedInIcon} alt={"Yazan Tarifi  - LinkedIn Account"} width={"30px"} height={"30px"} />
+            <img loading={"lazy"} src={LinkedInIcon} alt={"Yazan Tarifi  - LinkedIn Account"} width={"30px"} height={"30px"} />
         </a>
         <a target="_blank" rel="noreferrer" className={"p-3 cursor-pointer"} href={"https://dev.to/yazan98"}>
-            <img src={DevIcon} alt={"Yazan Tarifi  - Dev.to Account"} width={"30px"} height={"30px"} />
+            <img loading={"lazy"} src={DevIcon} alt={"Yazan Tarifi  - Dev.to Account"} width={"30px"} height={"30px"} />
         </a>
         <a target="_blank" rel="noreferrer" className={"p-3 cursor-pointer"} href={"https://www.behance.net/yazantarifi98"}>
-            <img src={BehanceIcon} alt={"Yazan Tarifi  - Behance Account"} width={"30px"} height={"30px"} />
+            <img loading={"lazy"} src={BehanceIcon} alt={"Yazan Tarifi  - Behance Account"} width={"30px"} height={"30px"} />
         </a>
         <a target="_blank" rel="noreferrer" className={"p-3 cursor-pointer"} href={"https://stackoverflow.com/users/12858222/yt98"}>
-            <img src={StackOverFlowIcon} alt={"Yazan Tarifi  - Stackoverflow Account"} width={"30px"} height={"30px"} />
+            <img loading={"lazy"} src={StackOverFlowIcon} alt={"Yazan Tarifi  - Stackoverflow Account"} width={"30px"} height={"30px"} style={{imageResolution: "150dpi"}} />
         </a>
       </div>
       <br/>
@@ -34,3 +34,4 @@ export default function FooterComponent() {
     </footer>
   );
 }
+
