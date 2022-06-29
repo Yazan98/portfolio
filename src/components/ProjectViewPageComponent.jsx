@@ -17,7 +17,7 @@ export default function ProjectViewPageComponent() {
         <ScreenContainerComponent title={"Projects - " + projectEntity.name}>
             <ToolbarComponent />
 
-            <main style={{ minHeight: "100vh" }}>
+            <main style={{ minHeight: "40vh" }}>
                 <section className={"relative h-screen w-screen"}>
                     <div className="container flex flex-col-reverse lg:flex-row items-center gap-12 mt-14 lg:mt-28 text-black">
                         <div className="Text flex flex-1 flex-col items-center lg:items-start md:p-5 lg:p-5 xl:p-5">
@@ -39,19 +39,19 @@ export default function ProjectViewPageComponent() {
                                 </div> : null}
                             </div>
                         </div>
-                        <div className="flex justify-center flex-1">
+                        <div className="flex justify-center flex-2 md:p-20 lg:p-20">
                             <img loading="lazy" className={"w-5/6 h-5/6 sm:w-3/4 sm:h-3/4 md:w-full md:h-full rounded-xl"} src={projectEntity.imageProject} alt="Projects Phone Logo" />
                         </div>
                     </div>
                 </section>
             </main>
 
-            <div className={"mb-40 md:hidden lg:hidden xl:hidden"} />
-            {projectEntity.images ? <div className={"p-20"}>
+            <div className={"mb-20 md:hidden lg:hidden xl:hidden"} />
+            {projectEntity.images ? <div className={"p-20 md:w-4/5 lg:w-4/5"}>
                 <h2 className="text-center text-3xl md:text-4 lg:text-5x1 lg:text-left mb-2" style={{color: PRIMARY_COLOR}}>Project Images</h2>
                 <div className={"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 justify-start gap-10 items-center mt-10"}>
                     {projectEntity.images.map((item) => (
-                        <img className={"sm:w-3/4 sm:h-3/4 md:w-full md:h-full"} alt={projectEntity.name} src={item} />
+                        <img className={"sm:w-3/4 sm:h-3/4 md:w-full md:h-full md:p-5"} alt={projectEntity.name} src={item} />
                     ))}
                 </div>
             </div> : null}
