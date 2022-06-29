@@ -267,6 +267,25 @@ export default function getProjectsList() {
     },
     {
       id: 12,
+      name: 'Legora',
+      createdAt: 'Github : 2022',
+      description: 'Desktop Application Built With Jetpack Compose and Kotlin With Support Of CLI in Javascript',
+      image: 'https://user-images.githubusercontent.com/29167110/176330877-f231420a-6b4b-43b1-b0f9-64174679b52a.png',
+      type: WEB_APPS_FILTER_TYPE,
+      longDescription: "A Project Starter, Code Generator To Build Applications With Ready Configurations Built With Kotlin and Jetpack Compose Also with JavaScript To Provide CLI to Generate Several Projects",
+      imageProject: "https://user-images.githubusercontent.com/29167110/176330877-f231420a-6b4b-43b1-b0f9-64174679b52a.png",
+      link: "https://legora.me",
+      tags: [
+        "Kotlin",
+          "Jetpack Compose",
+          "Desktop App",
+          "Electron App",
+          "Next.js",
+          "Core Cli Javascript"
+      ]
+    },
+    {
+      id: 13,
       name: 'All Projects',
       createdAt: 'View All Projects Open, Closed Source',
       description: 'Show All Projects In One List with All Links Required to Each Project with Description and More Filters',
