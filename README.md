@@ -73,8 +73,8 @@ Execute The Following Commands to Run Docker Image
 Pull The Image to Your Device Then Run the Image on Port 3000
 
 ```
-docker pull yt98/portfolio-website:3.0.1
-docker run --name portfolio -p 3000:3000 -d yt98/portfolio-website:3.0.1
+docker pull yt98/portfolio-website:v3
+docker run --name portfolio -p 3000:3000 -d yt98/portfolio-website:v3
 ```
 
 ## License
