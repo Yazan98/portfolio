@@ -21,7 +21,7 @@ jobs:
       run: docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
       
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag yt98/portfolio:$(date +%s)
+      run: docker build . --file Dockerfile --tag yt98/portfolio-website:$(date +%s)
       
     - name: Docker Push
-      run: docker push ${{secrets.DOCKER_USER}}/portfolio
+      run: docker push ${{secrets.DOCKER_USER}}/portfolio-website
