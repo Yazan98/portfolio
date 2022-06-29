@@ -219,6 +219,33 @@ export default function getProjectsList() {
       ]
     },
     {
+      id: 1,
+      name: 'Autohub V2.0',
+      createdAt: 'Github : 2022',
+      description: 'Android Application : Closed Source Multi Modular Application With Jetpack Compose',
+      longDescription: "Android Application Built With Navigation Component and Jetpack Compose, Hilt Dependency Injection, Firebase Crashlytics, Navigation Between Modules, UseCases, Retrofit With Coroutines, Github Api, Vanite",
+      image: 'https://raw.githubusercontent.com/Yazan98/portfolio/master/src/components/images/autohub_preview.webp',
+      imageProject: "https://github.com/Yazan98/portfolio/blob/master/src/components/images/autohub.png?raw=true",
+      type: ANDROID_FILTER_TYPE,
+      link: "https://github.com/Yazan98/Github-Client",
+      tags: [
+        "Kotlin Courotines",
+        "Multi Modular App",
+        "Vortex",
+        "MVVM",
+        "Github Api",
+        "Kotlin",
+        "Retrofit",
+        "RxJava 2"
+      ],
+      images: [
+        "https://github.com/Yazan98/portfolio/blob/master/src/components/images/autohub_1.png?raw=true",
+        "https://github.com/Yazan98/portfolio/blob/master/src/components/images/autohub_2.png?raw=true",
+        "https://github.com/Yazan98/portfolio/blob/master/src/components/images/autohub_3.png?raw=true",
+        "https://github.com/Yazan98/portfolio/blob/master/src/components/images/autohub_4.png?raw=true"
+      ]
+    },
+    {
       id: 10,
       name: 'Destiny Api',
       createdAt: 'Github : 2021',

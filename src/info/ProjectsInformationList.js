@@ -338,6 +338,17 @@ export default function getProjectsInformationList() {
         'https://github-clone-ac510.web.app/#/',
       ],
     },
+    {
+      id: 25,
+      name: 'Markdown Compose',
+      language: 'Kotlin',
+      category: 'Android',
+      description: 'Android Library Built To render Markdown Strings Inside Jetpack Compose With Image Loading, Custom Text Sizes, Custom Colors',
+      hint: 'Kotlin . Open Source . Jetpack Compose',
+      links: [
+        'https://github.com/Yazan98/Markdown-Compose',
+      ],
+    },
   ];
 }
 
