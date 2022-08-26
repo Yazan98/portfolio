@@ -11,7 +11,7 @@ export default function ServicesComponent({ services, title, description }) {
                 <div className={"flex flex-1 justify-center items-center md:justify-start md:items-start lg:justify-start lg:items-start p-2"}>
                     <div className={"grid grid-flow-row auto-rows-max grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 justify-start gap-5 items-center mt-10"}>
                         {services ? services.map((item) => (
-                            <div className={"ProjectGithubItem justify-center rounded-xl border-2 p-4 relative"} key = {item.title}>
+                            <div className={"ProjectGithubItem justify-center rounded-xl p-4 relative"} style={{ background: 'white' }} key = {item.title}>
                                 <p className={"text-xs color-white truncate max-w-prose"} style={{ color: PRIMARY_COLOR }}>{item.tag}</p>
                                 <h3>{item.title}</h3>
                                 <p className={"mt-5 line-clamp"} style={{ color: DESCRIPTION_COLOR }}>{item.description}</p>

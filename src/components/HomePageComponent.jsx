@@ -6,11 +6,13 @@ import './styles/pages/HomePageStyle.scss';
 import FooterComponent from './common/FooterComponent';
 import ServicesComponent from "./home/ServicesComponent";
 import getServicesList, {getSkillsList} from "../info/ServicesList";
+import FeaturedProjectsComponent from "./home/FeaturedProjectsComponent";
 
 export default function HomePageComponent() {
   return (
     <ScreenContainerComponent title={HOME_PAGE_TITLE}>
       <HomePageCoverComponent />
+        <FeaturedProjectsComponent />
         <ServicesComponent services={getServicesList()} description={"This is List of Some Services I Build most of time"} title={"Services"} />
         <ServicesComponent services={getSkillsList()} description={"I Spent Most Time Building Things Using This Technologies To Know About Every Single Thing Inside Full System"} title={"Skills"} />
       <FooterComponent />
