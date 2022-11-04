@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {
   Grid, FormControlLabel, Radio, RadioGroup, FormControl, FormLabel,
 } from '@material-ui/core';
@@ -11,11 +11,16 @@ import getProjectsInformationList, {
   getProjectsInfoListByLanguage,
 } from '../info/ProjectsInformationList';
 import GithubProjectViewComponent from './childs/GithubProjectViewComponent';
+import ReactGA from "react-ga";
 
 export default function AllProjectsPageComponent() {
   const [projects, setProjects] = React.useState(getProjectsInformationList());
   const [filterType, setFilterType] = React.useState('all');
   const [filterCategory, setFilterCategory] = React.useState('categories');
+  useEffect(() => {
+    ReactGA.pageview(window.location.pathname)
+  }, [])
+
   React.useEffect(() => {
     if (filterType === 'All' || filterType === 'all') {
       setProjects(getProjectsInformationList());

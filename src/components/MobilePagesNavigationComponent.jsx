@@ -1,9 +1,14 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {PRIMARY_COLOR} from "../info/ColorUtils";
 import {NavLink, useHistory} from "react-router-dom";
+import ReactGA from "react-ga";
 
 export default function MobilePagesNavigationComponent() {
     const history = useHistory();
+    useEffect(() => {
+        ReactGA.pageview(window.location.pathname)
+    }, [])
+
     return (
         <div style={{ background: PRIMARY_COLOR }} className={"h-screen p-5"}>
             <div className={"top-0 right-0 static text-white cursor-pointer mr-0"} onClick={() => history.goBack()}>

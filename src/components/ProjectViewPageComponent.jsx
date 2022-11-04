@@ -1,10 +1,11 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import { useHistory } from 'react-router';
 import ScreenContainerComponent from "./common/ScreenContainerComponent";
 import {getProjectsListByName} from "../info/ProjectsList";
 import ToolbarComponent from "./common/ToolbarComponent";
 import FooterComponent from "./common/FooterComponent";
 import {DESCRIPTION_COLOR, PRIMARY_COLOR} from "../info/ColorUtils";
+import ReactGA from "react-ga";
 
 export default function ProjectViewPageComponent() {
     const componentUrl = window.location.href;
@@ -12,6 +13,9 @@ export default function ProjectViewPageComponent() {
     const projectName = splittedUrl[splittedUrl.length - 1].replace('%20', ' ');
     const projectEntity = getProjectsListByName(projectName)[0];
     const history = useHistory();
+    useEffect(() => {
+        ReactGA.pageview(window.location.pathname)
+    }, [])
 
     return (
         <ScreenContainerComponent title={"Projects - " + projectEntity.name}>

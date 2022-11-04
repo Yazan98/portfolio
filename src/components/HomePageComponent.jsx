@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import ScreenContainerComponent from './common/ScreenContainerComponent';
 import { HOME_PAGE_TITLE } from '../info/StringsUtils';
 import HomePageCoverComponent from './home/HomePageCoverComponent';
@@ -7,8 +7,13 @@ import FooterComponent from './common/FooterComponent';
 import ServicesComponent from "./home/ServicesComponent";
 import getServicesList, {getSkillsList} from "../info/ServicesList";
 import FeaturedProjectsComponent from "./home/FeaturedProjectsComponent";
+import ReactGA from "react-ga";
 
 export default function HomePageComponent() {
+    useEffect(() => {
+        ReactGA.pageview(window.location.pathname)
+    }, [])
+
   return (
     <ScreenContainerComponent title={HOME_PAGE_TITLE}>
       <HomePageCoverComponent />
