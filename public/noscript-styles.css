@@ -119,3 +119,37 @@ ul {
     width: 40%;
     text-align: center;
 }
+
+.services {
+    padding: 3em;
+}
+
+.services .title {
+    color: rgb(41, 98, 255);
+}
+
+.services .servicesOptions {
+    display: grid;
+    column-gap: 30px;
+    grid-template-columns: 25vw 25vw 25vw;
+}
+
+
+.services .servicesOptions .item {
+    width: 25vw;
+    height: 250px;
+    background-color: white;
+    border-color: #9ca3ad;
+    border-radius: 25px;
+    border-width: 1px;
+    margin: 1em;
+    padding: 2em;
+}
+
+.services .servicesOptions .item p {
+    font-size: small;
+}
+
+.services .servicesOptions .item .text {
+    color: rgb(41, 98, 255);
+}
