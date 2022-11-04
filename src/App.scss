@@ -8,7 +8,7 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+  font-family: 'Roboto', sans-serif, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
   Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 
   font-size: 16px;
@@ -43,7 +43,7 @@ ul {
 * , *:after, *:before {
   margin: 0;
   padding: 0;
-  font-family: 'Noto Sans SC', sans-serif;
+  font-family: 'Roboto', sans-serif, 'Noto Sans SC', sans-serif;
   scroll-behavior: smooth;
 }
 
@@ -57,6 +57,6 @@ ul {
 * , *:after, *:before {
   margin: 0;
   padding: 0;
-  font-family: 'Noto Sans SC', sans-serif;
+  font-family: 'Roboto', sans-serif, 'Noto Sans SC', sans-serif;
   scroll-behavior: smooth;
 }
