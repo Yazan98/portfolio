@@ -8,6 +8,13 @@ export default function getArchiveList() {
       isOpenSource: true,
     },
     {
+      year: '2022',
+      name: 'Mushrrom',
+      madeAt: 'Github',
+      built: 'Typescript, Nest.js, Discord Bot, Google Maven Api, Github Api V3, Cron Job',
+      isOpenSource: true,
+    },
+    {
       year: '2021',
       name: 'Viper Idea',
       madeAt: 'Github',

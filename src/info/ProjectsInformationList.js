@@ -349,6 +349,17 @@ export default function getProjectsInformationList() {
         'https://github.com/Yazan98/Markdown-Compose',
       ],
     },
+    {
+      id: 26,
+      name: 'Mushroom',
+      language: 'Typescript',
+      category: 'WebApps',
+      description: 'CronJob Application on Nest.js to Start Checking Github Repositories Everyday and see if new Release Submitted from Selected Repositories will send Message to Discord',
+      hint: 'Typescript . CronJob . NestJs . Discord',
+      links: [
+        'https://github.com/Yazan98/Mushroom',
+      ],
+    },
   ];
 }
 

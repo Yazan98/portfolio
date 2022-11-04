@@ -1,12 +1,20 @@
 import React from 'react';
 import { DESCRIPTION_COLOR } from '../../info/ColorUtils';
 import '../styles/pages/ProjectsPageStyle.scss';
+import ReactGA from "react-ga";
 
 export default function ProjectViewComponent({ projectView, onClickListener }) {
   return (
     <div
       className="ProjectViewContainerItem justify-center"
-      onClick={() => onClickListener(projectView.name)}
+      onClick={() => {
+        ReactGA.event({
+          category: "Project",
+          action: "Project - " + projectView.name,
+          label: "Project Button - ProjectView"
+        })
+        onClickListener(projectView.name)
+      }}
     >
       <div className="ImageContainer">
         <img
