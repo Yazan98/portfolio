@@ -12,11 +12,15 @@ import getProjectsList, {
   WEB_APPS_FILTER_TYPE, WEBSITES_FILTER_TYPE, ALL_PROJECTS_ID,
 } from '../info/ProjectsList';
 import ProjectViewComponent from './childs/ProjectViewComponent';
+import ReactGA from "react-ga";
 
 export default function ProjectsPageComponent() {
   const [filterType, setFilterType] = React.useState(ALL_FILTER_TYPE);
   const [projectsList, setProjectsList] = React.useState(getProjectsList());
   const history = useHistory();
+  useEffect(() => {
+    ReactGA.pageview(window.location.pathname)
+  }, [])
 
   useEffect(() => {
     if (filterType === ALL_FILTER_TYPE) {

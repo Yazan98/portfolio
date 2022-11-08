@@ -1,12 +1,17 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import ScreenContainerComponent from './common/ScreenContainerComponent';
 import ToolbarComponent from './common/ToolbarComponent';
 import FooterComponent from './common/FooterComponent';
 import { BLACK_COLOR, DESCRIPTION_COLOR, PRIMARY_COLOR } from '../info/ColorUtils';
 import getArchiveList from '../info/ArchiveList';
 import MobileArchiveItem from "./childs/MobileArchiveItem";
+import ReactGA from "react-ga";
 
 export default function ArchivePageComponent() {
+  useEffect(() => {
+    ReactGA.pageview(window.location.pathname)
+  }, [])
+
   return (
     <ScreenContainerComponent title="Yazan Tarifi Portfolio - Archive">
       <ToolbarComponent />

@@ -9,6 +9,10 @@ import ArchivePageComponent from "./components/ArchivePageComponent";
 import AllProjectsPageComponent from './components/AllProjectsPageComponent';
 import MobilePagesNavigationComponent from "./components/MobilePagesNavigationComponent";
 import ProjectViewPageComponent from "./components/ProjectViewPageComponent";
+import ReactGA from 'react-ga';
+
+const GOOGLE_ANALYTICS_TRACKING_ID = "UA-239882909-2"
+ReactGA.initialize(GOOGLE_ANALYTICS_TRACKING_ID)
 
 function App() {
     return (

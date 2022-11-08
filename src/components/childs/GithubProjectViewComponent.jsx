@@ -2,6 +2,7 @@ import React from 'react';
 import { DESCRIPTION_COLOR } from '../../info/ColorUtils';
 import GithubIcon from '../images/github-logo.svg';
 import LinkIcon from '../images/link.svg';
+import ReactGA from "react-ga";
 
 function getSingleLinkItem(link) {
   return (
@@ -18,7 +19,13 @@ function getMutlipleLinksItem(links = []) {
     <div className={"flex justify-end"}>
       {links ? links.map((item) => (item.includes('github.com')
         ? (
-          <a href={item} target="_blank" rel="noreferrer">
+          <a href={item} target="_blank" rel="noreferrer" onClick={() => {
+              ReactGA.event({
+                  category: "GithubProject",
+                  action: "Project - " + item,
+                  label: "Project Button - GithubProject"
+              })
+          }}>
             <img src={GithubIcon} alt="Github Repo" width="20px" height="20px" loading="lazy" style={{ marginLeft: '10px', cursor: 'pointer' }} />
           </a>
         )
