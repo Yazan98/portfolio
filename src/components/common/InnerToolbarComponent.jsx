@@ -8,7 +8,7 @@ export default function InnerToolbarComponent({ isTitleWhite }) {
     const history = useHistory()
     return (
       <nav className={"flex justify-between items-center h-16 text-white relative font-mono"} role={"navigation"}>
-        <NavLink style={{ fontSize: "large", color: isTitleWhite ? "white": PRIMARY_COLOR }} to={"/"} className={"pl-8"} onClick={() => {
+        <NavLink style={{ fontSize: "large", color: "white" }} to={"/"} className={"pl-8"} onClick={() => {
             ReactGA.event({
                 category: "Toolbar",
                 action: "Website Name",
@@ -57,6 +57,14 @@ export default function InnerToolbarComponent({ isTitleWhite }) {
                   label: "Archive Button - InnerToolbarComponent"
               })
           }} to="/archive">Archive</NavLink>
+            <NavLink style={{ color: "white" }} className={"p-2"} onClick={() => {
+                ReactGA.event({
+                    category: "Toolbar",
+                    action: "Articles Button",
+                    label: "Articles Button - InnerToolbarComponent"
+                })
+                window.open("https://medium.com/@yazantarifi98", '_blank', 'noopener,noreferrer');
+            }} to={""}>Articles</NavLink>
         </div>
       </nav>
   );

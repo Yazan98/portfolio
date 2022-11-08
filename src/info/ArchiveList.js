@@ -1,10 +1,17 @@
 export default function getArchiveList() {
   return [
     {
-      year: '2021',
-      name: 'Zilon',
+      year: '2022',
+      name: 'Avalugg',
       madeAt: 'Github',
-      built: 'Typescript, Nest.js, Slack Api, Google Maven Api, Github Api V3, Cron Job',
+      built: 'Swift, XCode IDE, Macos Application, ADB, Shell Commands',
+      isOpenSource: true,
+    },
+    {
+      year: '2022',
+      name: 'Zeeva',
+      madeAt: 'Github',
+      built: 'Ruby, Fastlane, Gem',
       isOpenSource: true,
     },
     {
@@ -12,6 +19,13 @@ export default function getArchiveList() {
       name: 'Mushrrom',
       madeAt: 'Github',
       built: 'Typescript, Nest.js, Discord Bot, Google Maven Api, Github Api V3, Cron Job',
+      isOpenSource: true,
+    },
+    {
+      year: '2021',
+      name: 'Zilon',
+      madeAt: 'Github',
+      built: 'Typescript, Nest.js, Slack Api, Google Maven Api, Github Api V3, Cron Job',
       isOpenSource: true,
     },
     {

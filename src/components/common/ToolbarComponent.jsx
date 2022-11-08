@@ -57,6 +57,14 @@ export default function ToolbarComponent() {
                 label: "Archive Button - ToolbarComponent"
             })
         }} to="/archive">Archive</NavLink>
+          <NavLink style={{ color: "black" }} className={"p-2"} onClick={() => {
+              ReactGA.event({
+                  category: "Toolbar",
+                  action: "Articles Button",
+                  label: "Articles Button - InnerToolbarComponent"
+              })
+              window.open("https://medium.com/@yazantarifi98", '_blank', 'noopener,noreferrer');
+          }} to={""}>Articles</NavLink>
       </div>
     </nav>
   );
