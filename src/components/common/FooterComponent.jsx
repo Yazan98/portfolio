@@ -55,6 +55,15 @@ export default function FooterComponent() {
         }}>
             <img loading={"lazy"} src={StackOverFlowIcon} alt={"Yazan Tarifi  - Stackoverflow Account"} width={"30px"} height={"30px"} style={{imageResolution: "150dpi"}} />
         </a>
+          <a target="_blank" rel="noreferrer" className={"p-3 cursor-pointer"} href={"https://play.google.com/store/apps/dev?id=5952784922322091748"} onClick={() => {
+            ReactGA.event({
+                category: "FooterLink",
+                action: "FooterButton - GooglePlay Account",
+                label: "Project Button - FooterLink"
+            })
+        }}>
+            <img loading={"lazy"} src={"https://user-images.githubusercontent.com/29167110/202741524-8aa12a64-ae5c-4b94-a1e1-299bd9d05a19.png"} alt={"Yazan Tarifi  - Google Play Account"} width={"30px"} height={"30px"} style={{imageResolution: "150dpi"}} />
+        </a>
           <a target="_blank" rel="noreferrer" className={"p-3 cursor-pointer"} href={"https://hub.docker.com/u/yt98"} onClick={() => {
               ReactGA.event({
                   category: "FooterLink",
@@ -68,7 +77,7 @@ export default function FooterComponent() {
       <br/>
       <hr/>
       <div className={"items-center h-16 text-gray-600 md:flex md:justify-between lg:flex lg:justify-between xl:flex xl:justify-between"}>
-          <p>Yazan Tarifi (V 3.1.0) - Copyright @ 2021 Personal Website</p>
+          <p>Yazan Tarifi (V 3.1.1) - Copyright @ 2021 Personal Website</p>
           <p className={"pt-2 md:pt-0 lg:pt-0 xl:pt-0"}>Website is Open Source (<a href="https://github.com/Yazan98/portfolio">Website Url</a>)</p>
       </div>
     </footer>
