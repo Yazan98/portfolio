@@ -23,6 +23,13 @@ export default function getArchiveList() {
     },
     {
       year: '2021',
+      name: 'Legora',
+      madeAt: 'Github',
+      built: 'Riot Api, Gson, Retrofit, Coroutines, Vanite, ViewBinding, Multi Modular App, Deeplinks',
+      isOpenSource: false,
+    },
+    {
+      year: '2021',
       name: 'Zilon',
       madeAt: 'Github',
       built: 'Typescript, Nest.js, Slack Api, Google Maven Api, Github Api V3, Cron Job',

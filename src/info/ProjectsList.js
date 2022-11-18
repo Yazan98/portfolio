@@ -268,20 +268,28 @@ export default function getProjectsList() {
     {
       id: 12,
       name: 'Legora',
-      createdAt: 'Github : 2022',
-      description: 'Desktop Application Built With Jetpack Compose and Kotlin With Support Of CLI in Javascript',
-      image: 'https://user-images.githubusercontent.com/29167110/176330877-f231420a-6b4b-43b1-b0f9-64174679b52a.png',
+      createdAt: 'Github : 2021',
+      description: 'Android Application - Training Project to Test Vanite Source Code Library Built With Riot Api',
+      image: 'https://user-images.githubusercontent.com/29167110/202738494-ca1a57ed-6b1f-4ecf-b69f-026c1ec4da3f.png',
       type: WEB_APPS_FILTER_TYPE,
-      longDescription: "A Project Starter, Code Generator To Build Applications With Ready Configurations Built With Kotlin and Jetpack Compose Also with JavaScript To Provide CLI to Generate Several Projects",
-      imageProject: "https://user-images.githubusercontent.com/29167110/176330877-f231420a-6b4b-43b1-b0f9-64174679b52a.png",
-      link: "https://legora.me",
+      longDescription: "Android Application Built With Navigation Components and ViewBinding, Vanite, Coroutines, Retrofit, Moshi, Multi Modular Application To Show Summoners Information and Champions, Items, Deeplinks, Skins Built with Riot Api",
+      imageProject: "https://user-images.githubusercontent.com/29167110/202738494-ca1a57ed-6b1f-4ecf-b69f-026c1ec4da3f.png",
+      link: "https://play.google.com/store/apps/details?id=com.yazantarifi.league.client",
       tags: [
         "Kotlin",
-          "Jetpack Compose",
-          "Desktop App",
-          "Electron App",
-          "Next.js",
-          "Core Cli Javascript"
+          "View Binding",
+          "Coroutines",
+          "Vanite",
+          "Retrofit"
+      ],
+      images: [
+        "https://user-images.githubusercontent.com/29167110/202739048-0663af37-2394-4a2f-9fd4-173bc4f64aeb.png",
+        "https://user-images.githubusercontent.com/29167110/202739066-614a7921-d53f-4ef2-a67f-ca8b3f884902.png",
+        "https://user-images.githubusercontent.com/29167110/202739084-f6c93f09-cdff-4044-9c0d-de35d86f1277.png",
+        "https://user-images.githubusercontent.com/29167110/202739101-406bb5a2-4448-404e-8c16-2e8cd55f4744.png",
+        "https://user-images.githubusercontent.com/29167110/202739117-b79c40dc-2648-43fe-ab59-ae3d6ca0283b.png",
+        "https://user-images.githubusercontent.com/29167110/202739136-50685847-133d-450e-b107-f709f39b532a.png",
+        "https://user-images.githubusercontent.com/29167110/202739167-76fe2730-986d-4fdb-ac34-493819797005.png",
       ]
     },
     {
