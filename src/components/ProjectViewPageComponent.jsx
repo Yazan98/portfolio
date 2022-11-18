@@ -43,8 +43,8 @@ export default function ProjectViewPageComponent() {
                                 </div> : null}
                             </div>
                         </div>
-                        <div className="flex justify-center flex-2 md:p-20 lg:p-20">
-                            <img loading="lazy" className={"w-5/6 h-5/6 sm:w-3/4 sm:h-3/4 md:w-full md:h-full rounded-xl"} src={projectEntity.imageProject} alt="Projects Phone Logo" />
+                        <div className="flex justify-center flex-2 md:p-5 lg:p-5">
+                            <img loading="lazy" className={"w-5/6 h-5/6 sm:w-3/4 sm:h-3/4 rounded-xl"} src={projectEntity.imageProject} alt={projectEntity.name} />
                         </div>
                     </div>
                 </section>
