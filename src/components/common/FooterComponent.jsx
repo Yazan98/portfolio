@@ -77,7 +77,7 @@ export default function FooterComponent() {
       <br/>
       <hr/>
       <div className={"items-center h-16 text-gray-600 md:flex md:justify-between lg:flex lg:justify-between xl:flex xl:justify-between"}>
-          <p>Yazan Tarifi (V 3.1.1) - Copyright @ 2021 Personal Website</p>
+          <p>Yazan Tarifi (V 3.1.2) - Copyright @ 2021 Personal Website</p>
           <p className={"pt-2 md:pt-0 lg:pt-0 xl:pt-0"}>Website is Open Source (<a href="https://github.com/Yazan98/portfolio">Website Url</a>)</p>
       </div>
     </footer>
