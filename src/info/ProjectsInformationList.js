@@ -360,6 +360,94 @@ export default function getProjectsInformationList() {
         'https://github.com/Yazan98/Mushroom',
       ],
     },
+    {
+      id: 27,
+      name: 'Zeeva',
+      language: 'Ruby',
+      category: 'tools',
+      description: 'Push Notifications to Discord, Telegram Using Fastlane Tasks',
+      hint: 'Ruby . Fastlane . Discord',
+      links: [
+        'https://github.com/Yazan98/fastlane-Zeeva',
+      ],
+    },
+    {
+      id: 28,
+      name: 'Avalugg',
+      language: 'Swift',
+      category: 'tools',
+      description: 'Submit ADB Commands for Android Emulators From Macos Toolbar',
+      hint: 'SwiftUI, Macos . ADB Commands',
+      links: [
+        'https://github.com/Yazan98/android-tools-macos',
+      ],
+    },
+    {
+      id: 29,
+      name: 'KMM Cryptocurrency',
+      language: 'Kotlin',
+      category: 'Android',
+      description: 'Kotlin Multiplatform Mobile, Realm Kotlin SDK, Ktor Client',
+      hint: 'Kotlin . Jetpack Compose . SwiftUI . Realm',
+      links: [
+        'https://github.com/Yazan98/KMM-Cryptocurrency',
+      ],
+    },
+    {
+      id: 30,
+      name: 'Compare Url',
+      language: 'Swift',
+      category: 'tools',
+      description: 'Compare Query Params Between 2 Urls Built for Macos Apps, SwiftUI',
+      hint: 'SwiftUI . Macos Apps',
+      links: [
+        'https://github.com/Yazan98/Compare-Url',
+      ],
+    },
+    {
+      id: 31,
+      name: 'KMM Sopy',
+      language: 'Kotlin',
+      category: 'Android',
+      description: 'Kotlin Multiplatform Mobile Library For Shared Code in Mobile Apps',
+      hint: 'Maven Central, Kotlin Multiplatform Mobile',
+      links: [
+        'https://github.com/Yazan98/KMM-Sopy',
+      ],
+    },
+    {
+      id: 31,
+      name: 'Rick and Morty IOS App',
+      language: 'Swift',
+      category: 'IOS',
+      description: 'IOS Application Built with UIKit, Alamofire, RealmSwift',
+      hint: 'UIKit . Swift . CollectionViews',
+      links: [
+        'https://github.com/Yazan98/rick-morty-ios-app',
+      ],
+    },
+    {
+      id: 32,
+      name: 'Link Loom',
+      language: 'Kotlin',
+      category: 'Android',
+      description: 'Jetpack Compose Android Tv App With Chromecast SDK Push Events',
+      hint: 'Kotlin . Chromecast SDK . Jetpack Compose',
+      links: [
+        'https://github.com/Yazan98/LinkLoomTv',
+      ],
+    },
+    {
+      id: 33,
+      name: 'Gitly IOS App',
+      language: 'Swift',
+      category: 'IOS',
+      description: 'IOS Application Built with SwiftUI, GraphQL, Apollo Client, RealmSwift',
+      hint: 'SwiftUI . GraphQL , Github Api',
+      links: [
+        'https://github.com/Yazan98/Gitly',
+      ],
+    },
   ];
 }
 
