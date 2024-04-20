@@ -3,6 +3,7 @@ export const ANDROID_FILTER_TYPE = 'android';
 export const IOS_FILTER_TYPE = 'ios';
 export const WEBSITES_FILTER_TYPE = 'Websites';
 export const WEB_APPS_FILTER_TYPE = 'webApps';
+export const MAC_APPS_FILTER_TYPE = 'macApps';
 export const TOOLS_FILTER_TYPE = 'tools';
 export const FILTERED_PROJECTS_FILTER_TYPE = 'filtered';
 
@@ -38,7 +39,7 @@ export default function getProjectsList() {
       ]
     },{
       id: 2,
-      name: 'Rick and Morty',
+      name: 'RickAndMorty',
       createdAt: 'Github : 2023',
       description: 'IOS Application Built with UIKit, Alamofire, Push Navigations, Nested Navigations, Tab Bar View, Realm, Collection Views',
       longDescription: "This Project Built to Learn the Nested Navigations, Nested Collection Views, Nested Push Navigations Built with Alamofire, Realm IOS SDK, UIKit",
@@ -342,9 +343,25 @@ export default function getProjectsList() {
         "MySql Database",
         "Firebase Admin"
       ]
+    },{
+      id: 15,
+      name: 'Tapper',
+      createdAt: 'Github : 2024',
+      description: 'Desktop Application Built With Swift, SwiftUI, Tapper CLI, ADB Commands Cli Builder',
+      image: 'https://github.com/tapper-app/assets/raw/main/Screenshot%202024-01-23%20at%208.21.27%E2%80%AFAM.png?raw=true',
+      type: MAC_APPS_FILTER_TYPE,
+      longDescription: "User Interface Application to generate ADB Commands Built for Macos Devices and Written in SwiftUI, Also Save ADB Commands in Realm Database",
+      imageProject: "https://github.com/tapper-app/assets/raw/main/Screenshot%202024-01-23%20at%208.21.27%E2%80%AFAM.png?raw=true",
+      link: "https://github.com/tapper-app",
+      tags: [
+        "Swift UI",
+        "Macos Apps",
+        "Realm Swift",
+        "NodeJs Cli",
+      ]
     },
     {
-      id: 15,
+      id: 16,
       name: 'Legora',
       createdAt: 'Github : 2021',
       description: 'Android Application - Training Project to Test Vanite Source Code Library Built With Riot Api',
@@ -371,7 +388,7 @@ export default function getProjectsList() {
       ]
     },
     {
-      id: 16,
+      id: 17,
       name: 'All Projects',
       createdAt: 'View All Projects Open, Closed Source',
       description: 'Show All Projects In One List with All Links Required to Each Project with Description and More Filters',
