@@ -1,5 +1,6 @@
 export const ALL_FILTER_TYPE = 'all';
 export const ANDROID_FILTER_TYPE = 'android';
+export const IOS_FILTER_TYPE = 'ios';
 export const WEBSITES_FILTER_TYPE = 'Websites';
 export const WEB_APPS_FILTER_TYPE = 'webApps';
 export const TOOLS_FILTER_TYPE = 'tools';
@@ -15,25 +16,25 @@ export default function getProjectsList() {
       createdAt: 'Github : 2024',
       description: 'IOS Application Built with SwiftUI, GraphQL, Apollo Client, UserDefaults, MVVM, Dynamic Widgets, Nested Navigations',
       longDescription: "This Project Built to Learn SwiftUI on IOS, Macos Apps and the Usage in this project for Apollo Client and GraphQL available only in IOS Apps, This Project has a Download Schema, Generate and build Dynamic GraphQL Queries",
-      image: 'https://raw.githubusercontent.com/Yazan98/portfolio/master/src/components/images/autohub_preview.webp',
-      imageProject: "https://github.com/Yazan98/portfolio/blob/master/src/components/images/autohub.png?raw=true",
-      type: ANDROID_FILTER_TYPE,
-      link: "https://github.com/Yazan98/Github-Client",
+      image: 'https://raw.githubusercontent.com/Yazan98/portfolio/v3.1.2/src/components/images/gitly_preview.webp',
+      imageProject: "https://raw.githubusercontent.com/Yazan98/portfolio/v3.1.2/src/components/images/gitly_preview.webp",
+      type: IOS_FILTER_TYPE,
+      link: "https://github.com/Yazan98/Gitly",
       tags: [
-        "Kotlin Courotines",
-        "Multi Modular App",
-        "Vortex",
-        "MVVM",
-        "Github Api",
-        "Kotlin",
-        "Retrofit",
-        "RxJava 2"
+        "IOS App",
+        "Swift 5",
+        "Swift UI",
+        "User Defaults",
+        "GraphQL",
+        "Apollo Client",
+        "Dynamic Queries",
+        "Pagination",
       ],
       images: [
-        "https://github.com/Yazan98/portfolio/blob/master/src/components/images/autohub_1.png?raw=true",
-        "https://github.com/Yazan98/portfolio/blob/master/src/components/images/autohub_2.png?raw=true",
-        "https://github.com/Yazan98/portfolio/blob/master/src/components/images/autohub_3.png?raw=true",
-        "https://github.com/Yazan98/portfolio/blob/master/src/components/images/autohub_4.png?raw=true"
+        "https://raw.githubusercontent.com/Yazan98/Gitly/main/Screenshots/Simulator%20Screenshot%20-%20iPhone%2015%20Pro%20Max%20-%202024-01-19%20at%2013.45.32.png",
+        "https://raw.githubusercontent.com/Yazan98/Gitly/main/Screenshots/Simulator%20Screenshot%20-%20iPhone%2015%20Pro%20Max%20-%202024-01-19%20at%2013.45.56.png",
+        "https://raw.githubusercontent.com/Yazan98/Gitly/main/Screenshots/Simulator%20Screenshot%20-%20iPhone%2015%20Pro%20Max%20-%202024-01-19%20at%2013.46.35.png",
+        "https://raw.githubusercontent.com/Yazan98/Gitly/main/Screenshots/Simulator%20Screenshot%20-%20iPhone%2015%20Pro%20Max%20-%202024-01-19%20at%2013.46.10.png"
       ]
     },
     {
