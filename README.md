@@ -61,6 +61,10 @@ Personal Website To Show The Projects Documentation, View On Github and Describe
 > 2. npm start
 > 3. npm run build
 
+## Start The Project (Yarn)
+> 1. yarn install
+> 2. yarn run start
+
 ## Branches Description
 1. master (Latest Source Code)
 2. v2.x Version 2 of The Website (Dark, Light Mode)

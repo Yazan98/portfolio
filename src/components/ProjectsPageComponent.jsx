@@ -9,7 +9,7 @@ import getProjectsList, {
   ALL_FILTER_TYPE, ANDROID_FILTER_TYPE,
   FILTERED_PROJECTS_FILTER_TYPE, getProjectsListByFilter,
   TOOLS_FILTER_TYPE,
-  WEB_APPS_FILTER_TYPE, WEBSITES_FILTER_TYPE, ALL_PROJECTS_ID,
+  WEB_APPS_FILTER_TYPE, WEBSITES_FILTER_TYPE, ALL_PROJECTS_ID, IOS_FILTER_TYPE, MAC_APPS_FILTER_TYPE,
 } from '../info/ProjectsList';
 import ProjectViewComponent from './childs/ProjectViewComponent';
 import ReactGA from "react-ga";
@@ -47,6 +47,8 @@ export default function ProjectsPageComponent() {
         <div className={"grid grid-cols-1 place-items-start gap-2 md:flex md:flex-start md:justify-start lg:flex lg:flex-start lg:justify-start"}>
           <p style={{ color: filterType === ALL_FILTER_TYPE ? "white" : "black" }} onClick={() => setFilterType(ALL_FILTER_TYPE)} className={"ItemFilter mr-5 " + (filterType === ALL_FILTER_TYPE ? "bg-blue-500 text-white hover:bg-blue-700 hover:text-white font-bold py-2 px-4 rounded-full" : "text-black py-2 px-4")}>All Projects</p>
           <p style={{ color: filterType === ANDROID_FILTER_TYPE ? "white" : "black" }} onClick={() => setFilterType(ANDROID_FILTER_TYPE)} className={"ItemFilter mr-5 " + (filterType === ANDROID_FILTER_TYPE ? "bg-blue-500 text-white hover:bg-blue-700 hover:text-white font-bold py-2 px-4 rounded-full" : "text-black py-2 px-4")}>Android Apps</p>
+          <p style={{ color: filterType === IOS_FILTER_TYPE ? "white" : "black" }} onClick={() => setFilterType(IOS_FILTER_TYPE)} className={"ItemFilter mr-5 " + (filterType === IOS_FILTER_TYPE ? "bg-blue-500 text-white hover:bg-blue-700 hover:text-white font-bold py-2 px-4 rounded-full" : "text-black py-2 px-4")}>IOS Apps</p>
+          <p style={{ color: filterType === MAC_APPS_FILTER_TYPE ? "white" : "black" }} onClick={() => setFilterType(MAC_APPS_FILTER_TYPE)} className={"ItemFilter mr-5 " + (filterType === MAC_APPS_FILTER_TYPE ? "bg-blue-500 text-white hover:bg-blue-700 hover:text-white font-bold py-2 px-4 rounded-full" : "text-black py-2 px-4")}>Macos Apps</p>
           <p style={{ color: filterType === WEBSITES_FILTER_TYPE ? "white" : "black" }} onClick={() => setFilterType(WEBSITES_FILTER_TYPE)} className={"ItemFilter mr-5 " + (filterType === WEBSITES_FILTER_TYPE ? "bg-blue-500 text-white hover:bg-blue-700 hover:text-white font-bold py-2 px-4 rounded-full" : "py-2 px-4")}>Websites</p>
           <p style={{ color: filterType === WEB_APPS_FILTER_TYPE ? "white" : "black" }} onClick={() => setFilterType(WEB_APPS_FILTER_TYPE)} className={"ItemFilter mr-5 " + (filterType === WEB_APPS_FILTER_TYPE ? "bg-blue-500 text-white hover:bg-blue-700 hover:text-white font-bold py-2 px-4 rounded-full" : "py-2 px-4")}>Web Apps</p>
         </div>

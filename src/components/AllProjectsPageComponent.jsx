@@ -60,6 +60,7 @@ export default function AllProjectsPageComponent() {
                 <RadioGroup defaultValue="All" onChange={(item) => onCategoryChanged(item)}>
                   <FormControlLabel control={<Radio size="small" color="primary" />} value="All" label="All" />
                   <FormControlLabel control={<Radio size="small" color="primary" />} value="Android" label="Android Applications" />
+                  <FormControlLabel control={<Radio size="small" color="primary" />} value="IOS" label="IOS Applications" />
                   <FormControlLabel control={<Radio size="small" color="primary" />} value="WebApps" label="Web Applications" />
                   <FormControlLabel control={<Radio size="small" color="primary" />} value="Websites" label="Websites" />
                   <FormControlLabel control={<Radio size="small" color="primary" />} value="Tools" label="Tools" />
@@ -71,6 +72,7 @@ export default function AllProjectsPageComponent() {
                   <FormControlLabel control={<Radio size="small" color="primary" />} value="All" label="All" />
                   <FormControlLabel control={<Radio size="small" color="primary" />} value="Kotlin" label="Kotlin" />
                   <FormControlLabel control={<Radio size="small" color="primary" />} value="Java" label="Java" />
+                  <FormControlLabel control={<Radio size="small" color="primary" />} value="Swift" label="Swift" />
                   <FormControlLabel control={<Radio size="small" color="primary" />} value="Javascript" label="Javascript" />
                   <FormControlLabel control={<Radio size="small" color="primary" />} value="Typescript" label="Typescript" />
                   <FormControlLabel control={<Radio size="small" color="primary" />} value="Ruby" label="Ruby" />
