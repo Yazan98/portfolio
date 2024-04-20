@@ -1,6 +1,51 @@
 export default function getArchiveList() {
   return [
     {
+      year: '2024',
+      name: 'Gitly',
+      madeAt: 'Github',
+      built: 'Apollo Client, IOS App, SwiftUI, GraphQL, Pagination, Nested Push Navigations',
+      isOpenSource: true,
+    },{
+      year: '2023',
+      name: 'Link Loom',
+      madeAt: 'Github',
+      built: 'Chromecast SDK, Android Tv App, Jetpack Compose Android Tv SDK, Chromecast Push Events',
+      isOpenSource: true,
+    },{
+      year: '2023',
+      name: 'Rick And Morty IOS App',
+      madeAt: 'Github',
+      built: 'UIKit, Swift, IOS App, Alamofire, RealmSwift, CollectionView, Permissions, Localizations',
+      isOpenSource: true,
+    },{
+      year: '2023',
+      name: 'Karkdown Compose',
+      madeAt: 'Github',
+      built: 'Jetpack Compose, Maven Central',
+      isOpenSource: true,
+    },
+    {
+      year: '2023',
+      name: 'KMM Sopy',
+      madeAt: 'Github',
+      built: 'Kotlin Multiplatform Mobile, IOS, Android, Maven Central',
+      isOpenSource: true,
+    },{
+      year: '2023',
+      name: 'Compare Url',
+      madeAt: 'Github',
+      built: 'Macos App, SwiftUI',
+      isOpenSource: true,
+    },
+    {
+      year: '2023',
+      name: 'Coina',
+      madeAt: 'Github',
+      built: 'Kotlin Multiplatform Mobile, IOS App, Android App, Jetpack Compose, SwiftUI, MVVM, Ktor Client',
+      isOpenSource: true,
+    },
+    {
       year: '2022',
       name: 'Avalugg',
       madeAt: 'Github',
