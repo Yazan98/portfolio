@@ -11,6 +11,33 @@ export default function getProjectsList() {
   return [
     {
       id: 1,
+      name: 'Gitly',
+      createdAt: 'Github : 2024',
+      description: 'IOS Application Built with SwiftUI, GraphQL, Apollo Client, UserDefaults, MVVM, Dynamic Widgets, Nested Navigations',
+      longDescription: "This Project Built to Learn SwiftUI on IOS, Macos Apps and the Usage in this project for Apollo Client and GraphQL available only in IOS Apps, This Project has a Download Schema, Generate and build Dynamic GraphQL Queries",
+      image: 'https://raw.githubusercontent.com/Yazan98/portfolio/master/src/components/images/autohub_preview.webp',
+      imageProject: "https://github.com/Yazan98/portfolio/blob/master/src/components/images/autohub.png?raw=true",
+      type: ANDROID_FILTER_TYPE,
+      link: "https://github.com/Yazan98/Github-Client",
+      tags: [
+        "Kotlin Courotines",
+        "Multi Modular App",
+        "Vortex",
+        "MVVM",
+        "Github Api",
+        "Kotlin",
+        "Retrofit",
+        "RxJava 2"
+      ],
+      images: [
+        "https://github.com/Yazan98/portfolio/blob/master/src/components/images/autohub_1.png?raw=true",
+        "https://github.com/Yazan98/portfolio/blob/master/src/components/images/autohub_2.png?raw=true",
+        "https://github.com/Yazan98/portfolio/blob/master/src/components/images/autohub_3.png?raw=true",
+        "https://github.com/Yazan98/portfolio/blob/master/src/components/images/autohub_4.png?raw=true"
+      ]
+    },
+    {
+      id: 2,
       name: 'Autohub',
       createdAt: 'Github : 2019',
       description: 'Android Application : Open Source Built Based on MVVM, Vortex, Github Api V3, With Navigation Component',
@@ -37,7 +64,7 @@ export default function getProjectsList() {
       ]
     },
     {
-      id: 2,
+      id: 3,
       name: 'Destiny',
       createdAt: 'Github : 2019',
       description: 'Android Application : Open Source Built Based on MVVM, Vortex, SpringBoot Api, With Navigation Component',
@@ -62,7 +89,7 @@ export default function getProjectsList() {
       ]
     },
     {
-      id: 3,
+      id: 4,
       name: 'Portfolio',
       createdAt: 'Github : 2020',
       description: 'My Personal Website Built With React.js, And Support PWAs and Some of SEO Techniques For Google Search Console and SPA with Typescript, Jsx, And SASS To Write Clear Css, React Router To Change Pages, Client Side Rendering Also Dark / White Mode Supported in All Pages Inside The Repository You Can Find The First and Second Version of The Website',
@@ -87,7 +114,7 @@ export default function getProjectsList() {
       ]
     },
     {
-      id: 4,
+      id: 5,
       name: 'Drasati',
       createdAt: '2020',
       description: 'Android Application : Closed Source An organizing platform for school students that aims to gather students and link them with audible lessons by providing a tree plan with the possibility to speak with teachers if a difference occurs on a certain point with the support feature of all classes',
@@ -112,7 +139,7 @@ export default function getProjectsList() {
       ]
     },
     {
-      id: 5,
+      id: 6,
       name: 'Wintrop',
       createdAt: 'Github : 2019',
       description: 'Android Application : Open Source Weather Application Powered By Vortex , Latest Android Technologies With Managed Structure To Show Weather Status For Amman, Irbid, Aqaba',
@@ -135,7 +162,7 @@ export default function getProjectsList() {
       ]
     },
     {
-      id: 6,
+      id: 7,
       name: 'Shopie Api',
       createdAt: 'Github : 2021',
       description: 'Api - Open Source Api Built With PHP - Laravel To Calculate The Database Relations And Logic For Shop Application and Website to Manage Accounts, Recipes, Restaurants, Bearer Tokens, Phone Number Verification, User Addresses, Categories This Project Mainly Built to Apply PHP Skills into a Project in PHP Training Path',
@@ -151,7 +178,7 @@ export default function getProjectsList() {
       ]
     },
     {
-      id: 7,
+      id: 8,
       name: 'Vortex',
       createdAt: 'Github : 2019',
       description: 'Android Library : Open Source Android Infrastructure To Build Android Applications With Latest Technologies and Ready State Handling with User Interface Implementation For The Android Common Cases This Library is Not Just Base Code it\'s also help you to get the target as soon as possible with ready techniques',
@@ -169,7 +196,7 @@ export default function getProjectsList() {
       ]
     },
     {
-      id: 8,
+      id: 9,
       name: 'Netflix Clone',
       createdAt: 'Github : 2021',
       description: 'Website - Open Source a React.js Project Built to show Movies Based on MoviesDB Api And React Hooks, Typescript',
@@ -194,7 +221,7 @@ export default function getProjectsList() {
       ]
     },
     {
-      id: 9,
+      id: 10,
       name: 'Github Clone',
       createdAt: 'Github : 2021',
       description: 'Website - Open Source a React.js Project With Github Api V3 Project To Show Popular Repos, PWA, Show Profile Repos, Information, Profile View With Github UserName, Grid - Linear List Toggle',
@@ -219,7 +246,7 @@ export default function getProjectsList() {
       ]
     },
     {
-      id: 10,
+      id: 11,
       name: 'Autohub V2.0',
       createdAt: 'Github : 2022',
       description: 'Android Application : Closed Source Multi Modular Application With Jetpack Compose',
@@ -248,7 +275,7 @@ export default function getProjectsList() {
       ]
     },
     {
-      id: 11,
+      id: 12,
       name: 'Destiny Api',
       createdAt: 'Github : 2021',
       description: 'Api - Open Source Spring Boot Project To Manage Firebase Admin SDK, Mysql, JWT Tokens, Mainly To Manage Mobile Applications and Built With Kotlin, Kotlin-Jackson',
@@ -266,7 +293,7 @@ export default function getProjectsList() {
       ]
     },
     {
-      id: 12,
+      id: 13,
       name: 'Legora',
       createdAt: 'Github : 2021',
       description: 'Android Application - Training Project to Test Vanite Source Code Library Built With Riot Api',
@@ -293,7 +320,7 @@ export default function getProjectsList() {
       ]
     },
     {
-      id: 13,
+      id: 14,
       name: 'All Projects',
       createdAt: 'View All Projects Open, Closed Source',
       description: 'Show All Projects In One List with All Links Required to Each Project with Description and More Filters',
