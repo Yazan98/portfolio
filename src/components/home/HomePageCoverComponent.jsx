@@ -26,9 +26,10 @@ export default function HomePageCoverComponent() {
             <div className={"grid grid-rows-3 gap-x-1 gap-y-2 grid-cols-2 max-w-xs"}>
               <p>Android - Kotlin</p>
               <p>React, Next.js</p>
-              <p>Spring Boot</p>
+              <p>Jetpack Compose</p>
               <p>NodeJs (Nest.js)</p>
               <p>CLI's (Js, Ruby)</p>
+              <p>SwiftUI Apps</p>
             </div>
             <div className="flex justify-left flex-wrap pt-6">
               <a
