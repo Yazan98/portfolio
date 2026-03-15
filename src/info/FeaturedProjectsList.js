@@ -11,6 +11,14 @@ import RafeeqImage9 from '../components/images/rafeeq_9.png';
 import RafeeqImage10 from '../components/images/rafeeq_10.png';
 import RafeeqImage11 from '../components/images/rafeeq_11.png';
 
+import ExpenziaImage from '../components/images/expenzia.png';
+import ExpenziaImage1 from '../components/images/expenzia_1.png';
+import ExpenziaImage2 from '../components/images/expenzia_2.png';
+import ExpenziaImage3 from '../components/images/expenzia_3.png';
+import ExpenziaImage4 from '../components/images/expenzia_4.png';
+import ExpenziaImage5 from '../components/images/expenzia_5.png';
+import ExpenziaImage6 from '../components/images/expenzia_6.png';
+
 export default function getFeaturedProjectsList() {
     return [
         {
@@ -33,6 +41,25 @@ export default function getFeaturedProjectsList() {
                 "Shared Database",
             ],
             images: [RafeeqImage1, RafeeqImage2, RafeeqImage3, RafeeqImage4, RafeeqImage5, RafeeqImage6, RafeeqImage7, RafeeqImage8, RafeeqImage9, RafeeqImage10, RafeeqImage11]
+        },
+        {
+            id: 2,
+            name: 'Expenzia',
+            createdAt: '2025',
+            description: 'Native Android Application for Expenses Tracker',
+            longDescription: "The Target of Building the Application is to Test the new Deployment of Android App to Google Play Store with the New Rules and Changes also to Learn how to Connect and Configure Admob Configurations",
+            image: ExpenziaImage,
+            imageProject: ExpenziaImage,
+            type: 'Android',
+            link: "https://play.google.com/store/apps/details?id=app.expenzia.android",
+            tags: [
+                "Room Database",
+                "Jetpack Compose",
+                "Admob",
+                "Google Play Store",
+                "Google Play Console"
+            ],
+            images: [ExpenziaImage1, ExpenziaImage2, ExpenziaImage3, ExpenziaImage4, ExpenziaImage5, ExpenziaImage6]
         },
         {
             id: 10,
@@ -61,7 +88,7 @@ export default function getFeaturedProjectsList() {
                 "https://raw.githubusercontent.com/Yazan98/Gitly/main/Screenshots/Simulator%20Screenshot%20-%20iPhone%2015%20Pro%20Max%20-%202024-01-19%20at%2013.46.10.png"
             ]
         }, {
-            id: 2,
+            id: 7,
             name: 'RickAndMorty',
             createdAt: 'Github : 2023',
             description: 'IOS Application Built with UIKit, Alamofire, Push Navigations, Nested Navigations, Tab Bar View, Realm, Collection Views',
