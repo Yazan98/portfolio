@@ -1,11 +1,27 @@
 import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
-import { Github, Linkedin, Mail, ArrowRight, Code2, Smartphone, Database, Server } from 'lucide-react';
+import { Github, Linkedin, Mail, Twitter, ArrowRight, Layers, Smartphone, Server, ChevronLeft, ChevronRight, Code2 } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import InteractiveBackground from '../components/ui/InteractiveBackground';
 
+// @ts-ignore
+import getProjectsList from '../info/ProjectsList';
+
+const languages = [
+    { name: 'Kotlin', tag: 'Mobile / Backend' },
+    { name: 'Java', tag: 'Enterprise' },
+    { name: 'TypeScript', tag: 'Frontend / APIs' },
+    { name: 'Swift', tag: 'iOS Native' },
+    { name: 'Dart', tag: 'Cross-Platform' },
+    { name: 'Ruby', tag: 'Scripting' },
+];
+
 const HomePage: React.FC = () => {
     const containerRef = useRef<HTMLDivElement>(null);
+    const projectsScrollRef = useRef<HTMLDivElement>(null);
+
+    // Fetch top 3 projects for the featured carousel
+    const featuredProjects = getProjectsList().slice(0, 3);
 
     useEffect(() => {
         // Complex GSAP Entrance Animation
@@ -17,14 +33,22 @@ const HomePage: React.FC = () => {
                 .from('.hero-desc', { y: 20, opacity: 0, duration: 0.6, ease: 'power2.out' }, "-=0.4")
                 .from('.hero-metrics .metric-item', { scale: 0.8, opacity: 0, duration: 0.5, stagger: 0.1, ease: 'back.out(1.5)' }, "-=0.2")
                 .from('.hero-buttons', { y: 20, opacity: 0, duration: 0.5, ease: 'power2.out' }, "-=0.3")
-                .from('.hero-socials a', { scale: 0, opacity: 0, duration: 0.4, stagger: 0.1, ease: 'back.out(2)' }, "-=0.2");
+                .from('.hero-socials a', { scale: 0, opacity: 0, duration: 0.4, stagger: 0.1, ease: 'back.out(2)' }, "-=0.2")
+                .from('.content-section', { y: 40, opacity: 0, duration: 0.8, stagger: 0.2, ease: 'power2.out' }, "-=0.2");
         }, containerRef);
 
         return () => ctx.revert();
     }, []);
 
+    const scrollProjects = (direction: 'left' | 'right') => {
+        if (projectsScrollRef.current) {
+            const { clientWidth } = projectsScrollRef.current;
+            projectsScrollRef.current.scrollBy({ left: direction === 'left' ? -clientWidth : clientWidth, behavior: 'smooth' });
+        }
+    };
+
     return (
-        <div className="relative min-h-[calc(100vh-4rem)] flex items-center bg-gray-50/50 dark:bg-dark-300/20 overflow-hidden">
+        <div className="relative min-h-[calc(100vh-4rem)] bg-dark-300 overflow-x-hidden">
             <Helmet>
                 <title>Yazan Tarifi - Software Engineer</title>
                 <meta name="description" content="Portfolio of Yazan Tarifi - Enterprise Mobile & Backend Developer" />
@@ -34,49 +58,49 @@ const HomePage: React.FC = () => {
             <InteractiveBackground />
 
             {/* Main Content Overlay */}
-            <div ref={containerRef} className="container mx-auto px-4 py-20 relative z-10 w-full">
-                <section className="max-w-5xl mx-auto flex flex-col items-center text-center">
+            <div ref={containerRef} className="relative z-10 w-full pt-20 pb-20">
+                <section className="container mx-auto px-4 max-w-5xl flex flex-col items-center text-center mb-32">
 
                     {/* Badge */}
-                    <div className="hero-badge inline-flex items-center gap-2 py-1.5 px-4 rounded-full bg-white dark:bg-dark-100 border border-gray-200 dark:border-gray-800 text-primary-600 dark:text-primary-400 text-sm font-semibold mb-8 shadow-sm">
+                    <div className="hero-badge inline-flex items-center gap-2 py-1.5 px-4 rounded-full bg-dark-100 border border-gray-800 text-primary-400 text-sm font-semibold mb-8 shadow-sm">
                         <span className="relative flex h-2 w-2">
                             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary-400 opacity-75"></span>
                             <span className="relative inline-flex rounded-full h-2 w-2 bg-primary-500"></span>
                         </span>
-                        Available for Enterprise Projects
+                        Building Enterprise Projects
                     </div>
 
                     {/* Title Elements */}
                     <div className="perspective-1000 mb-6">
-                        <h1 className="hero-title-line text-5xl md:text-7xl lg:text-8xl font-display font-extrabold tracking-tight text-gray-900 dark:text-white leading-[1.1]">
-                            Hi, I'm <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-600 to-purple-400 dark:from-primary-400 dark:to-cyan-400">Yazan Tarifi</span>
+                        <h1 className="hero-title-line text-5xl md:text-7xl lg:text-8xl font-display font-extrabold tracking-tight text-white leading-[1.1]">
+                            Hi, I'm <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-cyan-400">Yazan Tarifi</span>
                         </h1>
-                        <h2 className="hero-title-line text-3xl md:text-5xl font-display font-medium text-gray-600 dark:text-gray-300 mt-2">
-                            Software Engineer & Architect
+                        <h2 className="hero-title-line text-3xl md:text-5xl font-display font-medium text-gray-300 mt-2">
+                            Software Engineer
                         </h2>
                     </div>
 
                     {/* Description Details */}
-                    <p className="hero-desc text-lg md:text-xl text-gray-600 dark:text-gray-400 max-w-3xl mb-12 leading-relaxed">
-                        I specialize in building Native Mobile Applications (Android, iOS) with Kotlin Multiplatform and Jetpack Compose. I architect robust Backend services using NestJS and Kotlin/Ktor, focusing on scalable deployments, high-performance rendering, and seamless user experiences.
+                    <p className="hero-desc text-lg md:text-xl text-gray-400 max-w-3xl mb-12 leading-relaxed">
+                        Crafting elite Native Mobile experiences for Android & iOS. I masterfully weave modern UIs with Jetpack Compose & Compose Multiplatform, leverage the absolute cutting-edge of Kotlin Multiplatform for shared logic, and architect unshakeable Backend systems with NestJS & Spring Boot.
                     </p>
 
                     {/* Quick Metrics / Tech Stack */}
                     <div className="hero-metrics flex flex-wrap justify-center gap-4 md:gap-8 mb-12">
-                        <div className="metric-item flex flex-col items-center p-4 bg-white/60 dark:bg-dark-200/60 backdrop-blur-md rounded-2xl border border-gray-100 dark:border-gray-800 shadow-sm min-w-[140px]">
+                        <div className="metric-item flex flex-col items-center p-4 bg-dark-200/60 backdrop-blur-md rounded-2xl border border-gray-800 shadow-sm min-w-[150px]">
                             <Smartphone className="text-primary-500 mb-2" size={28} />
-                            <span className="font-bold text-gray-900 dark:text-white text-lg">Mobile Native</span>
-                            <span className="text-xs text-gray-500 dark:text-gray-400">Kotlin & KMP</span>
+                            <span className="font-bold text-white text-lg">Mobile Native</span>
+                            <span className="text-xs text-gray-400">Android & iOS</span>
                         </div>
-                        <div className="metric-item flex flex-col items-center p-4 bg-white/60 dark:bg-dark-200/60 backdrop-blur-md rounded-2xl border border-gray-100 dark:border-gray-800 shadow-sm min-w-[140px]">
+                        <div className="metric-item flex flex-col items-center p-4 bg-dark-200/60 backdrop-blur-md rounded-2xl border border-gray-800 shadow-sm min-w-[150px]">
+                            <Layers className="text-purple-500 mb-2" size={28} />
+                            <span className="font-bold text-white text-lg">Compose MP</span>
+                            <span className="text-xs text-gray-400">KMP & UI Sharing</span>
+                        </div>
+                        <div className="metric-item flex flex-col items-center p-4 bg-dark-200/60 backdrop-blur-md rounded-2xl border border-gray-800 shadow-sm min-w-[150px]">
                             <Server className="text-cyan-500 mb-2" size={28} />
-                            <span className="font-bold text-gray-900 dark:text-white text-lg">Backend API</span>
-                            <span className="text-xs text-gray-500 dark:text-gray-400">NestJS & Spring</span>
-                        </div>
-                        <div className="metric-item flex flex-col items-center p-4 bg-white/60 dark:bg-dark-200/60 backdrop-blur-md rounded-2xl border border-gray-100 dark:border-gray-800 shadow-sm min-w-[140px]">
-                            <Code2 className="text-purple-500 mb-2" size={28} />
-                            <span className="font-bold text-gray-900 dark:text-white text-lg">Web Web</span>
-                            <span className="text-xs text-gray-500 dark:text-gray-400">React & Next.js</span>
+                            <span className="font-bold text-white text-lg">Backend API</span>
+                            <span className="text-xs text-gray-400">NestJS & Spring Boot</span>
                         </div>
                     </div>
 
@@ -85,30 +109,105 @@ const HomePage: React.FC = () => {
                         <a href="/projects" className="flex items-center gap-2 px-8 py-4 rounded-full bg-gradient-to-r from-primary-600 to-primary-500 hover:from-primary-500 hover:to-primary-400 text-white font-bold transition-all shadow-lg shadow-primary-500/25 hover:shadow-primary-500/40 transform hover:-translate-y-1">
                             Explore My Work <ArrowRight size={20} />
                         </a>
-                        <a href="mailto:yazantarifi98@gmail.com" className="flex items-center gap-2 px-8 py-4 rounded-full bg-white dark:bg-dark-100 border border-gray-200 dark:border-gray-800 hover:border-primary-500/50 text-gray-900 dark:text-white font-bold transition-all transform hover:-translate-y-1">
+                        <a href="mailto:yazantarifi98@gmail.com" className="flex items-center gap-2 px-8 py-4 rounded-full bg-dark-100 border border-gray-800 hover:border-primary-500/50 text-white font-bold transition-all transform hover:-translate-y-1">
                             Contact Me
                         </a>
                     </div>
 
                     {/* Socials */}
-                    <div className="hero-socials flex items-center gap-6 text-gray-500 dark:text-gray-400">
-                        <a href="https://github.com/Yazan98" target="_blank" rel="noopener noreferrer" aria-label="Github" className="p-3 bg-white dark:bg-dark-200 rounded-full shadow-sm hover:text-gray-900 dark:hover:text-white hover:scale-110 transition-all border border-gray-100 dark:border-gray-800">
+                    <div className="hero-socials flex items-center gap-6 text-gray-400">
+                        <a href="https://github.com/Yazan98" target="_blank" rel="noopener noreferrer" aria-label="Github" className="p-3 bg-dark-200 rounded-full shadow-sm hover:text-white hover:scale-110 transition-all border border-gray-800">
                             <Github size={22} />
                         </a>
-                        <a href="https://linkedin.com/in/yazantarifi" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="p-3 bg-white dark:bg-dark-200 rounded-full shadow-sm hover:text-primary-600 hover:scale-110 transition-all border border-gray-100 dark:border-gray-800">
+                        <a href="https://x.com/YazanT98" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)" className="p-3 bg-dark-200 rounded-full shadow-sm hover:text-[#1DA1F2] hover:scale-110 transition-all border border-gray-800">
+                            <Twitter size={22} />
+                        </a>
+                        <a href="https://linkedin.com/in/yazantarifi" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="p-3 bg-dark-200 rounded-full shadow-sm hover:text-primary-600 hover:scale-110 transition-all border border-gray-800">
                             <Linkedin size={22} />
                         </a>
-                        <a href="mailto:yazantarifi98@gmail.com" aria-label="Email" className="p-3 bg-white dark:bg-dark-200 rounded-full shadow-sm hover:text-red-500 hover:scale-110 transition-all border border-gray-100 dark:border-gray-800">
+                        <a href="mailto:yazantarifi98@gmail.com" aria-label="Email" className="p-3 bg-dark-200 rounded-full shadow-sm hover:text-red-500 hover:scale-110 transition-all border border-gray-800">
                             <Mail size={22} />
                         </a>
                     </div>
+                </section>
 
+                {/* Programming Languages Section */}
+                <section className="content-section container mx-auto px-4 max-w-5xl mb-32">
+                    <div className="flex items-center justify-between mb-8">
+                        <h3 className="text-3xl font-display font-bold text-white flex items-center gap-3">
+                            <Code2 className="text-primary-500" /> Core Languages
+                        </h3>
+                    </div>
+                    <div className="grid grid-cols-2 lg:grid-cols-3 gap-4">
+                        {languages.map(lang => (
+                            <div key={lang.name} className="flex items-center gap-4 bg-dark-200/50 border border-gray-800/60 hover:border-primary-500/40 p-5 rounded-2xl transition-colors backdrop-blur-sm group">
+                                <div className="h-2 w-2 rounded-full bg-primary-500 group-hover:scale-150 transition-transform"></div>
+                                <div>
+                                    <h4 className="font-bold text-lg text-white">{lang.name}</h4>
+                                    <p className="text-xs text-gray-400">{lang.tag}</p>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </section>
+
+                {/* Featured Projects Horizonal Carousel */}
+                <section className="content-section w-full">
+                    <div className="container mx-auto px-4 max-w-5xl flex items-center justify-between mb-8">
+                        <h3 className="text-3xl font-display font-bold text-white">Featured Projects</h3>
+                        <div className="flex gap-2">
+                            <button onClick={() => scrollProjects('left')} className="p-3 rounded-full bg-dark-200 border border-gray-800 hover:bg-dark-100 hover:border-primary-500 transition-colors text-white">
+                                <ChevronLeft size={20} />
+                            </button>
+                            <button onClick={() => scrollProjects('right')} className="p-3 rounded-full bg-dark-200 border border-gray-800 hover:bg-dark-100 hover:border-primary-500 transition-colors text-white">
+                                <ChevronRight size={20} />
+                            </button>
+                        </div>
+                    </div>
+
+                    <div
+                        ref={projectsScrollRef}
+                        className="flex overflow-x-auto snap-x snap-mandatory hide-scrollbar pb-8"
+                        style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+                    >
+                        {featuredProjects.map((project: any) => (
+                            <div key={project.id} className="min-w-full w-full snap-center px-4 md:px-12 flex-shrink-0">
+                                <div className="relative h-[60vh] min-h-[400px] w-full max-w-6xl mx-auto rounded-3xl overflow-hidden group">
+                                    {project.image && (
+                                        <img src={project.image} alt={project.name} className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                                    )}
+                                    <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/60 to-transparent"></div>
+                                    <div className="absolute bottom-0 left-0 w-full p-8 md:p-14 z-10">
+                                        <span className="inline-block px-3 py-1 rounded bg-primary-600/20 text-primary-400 border border-primary-500/30 text-xs font-bold uppercase tracking-wider mb-4 backdrop-blur-md">
+                                            {project.type === 'ANDROID_APP' ? 'Android Native' : project.type}
+                                        </span>
+                                        <h4 className="text-4xl md:text-5xl font-display font-bold text-white mb-4 leading-tight">{project.name}</h4>
+                                        <p className="text-lg text-gray-300 max-w-2xl mb-6 line-clamp-2 md:line-clamp-none">
+                                            {project.description}
+                                        </p>
+                                        <div className="flex flex-wrap gap-2">
+                                            {(project.tags || []).slice(0, 4).map((tech: string) => (
+                                                <span key={tech} className="px-3 py-1 bg-dark-100/80 border border-gray-700/50 backdrop-blur-md text-gray-300 text-sm rounded-full">
+                                                    {tech}
+                                                </span>
+                                            ))}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
                 </section>
             </div>
 
             {/* Ambient gradients to blend with canvas */}
             <div className="absolute top-0 left-0 w-full h-[500px] bg-gradient-to-b from-primary-900/10 to-transparent pointer-events-none z-0"></div>
             <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-cyan-900/10 rounded-full blur-[100px] pointer-events-none z-0"></div>
+
+            <style dangerouslySetInnerHTML={{
+                __html: `
+                .hide-scrollbar::-webkit-scrollbar { display: none; }
+            `}} />
         </div>
     );
 };

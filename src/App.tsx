@@ -10,18 +10,12 @@ import Footer from './components/layout/Footer';
 import SplashScreen from './components/layout/SplashScreen';
 
 function App() {
-    const [isDarkMode, setIsDarkMode] = useState(true);
     const [showSplash, setShowSplash] = useState(true);
 
     useEffect(() => {
-        if (isDarkMode) {
-            document.documentElement.classList.add('dark');
-        } else {
-            document.documentElement.classList.remove('dark');
-        }
-    }, [isDarkMode]);
-
-    const toggleDarkMode = () => setIsDarkMode(!isDarkMode);
+        // Enforce pure Dark Mode layout
+        document.documentElement.classList.add('dark');
+    }, []);
 
     return (
         <BrowserRouter>
@@ -67,7 +61,7 @@ function App() {
             </Helmet>
 
             <div className={`flex flex-col min-h-screen bg-white dark:bg-dark-300 text-gray-900 dark:text-gray-100 transition-colors duration-300 ${showSplash ? 'opacity-0' : 'opacity-100 transition-opacity duration-1000'}`}>
-                <Navbar isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />
+                <Navbar />
                 <main className="flex-grow">
                     <Routes>
                         <Route path="/" element={<HomePage />} />

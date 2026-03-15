@@ -71,7 +71,7 @@ const SplashScreen: React.FC<SplashScreenProps> = ({ onComplete }) => {
             </div>
 
             <p className="splash-text mt-12 text-primary-300/80 font-medium tracking-widest uppercase text-sm drop-shadow-md">
-                Initializing Portfolio
+                Yazan Tarifi Portfolio
             </p>
         </div>
     );

@@ -12,25 +12,25 @@ class Bubble {
     constructor(x: number, y: number, color: string) {
         this.x = x;
         this.y = y;
-        this.size = Math.random() * 20 + 5;
-        this.speedX = (Math.random() - 0.5) * 3;
-        this.speedY = (Math.random() - 0.5) * 3;
+        this.size = Math.random() * 25 + 10;
+        this.speedX = (Math.random() - 0.5) * 1.5; // Slower drift
+        this.speedY = (Math.random() - 0.5) * 1.5 - 0.5; // Slower drift, slightly upward
         this.color = color;
-        this.life = 1;
+        this.life = 0.8; // Lower initial opacity for chiller vibe
     }
 
     update() {
         this.x += this.speedX;
         this.y += this.speedY;
-        this.size *= 0.95; // Shrink over time
-        this.life -= 0.02; // Fade out
+        this.size *= 0.98; // Shrink much slower
+        this.life -= 0.008; // Fade out much slower
     }
 
     draw(ctx: CanvasRenderingContext2D) {
         ctx.save();
         ctx.globalAlpha = Math.max(0, this.life);
         ctx.fillStyle = this.color;
-        ctx.shadowBlur = 15;
+        ctx.shadowBlur = 25; // Increase glow
         ctx.shadowColor = this.color;
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
@@ -75,8 +75,8 @@ const InteractiveBackground: React.FC = () => {
             mouseY = e.clientY;
             isMoving = true;
 
-            // Generate particles at mouse position
-            for (let i = 0; i < 2; i++) {
+            // Generate particles at mouse position but fewer
+            if (Math.random() > 0.5) {
                 const color = colors[Math.floor(Math.random() * colors.length)];
                 bubbles.current.push(new Bubble(mouseX, mouseY, color));
             }
@@ -101,8 +101,8 @@ const InteractiveBackground: React.FC = () => {
             // Remove dead bubbles
             bubbles.current = bubbles.current.filter((b) => b.life > 0 && b.size > 0.5);
 
-            // Add stray ambient bubbles if not moving to keep it alive
-            if (!isMoving && Math.random() > 0.95) {
+            // Add stray ambient bubbles less frequently
+            if (!isMoving && Math.random() > 0.98) {
                 const color = colors[Math.floor(Math.random() * colors.length)];
                 bubbles.current.push(new Bubble(
                     Math.random() * width,
