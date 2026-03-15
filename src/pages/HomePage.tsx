@@ -1,8 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { Github, Linkedin, Mail, Twitter, ArrowRight, Layers, Smartphone, Server, ChevronLeft, ChevronRight, Code2, AppWindow } from 'lucide-react';
-import { SiKotlin, SiTypescript, SiSwift, SiJavascript, SiRuby } from 'react-icons/si';
-import { FaJava, FaMediumM } from 'react-icons/fa';
+import { FaMediumM } from 'react-icons/fa';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import InteractiveBackground from '../components/ui/InteractiveBackground';
@@ -11,12 +10,12 @@ import InteractiveBackground from '../components/ui/InteractiveBackground';
 import getProjectsList from '../info/ProjectsList';
 
 const languages = [
-    { name: 'Kotlin', tag: 'Mobile / Backend', icon: <SiKotlin size={28} className="text-[#0095D5]" /> },
-    { name: 'Java', tag: 'Enterprise', icon: <FaJava size={28} className="text-[#ED8B00]" /> },
-    { name: 'TypeScript', tag: 'Frontend / APIs', icon: <SiTypescript size={28} className="text-[#3178C6]" /> },
-    { name: 'Swift', tag: 'iOS Native', icon: <SiSwift size={28} className="text-[#F05138]" /> },
-    { name: 'JavaScript', tag: 'Web / Full-Stack', icon: <SiJavascript size={28} className="text-[#F7DF1E]" /> },
-    { name: 'Ruby', tag: 'Scripting', icon: <SiRuby size={28} className="text-[#CC342D]" /> },
+    { name: 'Kotlin', tag: 'Mobile / Backend', icon: <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/kotlin/kotlin-original.svg" alt="Kotlin" className="w-10 h-10 drop-shadow-md group-hover:drop-shadow-[0_0_12px_rgba(0,149,213,0.6)] transition-all duration-300" /> },
+    { name: 'Java', tag: 'Enterprise', icon: <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" alt="Java" className="w-10 h-10 drop-shadow-md group-hover:drop-shadow-[0_0_12px_rgba(237,139,0,0.6)] transition-all duration-300" /> },
+    { name: 'TypeScript', tag: 'Frontend / APIs', icon: <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" alt="TypeScript" className="w-10 h-10 drop-shadow-md group-hover:drop-shadow-[0_0_12px_rgba(49,120,198,0.6)] transition-all duration-300" /> },
+    { name: 'Swift', tag: 'iOS Native', icon: <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/swift/swift-original.svg" alt="Swift" className="w-10 h-10 drop-shadow-md group-hover:drop-shadow-[0_0_12px_rgba(240,81,56,0.6)] transition-all duration-300" /> },
+    { name: 'JavaScript', tag: 'Web / Full-Stack', icon: <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" alt="JavaScript" className="w-10 h-10 drop-shadow-md group-hover:drop-shadow-[0_0_12px_rgba(247,223,30,0.6)] transition-all duration-300" /> },
+    { name: 'Ruby', tag: 'Scripting', icon: <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/ruby/ruby-original.svg" alt="Ruby" className="w-10 h-10 drop-shadow-md group-hover:drop-shadow-[0_0_12px_rgba(204,52,45,0.6)] transition-all duration-300" /> },
 ];
 
 const HomePage: React.FC = () => {
