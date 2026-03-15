@@ -83,9 +83,9 @@ const ProjectsPage: React.FC = () => {
                 ))}
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-6 md:gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 gap-6 md:gap-8">
                 {filteredProjects.map((project: any) => (
-                    <div key={project.id} className="project-card group [perspective:1500px] h-[350px] sm:h-[400px]">
+                    <div key={project.id} className="project-card group [perspective:1500px] h-[260px] sm:h-[280px]">
                         {/* 3D Flip Container wrapper */}
                         <div className="relative w-full h-full transition-all duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)] shadow-xl hover:shadow-primary-500/20 rounded-2xl">
 
@@ -150,16 +150,6 @@ const ProjectsPage: React.FC = () => {
                                             </span>
                                         )}
                                     </div>
-
-                                    {/* CTA Button */}
-                                    <a
-                                        href={project.link || '#'}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="w-full py-3.5 flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-primary-600 to-cyan-600 text-white font-bold hover:shadow-[0_0_20px_rgba(0,149,213,0.4)] transition-all transform hover:-translate-y-0.5"
-                                    >
-                                        View Details
-                                    </a>
                                 </div>
                             </div>
                         </div>

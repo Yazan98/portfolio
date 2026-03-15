@@ -132,13 +132,13 @@ const HomePage: React.FC = () => {
                             <Code2 className="text-primary-500" /> Core Languages
                         </h3>
                     </div>
-                    <div className="grid grid-cols-2 lg:grid-cols-3 gap-4">
+                    <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-4 lg:gap-5">
                         {languages.map(lang => (
-                            <div key={lang.name} className="flex items-center gap-5 bg-dark-200/80 border border-gray-800/80 hover:border-primary-500/50 p-6 rounded-2xl transition-all backdrop-blur-md group hover:shadow-lg hover:shadow-primary-500/10">
-                                <div className="group-hover:scale-110 transition-transform bg-dark-100 p-3 rounded-xl border border-gray-800 shadow-inner">
+                            <div key={lang.name} className="flex md:flex-row flex-col items-center justify-center md:justify-start gap-2 md:gap-5 bg-dark-200/80 border border-gray-800/80 hover:border-primary-500/50 p-4 md:p-6 rounded-2xl transition-all backdrop-blur-md group hover:shadow-lg hover:shadow-primary-500/10 aspect-square md:aspect-auto">
+                                <div className="group-hover:scale-110 transition-transform bg-dark-100 p-3 rounded-xl border border-gray-800 shadow-inner flex-shrink-0">
                                     {lang.icon}
                                 </div>
-                                <div>
+                                <div className="hidden md:block">
                                     <h4 className="font-bold text-lg text-white group-hover:text-primary-400 transition-colors">{lang.name}</h4>
                                     <p className="text-xs text-gray-400">{lang.tag}</p>
                                 </div>
@@ -149,6 +149,37 @@ const HomePage: React.FC = () => {
 
                 {/* Featured Projects Component */}
                 <FeaturedProjects />
+
+                {/* GitHub CTA Section */}
+                <section className="content-section container mx-auto px-4 max-w-5xl mb-32 mt-20 relative group">
+                    <div className="relative z-10 p-10 md:p-14 rounded-[3rem] bg-gradient-to-br from-dark-200/90 to-dark-100 border border-gray-800 shadow-2xl overflow-hidden flex flex-col md:flex-row items-center justify-between gap-10 transform transition-all duration-500 hover:border-primary-500/30">
+                        {/* Background glowing effects */}
+                        <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-primary-600/10 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/4 transition-opacity duration-700 group-hover:opacity-100 opacity-60"></div>
+                        <div className="absolute bottom-0 left-0 w-[300px] h-[300px] bg-cyan-600/10 rounded-full blur-[80px] translate-y-1/3 -translate-x-1/4 transition-opacity duration-700 group-hover:opacity-100 opacity-60"></div>
+
+                        <div className="relative z-10 flex-1 text-center md:text-left">
+                            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-dark-300/80 border border-gray-700 text-gray-300 text-xs font-bold uppercase tracking-widest mb-6 shadow-sm backdrop-blur-md">
+                                <Github size={14} className="text-white" /> Open Source
+                            </div>
+                            <h2 className="text-4xl md:text-5xl font-display font-black text-white mb-5 tracking-tight">
+                                Explore <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-cyan-400">All Projects</span>
+                            </h2>
+                            <p className="text-gray-400 text-lg leading-relaxed max-w-xl mx-auto md:mx-0">
+                                Dive into my GitHub repository to find a diverse collection of public projects, open-source algorithms, and experimental codebases built with cutting-edge technologies.
+                            </p>
+                        </div>
+
+                        <div className="relative z-10 flex-shrink-0 mt-4 md:mt-0">
+                            <a href="https://github.com/Yazan98" target="_blank" rel="noopener noreferrer" className="group/btn relative inline-flex items-center justify-center gap-3 px-8 py-5 bg-white text-black font-extrabold text-lg rounded-full overflow-hidden transition-all duration-300 hover:scale-105 active:scale-95 shadow-[0_0_40px_-10px_rgba(255,255,255,0.2)] hover:shadow-[0_0_60px_-15px_rgba(255,255,255,0.6)]">
+                                <span className="absolute inset-0 w-full h-full -mt-1 rounded-lg opacity-10 bg-gradient-to-b from-transparent via-transparent to-black pointer-events-none"></span>
+                                <div className="absolute inset-0 bg-gradient-to-r from-primary-100 to-cyan-100 opacity-0 group-hover/btn:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
+                                <Github size={24} className="relative z-10 group-hover/btn:rotate-12 transition-transform duration-300" />
+                                <span className="relative z-10 text-black">View GitHub Profile</span>
+                                <ArrowRight size={20} className="relative z-10 text-black group-hover/btn:translate-x-1.5 transition-transform duration-300" />
+                            </a>
+                        </div>
+                    </div>
+                </section>
             </div>
 
             {/* Ambient gradients to blend with canvas */}

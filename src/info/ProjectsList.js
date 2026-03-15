@@ -18,6 +18,7 @@ import ExpenziaImage3 from '../components/images/expenzia_3.png';
 import ExpenziaImage4 from '../components/images/expenzia_4.png';
 import ExpenziaImage5 from '../components/images/expenzia_5.png';
 import ExpenziaImage6 from '../components/images/expenzia_6.png';
+import LegoraImage from '../components/images/legora.png';
 
 export const ALL_FILTER_TYPE = 'all';
 export const ANDROID_FILTER_TYPE = 'android';
@@ -72,6 +73,38 @@ export default function getProjectsList() {
         "Google Play Console"
       ],
       images: [ExpenziaImage1, ExpenziaImage2, ExpenziaImage3, ExpenziaImage4, ExpenziaImage5, ExpenziaImage6]
+    },
+    {
+      id: 3,
+      name: 'Legora',
+      createdAt: '2024',
+      description: 'League of Legends Mobile Application Built with Kotlin Multiplatform',
+      longDescription: "This Project was the first try of Express Framework with Kotlin Multiplatform for Building a Full Stack Mobile Application with Backend, Apis, Deployment with Routing and Load Balancing with Nginx and Connecting to a Native Mobile Apps Using Kotlin Multiplatform for using Shared Logic and Native UI",
+      image: LegoraImage,
+      imageProject: LegoraImage,
+      type: MOBILE_FILTER_TYPE,
+      link: "https://github.com/Yazan98/legora",
+      tags: [
+        "Room Database",
+        "Jetpack Compose",
+        "SwiftUI",
+        "Kotlin Multiplatform",
+        "Express",
+        "Nginx"
+      ],
+      images: [
+        "https://github.com/Yazan98/legora/raw/main/images/android/Screenshot_20240706_191903.png?raw=true",
+        "https://github.com/Yazan98/legora/raw/main/images/android/Screenshot_20240706_192011.png?raw=true",
+        "https://github.com/Yazan98/legora/raw/main/images/android/Screenshot_20240706_192511.png?raw=true",
+        "https://github.com/Yazan98/legora/raw/main/images/android/Screenshot_20240706_192524.png?raw=true",
+        "https://github.com/Yazan98/legora/raw/main/images/android/Screenshot_20240706_192542.png?raw=true",
+        "https://github.com/Yazan98/legora/raw/main/images/android/Screenshot_20240706_192557.png?raw=true",
+        "https://github.com/Yazan98/legora/raw/main/images/android/Screenshot_20240706_192644.png?raw=true",
+        "https://github.com/Yazan98/legora/raw/main/images/ios/Simulator%20Screenshot%20-%20iPhone%2015%20Pro%20Max%20-%202024-07-06%20at%2019-portrait%202.png?raw=true",
+        "https://github.com/Yazan98/legora/raw/main/images/ios/Simulator%20Screenshot%20-%20iPhone%2015%20Pro%20Max%20-%202024-07-06%20at%2019-portrait%203.png?raw=true",
+        "https://github.com/Yazan98/legora/raw/main/images/ios/Simulator%20Screenshot%20-%20iPhone%2015%20Pro%20Max%20-%202024-07-06%20at%2019-portrait%204.png?raw=true",
+        "https://github.com/Yazan98/legora/raw/main/images/ios/Simulator%20Screenshot%20-%20iPhone%2015%20Pro%20Max%20-%202024-07-06%20at%2019-portrait.png?raw=true"
+      ]
     },
     {
       id: 10,

@@ -9,6 +9,7 @@ import SkillsPage from './pages/SkillsPage';
 import Navbar from './components/layout/Navbar';
 import Footer from './components/layout/Footer';
 import SplashScreen from './components/layout/SplashScreen';
+import ScrollToTop from './components/layout/ScrollToTop';
 
 function App() {
     const [showSplash, setShowSplash] = useState(true);
@@ -20,6 +21,7 @@ function App() {
 
     return (
         <BrowserRouter>
+            <ScrollToTop />
             {showSplash && <SplashScreen onComplete={() => setShowSplash(false)} />}
 
             <Helmet>

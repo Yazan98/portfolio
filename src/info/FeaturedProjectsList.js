@@ -19,6 +19,8 @@ import ExpenziaImage4 from '../components/images/expenzia_4.png';
 import ExpenziaImage5 from '../components/images/expenzia_5.png';
 import ExpenziaImage6 from '../components/images/expenzia_6.png';
 
+import LegoraImage from '../components/images/legora.png';
+
 export default function getFeaturedProjectsList() {
     return [
         {
@@ -62,7 +64,39 @@ export default function getFeaturedProjectsList() {
             images: [ExpenziaImage1, ExpenziaImage2, ExpenziaImage3, ExpenziaImage4, ExpenziaImage5, ExpenziaImage6]
         },
         {
-            id: 10,
+            id: 3,
+            name: 'Legora',
+            createdAt: '2024',
+            description: 'League of Legends Mobile Application Built with Kotlin Multiplatform',
+            longDescription: "This Project was the first try of Express Framework with Kotlin Multiplatform for Building a Full Stack Mobile Application with Backend, Apis, Deployment with Routing and Load Balancing with Nginx and Connecting to a Native Mobile Apps Using Kotlin Multiplatform for using Shared Logic and Native UI",
+            image: LegoraImage,
+            imageProject: LegoraImage,
+            type: 'mobile',
+            link: "https://github.com/Yazan98/legora",
+            tags: [
+                "Room Database",
+                "Jetpack Compose",
+                "SwiftUI",
+                "Kotlin Multiplatform",
+                "Express",
+                "Nginx"
+            ],
+            images: [
+                "https://github.com/Yazan98/legora/raw/main/images/android/Screenshot_20240706_191903.png?raw=true",
+                "https://github.com/Yazan98/legora/raw/main/images/android/Screenshot_20240706_192011.png?raw=true",
+                "https://github.com/Yazan98/legora/raw/main/images/android/Screenshot_20240706_192511.png?raw=true",
+                "https://github.com/Yazan98/legora/raw/main/images/android/Screenshot_20240706_192524.png?raw=true",
+                "https://github.com/Yazan98/legora/raw/main/images/android/Screenshot_20240706_192542.png?raw=true",
+                "https://github.com/Yazan98/legora/raw/main/images/android/Screenshot_20240706_192557.png?raw=true",
+                "https://github.com/Yazan98/legora/raw/main/images/android/Screenshot_20240706_192644.png?raw=true",
+                "https://github.com/Yazan98/legora/raw/main/images/ios/Simulator%20Screenshot%20-%20iPhone%2015%20Pro%20Max%20-%202024-07-06%20at%2019-portrait%202.png?raw=true",
+                "https://github.com/Yazan98/legora/raw/main/images/ios/Simulator%20Screenshot%20-%20iPhone%2015%20Pro%20Max%20-%202024-07-06%20at%2019-portrait%203.png?raw=true",
+                "https://github.com/Yazan98/legora/raw/main/images/ios/Simulator%20Screenshot%20-%20iPhone%2015%20Pro%20Max%20-%202024-07-06%20at%2019-portrait%204.png?raw=true",
+                "https://github.com/Yazan98/legora/raw/main/images/ios/Simulator%20Screenshot%20-%20iPhone%2015%20Pro%20Max%20-%202024-07-06%20at%2019-portrait.png?raw=true"
+            ]
+        },
+        {
+            id: 4,
             name: 'Gitly',
             createdAt: 'Github : 2024',
             description: 'IOS Application Built with SwiftUI, GraphQL, Apollo Client, UserDefaults, MVVM, Dynamic Widgets, Nested Navigations',
@@ -86,108 +120,6 @@ export default function getFeaturedProjectsList() {
                 "https://raw.githubusercontent.com/Yazan98/Gitly/main/Screenshots/Simulator%20Screenshot%20-%20iPhone%2015%20Pro%20Max%20-%202024-01-19%20at%2013.45.56.png",
                 "https://raw.githubusercontent.com/Yazan98/Gitly/main/Screenshots/Simulator%20Screenshot%20-%20iPhone%2015%20Pro%20Max%20-%202024-01-19%20at%2013.46.35.png",
                 "https://raw.githubusercontent.com/Yazan98/Gitly/main/Screenshots/Simulator%20Screenshot%20-%20iPhone%2015%20Pro%20Max%20-%202024-01-19%20at%2013.46.10.png"
-            ]
-        }, {
-            id: 7,
-            name: 'RickAndMorty',
-            createdAt: 'Github : 2023',
-            description: 'IOS Application Built with UIKit, Alamofire, Push Navigations, Nested Navigations, Tab Bar View, Realm, Collection Views',
-            longDescription: "This Project Built to Learn the Nested Navigations, Nested Collection Views, Nested Push Navigations Built with Alamofire, Realm IOS SDK, UIKit",
-            image: 'https://raw.githubusercontent.com/Yazan98/portfolio/v3.1.2/src/components/images/rick_morty_preview.webp',
-            imageProject: "https://raw.githubusercontent.com/Yazan98/portfolio/v3.1.2/src/components/images/rick_morty_preview.webp",
-            type: 'ios',
-            link: "https://github.com/Yazan98/rick-morty-ios-app",
-            tags: [
-                "IOS App",
-                "Swift 5",
-                "UIKit",
-                "Realm IOS",
-                "Alamofire",
-                "CollectionViews",
-                "Tab Bar Layout",
-                "Nested Navigations",
-            ],
-            images: [
-                "https://private-user-images.githubusercontent.com/29167110/265701773-1abca177-7a01-4b38-a670-7c2ec09e4f89.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MTM1OTE3MTMsIm5iZiI6MTcxMzU5MTQxMywicGF0aCI6Ii8yOTE2NzExMC8yNjU3MDE3NzMtMWFiY2ExNzctN2EwMS00YjM4LWE2NzAtN2MyZWMwOWU0Zjg5LnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDA0MjAlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQwNDIwVDA1MzY1M1omWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWYwODgxNjViZTNmZTNmODJkM2Y4NTgwNzI1YTFiZTE1NWMwZjQwZTBiM2FkMTNiMTI4YmVmMzYyYmYwNjYzOWImWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.FFyKnVyQXZm0wb7SbxW39sTMMf7y3pZetmYM9FOaY30",
-                "https://private-user-images.githubusercontent.com/29167110/265701930-2176e896-977e-4a3e-88a6-f303423eb71f.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MTM1OTE3MTMsIm5iZiI6MTcxMzU5MTQxMywicGF0aCI6Ii8yOTE2NzExMC8yNjU3MDE5MzAtMjE3NmU4OTYtOTc3ZS00YTNlLTg4YTYtZjMwMzQyM2ViNzFmLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDA0MjAlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQwNDIwVDA1MzY1M1omWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWNlMGNkOTJmNjkzMDNhMmM3NTk4MDViOTQzMTc0MzQxMzljNDJhMTRlMTc5MTIwMjJjMDJjODM3NTMxYWEyYjUmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.5jxeJ0HZVygHLfH2OfvVsbMMjDRaYMncPTsMfq-gpd0",
-                "https://private-user-images.githubusercontent.com/29167110/265702010-34a8b1a4-9a3c-42b7-be88-97abef470a1e.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MTM1OTE3MTMsIm5iZiI6MTcxMzU5MTQxMywicGF0aCI6Ii8yOTE2NzExMC8yNjU3MDIwMTAtMzRhOGIxYTQtOWEzYy00MmI3LWJlODgtOTdhYmVmNDcwYTFlLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDA0MjAlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQwNDIwVDA1MzY1M1omWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTgwMDAyY2ZjZWZhOWJlMDlhYjc2OWNjMzcwMzAzZjBkODM0YmNiNzQ4NDhkMjI0NTkyNWE3MGEzYWM5YzhmZjAmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.YCWHOukYd_2sir_NpaJN7EXCyYtdtVEBx_0NvN28iJw",
-                "https://private-user-images.githubusercontent.com/29167110/265702414-48513136-9679-4939-80a3-42769cbc7a86.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MTM1OTE3MTMsIm5iZiI6MTcxMzU5MTQxMywicGF0aCI6Ii8yOTE2NzExMC8yNjU3MDI0MTQtNDg1MTMxMzYtOTY3OS00OTM5LTgwYTMtNDI3NjljYmM3YTg2LnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDA0MjAlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQwNDIwVDA1MzY1M1omWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTk1NDA2M2NjNDVkMmE1MmE2ZGE3ZmUyNjI2YjY1YWZiOTk4MzBhODYxZWY3ODQ0OTUxMmE4ZTI2M2E2MTRiYzUmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.BX-ewZVBDld2THCMmbmipReOJDDp82KD_Dq4EXOBZdI",
-                "https://private-user-images.githubusercontent.com/29167110/265702545-6126642a-43a1-4af7-a15a-2d3fa5e9cb1b.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MTM1OTE3MTMsIm5iZiI6MTcxMzU5MTQxMywicGF0aCI6Ii8yOTE2NzExMC8yNjU3MDI1NDUtNjEyNjY0MmEtNDNhMS00YWY3LWExNWEtMmQzZmE1ZTljYjFiLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDA0MjAlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQwNDIwVDA1MzY1M1omWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWEyM2RmMDViM2M0ZTMyOGY2MGFhNjU2MjRlMjYyMTNmNzI1ZjQ3NDUxZjIyZmQxOTBmZDI4YzcwY2NlYjYyZjYmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.kcyv7kXLM9f0w-OYiUK0TiJzjtt0SuYf73U7gETH3Co",
-                "https://private-user-images.githubusercontent.com/29167110/265703050-b32d4598-1ad1-496c-99f0-3324cbf82a41.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MTM1OTE3MTMsIm5iZiI6MTcxMzU5MTQxMywicGF0aCI6Ii8yOTE2NzExMC8yNjU3MDMwNTAtYjMyZDQ1OTgtMWFkMS00OTZjLTk5ZjAtMzMyNGNiZjgyYTQxLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDA0MjAlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQwNDIwVDA1MzY1M1omWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWM1OWZhYjFmYWJhN2Q0ZmI1OGRmYmFhNTc0MDQzMDY5Y2NiY2IzY2QwYTYyYzFhODEyOTY3NTA0YWRiMTAyNjUmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.Dh_1FjHQv66uASMGql7rogpnNmC_hLQD02SG9ezc6MQ",
-                "https://private-user-images.githubusercontent.com/29167110/265702966-20c9f581-10c1-4605-a6f4-a6b9b5adad99.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MTM1OTE3MTMsIm5iZiI6MTcxMzU5MTQxMywicGF0aCI6Ii8yOTE2NzExMC8yNjU3MDI5NjYtMjBjOWY1ODEtMTBjMS00NjA1LWE2ZjQtYTZiOWI1YWRhZDk5LnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDA0MjAlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQwNDIwVDA1MzY1M1omWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWZkZDkyMDc2MzBjNTZhMjhhYWVlM2UxMGQ1ZmYyMDVjYjRiNDYxZGZhMWUxODA1NDFjMWI5MzQ0M2U3ZjdjOTcmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0._7KCRFnvuxPra9r0hRCqWPAVgoDMYlRPq1hJ8MW30rs",
-                "https://private-user-images.githubusercontent.com/29167110/265703340-3694bb40-3314-4235-88ab-b934705aeb9e.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MTM1OTE3MTMsIm5iZiI6MTcxMzU5MTQxMywicGF0aCI6Ii8yOTE2NzExMC8yNjU3MDMzNDAtMzY5NGJiNDAtMzMxNC00MjM1LTg4YWItYjkzNDcwNWFlYjllLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDA0MjAlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQwNDIwVDA1MzY1M1omWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTg2MzFhM2Y2N2Y5ZWEyNDM1YmJiNGM3M2NkOWRhZTdiNmM5ZjRmNGM1ODVhNjAzMmFmOWUzMGY1ZDJlMWE1NTkmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.C_w6rKCKrP2n5mE07423Xt5h-J-cMetOLBpM1lKEoOo"
-            ]
-        }, {
-            id: 3,
-            name: 'Coina',
-            createdAt: 'Github : 2023',
-            description: 'Kotlin Multiplatform Mobile Application Written in Kotlin Jetpack Compose and Swift with SwiftUI, Ktor Client',
-            longDescription: "This Project Built to test the Concept of Sharing the Bussiness Logic between Native Android, IOS Apps using Kotlin Multiplatform with Ktor Client, Offline Caching with Realm Kotlin SDK to share Queries",
-            image: 'https://raw.githubusercontent.com/Yazan98/portfolio/v3.1.2/src/components/images/kmm_preview.webp',
-            imageProject: "https://raw.githubusercontent.com/Yazan98/portfolio/v3.1.2/src/components/images/kmm_preview.webp",
-            type: 'android',
-            link: "https://github.com/Yazan98/KMM-Cryptocurrency",
-            tags: [
-                "IOS App",
-                "Jetpack Compose",
-                "Android",
-                "Swift UI",
-                "User Defaults",
-                "Shared Prefs",
-                "Ktor Client",
-                "Realm Kotlin SDK"
-            ]
-        },
-        {
-            id: 4,
-            name: 'Autohub',
-            createdAt: 'Github : 2019',
-            description: 'Android Application : Open Source Built Based on MVVM, Vortex, Github Api V3, With Navigation Component',
-            longDescription: "Android Application is created to view Github Account Information with Authentication Basic Auth Username and Password Powered By Github Api V3 and the Base Structure of the Project is MVVM with Navigation Components and Kotlin Programming Language",
-            image: 'https://raw.githubusercontent.com/Yazan98/portfolio/master/src/components/images/autohub_preview.webp',
-            imageProject: "https://github.com/Yazan98/portfolio/blob/master/src/components/images/autohub.png?raw=true",
-            type: 'android',
-            link: "https://github.com/Yazan98/Github-Client",
-            tags: [
-                "Kotlin Courotines",
-                "Multi Modular App",
-                "Vortex",
-                "MVVM",
-                "Github Api",
-                "Kotlin",
-                "Retrofit",
-                "RxJava 2"
-            ],
-            images: [
-                "https://github.com/Yazan98/portfolio/blob/master/src/components/images/autohub_1.png?raw=true",
-                "https://github.com/Yazan98/portfolio/blob/master/src/components/images/autohub_2.png?raw=true",
-                "https://github.com/Yazan98/portfolio/blob/master/src/components/images/autohub_3.png?raw=true",
-                "https://github.com/Yazan98/portfolio/blob/master/src/components/images/autohub_4.png?raw=true"
-            ]
-        },
-        {
-            id: 5,
-            name: 'Destiny',
-            createdAt: 'Github : 2019',
-            description: 'Android Application : Open Source Built Based on MVVM, Vortex, SpringBoot Api, With Navigation Component',
-            image: 'https://raw.githubusercontent.com/Yazan98/portfolio/master/src/components/images/destiny_preview.webp',
-            type: 'android',
-            longDescription: "Android Application Built to show Restaurants and Food Delivery App The Idea of this project is to Build a Food Delivery Api and see the Results on Mobile App and the Mobile App Built with Kotlin and MVVM",
-            imageProject: "https://raw.githubusercontent.com/Yazan98/portfolio/master/src/components/images/destiny_preview.webp",
-            tags: [
-                "Kotlin Courotines",
-                "Multi Modular App",
-                "Vortex",
-                "MVVM",
-                "Kotlin",
-                "Retrofit",
-                "RxJava 2"
-            ],
-            images: [
-                "https://github.com/Yazan98/portfolio/blob/master/src/components/images/destiny_1.png?raw=true",
-                "https://github.com/Yazan98/portfolio/blob/master/src/components/images/destiny_2.png?raw=true",
-                "https://github.com/Yazan98/portfolio/blob/master/src/components/images/destiny_3.png?raw=true",
-                "https://github.com/Yazan98/portfolio/blob/master/src/components/images/destiny_4.png?raw=true"
             ]
         }
     ];
