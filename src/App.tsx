@@ -4,6 +4,7 @@ import { Helmet } from 'react-helmet-async';
 
 import HomePage from './pages/HomePage';
 import ProjectsPage from './pages/ProjectsPage';
+import ProjectDetailsPage from './pages/ProjectDetailsPage';
 import SkillsPage from './pages/SkillsPage';
 import Navbar from './components/layout/Navbar';
 import Footer from './components/layout/Footer';
@@ -66,6 +67,7 @@ function App() {
                     <Routes>
                         <Route path="/" element={<HomePage />} />
                         <Route path="/projects" element={<ProjectsPage />} />
+                        <Route path="/project/:id" element={<ProjectDetailsPage />} />
                         <Route path="/skills" element={<SkillsPage />} />
                     </Routes>
                 </main>

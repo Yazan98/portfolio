@@ -1,27 +1,30 @@
 import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
-import { Github, Linkedin, Mail, Twitter, ArrowRight, Layers, Smartphone, Server, ChevronLeft, ChevronRight, Code2 } from 'lucide-react';
+import { Github, Linkedin, Mail, Twitter, ArrowRight, Layers, Smartphone, Server, ChevronLeft, ChevronRight, Code2, AppWindow } from 'lucide-react';
+import { SiKotlin, SiTypescript, SiSwift, SiJavascript, SiRuby } from 'react-icons/si';
+import { FaJava, FaMediumM } from 'react-icons/fa';
 import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 import InteractiveBackground from '../components/ui/InteractiveBackground';
 
 // @ts-ignore
 import getProjectsList from '../info/ProjectsList';
 
 const languages = [
-    { name: 'Kotlin', tag: 'Mobile / Backend' },
-    { name: 'Java', tag: 'Enterprise' },
-    { name: 'TypeScript', tag: 'Frontend / APIs' },
-    { name: 'Swift', tag: 'iOS Native' },
-    { name: 'Dart', tag: 'Cross-Platform' },
-    { name: 'Ruby', tag: 'Scripting' },
+    { name: 'Kotlin', tag: 'Mobile / Backend', icon: <SiKotlin size={28} className="text-[#0095D5]" /> },
+    { name: 'Java', tag: 'Enterprise', icon: <FaJava size={28} className="text-[#ED8B00]" /> },
+    { name: 'TypeScript', tag: 'Frontend / APIs', icon: <SiTypescript size={28} className="text-[#3178C6]" /> },
+    { name: 'Swift', tag: 'iOS Native', icon: <SiSwift size={28} className="text-[#F05138]" /> },
+    { name: 'JavaScript', tag: 'Web / Full-Stack', icon: <SiJavascript size={28} className="text-[#F7DF1E]" /> },
+    { name: 'Ruby', tag: 'Scripting', icon: <SiRuby size={28} className="text-[#CC342D]" /> },
 ];
 
 const HomePage: React.FC = () => {
     const containerRef = useRef<HTMLDivElement>(null);
     const projectsScrollRef = useRef<HTMLDivElement>(null);
 
-    // Fetch top 3 projects for the featured carousel
-    const featuredProjects = getProjectsList().slice(0, 3);
+    // Fetch top 5 projects for the featured carousel
+    const featuredProjects = getProjectsList().slice(0, 5);
 
     useEffect(() => {
         // Complex GSAP Entrance Animation
@@ -57,6 +60,9 @@ const HomePage: React.FC = () => {
             {/* High-Performance Canvas Interactive Layer */}
             <InteractiveBackground />
 
+            {/* Animated Purple Gradient Background Setup (Alpha 0.3) */}
+            <div className="fixed inset-0 z-0 animate-gradient-bg bg-[length:400%_400%] bg-gradient-to-br from-[#1a0532]/30 via-[#3a0b6e]/30 to-[#0f0022]/30 pointer-events-none opacity-100 mix-blend-screen"></div>
+
             {/* Main Content Overlay */}
             <div ref={containerRef} className="relative z-10 w-full pt-20 pb-20">
                 <section className="container mx-auto px-4 max-w-5xl flex flex-col items-center text-center mb-32">
@@ -81,8 +87,8 @@ const HomePage: React.FC = () => {
                     </div>
 
                     {/* Description Details */}
-                    <p className="hero-desc text-lg md:text-xl text-gray-400 max-w-3xl mb-12 leading-relaxed">
-                        Crafting elite Native Mobile experiences for Android & iOS. I masterfully weave modern UIs with Jetpack Compose & Compose Multiplatform, leverage the absolute cutting-edge of Kotlin Multiplatform for shared logic, and architect unshakeable Backend systems with NestJS & Spring Boot.
+                    <p className="hero-desc text-lg md:text-xl text-gray-400 max-w-4xl mb-12 leading-relaxed">
+                        <span className="text-white font-semibold">Mobile App Maestro</span> crafting elite Native experiences for Android & iOS. I build fluid, modern interfaces with <span className="text-primary-400">Jetpack Compose</span> and <span className="text-cyan-400">Compose Multiplatform</span>. Driven by performance, I architect robust shared logic using <span className="text-purple-400">Kotlin Multiplatform</span> and engineer unshakeable backend systems with <span className="text-red-400">NestJS & Spring Boot</span> to deliver flawless full-stack solutions.
                     </p>
 
                     {/* Quick Metrics / Tech Stack */}
@@ -106,9 +112,9 @@ const HomePage: React.FC = () => {
 
                     {/* Actions */}
                     <div className="hero-buttons flex flex-wrap items-center justify-center gap-4 mb-14">
-                        <a href="/projects" className="flex items-center gap-2 px-8 py-4 rounded-full bg-gradient-to-r from-primary-600 to-primary-500 hover:from-primary-500 hover:to-primary-400 text-white font-bold transition-all shadow-lg shadow-primary-500/25 hover:shadow-primary-500/40 transform hover:-translate-y-1">
+                        <Link to="/projects" className="flex items-center gap-2 px-8 py-4 rounded-full bg-gradient-to-r from-primary-600 to-primary-500 hover:from-primary-500 hover:to-primary-400 text-white font-bold transition-all shadow-lg shadow-primary-500/25 hover:shadow-primary-500/40 transform hover:-translate-y-1">
                             Explore My Work <ArrowRight size={20} />
-                        </a>
+                        </Link>
                         <a href="mailto:yazantarifi98@gmail.com" className="flex items-center gap-2 px-8 py-4 rounded-full bg-dark-100 border border-gray-800 hover:border-primary-500/50 text-white font-bold transition-all transform hover:-translate-y-1">
                             Contact Me
                         </a>
@@ -116,17 +122,17 @@ const HomePage: React.FC = () => {
 
                     {/* Socials */}
                     <div className="hero-socials flex items-center gap-6 text-gray-400">
-                        <a href="https://github.com/Yazan98" target="_blank" rel="noopener noreferrer" aria-label="Github" className="p-3 bg-dark-200 rounded-full shadow-sm hover:text-white hover:scale-110 transition-all border border-gray-800">
-                            <Github size={22} />
-                        </a>
-                        <a href="https://x.com/YazanT98" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)" className="p-3 bg-dark-200 rounded-full shadow-sm hover:text-[#1DA1F2] hover:scale-110 transition-all border border-gray-800">
+                        <a href="https://x.com/YazanT98" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)" className="p-3 bg-dark-200 rounded-full shadow-sm hover:text-white hover:bg-black hover:scale-110 transition-all border border-gray-800">
                             <Twitter size={22} />
                         </a>
-                        <a href="https://linkedin.com/in/yazantarifi" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="p-3 bg-dark-200 rounded-full shadow-sm hover:text-primary-600 hover:scale-110 transition-all border border-gray-800">
+                        <a href="https://linkedin.com/in/yazantarifi" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="p-3 bg-dark-200 rounded-full shadow-sm hover:text-[#0a66c2] hover:bg-white hover:scale-110 transition-all border border-gray-800">
                             <Linkedin size={22} />
                         </a>
-                        <a href="mailto:yazantarifi98@gmail.com" aria-label="Email" className="p-3 bg-dark-200 rounded-full shadow-sm hover:text-red-500 hover:scale-110 transition-all border border-gray-800">
-                            <Mail size={22} />
+                        <a href="https://github.com/Yazan98" target="_blank" rel="noopener noreferrer" aria-label="Github" className="p-3 bg-dark-200 rounded-full shadow-sm hover:text-white hover:bg-gray-800 hover:scale-110 transition-all border border-gray-800">
+                            <Github size={22} />
+                        </a>
+                        <a href="https://medium.com/@yazantarifi98" target="_blank" rel="noopener noreferrer" aria-label="Medium" className="p-3 bg-dark-200 rounded-full shadow-sm hover:text-black hover:bg-white hover:scale-110 transition-all border border-gray-800">
+                            <FaMediumM size={22} />
                         </a>
                     </div>
                 </section>
@@ -140,10 +146,12 @@ const HomePage: React.FC = () => {
                     </div>
                     <div className="grid grid-cols-2 lg:grid-cols-3 gap-4">
                         {languages.map(lang => (
-                            <div key={lang.name} className="flex items-center gap-4 bg-dark-200/50 border border-gray-800/60 hover:border-primary-500/40 p-5 rounded-2xl transition-colors backdrop-blur-sm group">
-                                <div className="h-2 w-2 rounded-full bg-primary-500 group-hover:scale-150 transition-transform"></div>
+                            <div key={lang.name} className="flex items-center gap-5 bg-dark-200/80 border border-gray-800/80 hover:border-primary-500/50 p-6 rounded-2xl transition-all backdrop-blur-md group hover:shadow-lg hover:shadow-primary-500/10">
+                                <div className="group-hover:scale-110 transition-transform bg-dark-100 p-3 rounded-xl border border-gray-800 shadow-inner">
+                                    {lang.icon}
+                                </div>
                                 <div>
-                                    <h4 className="font-bold text-lg text-white">{lang.name}</h4>
+                                    <h4 className="font-bold text-lg text-white group-hover:text-primary-400 transition-colors">{lang.name}</h4>
                                     <p className="text-xs text-gray-400">{lang.tag}</p>
                                 </div>
                             </div>
@@ -151,48 +159,78 @@ const HomePage: React.FC = () => {
                     </div>
                 </section>
 
-                {/* Featured Projects Horizonal Carousel */}
-                <section className="content-section w-full">
-                    <div className="container mx-auto px-4 max-w-5xl flex items-center justify-between mb-8">
-                        <h3 className="text-3xl font-display font-bold text-white">Featured Projects</h3>
-                        <div className="flex gap-2">
-                            <button onClick={() => scrollProjects('left')} className="p-3 rounded-full bg-dark-200 border border-gray-800 hover:bg-dark-100 hover:border-primary-500 transition-colors text-white">
-                                <ChevronLeft size={20} />
+                {/* Featured Projects Horizonal Carousel (Full Viewport Redesign) */}
+                <section className="content-section w-full pt-12 border-t border-gray-800/50 bg-dark-200">
+                    <div className="container mx-auto px-4 max-w-7xl flex items-center justify-between mb-8">
+                        <h3 className="text-3xl font-display font-bold text-white flex items-center gap-3">
+                            <AppWindow className="text-primary-500" /> Featured Projects
+                        </h3>
+                        <div className="flex gap-4">
+                            <button onClick={() => scrollProjects('left')} className="p-4 rounded-full bg-dark-300 border border-gray-700 hover:bg-dark-100 hover:border-primary-500 transition-colors text-white z-20 hover:scale-110 transform">
+                                <ChevronLeft size={24} />
                             </button>
-                            <button onClick={() => scrollProjects('right')} className="p-3 rounded-full bg-dark-200 border border-gray-800 hover:bg-dark-100 hover:border-primary-500 transition-colors text-white">
-                                <ChevronRight size={20} />
+                            <button onClick={() => scrollProjects('right')} className="p-4 rounded-full bg-dark-300 border border-gray-700 hover:bg-dark-100 hover:border-primary-500 transition-colors text-white z-20 hover:scale-110 transform">
+                                <ChevronRight size={24} />
                             </button>
                         </div>
                     </div>
 
                     <div
                         ref={projectsScrollRef}
-                        className="flex overflow-x-auto snap-x snap-mandatory hide-scrollbar pb-8"
+                        className="flex overflow-x-auto snap-x snap-mandatory hide-scrollbar pb-16"
                         style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
                     >
                         {featuredProjects.map((project: any) => (
-                            <div key={project.id} className="min-w-full w-full snap-center px-4 md:px-12 flex-shrink-0">
-                                <div className="relative h-[60vh] min-h-[400px] w-full max-w-6xl mx-auto rounded-3xl overflow-hidden group">
-                                    {project.image && (
-                                        <img src={project.image} alt={project.name} className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
-                                    )}
-                                    <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/60 to-transparent"></div>
-                                    <div className="absolute bottom-0 left-0 w-full p-8 md:p-14 z-10">
-                                        <span className="inline-block px-3 py-1 rounded bg-primary-600/20 text-primary-400 border border-primary-500/30 text-xs font-bold uppercase tracking-wider mb-4 backdrop-blur-md">
-                                            {project.type === 'ANDROID_APP' ? 'Android Native' : project.type}
+                            <div key={project.id} className="min-w-full w-full snap-center flex-shrink-0">
+                                <div className="relative min-h-[85vh] w-full border-y border-gray-800 flex flex-col md:flex-row bg-[#0B0B0E]">
+
+                                    {/* Left Side: Content & Stats */}
+                                    <div className="w-full md:w-1/2 p-8 md:p-16 lg:p-24 flex flex-col justify-center z-10 bg-dark-200/90 backdrop-blur-3xl border-r border-gray-800/80">
+                                        <span className="inline-block self-start px-4 py-2 rounded-full bg-gradient-to-r from-primary-600/30 to-purple-600/20 text-primary-300 border border-primary-500/40 text-sm font-bold uppercase tracking-wider mb-8 shadow-inner shadow-primary-500/10">
+                                            {project.type === 'ANDROID_APP' ? 'Android Native' : project.type.replace('_', ' ')}
                                         </span>
-                                        <h4 className="text-4xl md:text-5xl font-display font-bold text-white mb-4 leading-tight">{project.name}</h4>
-                                        <p className="text-lg text-gray-300 max-w-2xl mb-6 line-clamp-2 md:line-clamp-none">
+
+                                        <h4 className="text-5xl lg:text-7xl font-display font-bold text-white mb-8 leading-tight tracking-tight">
+                                            {project.name}
+                                        </h4>
+
+                                        {/* Stats Row */}
+                                        <div className="flex flex-wrap gap-4 mb-10">
+                                            <div className="bg-[#121217] border border-gray-800/80 p-5 rounded-2xl flex-1 text-center min-w-[120px] shadow-sm">
+                                                <h5 className="text-3xl font-bold text-white">Top</h5>
+                                                <p className="text-gray-400 text-sm mt-1 uppercase tracking-wider font-semibold">Tier App</p>
+                                            </div>
+                                            <div className="bg-[#121217] border border-gray-800/80 p-5 rounded-2xl flex-1 text-center min-w-[120px] shadow-sm">
+                                                <h5 className="text-3xl font-bold text-white">{project.tags?.length || 5}+</h5>
+                                                <p className="text-gray-400 text-sm mt-1 uppercase tracking-wider font-semibold">Technologies</p>
+                                            </div>
+                                        </div>
+
+                                        <p className="text-xl lg:text-2xl text-gray-300 mb-12 line-clamp-4 leading-relaxed font-light">
                                             {project.description}
                                         </p>
-                                        <div className="flex flex-wrap gap-2">
-                                            {(project.tags || []).slice(0, 4).map((tech: string) => (
-                                                <span key={tech} className="px-3 py-1 bg-dark-100/80 border border-gray-700/50 backdrop-blur-md text-gray-300 text-sm rounded-full">
-                                                    {tech}
-                                                </span>
-                                            ))}
-                                        </div>
+
+                                        {/* CTA */}
+                                        <Link to={`/project/${project.id}`} className="mt-auto self-start flex items-center gap-3 px-10 py-5 rounded-full bg-gradient-to-r from-primary-600 to-primary-500 text-white font-bold transition-all transform hover:-translate-y-2 hover:shadow-[0_15px_40px_-10px_rgba(168,85,247,0.7)] group">
+                                            View The Project <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
+                                        </Link>
                                     </div>
+
+                                    {/* Right Side: Image Mockup & Glow */}
+                                    <div className="w-full md:w-1/2 relative overflow-hidden flex items-center justify-center p-0 h-full min-h-[500px]">
+                                        {/* Ambient Glow */}
+                                        <div className="absolute inset-0 bg-gradient-to-l from-primary-900/10 via-transparent to-dark-200/90 z-10"></div>
+                                        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[150%] h-[150%] bg-primary-500/20 blur-[150px] rounded-full pointer-events-none"></div>
+
+                                        {project.image ? (
+                                            <img src={project.image} alt={project.name} className="absolute inset-0 w-full h-full object-cover transition-transform duration-[1.5s] ease-out group-hover:scale-[1.05] grayscale-[20%] group-hover:grayscale-0" />
+                                        ) : (
+                                            <div className="absolute inset-0 w-full h-full bg-[#0a0a0d] flex items-center justify-center">
+                                                <AppWindow size={100} className="text-gray-800" />
+                                            </div>
+                                        )}
+                                    </div>
+
                                 </div>
                             </div>
                         ))}
