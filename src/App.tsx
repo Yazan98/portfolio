@@ -1,36 +1,83 @@
-import React from 'react';
-import './App.scss';
-import {HashRouter, Route, Switch} from "react-router-dom";
-import HomePageComponent from "./components/HomePageComponent";
-import NotFoundPageViewComponent from "./components/NotFoundPageViewComponent";
-import ProjectsPageComponent from "./components/ProjectsPageComponent";
-import SkillsPageComponent from "./components/SkillsPageComponent";
-import ArchivePageComponent from "./components/ArchivePageComponent";
-import AllProjectsPageComponent from './components/AllProjectsPageComponent';
-import MobilePagesNavigationComponent from "./components/MobilePagesNavigationComponent";
-import ProjectViewPageComponent from "./components/ProjectViewPageComponent";
-import ReactGA from 'react-ga';
+import React, { useEffect, useState } from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 
-const GOOGLE_ANALYTICS_TRACKING_ID = "UA-239882909-2"
-ReactGA.initialize(GOOGLE_ANALYTICS_TRACKING_ID)
+import HomePage from './pages/HomePage';
+import ProjectsPage from './pages/ProjectsPage';
+import SkillsPage from './pages/SkillsPage';
+import Navbar from './components/layout/Navbar';
+import Footer from './components/layout/Footer';
+import SplashScreen from './components/layout/SplashScreen';
 
 function App() {
+    const [isDarkMode, setIsDarkMode] = useState(true);
+    const [showSplash, setShowSplash] = useState(true);
+
+    useEffect(() => {
+        if (isDarkMode) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
+    }, [isDarkMode]);
+
+    const toggleDarkMode = () => setIsDarkMode(!isDarkMode);
+
     return (
-        <div className="App">
-            <HashRouter>
-                <Switch>
-                    <Route exact path="/" component={HomePageComponent}/>
-                    <Route exact path="/projects" component={ProjectsPageComponent}/>
-                    <Route exact path="/skills" component={SkillsPageComponent}/>
-                    <Route exact path="/archive" component={ArchivePageComponent} />
-                    <Route exact path="/projects/all" component={AllProjectsPageComponent} />
-                    <Route exact path="/projects/:projectName" component={ProjectViewPageComponent} />
-                    <Route exact path="/nav" component={MobilePagesNavigationComponent} />
-                    <Route exact path="/projects/nav" component={MobilePagesNavigationComponent} />
-                    <Route path='*' exact={true} component={NotFoundPageViewComponent}/>
-                </Switch>
-            </HashRouter>
-        </div>
+        <BrowserRouter>
+            {showSplash && <SplashScreen onComplete={() => setShowSplash(false)} />}
+
+            <Helmet>
+                {/* Maximum SEO Limits for CSR */}
+                <title>Yazan Tarifi - Senior Software Engineer & Mobile Developer</title>
+                <meta name="description" content="Yazan Tarifi's Premium Portfolio Site. Exploring advanced Android development, highly scalable backend systems, and beautiful frontend UI experiences." />
+                <meta name="keywords" content="Yazan Tarifi, Software Engineer, Mobile Developer, Android Developer, Backend Developer, NestJS, Kotlin Config, iOS Developer, React Portfolio, Next.js Expert" />
+                <meta name="author" content="Yazan Tarifi" />
+                <link rel="canonical" href="https://yazantarifi.com/" />
+
+                {/* Open Graph / Social Media Metatags */}
+                <meta property="og:type" content="website" />
+                <meta property="og:url" content="https://yazantarifi.com/" />
+                <meta property="og:title" content="Yazan Tarifi - $15,000 Premium Software Engineering Portfolio" />
+                <meta property="og:description" content="Explore Yazan's code-minded approach to building digital experiences." />
+                <meta property="og:image" content="https://user-images.githubusercontent.com/29167110/199554964-5d0e913d-72da-4527-9ef4-68b90d0e2a95.png" />
+
+                {/* Twitter Card */}
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:title" content="Yazan Tarifi - Senior Software Engineer" />
+                <meta name="twitter:description" content="Premium portfolio showcasing enterprise-grade architecture and beautiful interfaces." />
+
+                {/* JSON-LD Structured Data for Rich Snippets */}
+                <script type="application/ld+json">
+                    {`
+            {
+              "@context": "https://schema.org",
+              "@type": "Person",
+              "name": "Yazan Tarifi",
+              "jobTitle": "Senior Software Engineer",
+              "url": "https://yazantarifi.com/",
+              "sameAs": [
+                "https://github.com/Yazan98",
+                "https://linkedin.com/in/yazantarifi"
+              ],
+              "knowsAbout": ["Android Development", "React", "Kotlin", "Swift", "Nest.js", "Backend Architecture"]
+            }
+          `}
+                </script>
+            </Helmet>
+
+            <div className={`flex flex-col min-h-screen bg-white dark:bg-dark-300 text-gray-900 dark:text-gray-100 transition-colors duration-300 ${showSplash ? 'opacity-0' : 'opacity-100 transition-opacity duration-1000'}`}>
+                <Navbar isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />
+                <main className="flex-grow">
+                    <Routes>
+                        <Route path="/" element={<HomePage />} />
+                        <Route path="/projects" element={<ProjectsPage />} />
+                        <Route path="/skills" element={<SkillsPage />} />
+                    </Routes>
+                </main>
+                <Footer />
+            </div>
+        </BrowserRouter>
     );
 }
 
