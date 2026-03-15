@@ -55,7 +55,7 @@ const ProjectDetailsPage: React.FC = () => {
                 {/* Header Section */}
                 <header className="mb-16">
                     <span className="header-fade inline-block px-3 py-1.5 rounded-lg bg-primary-600/20 text-primary-400 border border-primary-500/30 text-sm font-bold uppercase tracking-wider mb-6">
-                        {project.type === 'ANDROID_APP' ? 'Android Native' : project.type.replace('_', ' ')}
+                        {project.type === 'ANDROID_APP' || project.type === 'android' ? 'Android Native' : project.type.replace('_', ' ')}
                     </span>
                     <h1 className="header-fade text-5xl md:text-7xl font-display font-bold text-white mb-6">
                         {project.name}
@@ -67,7 +67,7 @@ const ProjectDetailsPage: React.FC = () => {
 
                 {/* Big Hero Image */}
                 {project.image && (
-                    <div className="content-fade w-full h-[50vh] md:h-[70vh] rounded-[2rem] overflow-hidden bg-dark-200 border border-gray-800 shadow-2xl shadow-primary-900/20 mb-20 relative">
+                    <div className="content-fade w-full rounded-[2rem] overflow-hidden bg-dark-200 border border-gray-800 shadow-2xl shadow-primary-900/20 mb-20 relative flex items-center justify-center min-h-[60vh] md:min-h-[75vh] xl:min-h-[100vh]">
                         <img src={project.image} alt={project.name} className="absolute inset-0 w-full h-full object-cover" />
                     </div>
                 )}
@@ -115,15 +115,14 @@ const ProjectDetailsPage: React.FC = () => {
                             <h2 className="text-3xl font-display font-bold text-white mb-6">About the Project</h2>
                             <p className="text-gray-300 leading-relaxed">
                                 {project.description}
-                                {/* Temporary mockup text to fulfill design criteria since ProjectsList data might be brief */}
                                 <br /><br />
-                                This application serves as a prime example of high-performance mobile UI mapping stateful data architectures. Leveraging modern concurrency and reactive patterns, it ensures a seamless zero-lag user experience even under heavy load processing.
+                                {project.longDescription}
                             </p>
                         </section>
 
                         <div className="w-full h-px bg-gradient-to-r from-gray-800 via-gray-700 to-gray-800 my-12 hidden md:block"></div>
 
-                        <section className="prose prose-invert prose-lg max-w-none">
+                        {/* <section className="prose prose-invert prose-lg max-w-none">
                             <h2 className="text-3xl font-display font-bold text-white mb-6 flex items-center gap-3">
                                 <ListChecks className="text-primary-500" size={28} /> What I Learned
                             </h2>
@@ -133,27 +132,24 @@ const ProjectDetailsPage: React.FC = () => {
                                 <li>Building robust, resilient data-fetching layers with retry logic and offline caching.</li>
                                 <li>Implementing cutting-edge Native design systems and animations.</li>
                             </ul>
-                        </section>
+                        </section> */}
                     </div>
                 </div>
 
-                {/* Mock Screenshots Gallery Component */}
-                <section className="content-fade mb-20">
-                    <h2 className="text-3xl font-display font-bold text-white mb-8">Screenshots Gallery</h2>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-                        {/* Placeholder mockups since exact multiple images per project don't exist in ProjectsList yet */}
-                        {[1, 2, 3].map((num) => (
-                            <div key={num} className="aspect-[9/16] bg-dark-200 border border-gray-800 rounded-3xl overflow-hidden flex items-center justify-center relative group">
-                                <div className="absolute inset-0 bg-primary-900/10 mix-blend-overlay z-10"></div>
-                                {project.image ? (
-                                    <img src={project.image} alt="Gallery Mock" className="w-full h-full object-cover filter brightness-75 group-hover:scale-105 transition-transform duration-500" />
-                                ) : (
-                                    <Smartphone size={48} className="text-gray-700" />
-                                )}
-                            </div>
-                        ))}
-                    </div>
-                </section>
+                {/* Screenshots Gallery Component */}
+                {project.images && project.images.length > 0 && (
+                    <section className="content-fade mb-20">
+                        <h2 className="text-3xl font-display font-bold text-white mb-8">Screenshots Gallery</h2>
+                        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+                            {project.images.map((img: string, index: number) => (
+                                <div key={index} className="aspect-[9/16] bg-dark-200 border border-gray-800 rounded-3xl overflow-hidden flex items-center justify-center relative group p-4 xl:p-6 transition-all duration-300 hover:border-primary-500/50 hover:shadow-[0_0_30px_-5px_var(--primary-500-alpha-20)] hover:-translate-y-2">
+                                    <div className="absolute inset-0 bg-primary-900/5 mix-blend-overlay z-10 transition-opacity duration-300 group-hover:opacity-0"></div>
+                                    <img src={img} alt={`${project.name} Screenshot ${index + 1}`} className="w-full h-full object-contain filter group-hover:brightness-110 transition-all duration-500" />
+                                </div>
+                            ))}
+                        </div>
+                    </section>
+                )}
             </div>
         </div>
     );

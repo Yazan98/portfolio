@@ -1,7 +1,41 @@
+import RafeeqImage from '../components/images/rafeeq_landing.png';
+import RafeeqImage1 from '../components/images/rafeeq_1.png';
+import RafeeqImage2 from '../components/images/rafeeq_2.png';
+import RafeeqImage3 from '../components/images/rafeeq_3.png';
+import RafeeqImage4 from '../components/images/rafeeq_4.png';
+import RafeeqImage5 from '../components/images/rafeeq_5.png';
+import RafeeqImage6 from '../components/images/rafeeq_6.png';
+import RafeeqImage7 from '../components/images/rafeeq_7.png';
+import RafeeqImage8 from '../components/images/rafeeq_8.png';
+import RafeeqImage9 from '../components/images/rafeeq_9.png';
+import RafeeqImage10 from '../components/images/rafeeq_10.png';
+import RafeeqImage11 from '../components/images/rafeeq_11.png';
+
 export default function getFeaturedProjectsList() {
     return [
         {
             id: 1,
+            name: 'Rafeeq',
+            createdAt: '2026',
+            description: 'Compose Multiplatform Mobile Application Targeting Android, IOS with Shared Logic and UI',
+            longDescription: "This is the First Full Project to show Quran Content for Muslims with Arabic and English with a Shared UI and Logic Using Kotlin and Compose Multiplatform with Embedded UI Composables inside SwiftUI and Swift, The Idea of Building this Project is to See how Possible i can Share the UI Between Android and IOS with a KMP Official Libraries",
+            image: RafeeqImage,
+            imageProject: RafeeqImage,
+            type: 'mobile',
+            tags: [
+                "Compose Multiplatform",
+                "Swift 5",
+                "Swift UI",
+                "Jetpack Compose",
+                "Local Json Resources",
+                "Shared Logic",
+                "Shared UI",
+                "Shared Database",
+            ],
+            images: [RafeeqImage1, RafeeqImage2, RafeeqImage3, RafeeqImage4, RafeeqImage5, RafeeqImage6, RafeeqImage7, RafeeqImage8, RafeeqImage9, RafeeqImage10, RafeeqImage11]
+        },
+        {
+            id: 10,
             name: 'Gitly',
             createdAt: 'Github : 2024',
             description: 'IOS Application Built with SwiftUI, GraphQL, Apollo Client, UserDefaults, MVVM, Dynamic Widgets, Nested Navigations',
