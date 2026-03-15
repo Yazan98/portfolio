@@ -20,31 +20,35 @@ const SplashScreen: React.FC<SplashScreenProps> = ({ onComplete }) => {
                 }
             });
 
-            // 1. Initial logo glow & reveal
-            tl.fromTo('.logo-container',
-                { autoAlpha: 0, scale: 0.8 },
-                { autoAlpha: 1, scale: 1, duration: 1, ease: 'power3.out' }
+            // 1. Initial logo 3D flip & reveal
+            tl.fromTo('.logo-img',
+                { autoAlpha: 0, scale: 0.5, rotationY: -90, z: -500 },
+                { autoAlpha: 1, scale: 1, rotationY: 0, z: 0, duration: 1.5, ease: 'expo.out' }
             )
-                // 2. Pulse effect
-                .to('.logo-container', {
-                    scale: 1.1,
-                    duration: 0.8,
+                // 2. Float effect
+                .to('.logo-img', {
+                    y: -15,
+                    duration: 1.2,
                     yoyo: true,
-                    repeat: 1,
-                    ease: 'power2.inOut'
-                })
+                    repeat: -1,
+                    ease: 'sine.inOut'
+                }, "-=0.5")
                 // 3. Slide text up
                 .fromTo('.splash-text',
-                    { autoAlpha: 0, y: 20 },
-                    { autoAlpha: 1, y: 0, duration: 0.6, ease: 'power2.out' },
-                    "-=0.6" // overlaps pulse
+                    { autoAlpha: 0, y: 30, letterSpacing: '0px' },
+                    { autoAlpha: 1, y: 0, letterSpacing: '4px', duration: 1, ease: 'power3.out' },
+                    "-=1"
                 )
-                // 4. Fade everything out
+                // 4. Fade everything out to start app
                 .to('.splash-overlay', {
-                    autoAlpha: 0,
-                    duration: 0.8,
-                    delay: 0.5,
-                    ease: 'power2.inOut'
+                    opacity: 0,
+                    duration: 1,
+                    delay: 1.5,
+                    ease: 'power2.inOut',
+                    onComplete: () => {
+                        // Kill float animation
+                        gsap.killTweensOf('.logo-img');
+                    }
                 });
         }, containerRef);
 
@@ -54,19 +58,19 @@ const SplashScreen: React.FC<SplashScreenProps> = ({ onComplete }) => {
     return (
         <div
             ref={containerRef}
-            className="splash-overlay fixed inset-0 z-[100] flex flex-col items-center justify-center bg-dark-300 pointer-events-none"
+            className="splash-overlay fixed inset-0 z-[100] flex flex-col items-center justify-center bg-[#050505] pointer-events-none"
         >
-            <div className="logo-container relative flex items-center justify-center">
+            <div className="logo-container relative flex flex-col items-center justify-center perspective-1000">
                 {/* Glowing background blob */}
-                <div className="absolute inset-0 bg-primary-500 rounded-full blur-3xl opacity-20"></div>
+                <div className="absolute inset-0 bg-primary-600 rounded-full blur-[80px] opacity-20 transform scale-150"></div>
 
-                {/* The Text Logo Representation */}
-                <div className="relative text-5xl md:text-7xl font-display font-extrabold text-white tracking-widest z-10">
-                    YT<span className="text-primary-500">.</span>
+                {/* The Logo Image */}
+                <div className="relative z-10 perspective-1000">
+                    <img src="/logo.png" alt="Yazan Tarifi Logo" className="logo-img w-32 h-32 md:w-48 md:h-48 object-contain drop-shadow-[0_0_25px_rgba(168,85,247,0.4)]" />
                 </div>
             </div>
 
-            <p className="splash-text mt-8 text-primary-300 font-medium tracking-widest uppercase text-sm">
+            <p className="splash-text mt-12 text-primary-300/80 font-medium tracking-widest uppercase text-sm drop-shadow-md">
                 Initializing Portfolio
             </p>
         </div>

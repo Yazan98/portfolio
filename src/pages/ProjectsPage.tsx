@@ -1,26 +1,49 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { gsap } from 'gsap';
-import { ExternalLink, Github } from 'lucide-react';
+import { Github } from 'lucide-react';
 
-const mockProjects = [
-    { id: 1, title: 'Enterprise Banking App', category: 'Mobile App', tech: ['Kotlin', 'Android', 'MVVM'], desc: 'High-security banking platform serving 2M+ users.' },
-    { id: 2, title: 'Defi Crypto Exchange', category: 'Web App', tech: ['React', 'Next.js', 'Web3'], desc: 'Real-time crypto trading interface with millisecond latency.' },
-    { id: 3, title: 'Fitness Tracking Ecosystem', category: 'Mobile App', tech: ['Swift', 'iOS', 'HealthKit'], desc: 'Comprehensive health monitoring and workout planning.' },
-    { id: 4, title: 'AI Code Assistant CLI', category: 'Tooling', tech: ['Go', 'OpenAI'], desc: 'Command line tool for rapid codebase scaffolding.' },
-    { id: 5, title: 'E-commerce Backend', category: 'Backend', tech: ['Nest.js', 'PostgreSQL', 'Redis'], desc: 'Microservices architecture handling 10k RPS.' },
-    { id: 6, title: 'Smart Home Hub', category: 'Web App', tech: ['React', 'Firebase'], desc: 'IoT dashboard for controlling smart home devices.' },
+// @ts-ignore
+import getProjectsList, {
+    ALL_FILTER_TYPE,
+    ANDROID_FILTER_TYPE,
+    IOS_FILTER_TYPE,
+    WEBSITES_FILTER_TYPE,
+    WEB_APPS_FILTER_TYPE,
+    MAC_APPS_FILTER_TYPE,
+    TOOLS_FILTER_TYPE
+} from '../info/ProjectsList';
+
+interface Project {
+    id: string;
+    name: string;
+    type: string;
+    description: string;
+    createdAt: string;
+    image?: string;
+    link?: string;
+    tags?: string[];
+}
+
+const categories = [
+    { label: 'All', value: ALL_FILTER_TYPE },
+    { label: 'Android Apps', value: ANDROID_FILTER_TYPE },
+    { label: 'iOS Apps', value: IOS_FILTER_TYPE },
+    { label: 'Web Apps', value: WEB_APPS_FILTER_TYPE },
+    { label: 'Websites', value: WEBSITES_FILTER_TYPE },
+    { label: 'macOS Apps', value: MAC_APPS_FILTER_TYPE },
+    { label: 'Tools', value: TOOLS_FILTER_TYPE },
 ];
 
-const categories = ['All', 'Mobile App', 'Web App', 'Backend', 'Tooling'];
-
 const ProjectsPage: React.FC = () => {
-    const [filter, setFilter] = useState('All');
+    const [filter, setFilter] = useState(ALL_FILTER_TYPE);
     const containerRef = useRef<HTMLDivElement>(null);
 
-    const filteredProjects = filter === 'All'
-        ? mockProjects
-        : mockProjects.filter(p => p.category === filter);
+    const allProjects = getProjectsList();
+
+    const filteredProjects = filter === ALL_FILTER_TYPE
+        ? allProjects
+        : allProjects.filter((p: any) => p.type === filter);
 
     useEffect(() => {
         const ctx = gsap.context(() => {
@@ -51,42 +74,53 @@ const ProjectsPage: React.FC = () => {
             <div className="flex flex-wrap gap-2 mb-10 justify-center md:justify-start">
                 {categories.map(cat => (
                     <button
-                        key={cat}
-                        onClick={() => setFilter(cat)}
-                        className={`px-5 py-2 rounded-full text-sm font-medium transition-all ${filter === cat ? 'bg-primary-600 text-white shadow-md' : 'bg-gray-100 dark:bg-dark-100 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-dark-200'}`}
+                        key={cat.value}
+                        onClick={() => setFilter(cat.value)}
+                        className={`px-5 py-2 rounded-full text-sm font-medium transition-all ${filter === cat.value ? 'bg-primary-600 text-white shadow-md' : 'bg-gray-100 dark:bg-dark-100 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-dark-200'}`}
                     >
-                        {cat}
+                        {cat.label}
                     </button>
                 ))}
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {filteredProjects.map(project => (
-                    <div key={project.id} className="project-card group bg-white dark:bg-dark-200 border border-gray-100 dark:border-gray-800 rounded-2xl p-6 hover:shadow-xl hover:border-primary-500/30 transition-all duration-300 flex flex-col h-full">
-                        <div className="flex justify-between items-start mb-4">
+                {filteredProjects.map((project: any) => (
+                    <div key={project.id} className="project-card group bg-white dark:bg-dark-200 border border-gray-100 dark:border-gray-800 rounded-2xl p-6 hover:shadow-xl hover:border-primary-500/30 transition-all duration-300 flex flex-col h-full overflow-hidden relative">
+
+                        {/* Project Image Banner */}
+                        {project.image && (
+                            <div className="absolute inset-0 h-48 w-full overflow-hidden rounded-t-2xl z-0 opacity-20 group-hover:opacity-40 transition-opacity">
+                                <img src={project.image} alt={project.name} className="w-full h-full object-cover" />
+                                <div className="absolute inset-0 bg-gradient-to-t from-dark-200 to-transparent"></div>
+                            </div>
+                        )}
+
+                        <div className="flex justify-between items-start mb-4 relative z-10 pt-32">
                             <span className="text-xs font-semibold uppercase tracking-wider text-primary-500 dark:text-primary-400">
-                                {project.category}
+                                {categories.find(c => c.value === project.type)?.label || project.type}
                             </span>
                             <div className="flex gap-2">
-                                <button className="text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">
-                                    <Github size={18} />
-                                </button>
-                                <button className="text-gray-400 hover:text-primary-500 transition-colors">
-                                    <ExternalLink size={18} />
-                                </button>
+                                {project.link && (
+                                    <a href={project.link} target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-white transition-colors">
+                                        <Github size={18} />
+                                    </a>
+                                )}
                             </div>
                         </div>
 
-                        <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3 group-hover:text-primary-500 transition-colors">
-                            {project.title}
+                        <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2 relative z-10 group-hover:text-primary-500 transition-colors">
+                            {project.name}
                         </h3>
-
-                        <p className="text-gray-600 dark:text-gray-400 text-sm mb-6 flex-grow leading-relaxed">
-                            {project.desc}
+                        <p className="text-xs text-primary-400 mb-4 relative z-10 font-medium">
+                            {project.createdAt}
                         </p>
 
-                        <div className="flex flex-wrap gap-2 mt-auto pt-4 border-t border-gray-100 dark:border-gray-800/50">
-                            {project.tech.map(tech => (
+                        <p className="text-gray-600 dark:text-gray-400 text-sm mb-6 flex-grow leading-relaxed relative z-10">
+                            {project.description}
+                        </p>
+
+                        <div className="flex flex-wrap gap-2 mt-auto pt-4 border-t border-gray-100 dark:border-gray-800/50 relative z-10">
+                            {(project.tags || []).map((tech: any) => (
                                 <span key={tech} className="text-xs px-2 py-1 rounded bg-gray-50 dark:bg-dark-100 text-gray-600 dark:text-gray-400 font-medium border border-gray-100 dark:border-gray-800">
                                     {tech}
                                 </span>

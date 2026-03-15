@@ -12,8 +12,9 @@ const Navbar: React.FC<NavbarProps> = ({ isDarkMode, toggleDarkMode }) => {
         <header className="sticky top-0 z-50 w-full backdrop-blur-md bg-white/70 dark:bg-dark-200/70 border-b border-gray-200 dark:border-gray-800 transition-colors duration-300">
             <div className="container mx-auto px-4 h-16 flex items-center justify-between">
                 <div className="flex items-center gap-2">
-                    <Link to="/" className="text-xl font-display font-bold tracking-tight text-gray-900 dark:text-white">
-                        Yazan Tarifi<span className="text-primary-500">.</span>
+                    <Link to="/" className="flex items-center gap-3 text-xl font-display font-bold tracking-tight text-gray-900 dark:text-white group">
+                        <img src="/logo.png" alt="Yazan Tarifi" className="w-10 h-10 object-contain group-hover:scale-105 transition-transform" />
+                        <span className="hidden sm:inline-block">Yazan Tarifi<span className="text-primary-500">.</span></span>
                     </Link>
                 </div>
 
