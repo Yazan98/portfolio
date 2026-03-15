@@ -36,7 +36,7 @@ const HomePage: React.FC = () => {
                 .from('.hero-desc', { y: 20, opacity: 0, duration: 0.6, ease: 'power2.out' }, "-=0.4")
                 .from('.hero-metrics .metric-item', { scale: 0.8, opacity: 0, duration: 0.5, stagger: 0.1, ease: 'back.out(1.5)' }, "-=0.2")
                 .from('.hero-buttons', { y: 20, opacity: 0, duration: 0.5, ease: 'power2.out' }, "-=0.3")
-                .from('.hero-socials a', { scale: 0, opacity: 0, duration: 0.4, stagger: 0.1, ease: 'back.out(2)' }, "-=0.2")
+                .fromTo('.hero-socials', { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.5, ease: 'power2.out' }, "-=0.2")
                 .from('.content-section', { y: 40, opacity: 0, duration: 0.8, stagger: 0.2, ease: 'power2.out' }, "-=0.2");
         }, containerRef);
 
@@ -64,7 +64,7 @@ const HomePage: React.FC = () => {
             <div className="fixed inset-0 z-0 animate-gradient-bg bg-[length:400%_400%] bg-gradient-to-br from-[#1a0532]/30 via-[#3a0b6e]/30 to-[#0f0022]/30 pointer-events-none opacity-100 mix-blend-screen"></div>
 
             {/* Main Content Overlay */}
-            <div ref={containerRef} className="relative z-10 w-full pt-20 pb-20">
+            <div ref={containerRef} className="relative z-10 w-full pt-20">
                 <section className="container mx-auto px-4 max-w-5xl flex flex-col items-center text-center mb-32">
 
                     {/* Badge */}
@@ -122,16 +122,16 @@ const HomePage: React.FC = () => {
 
                     {/* Socials */}
                     <div className="hero-socials flex items-center gap-6 text-gray-400">
-                        <a href="https://x.com/YazanT98" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)" className="p-3 bg-dark-200 rounded-full shadow-sm hover:text-white hover:bg-black hover:scale-110 transition-all border border-gray-800">
+                        <a href="https://x.com/YazanT98" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)" className="p-3 bg-dark-200 rounded-full shadow-sm hover:text-white hover:bg-black hover:scale-110 transition-all border border-gray-800 flex items-center justify-center">
                             <Twitter size={22} />
                         </a>
-                        <a href="https://linkedin.com/in/yazantarifi" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="p-3 bg-dark-200 rounded-full shadow-sm hover:text-[#0a66c2] hover:bg-white hover:scale-110 transition-all border border-gray-800">
+                        <a href="https://linkedin.com/in/yazantarifi" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="p-3 bg-dark-200 rounded-full shadow-sm hover:text-[#0a66c2] hover:bg-white hover:scale-110 transition-all border border-gray-800 flex items-center justify-center">
                             <Linkedin size={22} />
                         </a>
-                        <a href="https://github.com/Yazan98" target="_blank" rel="noopener noreferrer" aria-label="Github" className="p-3 bg-dark-200 rounded-full shadow-sm hover:text-white hover:bg-gray-800 hover:scale-110 transition-all border border-gray-800">
+                        <a href="https://github.com/Yazan98" target="_blank" rel="noopener noreferrer" aria-label="Github" className="p-3 bg-dark-200 rounded-full shadow-sm hover:text-white hover:bg-gray-800 hover:scale-110 transition-all border border-gray-800 flex items-center justify-center">
                             <Github size={22} />
                         </a>
-                        <a href="https://medium.com/@yazantarifi98" target="_blank" rel="noopener noreferrer" aria-label="Medium" className="p-3 bg-dark-200 rounded-full shadow-sm hover:text-black hover:bg-white hover:scale-110 transition-all border border-gray-800">
+                        <a href="https://medium.com/@yazantarifi98" target="_blank" rel="noopener noreferrer" aria-label="Medium" className="p-3 bg-dark-200 rounded-full shadow-sm hover:text-black hover:bg-white hover:scale-110 transition-all border border-gray-800 flex items-center justify-center">
                             <FaMediumM size={22} />
                         </a>
                     </div>
@@ -160,7 +160,7 @@ const HomePage: React.FC = () => {
                 </section>
 
                 {/* Featured Projects Horizonal Carousel (Full Viewport Redesign) */}
-                <section className="content-section w-full pt-12 border-t border-gray-800/50 bg-dark-200">
+                <section className="content-section w-full pt-12 bg-dark-200">
                     <div className="container mx-auto px-4 max-w-7xl flex items-center justify-between mb-8">
                         <h3 className="text-3xl font-display font-bold text-white flex items-center gap-3">
                             <AppWindow className="text-primary-500" /> Featured Projects
@@ -177,15 +177,15 @@ const HomePage: React.FC = () => {
 
                     <div
                         ref={projectsScrollRef}
-                        className="flex overflow-x-auto snap-x snap-mandatory hide-scrollbar pb-16"
+                        className="flex overflow-x-auto snap-x snap-mandatory hide-scrollbar"
                         style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
                     >
                         {featuredProjects.map((project: any) => (
                             <div key={project.id} className="min-w-full w-full snap-center flex-shrink-0">
-                                <div className="relative min-h-[85vh] w-full border-y border-gray-800 flex flex-col md:flex-row bg-[#0B0B0E]">
+                                <div className="relative min-h-[85vh] w-full flex flex-col md:flex-row bg-[#0B0B0E]">
 
                                     {/* Left Side: Content & Stats */}
-                                    <div className="w-full md:w-1/2 p-8 md:p-16 lg:p-24 flex flex-col justify-center z-10 bg-dark-200/90 backdrop-blur-3xl border-r border-gray-800/80">
+                                    <div className="w-full md:w-1/2 p-8 md:p-16 lg:p-24 flex flex-col justify-center z-10 bg-dark-200/90 backdrop-blur-3xl">
                                         <span className="inline-block self-start px-4 py-2 rounded-full bg-gradient-to-r from-primary-600/30 to-purple-600/20 text-primary-300 border border-primary-500/40 text-sm font-bold uppercase tracking-wider mb-8 shadow-inner shadow-primary-500/10">
                                             {project.type === 'ANDROID_APP' ? 'Android Native' : project.type.replace('_', ' ')}
                                         </span>
@@ -217,9 +217,9 @@ const HomePage: React.FC = () => {
                                     </div>
 
                                     {/* Right Side: Image Mockup & Glow */}
-                                    <div className="w-full md:w-1/2 relative overflow-hidden flex items-center justify-center p-0 h-full min-h-[500px]">
+                                    <div className="w-full md:w-1/2 relative overflow-hidden flex items-center justify-center p-0 min-h-[500px]">
                                         {/* Ambient Glow */}
-                                        <div className="absolute inset-0 bg-gradient-to-l from-primary-900/10 via-transparent to-dark-200/90 z-10"></div>
+                                        <div className="absolute inset-0 bg-gradient-to-l from-primary-900/10 via-transparent to-dark-200/90 z-10 hidden md:block"></div>
                                         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[150%] h-[150%] bg-primary-500/20 blur-[150px] rounded-full pointer-events-none"></div>
 
                                         {project.image ? (
