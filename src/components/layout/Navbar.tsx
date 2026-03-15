@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Menu } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 
 const Navbar: React.FC = () => {
+    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
     return (
         <header className="sticky top-0 z-50 w-full backdrop-blur-md bg-white/70 dark:bg-dark-200/70 border-b border-gray-200 dark:border-gray-800 transition-colors duration-300">
             <div className="container mx-auto px-4 h-16 flex items-center justify-between">
@@ -20,11 +22,43 @@ const Navbar: React.FC = () => {
                 </nav>
 
                 <div className="flex items-center gap-4">
-                    <button className="md:hidden p-2 text-gray-900 dark:text-gray-100">
-                        <Menu size={24} />
+                    <button
+                        className="md:hidden p-2 text-gray-900 dark:text-gray-100 focus:outline-none"
+                        onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                    >
+                        {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
                     </button>
                 </div>
             </div>
+
+            {/* Mobile Dropdown Menu */}
+            {isMobileMenuOpen && (
+                <div className="md:hidden bg-white dark:bg-dark-200 border-b border-gray-200 dark:border-gray-800 shadow-lg absolute w-full left-0 top-16">
+                    <nav className="flex flex-col px-4 pt-2 pb-6 gap-2">
+                        <Link
+                            to="/"
+                            onClick={() => setIsMobileMenuOpen(false)}
+                            className="text-base font-medium px-4 py-3 rounded-lg hover:bg-gray-100 dark:hover:bg-dark-100 hover:text-primary-500 transition-colors"
+                        >
+                            Home
+                        </Link>
+                        <Link
+                            to="/projects"
+                            onClick={() => setIsMobileMenuOpen(false)}
+                            className="text-base font-medium px-4 py-3 rounded-lg hover:bg-gray-100 dark:hover:bg-dark-100 hover:text-primary-500 transition-colors"
+                        >
+                            Projects
+                        </Link>
+                        <Link
+                            to="/skills"
+                            onClick={() => setIsMobileMenuOpen(false)}
+                            className="text-base font-medium px-4 py-3 rounded-lg hover:bg-gray-100 dark:hover:bg-dark-100 hover:text-primary-500 transition-colors"
+                        >
+                            Skills
+                        </Link>
+                    </nav>
+                </div>
+            )}
         </header>
     );
 };

@@ -56,7 +56,7 @@ const ProjectsPage: React.FC = () => {
     }, [filter]);
 
     return (
-        <div className="container mx-auto px-4 py-16" ref={containerRef}>
+        <div className="w-full px-6 md:px-12 lg:px-16 py-16 max-w-[1600px] mx-auto" ref={containerRef}>
             <Helmet>
                 <title>Yazan Tarifi - Projects</title>
                 <meta name="description" content="Explore Yazan Tarifi's premium software engineering portfolio." />
@@ -83,48 +83,85 @@ const ProjectsPage: React.FC = () => {
                 ))}
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-6 md:gap-8">
                 {filteredProjects.map((project: any) => (
-                    <div key={project.id} className="project-card group bg-white dark:bg-dark-200 border border-gray-100 dark:border-gray-800 rounded-2xl p-6 hover:shadow-xl hover:border-primary-500/30 transition-all duration-300 flex flex-col h-full overflow-hidden relative">
+                    <div key={project.id} className="project-card group [perspective:1500px] h-[350px] sm:h-[400px]">
+                        {/* 3D Flip Container wrapper */}
+                        <div className="relative w-full h-full transition-all duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)] shadow-xl hover:shadow-primary-500/20 rounded-2xl">
 
-                        {/* Project Image Banner */}
-                        {project.image && (
-                            <div className="absolute inset-0 h-48 w-full overflow-hidden rounded-t-2xl z-0 opacity-20 group-hover:opacity-40 transition-opacity">
-                                <img src={project.image} alt={project.name} className="w-full h-full object-cover" />
-                                <div className="absolute inset-0 bg-gradient-to-t from-dark-200 to-transparent"></div>
-                            </div>
-                        )}
-
-                        <div className="flex justify-between items-start mb-4 relative z-10 pt-32">
-                            <span className="text-xs font-semibold uppercase tracking-wider text-primary-500 dark:text-primary-400">
-                                {categories.find(c => c.value === project.type)?.label || project.type}
-                            </span>
-                            <div className="flex gap-2">
-                                {project.link && (
-                                    <a href={project.link} target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-white transition-colors">
-                                        <Github size={18} />
-                                    </a>
+                            {/* Front Face: Image Cover */}
+                            <div className="absolute inset-0 w-full h-full [backface-visibility:hidden] rounded-2xl overflow-hidden bg-dark-200 border border-gray-100 dark:border-gray-800">
+                                {project.image ? (
+                                    <>
+                                        <img src={project.image} alt={project.name} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                                        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
+                                    </>
+                                ) : (
+                                    <div className="w-full h-full flex items-center justify-center bg-dark-100">
+                                        <span className="text-gray-500 font-medium">No Image Available</span>
+                                    </div>
                                 )}
+
+                                {/* Overlay Title on Front */}
+                                <div className="absolute bottom-6 left-6 right-6 flex items-end justify-between">
+                                    <h3 className="text-2xl font-display font-bold text-white drop-shadow-md">
+                                        {project.name}
+                                    </h3>
+                                    <span className="text-xs font-semibold px-3 py-1 bg-primary-500/20 text-primary-400 rounded-full border border-primary-500/30 backdrop-blur-sm">
+                                        {categories.find(c => c.value === project.type)?.label || project.type}
+                                    </span>
+                                </div>
                             </div>
-                        </div>
 
-                        <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2 relative z-10 group-hover:text-primary-500 transition-colors">
-                            {project.name}
-                        </h3>
-                        <p className="text-xs text-primary-400 mb-4 relative z-10 font-medium">
-                            {project.createdAt}
-                        </p>
+                            {/* Back Face: Content & CTA */}
+                            <div className="absolute inset-0 w-full h-full [backface-visibility:hidden] [transform:rotateY(180deg)] rounded-2xl bg-white dark:bg-dark-200 border border-primary-500/40 p-6 sm:p-8 flex flex-col justify-between overflow-hidden">
+                                {/* Ambient Background Glow */}
+                                <div className="absolute top-0 right-0 w-48 h-48 bg-primary-900/10 rounded-full blur-3xl pointer-events-none -mr-10 -mt-10"></div>
 
-                        <p className="text-gray-600 dark:text-gray-400 text-sm mb-6 flex-grow leading-relaxed relative z-10">
-                            {project.description}
-                        </p>
+                                <div>
+                                    <div className="flex justify-between items-center mb-4 relative z-10">
+                                        {project.link && (
+                                            <a href={project.link} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-gray-500 hover:text-white transition-colors bg-dark-100 px-3 py-1.5 rounded-md border border-gray-800 text-sm">
+                                                <Github size={16} /> Repository
+                                            </a>
+                                        )}
+                                        <span className="text-xs text-primary-400 font-medium tracking-wide">
+                                            {project.createdAt}
+                                        </span>
+                                    </div>
+                                    <div className="relative z-10">
+                                        <p className="text-gray-600 dark:text-gray-300 text-sm sm:text-base leading-relaxed mb-6 line-clamp-5">
+                                            {project.description}
+                                        </p>
+                                    </div>
+                                </div>
 
-                        <div className="flex flex-wrap gap-2 mt-auto pt-4 border-t border-gray-100 dark:border-gray-800/50 relative z-10">
-                            {(project.tags || []).map((tech: any) => (
-                                <span key={tech} className="text-xs px-2 py-1 rounded bg-gray-50 dark:bg-dark-100 text-gray-600 dark:text-gray-400 font-medium border border-gray-100 dark:border-gray-800">
-                                    {tech}
-                                </span>
-                            ))}
+                                <div className="relative z-10 flex flex-col gap-6 mt-auto">
+                                    {/* Tech Tags */}
+                                    <div className="flex flex-wrap gap-2">
+                                        {(project.tags || []).slice(0, 5).map((tech: any) => (
+                                            <span key={tech} className="text-[11px] px-2.5 py-1 rounded bg-dark-300 text-gray-400 font-medium border border-gray-800">
+                                                {tech}
+                                            </span>
+                                        ))}
+                                        {(project.tags && project.tags.length > 5) && (
+                                            <span className="text-[11px] px-2.5 py-1 rounded bg-dark-300/50 text-gray-500 border border-gray-800/50">
+                                                +{project.tags.length - 5}
+                                            </span>
+                                        )}
+                                    </div>
+
+                                    {/* CTA Button */}
+                                    <a
+                                        href={project.link || '#'}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="w-full py-3.5 flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-primary-600 to-cyan-600 text-white font-bold hover:shadow-[0_0_20px_rgba(0,149,213,0.4)] transition-all transform hover:-translate-y-0.5"
+                                    >
+                                        View Details
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 ))}
