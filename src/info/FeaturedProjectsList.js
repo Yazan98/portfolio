@@ -20,6 +20,7 @@ import ExpenziaImage5 from '../components/images/expenzia_5.png';
 import ExpenziaImage6 from '../components/images/expenzia_6.png';
 
 import LegoraImage from '../components/images/legora.png';
+import GitlyImage from '../components/images/gitly.png';
 
 export default function getFeaturedProjectsList() {
     return [
@@ -101,8 +102,8 @@ export default function getFeaturedProjectsList() {
             createdAt: 'Github : 2024',
             description: 'IOS Application Built with SwiftUI, GraphQL, Apollo Client, UserDefaults, MVVM, Dynamic Widgets, Nested Navigations',
             longDescription: "This Project Built to Learn SwiftUI on IOS, Macos Apps and the Usage in this project for Apollo Client and GraphQL available only in IOS Apps, This Project has a Download Schema, Generate and build Dynamic GraphQL Queries",
-            image: 'https://raw.githubusercontent.com/Yazan98/portfolio/v3.1.2/src/components/images/gitly_preview.webp',
-            imageProject: "https://raw.githubusercontent.com/Yazan98/portfolio/v3.1.2/src/components/images/gitly_preview.webp",
+            image: GitlyImage,
+            imageProject: GitlyImage,
             type: 'ios',
             link: "https://github.com/Yazan98/Gitly",
             tags: [

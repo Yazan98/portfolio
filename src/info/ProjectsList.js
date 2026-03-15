@@ -19,6 +19,7 @@ import ExpenziaImage4 from '../components/images/expenzia_4.png';
 import ExpenziaImage5 from '../components/images/expenzia_5.png';
 import ExpenziaImage6 from '../components/images/expenzia_6.png';
 import LegoraImage from '../components/images/legora.png';
+import GitlyImage from '../components/images/gitly.png';
 
 export const ALL_FILTER_TYPE = 'all';
 export const ANDROID_FILTER_TYPE = 'android';
@@ -107,14 +108,14 @@ export default function getProjectsList() {
       ]
     },
     {
-      id: 10,
+      id: 4,
       name: 'Gitly',
       createdAt: 'Github : 2024',
       description: 'IOS Application Built with SwiftUI, GraphQL, Apollo Client, UserDefaults, MVVM, Dynamic Widgets, Nested Navigations',
       longDescription: "This Project Built to Learn SwiftUI on IOS, Macos Apps and the Usage in this project for Apollo Client and GraphQL available only in IOS Apps, This Project has a Download Schema, Generate and build Dynamic GraphQL Queries",
-      image: 'https://raw.githubusercontent.com/Yazan98/portfolio/v3.1.2/src/components/images/gitly_preview.webp',
-      imageProject: "https://raw.githubusercontent.com/Yazan98/portfolio/v3.1.2/src/components/images/gitly_preview.webp",
-      type: IOS_FILTER_TYPE,
+      image: GitlyImage,
+      imageProject: GitlyImage,
+      type: 'ios',
       link: "https://github.com/Yazan98/Gitly",
       tags: [
         "IOS App",
@@ -132,8 +133,9 @@ export default function getProjectsList() {
         "https://raw.githubusercontent.com/Yazan98/Gitly/main/Screenshots/Simulator%20Screenshot%20-%20iPhone%2015%20Pro%20Max%20-%202024-01-19%20at%2013.46.35.png",
         "https://raw.githubusercontent.com/Yazan98/Gitly/main/Screenshots/Simulator%20Screenshot%20-%20iPhone%2015%20Pro%20Max%20-%202024-01-19%20at%2013.46.10.png"
       ]
-    }, {
-      id: 7,
+    },
+    {
+      id: 5,
       name: 'RickAndMorty',
       createdAt: 'Github : 2023',
       description: 'IOS Application Built with UIKit, Alamofire, Push Navigations, Nested Navigations, Tab Bar View, Realm, Collection Views',
@@ -163,7 +165,7 @@ export default function getProjectsList() {
         "https://private-user-images.githubusercontent.com/29167110/265703340-3694bb40-3314-4235-88ab-b934705aeb9e.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MTM1OTE3MTMsIm5iZiI6MTcxMzU5MTQxMywicGF0aCI6Ii8yOTE2NzExMC8yNjU3MDMzNDAtMzY5NGJiNDAtMzMxNC00MjM1LTg4YWItYjkzNDcwNWFlYjllLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDA0MjAlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQwNDIwVDA1MzY1M1omWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTg2MzFhM2Y2N2Y5ZWEyNDM1YmJiNGM3M2NkOWRhZTdiNmM5ZjRmNGM1ODVhNjAzMmFmOWUzMGY1ZDJlMWE1NTkmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.C_w6rKCKrP2n5mE07423Xt5h-J-cMetOLBpM1lKEoOo"
       ]
     }, {
-      id: 3,
+      id: 6,
       name: 'Coina',
       createdAt: 'Github : 2023',
       description: 'Kotlin Multiplatform Mobile Application Written in Kotlin Jetpack Compose and Swift with SwiftUI, Ktor Client',
@@ -184,7 +186,7 @@ export default function getProjectsList() {
       ]
     },
     {
-      id: 4,
+      id: 7,
       name: 'Autohub',
       createdAt: 'Github : 2019',
       description: 'Android Application : Open Source Built Based on MVVM, Vortex, Github Api V3, With Navigation Component',
@@ -211,7 +213,7 @@ export default function getProjectsList() {
       ]
     },
     {
-      id: 5,
+      id: 8,
       name: 'Destiny',
       createdAt: 'Github : 2019',
       description: 'Android Application : Open Source Built Based on MVVM, Vortex, SpringBoot Api, With Navigation Component',
@@ -236,7 +238,7 @@ export default function getProjectsList() {
       ]
     },
     {
-      id: 6,
+      id: 9,
       name: 'Portfolio',
       createdAt: 'Github : 2020',
       description: 'My Personal Website Built With React.js, And Support PWAs and Some of SEO Techniques For Google Search Console and SPA with Typescript, Jsx, And SASS To Write Clear Css, React Router To Change Pages, Client Side Rendering Also Dark / White Mode Supported in All Pages Inside The Repository You Can Find The First and Second Version of The Website',
@@ -261,7 +263,7 @@ export default function getProjectsList() {
       ]
     },
     {
-      id: 18,
+      id: 10,
       name: 'Drasati',
       createdAt: '2020',
       description: 'Android Application : Closed Source An organizing platform for school students that aims to gather students and link them with audible lessons by providing a tree plan with the possibility to speak with teachers if a difference occurs on a certain point with the support feature of all classes',
@@ -286,7 +288,7 @@ export default function getProjectsList() {
       ]
     },
     {
-      id: 8,
+      id: 11,
       name: 'Wintrop',
       createdAt: 'Github : 2019',
       description: 'Android Application : Open Source Weather Application Powered By Vortex , Latest Android Technologies With Managed Structure To Show Weather Status For Amman, Irbid, Aqaba',
@@ -309,7 +311,7 @@ export default function getProjectsList() {
       ]
     },
     {
-      id: 9,
+      id: 12,
       name: 'Shopie Api',
       createdAt: 'Github : 2021',
       description: 'Api - Open Source Api Built With PHP - Laravel To Calculate The Database Relations And Logic For Shop Application and Website to Manage Accounts, Recipes, Restaurants, Bearer Tokens, Phone Number Verification, User Addresses, Categories This Project Mainly Built to Apply PHP Skills into a Project in PHP Training Path',
@@ -325,7 +327,7 @@ export default function getProjectsList() {
       ]
     },
     {
-      id: 10,
+      id: 13,
       name: 'Vortex',
       createdAt: 'Github : 2019',
       description: 'Android Library : Open Source Android Infrastructure To Build Android Applications With Latest Technologies and Ready State Handling with User Interface Implementation For The Android Common Cases This Library is Not Just Base Code it\'s also help you to get the target as soon as possible with ready techniques',
@@ -343,7 +345,7 @@ export default function getProjectsList() {
       ]
     },
     {
-      id: 11,
+      id: 14,
       name: 'Netflix Clone',
       createdAt: 'Github : 2021',
       description: 'Website - Open Source a React.js Project Built to show Movies Based on MoviesDB Api And React Hooks, Typescript',
@@ -368,7 +370,7 @@ export default function getProjectsList() {
       ]
     },
     {
-      id: 12,
+      id: 15,
       name: 'Github Clone',
       createdAt: 'Github : 2021',
       description: 'Website - Open Source a React.js Project With Github Api V3 Project To Show Popular Repos, PWA, Show Profile Repos, Information, Profile View With Github UserName, Grid - Linear List Toggle',
@@ -393,7 +395,7 @@ export default function getProjectsList() {
       ]
     },
     {
-      id: 13,
+      id: 16,
       name: 'Autohub V2.0',
       createdAt: 'Github : 2022',
       description: 'Android Application : Closed Source Multi Modular Application With Jetpack Compose',
@@ -422,7 +424,7 @@ export default function getProjectsList() {
       ]
     },
     {
-      id: 14,
+      id: 17,
       name: 'Destiny Api',
       createdAt: 'Github : 2021',
       description: 'Api - Open Source Spring Boot Project To Manage Firebase Admin SDK, Mysql, JWT Tokens, Mainly To Manage Mobile Applications and Built With Kotlin, Kotlin-Jackson',
@@ -439,7 +441,7 @@ export default function getProjectsList() {
         "Firebase Admin"
       ]
     }, {
-      id: 15,
+      id: 18,
       name: 'Tapper',
       createdAt: 'Github : 2024',
       description: 'Desktop Application Built With Swift, SwiftUI, Tapper CLI, ADB Commands Cli Builder',
@@ -456,7 +458,7 @@ export default function getProjectsList() {
       ]
     },
     {
-      id: 16,
+      id: 19,
       name: 'Legora',
       createdAt: 'Github : 2021',
       description: 'Android Application - Training Project to Test Vanite Source Code Library Built With Riot Api',
@@ -483,7 +485,7 @@ export default function getProjectsList() {
       ]
     },
     {
-      id: 17,
+      id: 20,
       name: 'All Projects',
       createdAt: 'View All Projects Open, Closed Source',
       description: 'Show All Projects In One List with All Links Required to Each Project with Description and More Filters',
