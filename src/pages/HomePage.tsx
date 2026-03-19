@@ -6,6 +6,9 @@ import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import InteractiveBackground from '../components/ui/InteractiveBackground';
 import FeaturedProjects from '../components/sections/FeaturedProjects';
+import ServicesSection from '../components/sections/ServicesSection';
+import ArticlesSection from '../components/sections/ArticlesSection';
+import ContactSection from '../components/sections/ContactSection';
 
 const languages = [
     { name: 'Kotlin', tag: 'Mobile / Backend', icon: <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/kotlin/kotlin-original.svg" alt="Kotlin" className="w-10 h-10 drop-shadow-md group-hover:drop-shadow-[0_0_12px_rgba(0,149,213,0.6)] transition-all duration-300" /> },
@@ -125,6 +128,9 @@ const HomePage: React.FC = () => {
                     </div>
                 </section>
 
+                {/* Services Section */}
+                <ServicesSection />
+
                 {/* Programming Languages Section */}
                 <section className="content-section container mx-auto px-4 max-w-5xl mb-32">
                     <div className="flex items-center justify-between mb-8">
@@ -149,6 +155,9 @@ const HomePage: React.FC = () => {
 
                 {/* Featured Projects Component */}
                 <FeaturedProjects />
+
+                {/* Articles Section */}
+                <ArticlesSection />
 
                 {/* GitHub CTA Section */}
                 <section className="content-section container mx-auto px-4 max-w-5xl mb-32 mt-20 relative group">
@@ -180,6 +189,9 @@ const HomePage: React.FC = () => {
                         </div>
                     </div>
                 </section>
+
+                {/* Contact Section */}
+                <ContactSection />
             </div>
 
             {/* Ambient gradients to blend with canvas */}

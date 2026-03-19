@@ -33,10 +33,10 @@ const SplashScreen: React.FC<SplashScreenProps> = ({ onComplete }) => {
                     repeat: -1,
                     ease: 'sine.inOut'
                 }, "-=0.5")
-                // 3. Slide text up
+                // 3. Slide text up smoothly with hardware acceleration
                 .fromTo('.splash-text',
-                    { autoAlpha: 0, y: 30, letterSpacing: '0px' },
-                    { autoAlpha: 1, y: 0, letterSpacing: '4px', duration: 1, ease: 'power3.out' },
+                    { autoAlpha: 0, y: 20, scale: 0.9, filter: 'blur(10px)' },
+                    { autoAlpha: 1, y: 0, scale: 1, filter: 'blur(0px)', duration: 1.2, ease: 'power3.out' },
                     "-=1"
                 )
                 // 4. Fade everything out to start app
