@@ -59,7 +59,11 @@ const ProjectsPage: React.FC = () => {
         <div className="w-full px-6 md:px-12 lg:px-16 py-16 max-w-[1600px] mx-auto" ref={containerRef}>
             <Helmet>
                 <title>Yazan Tarifi - Projects</title>
-                <meta name="description" content="Explore Yazan Tarifi's premium software engineering portfolio." />
+                <meta name="description" content="Browse all projects built by Yazan Tarifi — Android apps, iOS apps, backend systems, and web applications." />
+                <link rel="canonical" href="https://yazantarifi.com/projects" />
+                <meta property="og:title" content="Yazan Tarifi - Projects" />
+                <meta property="og:description" content="Browse all projects built by Yazan Tarifi — Android apps, iOS apps, backend systems, and web applications." />
+                <meta property="og:url" content="https://yazantarifi.com/projects" />
             </Helmet>
 
             <div className="mb-12 text-center md:text-left">

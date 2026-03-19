@@ -35,7 +35,7 @@ function App() {
                 {/* Open Graph / Social Media Metatags */}
                 <meta property="og:type" content="website" />
                 <meta property="og:url" content="https://yazantarifi.com/" />
-                <meta property="og:title" content="Yazan Tarifi - $15,000 Premium Software Engineering Portfolio" />
+                <meta property="og:title" content="Yazan Tarifi - Software Engineer Portfolio" />
                 <meta property="og:description" content="Explore Yazan's code-minded approach to building digital experiences." />
                 <meta property="og:image" content="https://yazantarifi.com/banner.png" />
 
