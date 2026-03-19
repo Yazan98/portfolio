@@ -483,15 +483,7 @@ export default function getProjectsList() {
         "https://user-images.githubusercontent.com/29167110/202739136-50685847-133d-450e-b107-f709f39b532a.png",
         "https://user-images.githubusercontent.com/29167110/202739167-76fe2730-986d-4fdb-ac34-493819797005.png",
       ]
-    },
-    {
-      id: 20,
-      name: 'All Projects',
-      createdAt: 'View All Projects Open, Closed Source',
-      description: 'Show All Projects In One List with All Links Required to Each Project with Description and More Filters',
-      image: 'https://raw.githubusercontent.com/Yazan98/portfolio/master/src/components/images/all_preview.webp',
-      type: FILTERED_PROJECTS_FILTER_TYPE,
-    },
+    }
   ];
 }
 

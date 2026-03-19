@@ -32,14 +32,11 @@ const ServicesSection: React.FC = () => {
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-[800px] h-[400px] bg-primary-600/5 blur-[120px] rounded-full pointer-events-none z-0"></div>
 
             <div className="relative z-10 mb-16 text-center">
-                <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-dark-100 border border-gray-800 text-primary-400 text-sm font-semibold mb-6 shadow-sm">
-                    My Architectural Focus
-                </div>
                 <h2 className="text-4xl md:text-5xl font-display font-black text-white mb-6">
                     What I <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-cyan-400">Do</span>
                 </h2>
                 <p className="text-gray-400 text-lg max-w-2xl mx-auto leading-relaxed">
-                    Delivering premium development services across the stack. From highly responsive mobile applications to scalable backend microservices.
+                    Building Mobile Applications with Api's and Backend Systems.
                 </p>
             </div>
 
