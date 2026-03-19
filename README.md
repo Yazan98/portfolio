@@ -1,89 +1,82 @@
 # Portfolio
-React Website To Build My Portfolio (Source Code of the Website)
 
-![New Project](https://github.com/Yazan98/portfolio/blob/v3/design/header.png?raw=true)
+My personal portfolio website — built with React, TypeScript, Vite, and Tailwind CSS.
 
-## Screenshots
-You can See Main Pages of the website in this [Link](https://github.com/Yazan98/portfolio/tree/master/screenshots)
+![Header](https://github.com/Yazan98/portfolio/blob/v3/design/header.png?raw=true)
 
-## Description
-Personal Website To Show The Projects Documentation, View On Github and Describe Each Project with Amazing Design Built With React.js, JSX, Mobile Responsive Design , This Project Built Based on Airbnb Eslint Rules
+**Live:** [yazantarifi.com](https://www.yazantarifi.com)
 
-#### Components
-1. React Router
-2. Typescript
-3. Create React App
-4. Tailwind CSS
-5. Bootstrap
-6. Node SASS
-7. Firebase Hosting
-8. PWA
-9. Responsive Design
-10. JSX
-11. React Hooks
+## Tech Stack
 
-## Features
-1. Responsive Design Built with Tailwind CSS
-2. Multi Page Layout
-3. Dynamic Lists (Pages Content inside Loops)
+- React 18 + TypeScript
+- Vite
+- Tailwind CSS
+- GSAP (animations)
+- React Router
+- React Helmet (SEO)
+- Firebase Hosting
 
-## Project Pages
-1. Home Page
-2. Projects Page
-3. All Projects Page
-4. Skills Page
-5. Archive Page
-6. App Page
-7. Mobile Navigation Page
-8. Not Found Page
+## Pages
 
-## Project History
-1. Simple Page Built with Vue.js
-2. Refactor To Angular 8
-3. Refactor To React.js (Typescript, PWA)
-4. Refactor To React.js Material UI
-5. Refactor To React.js Tailwind CSS
+| Page | Description |
+|------|-------------|
+| Home | Hero section, services, core languages, featured projects, articles, contact form |
+| Projects | Full project listing with 3D card hover animations |
+| Project Details | Individual project breakdown |
+| Skills | Languages and tools overview |
 
-## Project Deployment
-1. Main Website (https://www.yazantarifi.com)
-2. Github Pages (https://yazan98.github.io)
-3. Firebase Hosting (https://portfolio-v2-67ceb.web.app/)
+## Getting Started
 
-### Commands List
-```
-1. Deploy Test Version On Firebase : npx firebase deploy
-2. Generate Production Build (Without Map Files) : npm run build
-3. Run Project Locally : npm start
+```bash
+# install dependencies
+npm install
+
+# run locally (port 3000)
+npm run dev
+
+# production build (output: /build)
+npm run build
+
+# preview production build
+npm run preview
 ```
 
-## Start The Project
-> 1. npm install
-> 2. npm start
-> 3. npm run build
+## Deployment
 
-## Start The Project (Yarn)
-> 1. yarn install
-> 2. yarn run start
-
-## Branches Description
-1. master (Latest Source Code)
-2. v2.x Version 2 of The Website (Dark, Light Mode)
-3. v3 Version 3 of the Website (Dynamic Components)
-
-## Docker Information
-
-Docker Repository Link
-> https://hub.docker.com/repository/docker/yt98/portfolio-website
-
-Execute The Following Commands to Run Docker Image
-
-Pull The Image to Your Device Then Run the Image on Port 3000
-
+### Firebase
+```bash
+firebase login
+firebase deploy --only hosting
 ```
+
+### Docker
+```bash
+docker-compose up --build -d
+```
+
+Or pull directly:
+```bash
 docker pull yt98/portfolio-website:v3
 docker run --name portfolio -p 3000:3000 -d yt98/portfolio-website:v3
 ```
 
-## License
-Copyright (C) 2021 Portfolio is An Open Source Project (Licensed under the MIT License)
+### GitHub Pages
+```
+https://yazan98.github.io
+```
 
+## Project History
+
+1. Started as a simple Vue.js page
+2. Migrated to Angular 8
+3. Rebuilt in React + TypeScript (PWA)
+4. Redesigned with Material UI
+5. Current version — Tailwind CSS + Vite + GSAP animations
+
+## Screenshots
+
+See the [screenshots folder](https://github.com/Yazan98/portfolio/tree/master/screenshots) for page previews.
+
+## License
+
+MIT — see [LICENSE](LICENSE) for details.

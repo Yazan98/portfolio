@@ -1,5 +1,29 @@
+import RafeeqImage from '../components/images/rafeeq_landing.png';
+import RafeeqImage1 from '../components/images/rafeeq_1.png';
+import RafeeqImage2 from '../components/images/rafeeq_2.png';
+import RafeeqImage3 from '../components/images/rafeeq_3.png';
+import RafeeqImage4 from '../components/images/rafeeq_4.png';
+import RafeeqImage5 from '../components/images/rafeeq_5.png';
+import RafeeqImage6 from '../components/images/rafeeq_6.png';
+import RafeeqImage7 from '../components/images/rafeeq_7.png';
+import RafeeqImage8 from '../components/images/rafeeq_8.png';
+import RafeeqImage9 from '../components/images/rafeeq_9.png';
+import RafeeqImage10 from '../components/images/rafeeq_10.png';
+import RafeeqImage11 from '../components/images/rafeeq_11.png';
+
+import ExpenziaImage from '../components/images/expenzia.png';
+import ExpenziaImage1 from '../components/images/expenzia_1.png';
+import ExpenziaImage2 from '../components/images/expenzia_2.png';
+import ExpenziaImage3 from '../components/images/expenzia_3.png';
+import ExpenziaImage4 from '../components/images/expenzia_4.png';
+import ExpenziaImage5 from '../components/images/expenzia_5.png';
+import ExpenziaImage6 from '../components/images/expenzia_6.png';
+import LegoraImage from '../components/images/legora.png';
+import GitlyImage from '../components/images/gitly.png';
+
 export const ALL_FILTER_TYPE = 'all';
 export const ANDROID_FILTER_TYPE = 'android';
+export const MOBILE_FILTER_TYPE = 'mobile';
 export const IOS_FILTER_TYPE = 'ios';
 export const WEBSITES_FILTER_TYPE = 'Websites';
 export const WEB_APPS_FILTER_TYPE = 'webApps';
@@ -13,13 +37,85 @@ export default function getProjectsList() {
   return [
     {
       id: 1,
+      name: 'Rafeeq',
+      createdAt: '2026',
+      description: 'Compose Multiplatform Mobile Application Targeting Android, IOS with Shared Logic and UI',
+      longDescription: "This is the First Full Project to show Quran Content for Muslims with Arabic and English with a Shared UI and Logic Using Kotlin and Compose Multiplatform with Embedded UI Composables inside SwiftUI and Swift, The Idea of Building this Project is to See how Possible i can Share the UI Between Android and IOS with a KMP Official Libraries",
+      image: RafeeqImage,
+      imageProject: RafeeqImage,
+      type: MOBILE_FILTER_TYPE,
+      tags: [
+        "Compose Multiplatform",
+        "Swift 5",
+        "Swift UI",
+        "Jetpack Compose",
+        "Local Json Resources",
+        "Shared Logic",
+        "Shared UI",
+        "Shared Database",
+      ],
+      images: [RafeeqImage1, RafeeqImage2, RafeeqImage3, RafeeqImage4, RafeeqImage5, RafeeqImage6, RafeeqImage7, RafeeqImage8, RafeeqImage9, RafeeqImage10, RafeeqImage11]
+    },
+    {
+      id: 2,
+      name: 'Expenzia',
+      createdAt: '2025',
+      description: 'Native Android Application for Expenses Tracker',
+      longDescription: "The Target of Building the Application is to Test the new Deployment of Android App to Google Play Store with the New Rules and Changes also to Learn how to Connect and Configure Admob Configurations",
+      image: ExpenziaImage,
+      imageProject: ExpenziaImage,
+      type: ANDROID_FILTER_TYPE,
+      link: "https://play.google.com/store/apps/details?id=app.expenzia.android",
+      tags: [
+        "Room Database",
+        "Jetpack Compose",
+        "Admob",
+        "Google Play Store",
+        "Google Play Console"
+      ],
+      images: [ExpenziaImage1, ExpenziaImage2, ExpenziaImage3, ExpenziaImage4, ExpenziaImage5, ExpenziaImage6]
+    },
+    {
+      id: 3,
+      name: 'Legora',
+      createdAt: '2024',
+      description: 'League of Legends Mobile Application Built with Kotlin Multiplatform',
+      longDescription: "This Project was the first try of Express Framework with Kotlin Multiplatform for Building a Full Stack Mobile Application with Backend, Apis, Deployment with Routing and Load Balancing with Nginx and Connecting to a Native Mobile Apps Using Kotlin Multiplatform for using Shared Logic and Native UI",
+      image: LegoraImage,
+      imageProject: LegoraImage,
+      type: MOBILE_FILTER_TYPE,
+      link: "https://github.com/Yazan98/legora",
+      tags: [
+        "Room Database",
+        "Jetpack Compose",
+        "SwiftUI",
+        "Kotlin Multiplatform",
+        "Express",
+        "Nginx"
+      ],
+      images: [
+        "https://github.com/Yazan98/legora/raw/main/images/android/Screenshot_20240706_191903.png?raw=true",
+        "https://github.com/Yazan98/legora/raw/main/images/android/Screenshot_20240706_192011.png?raw=true",
+        "https://github.com/Yazan98/legora/raw/main/images/android/Screenshot_20240706_192511.png?raw=true",
+        "https://github.com/Yazan98/legora/raw/main/images/android/Screenshot_20240706_192524.png?raw=true",
+        "https://github.com/Yazan98/legora/raw/main/images/android/Screenshot_20240706_192542.png?raw=true",
+        "https://github.com/Yazan98/legora/raw/main/images/android/Screenshot_20240706_192557.png?raw=true",
+        "https://github.com/Yazan98/legora/raw/main/images/android/Screenshot_20240706_192644.png?raw=true",
+        "https://github.com/Yazan98/legora/raw/main/images/ios/Simulator%20Screenshot%20-%20iPhone%2015%20Pro%20Max%20-%202024-07-06%20at%2019-portrait%202.png?raw=true",
+        "https://github.com/Yazan98/legora/raw/main/images/ios/Simulator%20Screenshot%20-%20iPhone%2015%20Pro%20Max%20-%202024-07-06%20at%2019-portrait%203.png?raw=true",
+        "https://github.com/Yazan98/legora/raw/main/images/ios/Simulator%20Screenshot%20-%20iPhone%2015%20Pro%20Max%20-%202024-07-06%20at%2019-portrait%204.png?raw=true",
+        "https://github.com/Yazan98/legora/raw/main/images/ios/Simulator%20Screenshot%20-%20iPhone%2015%20Pro%20Max%20-%202024-07-06%20at%2019-portrait.png?raw=true"
+      ]
+    },
+    {
+      id: 4,
       name: 'Gitly',
       createdAt: 'Github : 2024',
       description: 'IOS Application Built with SwiftUI, GraphQL, Apollo Client, UserDefaults, MVVM, Dynamic Widgets, Nested Navigations',
       longDescription: "This Project Built to Learn SwiftUI on IOS, Macos Apps and the Usage in this project for Apollo Client and GraphQL available only in IOS Apps, This Project has a Download Schema, Generate and build Dynamic GraphQL Queries",
-      image: 'https://raw.githubusercontent.com/Yazan98/portfolio/v3.1.2/src/components/images/gitly_preview.webp',
-      imageProject: "https://raw.githubusercontent.com/Yazan98/portfolio/v3.1.2/src/components/images/gitly_preview.webp",
-      type: IOS_FILTER_TYPE,
+      image: GitlyImage,
+      imageProject: GitlyImage,
+      type: 'ios',
       link: "https://github.com/Yazan98/Gitly",
       tags: [
         "IOS App",
@@ -37,8 +133,9 @@ export default function getProjectsList() {
         "https://raw.githubusercontent.com/Yazan98/Gitly/main/Screenshots/Simulator%20Screenshot%20-%20iPhone%2015%20Pro%20Max%20-%202024-01-19%20at%2013.46.35.png",
         "https://raw.githubusercontent.com/Yazan98/Gitly/main/Screenshots/Simulator%20Screenshot%20-%20iPhone%2015%20Pro%20Max%20-%202024-01-19%20at%2013.46.10.png"
       ]
-    },{
-      id: 2,
+    },
+    {
+      id: 5,
       name: 'RickAndMorty',
       createdAt: 'Github : 2023',
       description: 'IOS Application Built with UIKit, Alamofire, Push Navigations, Nested Navigations, Tab Bar View, Realm, Collection Views',
@@ -59,16 +156,16 @@ export default function getProjectsList() {
       ],
       images: [
         "https://private-user-images.githubusercontent.com/29167110/265701773-1abca177-7a01-4b38-a670-7c2ec09e4f89.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MTM1OTE3MTMsIm5iZiI6MTcxMzU5MTQxMywicGF0aCI6Ii8yOTE2NzExMC8yNjU3MDE3NzMtMWFiY2ExNzctN2EwMS00YjM4LWE2NzAtN2MyZWMwOWU0Zjg5LnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDA0MjAlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQwNDIwVDA1MzY1M1omWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWYwODgxNjViZTNmZTNmODJkM2Y4NTgwNzI1YTFiZTE1NWMwZjQwZTBiM2FkMTNiMTI4YmVmMzYyYmYwNjYzOWImWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.FFyKnVyQXZm0wb7SbxW39sTMMf7y3pZetmYM9FOaY30",
-          "https://private-user-images.githubusercontent.com/29167110/265701930-2176e896-977e-4a3e-88a6-f303423eb71f.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MTM1OTE3MTMsIm5iZiI6MTcxMzU5MTQxMywicGF0aCI6Ii8yOTE2NzExMC8yNjU3MDE5MzAtMjE3NmU4OTYtOTc3ZS00YTNlLTg4YTYtZjMwMzQyM2ViNzFmLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDA0MjAlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQwNDIwVDA1MzY1M1omWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWNlMGNkOTJmNjkzMDNhMmM3NTk4MDViOTQzMTc0MzQxMzljNDJhMTRlMTc5MTIwMjJjMDJjODM3NTMxYWEyYjUmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.5jxeJ0HZVygHLfH2OfvVsbMMjDRaYMncPTsMfq-gpd0",
-          "https://private-user-images.githubusercontent.com/29167110/265702010-34a8b1a4-9a3c-42b7-be88-97abef470a1e.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MTM1OTE3MTMsIm5iZiI6MTcxMzU5MTQxMywicGF0aCI6Ii8yOTE2NzExMC8yNjU3MDIwMTAtMzRhOGIxYTQtOWEzYy00MmI3LWJlODgtOTdhYmVmNDcwYTFlLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDA0MjAlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQwNDIwVDA1MzY1M1omWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTgwMDAyY2ZjZWZhOWJlMDlhYjc2OWNjMzcwMzAzZjBkODM0YmNiNzQ4NDhkMjI0NTkyNWE3MGEzYWM5YzhmZjAmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.YCWHOukYd_2sir_NpaJN7EXCyYtdtVEBx_0NvN28iJw",
-          "https://private-user-images.githubusercontent.com/29167110/265702414-48513136-9679-4939-80a3-42769cbc7a86.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MTM1OTE3MTMsIm5iZiI6MTcxMzU5MTQxMywicGF0aCI6Ii8yOTE2NzExMC8yNjU3MDI0MTQtNDg1MTMxMzYtOTY3OS00OTM5LTgwYTMtNDI3NjljYmM3YTg2LnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDA0MjAlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQwNDIwVDA1MzY1M1omWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTk1NDA2M2NjNDVkMmE1MmE2ZGE3ZmUyNjI2YjY1YWZiOTk4MzBhODYxZWY3ODQ0OTUxMmE4ZTI2M2E2MTRiYzUmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.BX-ewZVBDld2THCMmbmipReOJDDp82KD_Dq4EXOBZdI",
-          "https://private-user-images.githubusercontent.com/29167110/265702545-6126642a-43a1-4af7-a15a-2d3fa5e9cb1b.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MTM1OTE3MTMsIm5iZiI6MTcxMzU5MTQxMywicGF0aCI6Ii8yOTE2NzExMC8yNjU3MDI1NDUtNjEyNjY0MmEtNDNhMS00YWY3LWExNWEtMmQzZmE1ZTljYjFiLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDA0MjAlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQwNDIwVDA1MzY1M1omWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWEyM2RmMDViM2M0ZTMyOGY2MGFhNjU2MjRlMjYyMTNmNzI1ZjQ3NDUxZjIyZmQxOTBmZDI4YzcwY2NlYjYyZjYmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.kcyv7kXLM9f0w-OYiUK0TiJzjtt0SuYf73U7gETH3Co",
-          "https://private-user-images.githubusercontent.com/29167110/265703050-b32d4598-1ad1-496c-99f0-3324cbf82a41.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MTM1OTE3MTMsIm5iZiI6MTcxMzU5MTQxMywicGF0aCI6Ii8yOTE2NzExMC8yNjU3MDMwNTAtYjMyZDQ1OTgtMWFkMS00OTZjLTk5ZjAtMzMyNGNiZjgyYTQxLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDA0MjAlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQwNDIwVDA1MzY1M1omWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWM1OWZhYjFmYWJhN2Q0ZmI1OGRmYmFhNTc0MDQzMDY5Y2NiY2IzY2QwYTYyYzFhODEyOTY3NTA0YWRiMTAyNjUmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.Dh_1FjHQv66uASMGql7rogpnNmC_hLQD02SG9ezc6MQ",
-          "https://private-user-images.githubusercontent.com/29167110/265702966-20c9f581-10c1-4605-a6f4-a6b9b5adad99.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MTM1OTE3MTMsIm5iZiI6MTcxMzU5MTQxMywicGF0aCI6Ii8yOTE2NzExMC8yNjU3MDI5NjYtMjBjOWY1ODEtMTBjMS00NjA1LWE2ZjQtYTZiOWI1YWRhZDk5LnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDA0MjAlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQwNDIwVDA1MzY1M1omWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWZkZDkyMDc2MzBjNTZhMjhhYWVlM2UxMGQ1ZmYyMDVjYjRiNDYxZGZhMWUxODA1NDFjMWI5MzQ0M2U3ZjdjOTcmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0._7KCRFnvuxPra9r0hRCqWPAVgoDMYlRPq1hJ8MW30rs",
-          "https://private-user-images.githubusercontent.com/29167110/265703340-3694bb40-3314-4235-88ab-b934705aeb9e.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MTM1OTE3MTMsIm5iZiI6MTcxMzU5MTQxMywicGF0aCI6Ii8yOTE2NzExMC8yNjU3MDMzNDAtMzY5NGJiNDAtMzMxNC00MjM1LTg4YWItYjkzNDcwNWFlYjllLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDA0MjAlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQwNDIwVDA1MzY1M1omWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTg2MzFhM2Y2N2Y5ZWEyNDM1YmJiNGM3M2NkOWRhZTdiNmM5ZjRmNGM1ODVhNjAzMmFmOWUzMGY1ZDJlMWE1NTkmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.C_w6rKCKrP2n5mE07423Xt5h-J-cMetOLBpM1lKEoOo"
+        "https://private-user-images.githubusercontent.com/29167110/265701930-2176e896-977e-4a3e-88a6-f303423eb71f.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MTM1OTE3MTMsIm5iZiI6MTcxMzU5MTQxMywicGF0aCI6Ii8yOTE2NzExMC8yNjU3MDE5MzAtMjE3NmU4OTYtOTc3ZS00YTNlLTg4YTYtZjMwMzQyM2ViNzFmLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDA0MjAlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQwNDIwVDA1MzY1M1omWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWNlMGNkOTJmNjkzMDNhMmM3NTk4MDViOTQzMTc0MzQxMzljNDJhMTRlMTc5MTIwMjJjMDJjODM3NTMxYWEyYjUmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.5jxeJ0HZVygHLfH2OfvVsbMMjDRaYMncPTsMfq-gpd0",
+        "https://private-user-images.githubusercontent.com/29167110/265702010-34a8b1a4-9a3c-42b7-be88-97abef470a1e.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MTM1OTE3MTMsIm5iZiI6MTcxMzU5MTQxMywicGF0aCI6Ii8yOTE2NzExMC8yNjU3MDIwMTAtMzRhOGIxYTQtOWEzYy00MmI3LWJlODgtOTdhYmVmNDcwYTFlLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDA0MjAlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQwNDIwVDA1MzY1M1omWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTgwMDAyY2ZjZWZhOWJlMDlhYjc2OWNjMzcwMzAzZjBkODM0YmNiNzQ4NDhkMjI0NTkyNWE3MGEzYWM5YzhmZjAmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.YCWHOukYd_2sir_NpaJN7EXCyYtdtVEBx_0NvN28iJw",
+        "https://private-user-images.githubusercontent.com/29167110/265702414-48513136-9679-4939-80a3-42769cbc7a86.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MTM1OTE3MTMsIm5iZiI6MTcxMzU5MTQxMywicGF0aCI6Ii8yOTE2NzExMC8yNjU3MDI0MTQtNDg1MTMxMzYtOTY3OS00OTM5LTgwYTMtNDI3NjljYmM3YTg2LnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDA0MjAlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQwNDIwVDA1MzY1M1omWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTk1NDA2M2NjNDVkMmE1MmE2ZGE3ZmUyNjI2YjY1YWZiOTk4MzBhODYxZWY3ODQ0OTUxMmE4ZTI2M2E2MTRiYzUmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.BX-ewZVBDld2THCMmbmipReOJDDp82KD_Dq4EXOBZdI",
+        "https://private-user-images.githubusercontent.com/29167110/265702545-6126642a-43a1-4af7-a15a-2d3fa5e9cb1b.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MTM1OTE3MTMsIm5iZiI6MTcxMzU5MTQxMywicGF0aCI6Ii8yOTE2NzExMC8yNjU3MDI1NDUtNjEyNjY0MmEtNDNhMS00YWY3LWExNWEtMmQzZmE1ZTljYjFiLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDA0MjAlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQwNDIwVDA1MzY1M1omWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWEyM2RmMDViM2M0ZTMyOGY2MGFhNjU2MjRlMjYyMTNmNzI1ZjQ3NDUxZjIyZmQxOTBmZDI4YzcwY2NlYjYyZjYmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.kcyv7kXLM9f0w-OYiUK0TiJzjtt0SuYf73U7gETH3Co",
+        "https://private-user-images.githubusercontent.com/29167110/265703050-b32d4598-1ad1-496c-99f0-3324cbf82a41.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MTM1OTE3MTMsIm5iZiI6MTcxMzU5MTQxMywicGF0aCI6Ii8yOTE2NzExMC8yNjU3MDMwNTAtYjMyZDQ1OTgtMWFkMS00OTZjLTk5ZjAtMzMyNGNiZjgyYTQxLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDA0MjAlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQwNDIwVDA1MzY1M1omWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWM1OWZhYjFmYWJhN2Q0ZmI1OGRmYmFhNTc0MDQzMDY5Y2NiY2IzY2QwYTYyYzFhODEyOTY3NTA0YWRiMTAyNjUmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.Dh_1FjHQv66uASMGql7rogpnNmC_hLQD02SG9ezc6MQ",
+        "https://private-user-images.githubusercontent.com/29167110/265702966-20c9f581-10c1-4605-a6f4-a6b9b5adad99.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MTM1OTE3MTMsIm5iZiI6MTcxMzU5MTQxMywicGF0aCI6Ii8yOTE2NzExMC8yNjU3MDI5NjYtMjBjOWY1ODEtMTBjMS00NjA1LWE2ZjQtYTZiOWI1YWRhZDk5LnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDA0MjAlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQwNDIwVDA1MzY1M1omWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWZkZDkyMDc2MzBjNTZhMjhhYWVlM2UxMGQ1ZmYyMDVjYjRiNDYxZGZhMWUxODA1NDFjMWI5MzQ0M2U3ZjdjOTcmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0._7KCRFnvuxPra9r0hRCqWPAVgoDMYlRPq1hJ8MW30rs",
+        "https://private-user-images.githubusercontent.com/29167110/265703340-3694bb40-3314-4235-88ab-b934705aeb9e.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MTM1OTE3MTMsIm5iZiI6MTcxMzU5MTQxMywicGF0aCI6Ii8yOTE2NzExMC8yNjU3MDMzNDAtMzY5NGJiNDAtMzMxNC00MjM1LTg4YWItYjkzNDcwNWFlYjllLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDA0MjAlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQwNDIwVDA1MzY1M1omWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTg2MzFhM2Y2N2Y5ZWEyNDM1YmJiNGM3M2NkOWRhZTdiNmM5ZjRmNGM1ODVhNjAzMmFmOWUzMGY1ZDJlMWE1NTkmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.C_w6rKCKrP2n5mE07423Xt5h-J-cMetOLBpM1lKEoOo"
       ]
-    },{
-      id: 3,
+    }, {
+      id: 6,
       name: 'Coina',
       createdAt: 'Github : 2023',
       description: 'Kotlin Multiplatform Mobile Application Written in Kotlin Jetpack Compose and Swift with SwiftUI, Ktor Client',
@@ -89,7 +186,7 @@ export default function getProjectsList() {
       ]
     },
     {
-      id: 4,
+      id: 7,
       name: 'Autohub',
       createdAt: 'Github : 2019',
       description: 'Android Application : Open Source Built Based on MVVM, Vortex, Github Api V3, With Navigation Component',
@@ -99,24 +196,24 @@ export default function getProjectsList() {
       type: ANDROID_FILTER_TYPE,
       link: "https://github.com/Yazan98/Github-Client",
       tags: [
-          "Kotlin Courotines",
-          "Multi Modular App",
-          "Vortex",
-          "MVVM",
-          "Github Api",
-          "Kotlin",
-          "Retrofit",
-          "RxJava 2"
+        "Kotlin Courotines",
+        "Multi Modular App",
+        "Vortex",
+        "MVVM",
+        "Github Api",
+        "Kotlin",
+        "Retrofit",
+        "RxJava 2"
       ],
       images: [
-          "https://github.com/Yazan98/portfolio/blob/master/src/components/images/autohub_1.png?raw=true",
-          "https://github.com/Yazan98/portfolio/blob/master/src/components/images/autohub_2.png?raw=true",
-          "https://github.com/Yazan98/portfolio/blob/master/src/components/images/autohub_3.png?raw=true",
-          "https://github.com/Yazan98/portfolio/blob/master/src/components/images/autohub_4.png?raw=true"
+        "https://github.com/Yazan98/portfolio/blob/master/src/components/images/autohub_1.png?raw=true",
+        "https://github.com/Yazan98/portfolio/blob/master/src/components/images/autohub_2.png?raw=true",
+        "https://github.com/Yazan98/portfolio/blob/master/src/components/images/autohub_3.png?raw=true",
+        "https://github.com/Yazan98/portfolio/blob/master/src/components/images/autohub_4.png?raw=true"
       ]
     },
     {
-      id: 5,
+      id: 8,
       name: 'Destiny',
       createdAt: 'Github : 2019',
       description: 'Android Application : Open Source Built Based on MVVM, Vortex, SpringBoot Api, With Navigation Component',
@@ -134,14 +231,14 @@ export default function getProjectsList() {
         "RxJava 2"
       ],
       images: [
-          "https://github.com/Yazan98/portfolio/blob/master/src/components/images/destiny_1.png?raw=true",
-          "https://github.com/Yazan98/portfolio/blob/master/src/components/images/destiny_2.png?raw=true",
-          "https://github.com/Yazan98/portfolio/blob/master/src/components/images/destiny_3.png?raw=true",
-          "https://github.com/Yazan98/portfolio/blob/master/src/components/images/destiny_4.png?raw=true"
+        "https://github.com/Yazan98/portfolio/blob/master/src/components/images/destiny_1.png?raw=true",
+        "https://github.com/Yazan98/portfolio/blob/master/src/components/images/destiny_2.png?raw=true",
+        "https://github.com/Yazan98/portfolio/blob/master/src/components/images/destiny_3.png?raw=true",
+        "https://github.com/Yazan98/portfolio/blob/master/src/components/images/destiny_4.png?raw=true"
       ]
     },
     {
-      id: 6,
+      id: 9,
       name: 'Portfolio',
       createdAt: 'Github : 2020',
       description: 'My Personal Website Built With React.js, And Support PWAs and Some of SEO Techniques For Google Search Console and SPA with Typescript, Jsx, And SASS To Write Clear Css, React Router To Change Pages, Client Side Rendering Also Dark / White Mode Supported in All Pages Inside The Repository You Can Find The First and Second Version of The Website',
@@ -160,13 +257,13 @@ export default function getProjectsList() {
         "Material UI"
       ],
       images: [
-          "https://github.com/Yazan98/portfolio/blob/master/src/components/images/portfolio_1.png?raw=true",
-          "https://github.com/Yazan98/portfolio/blob/master/src/components/images/portfolio_2.png?raw=true",
-          "https://github.com/Yazan98/portfolio/blob/master/src/components/images/portfolio_3.png?raw=true"
+        "https://github.com/Yazan98/portfolio/blob/master/src/components/images/portfolio_1.png?raw=true",
+        "https://github.com/Yazan98/portfolio/blob/master/src/components/images/portfolio_2.png?raw=true",
+        "https://github.com/Yazan98/portfolio/blob/master/src/components/images/portfolio_3.png?raw=true"
       ]
     },
     {
-      id: 7,
+      id: 10,
       name: 'Drasati',
       createdAt: '2020',
       description: 'Android Application : Closed Source An organizing platform for school students that aims to gather students and link them with audible lessons by providing a tree plan with the possibility to speak with teachers if a difference occurs on a certain point with the support feature of all classes',
@@ -191,7 +288,7 @@ export default function getProjectsList() {
       ]
     },
     {
-      id: 8,
+      id: 11,
       name: 'Wintrop',
       createdAt: 'Github : 2019',
       description: 'Android Application : Open Source Weather Application Powered By Vortex , Latest Android Technologies With Managed Structure To Show Weather Status For Amman, Irbid, Aqaba',
@@ -214,7 +311,7 @@ export default function getProjectsList() {
       ]
     },
     {
-      id: 9,
+      id: 12,
       name: 'Shopie Api',
       createdAt: 'Github : 2021',
       description: 'Api - Open Source Api Built With PHP - Laravel To Calculate The Database Relations And Logic For Shop Application and Website to Manage Accounts, Recipes, Restaurants, Bearer Tokens, Phone Number Verification, User Addresses, Categories This Project Mainly Built to Apply PHP Skills into a Project in PHP Training Path',
@@ -230,7 +327,7 @@ export default function getProjectsList() {
       ]
     },
     {
-      id: 10,
+      id: 13,
       name: 'Vortex',
       createdAt: 'Github : 2019',
       description: 'Android Library : Open Source Android Infrastructure To Build Android Applications With Latest Technologies and Ready State Handling with User Interface Implementation For The Android Common Cases This Library is Not Just Base Code it\'s also help you to get the target as soon as possible with ready techniques',
@@ -248,7 +345,7 @@ export default function getProjectsList() {
       ]
     },
     {
-      id: 11,
+      id: 14,
       name: 'Netflix Clone',
       createdAt: 'Github : 2021',
       description: 'Website - Open Source a React.js Project Built to show Movies Based on MoviesDB Api And React Hooks, Typescript',
@@ -273,7 +370,7 @@ export default function getProjectsList() {
       ]
     },
     {
-      id: 12,
+      id: 15,
       name: 'Github Clone',
       createdAt: 'Github : 2021',
       description: 'Website - Open Source a React.js Project With Github Api V3 Project To Show Popular Repos, PWA, Show Profile Repos, Information, Profile View With Github UserName, Grid - Linear List Toggle',
@@ -284,12 +381,12 @@ export default function getProjectsList() {
       link: "https://github.com/Yazan98/github-clone",
       tags: [
         "React.js",
-          "Firebase Deployment",
-          "Grid System",
-          "Flex System",
-          "React Hooks",
-          "Axios",
-          "Github Api V3"
+        "Firebase Deployment",
+        "Grid System",
+        "Flex System",
+        "React Hooks",
+        "Axios",
+        "Github Api V3"
       ],
       images: [
         "https://github.com/Yazan98/portfolio/blob/master/src/components/images/github_1.png?raw=true",
@@ -298,7 +395,7 @@ export default function getProjectsList() {
       ]
     },
     {
-      id: 13,
+      id: 16,
       name: 'Autohub V2.0',
       createdAt: 'Github : 2022',
       description: 'Android Application : Closed Source Multi Modular Application With Jetpack Compose',
@@ -327,7 +424,7 @@ export default function getProjectsList() {
       ]
     },
     {
-      id: 14,
+      id: 17,
       name: 'Destiny Api',
       createdAt: 'Github : 2021',
       description: 'Api - Open Source Spring Boot Project To Manage Firebase Admin SDK, Mysql, JWT Tokens, Mainly To Manage Mobile Applications and Built With Kotlin, Kotlin-Jackson',
@@ -343,8 +440,8 @@ export default function getProjectsList() {
         "MySql Database",
         "Firebase Admin"
       ]
-    },{
-      id: 15,
+    }, {
+      id: 18,
       name: 'Tapper',
       createdAt: 'Github : 2024',
       description: 'Desktop Application Built With Swift, SwiftUI, Tapper CLI, ADB Commands Cli Builder',
@@ -361,7 +458,7 @@ export default function getProjectsList() {
       ]
     },
     {
-      id: 16,
+      id: 19,
       name: 'Legora',
       createdAt: 'Github : 2021',
       description: 'Android Application - Training Project to Test Vanite Source Code Library Built With Riot Api',
@@ -372,10 +469,10 @@ export default function getProjectsList() {
       link: "https://play.google.com/store/apps/details?id=com.yazantarifi.league.client",
       tags: [
         "Kotlin",
-          "View Binding",
-          "Coroutines",
-          "Vanite",
-          "Retrofit"
+        "View Binding",
+        "Coroutines",
+        "Vanite",
+        "Retrofit"
       ],
       images: [
         "https://user-images.githubusercontent.com/29167110/202739048-0663af37-2394-4a2f-9fd4-173bc4f64aeb.png",
@@ -386,15 +483,7 @@ export default function getProjectsList() {
         "https://user-images.githubusercontent.com/29167110/202739136-50685847-133d-450e-b107-f709f39b532a.png",
         "https://user-images.githubusercontent.com/29167110/202739167-76fe2730-986d-4fdb-ac34-493819797005.png",
       ]
-    },
-    {
-      id: 17,
-      name: 'All Projects',
-      createdAt: 'View All Projects Open, Closed Source',
-      description: 'Show All Projects In One List with All Links Required to Each Project with Description and More Filters',
-      image: 'https://raw.githubusercontent.com/Yazan98/portfolio/master/src/components/images/all_preview.webp',
-      type: FILTERED_PROJECTS_FILTER_TYPE,
-    },
+    }
   ];
 }
 

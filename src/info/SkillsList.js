@@ -31,12 +31,6 @@ export default function getSkillsList() {
       tags: 'Mongo . Socket.io . Nest.js . CLI\'s',
     },
     {
-      icon: 'https://raw.githubusercontent.com/Yazan98/portfolio/master/src/components/images/pgp.webp',
-      name: 'PHP Language',
-      description: 'Beginner Level In PHP and Laravel Mainly Im Currently Learning PHP To Build Restful Api\'s on Laravel With Mysql, Swagger, Auth, Return Html, Css Views From Api With Different Response Types, also Yii2 Framework With Mysql Connection, Json Response',
-      tags: 'Laravel . Yii2 . Mysql . Auth',
-    },
-    {
       icon: 'https://raw.githubusercontent.com/Yazan98/portfolio/master/src/components/images/gradle_dark.webp',
       name: 'Gradle',
       description: 'Im Using Grovvy, Kotlin To Build Gradle Plugins To Configure Android projects or Spring Boot Projects Also Deploy Plugins On Gradle Portal Mainly The Plugins For Configuring Dynamic Tasks Or Libraries',
@@ -55,39 +49,16 @@ export default function getSkillsList() {
       tags: 'PWA . React.js . React Hooks . Responsive Design . CSR',
     },
     {
-      icon: 'https://raw.githubusercontent.com/Yazan98/portfolio/master/src/components/images/next_dark.webp',
-      name: 'Next.js',
-      description: 'Im Using Next.js To Build Websites Above React Library To Perform SEO, SSR, SSG Like My Portfolio This Website Built To Be Server Side Rendering Also Next is Better Choice To Build Static Websites Like CV or Portfolio',
-      tags: 'Next.js . React.js . React Hooks . SASS . SSR . SSG',
-    },
-    {
       icon: 'https://raw.githubusercontent.com/Yazan98/portfolio/master/src/components/images/nest.webp',
       name: 'Nest.js',
       description: 'Nest.js Is The Main Framework I Use To Build Api In Typescript Language and Im Using This Framework When i Need To Implement Socket.io Implementation and Chat Rooms Logic With MongoDB Queries',
       tags: 'Nest.js . Socket.io . Json . Node.js . Typescript',
     },
     {
-      icon: 'https://raw.githubusercontent.com/Yazan98/portfolio/master/src/components/images/jenkins.webp',
-      name: 'CI / CD',
-      description: 'Continues Integration For Android To Run Jobs On Specific Branches With Gradle Configuration and Create Pipelines, Jobs, and Fastlane For Android And Execute Lanes With Ruby Syntax and Manage Gems In App',
-      tags: 'CI . Fastlane . Jenkins',
-    },
-    {
       icon: 'https://raw.githubusercontent.com/Yazan98/portfolio/master/src/components/images/android.webp',
       name: 'Android Development',
       description: 'Create Android Applications With Kotlin and Gradle DSL With Latest Android Technologies Like Hilt, Jetpack Compose, Esspresso, Single Activity Applications, Multi Modular Apps, Deal With Offline Caching Experience and Familiar With MVVM, MVI, MVP, MVC, VIPER, Firebase, RxJava',
       tags: 'Optimized Apps . Android Apps',
-    },
-    {
-      icon: 'https://raw.githubusercontent.com/Yazan98/portfolio/master/src/components/images/sass.webp',
-      name: 'CSS / SASS',
-      description: 'Sass is The Main Styling Files For React and Next i use For Amazing Syntax, Extends, Features That Not Exists in CSS Files, Also Better When Using Mixins',
-      tags: 'SCSS . SASS . Website Styling',
-    }, {
-      icon: 'https://raw.githubusercontent.com/Yazan98/portfolio/master/src/components/images/spring.webp',
-      name: 'Spring Boot',
-      description: 'When I Need To Build Backend Restful Api The First Framework i Use Is Spring Boot With Kotlin or Java as a Main Language of The Current Project Also Im Using Mysql, NoSql, Spring Hibernate, JPA Data, Autowired Injection To Inject Everything and Spring Security With Bearer Tokens and Firebase Admin SDK',
-      tags: 'Spring Boot . Spring Starter . JPA . Hibernate',
-    },
+    }
   ];
 }

@@ -1,31 +1,31 @@
 {
   "short_name": "Portfolio",
-  "name": "Yazan Portfolio",
-  "description": "Personal Website For Yazan Tarifi",
+  "name": "Yazan Tarifi - Portfolio",
+  "description": "Personal Website For Yazan Tarifi - Software Engineer",
   "icons": [
     {
       "src": "logo.png",
       "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/jpg",
+      "type": "image/png",
       "purpose": "maskable"
     },
     {
-      "src": "logo.jpg",
-      "type": "image/jpg",
+      "src": "logo.png",
+      "type": "image/png",
       "purpose": "maskable",
       "sizes": "192x192"
     },
     {
       "src": "logo.png",
-      "type": "image/jpg",
+      "type": "image/png",
       "purpose": "maskable",
       "sizes": "512x512"
     }
   ],
   "start_url": "/",
-  "background_color": "#FFFFFF",
+  "background_color": "#0a0a0a",
   "display": "standalone",
   "scope": "/",
-  "theme_color": "#E53012",
+  "theme_color": "#a855f7",
   "orientation": "portrait"
 }
