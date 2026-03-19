@@ -37,12 +37,13 @@ function App() {
                 <meta property="og:url" content="https://yazantarifi.com/" />
                 <meta property="og:title" content="Yazan Tarifi - $15,000 Premium Software Engineering Portfolio" />
                 <meta property="og:description" content="Explore Yazan's code-minded approach to building digital experiences." />
-                <meta property="og:image" content="https://user-images.githubusercontent.com/29167110/199554964-5d0e913d-72da-4527-9ef4-68b90d0e2a95.png" />
+                <meta property="og:image" content="https://yazantarifi.com/banner.png" />
 
                 {/* Twitter Card */}
                 <meta name="twitter:card" content="summary_large_image" />
                 <meta name="twitter:title" content="Yazan Tarifi - Senior Software Engineer" />
                 <meta name="twitter:description" content="Premium portfolio showcasing enterprise-grade architecture and beautiful interfaces." />
+                <meta name="twitter:image" content="https://yazantarifi.com/banner.png" />
 
                 {/* JSON-LD Structured Data for Rich Snippets */}
                 <script type="application/ld+json">

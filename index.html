@@ -16,7 +16,7 @@
     <meta property="og:locale" content="en_US" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://yazantarifi.com/" />
-    <meta property="og:image" content="https://yazantarifi.com/big_header.jpg" />
+    <meta property="og:image" content="https://yazantarifi.com/banner.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta name="google-site-verification" content="sjhqZiHtHmbZA-n6PrKgrUHdEluHo4BTHx3lX9pNvT0" />
@@ -29,10 +29,9 @@
     <meta property="og:type" content="website" />
     <meta name="title" content="Yazan Tarifi - Software Engineer Portfolio" />
     <meta property="og:title" content="Yazan Tarifi - Software Engineer Portfolio" />
-    <meta property="og:image"
-        content="https://user-images.githubusercontent.com/29167110/199554964-5d0e913d-72da-4527-9ef4-68b90d0e2a95.png" />
-    <meta property="og:image:width" content="1280" />
-    <meta property="og:image:height" content="720" />
+    <meta property="og:image" content="https://yazantarifi.com/banner.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
     <meta property="og:ttl" content="" />
     <meta property="og:updated_time" content="" />
     <meta property="og:site_name" content="Yazan Tarifi - Software Engineer Portfolio" />
@@ -73,135 +72,339 @@
     <script type="module" src="/src/index.tsx"></script>
 
     <noscript>
-    <style>
-        :root {
-            --bg-dark-300: #0a0a0a;
-            --bg-dark-200: #141414;
-            --bg-dark-100: #1f1f1f;
-            --border-gray: #27272a;
-            --text-gray: #9ca3af;
-            --text-white: #f3f4f6;
-            --primary: #a855f7;
-            --cyan: #22d3ee;
-        }
-        body { margin: 0; background-color: var(--bg-dark-300); color: var(--text-white); font-family: 'Inter', 'Roboto', sans-serif; line-height: 1.5; }
-        .ns-container { max-width: 1000px; margin: 0 auto; padding: 60px 20px; }
-        
-        /* Hero Section */
-        .ns-hero { text-align: center; margin-bottom: 80px; padding-top: 40px; }
-        .ns-badge { display: inline-block; padding: 6px 16px; background-color: var(--bg-dark-100); border: 1px solid var(--border-gray); color: var(--primary); font-size: 0.875rem; font-weight: 600; border-radius: 9999px; margin-bottom: 24px; }
-        .ns-hero h1 { font-size: 4.5rem; font-weight: 800; margin: 10px 0; letter-spacing: -0.025em; line-height: 1.1; }
-        .ns-gradient-text { background: linear-gradient(to right, var(--primary), var(--cyan)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; color: transparent; }
-        .ns-hero h2 { font-size: 2.25rem; color: #d1d5db; margin: 10px 0 20px 0; font-weight: 500; }
-        .ns-hero p { font-size: 1.125rem; color: var(--text-gray); max-width: 800px; margin: 0 auto 40px auto; line-height: 1.7; }
-        .ns-hero-buttons { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; }
-        .ns-btn-primary { display: inline-block; padding: 14px 32px; background: linear-gradient(to right, #9333ea, #a855f7); color: #fff; text-decoration: none; font-weight: 700; border-radius: 9999px; }
-        .ns-btn-secondary { display: inline-block; padding: 14px 32px; background-color: var(--bg-dark-100); border: 1px solid var(--border-gray); color: #fff; text-decoration: none; font-weight: 700; border-radius: 9999px; transition: background-color 0.2s; }
-        .ns-btn-secondary:hover { background-color: #27272a; }
+        <style>
+            :root {
+                --bg-dark-300: #0a0a0a;
+                --bg-dark-200: #141414;
+                --bg-dark-100: #1f1f1f;
+                --border-gray: #27272a;
+                --text-gray: #9ca3af;
+                --text-white: #f3f4f6;
+                --primary: #a855f7;
+                --cyan: #22d3ee;
+            }
 
-        /* General Sections */
-        .ns-section { margin-bottom: 80px; }
-        .ns-section-header { text-align: center; margin-bottom: 40px; }
-        .ns-section-title { font-size: 3rem; font-weight: 800; margin: 0 0 16px 0; }
-        
-        /* Grid Layouts */
-        .ns-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; }
-        .ns-grid-cols-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 16px; }
-        
-        /* Cards */
-        .ns-card { background-color: var(--bg-dark-200); border: 1px solid var(--border-gray); padding: 32px; border-radius: 24px; transition: transform 0.2s, border-color 0.2s; }
-        .ns-card:hover { border-color: rgba(168, 85, 247, 0.5); transform: translateY(-4px); }
-        .ns-card h3 { font-size: 1.5rem; margin: 0 0 16px 0; color: #fff; }
-        .ns-card p { margin: 0; color: var(--text-gray); line-height: 1.6; }
-        
-        .ns-lang-card { background-color: var(--bg-dark-200); border: 1px solid var(--border-gray); padding: 24px; border-radius: 16px; text-align: center; transition: transform 0.2s, border-color 0.2s; }
-        .ns-lang-card:hover { border-color: rgba(34, 211, 238, 0.5); transform: scale(1.05); }
-        .ns-lang-card h3 { font-size: 1.25rem; margin: 0 0 8px 0; color: #f3f4f6; }
-        .ns-lang-card p { font-size: 0.875rem; margin: 0; color: var(--text-gray); }
+            body {
+                margin: 0;
+                background-color: var(--bg-dark-300);
+                color: var(--text-white);
+                font-family: 'Inter', 'Roboto', sans-serif;
+                line-height: 1.5;
+            }
 
-        /* Contact Box */
-        .ns-contact-card { background-color: var(--bg-dark-200); border: 1px solid var(--border-gray); padding: 50px; border-radius: 32px; }
-        .ns-contact-card h2 { font-size: 4rem; font-weight: 800; margin: 0 0 24px 0; line-height: 1.1; }
-        .ns-contact-card p { color: var(--text-gray); font-size: 1.125rem; margin-bottom: 16px; }
-        .ns-contact-link { color: var(--cyan); text-decoration: none; font-weight: 600; }
-        .ns-contact-link:hover { text-decoration: underline; }
-    </style>
+            .ns-container {
+                max-width: 1000px;
+                margin: 0 auto;
+                padding: 60px 20px;
+            }
 
-    <div class="ns-container">
-        <!-- Hero Section -->
-        <header class="ns-hero">
-            <div class="ns-badge">Building Enterprise Projects</div>
-            <h1>Hi, I'm <span class="ns-gradient-text">Yazan Tarifi</span></h1>
-            <h2>Software Engineer</h2>
-            <p>Mobile App Maestro Building Native Mobile Applications for Android & iOS. I build Solid, modern interfaces with Jetpack Compose and Compose Multiplatform. Driven by performance, I build shared logic using Kotlin Multiplatform and building backend projects using NestJS & Spring Boot to build (Full Stack, SAAS) solutions.</p>
-            <div class="ns-hero-buttons">
-                <a href="#services" class="ns-btn-primary">Explore My Work</a>
-                <a href="mailto:yazantarifi989@gmail.com" class="ns-btn-secondary">Contact Me</a>
-            </div>
-        </header>
+            /* Hero Section */
+            .ns-hero {
+                text-align: center;
+                margin-bottom: 80px;
+                padding-top: 40px;
+            }
 
-        <!-- What I Do Section -->
-        <section class="ns-section" id="services">
-            <div class="ns-section-header">
-                <div class="ns-badge">My Architectural Focus</div>
-                <h2 class="ns-section-title">What I <span class="ns-gradient-text">Do</span></h2>
-            </div>
-            <div class="ns-grid">
-                <div class="ns-card">
-                    <h3 class="ns-gradient-text">Android Development</h3>
-                    <p>Building android applications accessible by Milions of Users, With Clean Architecture, MVVM, Clean Code, Kotlin, Jetpack Compose, Firebase, Hilt, Retrofit, Room, WorkManager, Multi Modular Apps.</p>
+            .ns-badge {
+                display: inline-block;
+                padding: 6px 16px;
+                background-color: var(--bg-dark-100);
+                border: 1px solid var(--border-gray);
+                color: var(--primary);
+                font-size: 0.875rem;
+                font-weight: 600;
+                border-radius: 9999px;
+                margin-bottom: 24px;
+            }
+
+            .ns-hero h1 {
+                font-size: 4.5rem;
+                font-weight: 800;
+                margin: 10px 0;
+                letter-spacing: -0.025em;
+                line-height: 1.1;
+            }
+
+            .ns-gradient-text {
+                background: linear-gradient(to right, var(--primary), var(--cyan));
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+                color: transparent;
+            }
+
+            .ns-hero h2 {
+                font-size: 2.25rem;
+                color: #d1d5db;
+                margin: 10px 0 20px 0;
+                font-weight: 500;
+            }
+
+            .ns-hero p {
+                font-size: 1.125rem;
+                color: var(--text-gray);
+                max-width: 800px;
+                margin: 0 auto 40px auto;
+                line-height: 1.7;
+            }
+
+            .ns-hero-buttons {
+                display: flex;
+                justify-content: center;
+                gap: 16px;
+                flex-wrap: wrap;
+            }
+
+            .ns-btn-primary {
+                display: inline-block;
+                padding: 14px 32px;
+                background: linear-gradient(to right, #9333ea, #a855f7);
+                color: #fff;
+                text-decoration: none;
+                font-weight: 700;
+                border-radius: 9999px;
+            }
+
+            .ns-btn-secondary {
+                display: inline-block;
+                padding: 14px 32px;
+                background-color: var(--bg-dark-100);
+                border: 1px solid var(--border-gray);
+                color: #fff;
+                text-decoration: none;
+                font-weight: 700;
+                border-radius: 9999px;
+                transition: background-color 0.2s;
+            }
+
+            .ns-btn-secondary:hover {
+                background-color: #27272a;
+            }
+
+            /* General Sections */
+            .ns-section {
+                margin-bottom: 80px;
+            }
+
+            .ns-section-header {
+                text-align: center;
+                margin-bottom: 40px;
+            }
+
+            .ns-section-title {
+                font-size: 3rem;
+                font-weight: 800;
+                margin: 0 0 16px 0;
+            }
+
+            /* Grid Layouts */
+            .ns-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                gap: 24px;
+            }
+
+            .ns-grid-cols-2 {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+                gap: 16px;
+            }
+
+            /* Cards */
+            .ns-card {
+                background-color: var(--bg-dark-200);
+                border: 1px solid var(--border-gray);
+                padding: 32px;
+                border-radius: 24px;
+                transition: transform 0.2s, border-color 0.2s;
+            }
+
+            .ns-card:hover {
+                border-color: rgba(168, 85, 247, 0.5);
+                transform: translateY(-4px);
+            }
+
+            .ns-card h3 {
+                font-size: 1.5rem;
+                margin: 0 0 16px 0;
+                color: #fff;
+            }
+
+            .ns-card p {
+                margin: 0;
+                color: var(--text-gray);
+                line-height: 1.6;
+            }
+
+            .ns-lang-card {
+                background-color: var(--bg-dark-200);
+                border: 1px solid var(--border-gray);
+                padding: 24px;
+                border-radius: 16px;
+                text-align: center;
+                transition: transform 0.2s, border-color 0.2s;
+            }
+
+            .ns-lang-card:hover {
+                border-color: rgba(34, 211, 238, 0.5);
+                transform: scale(1.05);
+            }
+
+            .ns-lang-card h3 {
+                font-size: 1.25rem;
+                margin: 0 0 8px 0;
+                color: #f3f4f6;
+            }
+
+            .ns-lang-card p {
+                font-size: 0.875rem;
+                margin: 0;
+                color: var(--text-gray);
+            }
+
+            /* Contact Box */
+            .ns-contact-card {
+                background-color: var(--bg-dark-200);
+                border: 1px solid var(--border-gray);
+                padding: 50px;
+                border-radius: 32px;
+            }
+
+            .ns-contact-card h2 {
+                font-size: 4rem;
+                font-weight: 800;
+                margin: 0 0 24px 0;
+                line-height: 1.1;
+            }
+
+            .ns-contact-card p {
+                color: var(--text-gray);
+                font-size: 1.125rem;
+                margin-bottom: 16px;
+            }
+
+            .ns-contact-link {
+                color: var(--cyan);
+                text-decoration: none;
+                font-weight: 600;
+            }
+
+            .ns-contact-link:hover {
+                text-decoration: underline;
+            }
+        </style>
+
+        <div class="ns-container">
+            <!-- Hero Section -->
+            <header class="ns-hero">
+                <div class="ns-badge">Building Enterprise Projects</div>
+                <h1>Hi, I'm <span class="ns-gradient-text">Yazan Tarifi</span></h1>
+                <h2>Software Engineer</h2>
+                <p>Mobile App Maestro Building Native Mobile Applications for Android & iOS. I build Solid, modern
+                    interfaces with Jetpack Compose and Compose Multiplatform. Driven by performance, I build shared
+                    logic using Kotlin Multiplatform and building backend projects using NestJS & Spring Boot to build
+                    (Full Stack, SAAS) solutions.</p>
+                <div class="ns-hero-buttons">
+                    <a href="#services" class="ns-btn-primary">Explore My Work</a>
+                    <a href="mailto:yazantarifi989@gmail.com" class="ns-btn-secondary">Contact Me</a>
                 </div>
-                <div class="ns-card">
-                    <h3 class="ns-gradient-text" style="background: linear-gradient(to right, #22d3ee, #818cf8); -webkit-background-clip: text; color: transparent;">Web Apps (Backend)</h3>
-                    <p>Building Backend Projects and Api's with NestJs, Swagger, PostgreSQL, Firebase, Socket.IO, Configurations, JWT, TypeORM, Docker, Deployments, SSH Servers, Nginx Configurations.</p>
+            </header>
+
+            <!-- What I Do Section -->
+            <section class="ns-section" id="services">
+                <div class="ns-section-header">
+                    <div class="ns-badge">My Architectural Focus</div>
+                    <h2 class="ns-section-title">What I <span class="ns-gradient-text">Do</span></h2>
                 </div>
-                <div class="ns-card">
-                    <h3 class="ns-gradient-text" style="background: linear-gradient(to right, #fb7185, #a855f7); -webkit-background-clip: text; color: transparent;">Web Development</h3>
-                    <p>Building a Static Sites, Landing Pages with Tailwind CSS, React.js, Typescript, Hosting on Github Pages and Netlify.</p>
+                <div class="ns-grid">
+                    <div class="ns-card">
+                        <h3 class="ns-gradient-text">Android Development</h3>
+                        <p>Building android applications accessible by Milions of Users, With Clean Architecture, MVVM,
+                            Clean Code, Kotlin, Jetpack Compose, Firebase, Hilt, Retrofit, Room, WorkManager, Multi
+                            Modular Apps.</p>
+                    </div>
+                    <div class="ns-card">
+                        <h3 class="ns-gradient-text"
+                            style="background: linear-gradient(to right, #22d3ee, #818cf8); -webkit-background-clip: text; color: transparent;">
+                            Web Apps (Backend)</h3>
+                        <p>Building Backend Projects and Api's with NestJs, Swagger, PostgreSQL, Firebase, Socket.IO,
+                            Configurations, JWT, TypeORM, Docker, Deployments, SSH Servers, Nginx Configurations.</p>
+                    </div>
+                    <div class="ns-card">
+                        <h3 class="ns-gradient-text"
+                            style="background: linear-gradient(to right, #fb7185, #a855f7); -webkit-background-clip: text; color: transparent;">
+                            Web Development</h3>
+                        <p>Building a Static Sites, Landing Pages with Tailwind CSS, React.js, Typescript, Hosting on
+                            Github Pages and Netlify.</p>
+                    </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <!-- Core Languages Section -->
-        <section class="ns-section">
-            <div class="ns-section-header">
-                <h2 class="ns-section-title" style="font-size: 2.25rem;">Core Languages</h2>
-            </div>
-            <div class="ns-grid-cols-2">
-                <div class="ns-lang-card"><h3>Kotlin</h3><p>Mobile / Backend</p></div>
-                <div class="ns-lang-card"><h3>Java</h3><p>Enterprise</p></div>
-                <div class="ns-lang-card"><h3>TypeScript</h3><p>Frontend / APIs</p></div>
-                <div class="ns-lang-card"><h3>Swift</h3><p>iOS Native</p></div>
-                <div class="ns-lang-card"><h3>JavaScript</h3><p>Web / Full-Stack</p></div>
-                <div class="ns-lang-card"><h3>Ruby</h3><p>Scripting</p></div>
-            </div>
-        </section>
+            <!-- Core Languages Section -->
+            <section class="ns-section">
+                <div class="ns-section-header">
+                    <h2 class="ns-section-title" style="font-size: 2.25rem;">Core Languages</h2>
+                </div>
+                <div class="ns-grid-cols-2">
+                    <div class="ns-lang-card">
+                        <h3>Kotlin</h3>
+                        <p>Mobile / Backend</p>
+                    </div>
+                    <div class="ns-lang-card">
+                        <h3>Java</h3>
+                        <p>Enterprise</p>
+                    </div>
+                    <div class="ns-lang-card">
+                        <h3>TypeScript</h3>
+                        <p>Frontend / APIs</p>
+                    </div>
+                    <div class="ns-lang-card">
+                        <h3>Swift</h3>
+                        <p>iOS Native</p>
+                    </div>
+                    <div class="ns-lang-card">
+                        <h3>JavaScript</h3>
+                        <p>Web / Full-Stack</p>
+                    </div>
+                    <div class="ns-lang-card">
+                        <h3>Ruby</h3>
+                        <p>Scripting</p>
+                    </div>
+                </div>
+            </section>
 
-        <!-- Latest Articles Section -->
-        <section class="ns-section" id="articles">
-            <div class="ns-section-header">
-                <div class="ns-badge" style="color: #22d3ee; border-color: rgba(34, 211, 238, 0.3);">Technical Writing</div>
-                <h2 class="ns-section-title">Latest <span style="background: linear-gradient(to right, #a855f7, #ec4899); -webkit-background-clip: text; color: transparent;">Articles</span></h2>
-            </div>
-            <div class="ns-card" style="text-align: center;">
-                <h3 style="font-size: 1.75rem;">Explore My Technical Blog</h3>
-                <p style="margin-bottom: 24px;">I actively write about Kotlin Multiplatform, NestJS architecture, and systemic designs for enterprise software.</p>
-                <a href="https://medium.com/@yazantarifi98" class="ns-btn-secondary">Read on Medium @yazantarifi98</a>
-            </div>
-        </section>
+            <!-- Latest Articles Section -->
+            <section class="ns-section" id="articles">
+                <div class="ns-section-header">
+                    <div class="ns-badge" style="color: #22d3ee; border-color: rgba(34, 211, 238, 0.3);">Technical
+                        Writing</div>
+                    <h2 class="ns-section-title">Latest <span
+                            style="background: linear-gradient(to right, #a855f7, #ec4899); -webkit-background-clip: text; color: transparent;">Articles</span>
+                    </h2>
+                </div>
+                <div class="ns-card" style="text-align: center;">
+                    <h3 style="font-size: 1.75rem;">Explore My Technical Blog</h3>
+                    <p style="margin-bottom: 24px;">I actively write about Kotlin Multiplatform, NestJS architecture,
+                        and systemic designs for enterprise software.</p>
+                    <a href="https://medium.com/@yazantarifi98" class="ns-btn-secondary">Read on Medium
+                        @yazantarifi98</a>
+                </div>
+            </section>
 
-        <!-- Contact Section -->
-        <section class="ns-section" id="contact">
-            <div class="ns-contact-card">
-                <div class="ns-badge" style="color: #22d3ee; border-color: rgba(34, 211, 238, 0.3);">Get In Touch</div>
-                <h2>Let's build<br><span class="ns-gradient-text">something great.</span></h2>
-                <p>Location: <span style="color: #fff;">Amman, Jordan</span></p>
-                <p>Email: <a href="mailto:yazantarifi989@gmail.com" class="ns-contact-link">yazantarifi989@gmail.com</a></p>
-                <p>GitHub: <a href="https://github.com/Yazan98" class="ns-contact-link">github.com/Yazan98</a></p>
-            </div>
-        </section>
-    </div>
-</noscript>
+            <!-- Contact Section -->
+            <section class="ns-section" id="contact">
+                <div class="ns-contact-card">
+                    <div class="ns-badge" style="color: #22d3ee; border-color: rgba(34, 211, 238, 0.3);">Get In Touch
+                    </div>
+                    <h2>Let's build<br><span class="ns-gradient-text">something great.</span></h2>
+                    <p>Location: <span style="color: #fff;">Amman, Jordan</span></p>
+                    <p>Email: <a href="mailto:yazantarifi989@gmail.com"
+                            class="ns-contact-link">yazantarifi989@gmail.com</a></p>
+                    <p>GitHub: <a href="https://github.com/Yazan98" class="ns-contact-link">github.com/Yazan98</a></p>
+                </div>
+            </section>
+        </div>
+    </noscript>
 
 </body>
 
