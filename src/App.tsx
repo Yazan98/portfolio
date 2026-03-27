@@ -29,16 +29,16 @@ function App() {
 
                 {/* Open Graph / Social Media Metatags */}
                 <meta property="og:type" content="website" />
-                <meta property="og:url" content="https://yazantarifi.com/" />
+                <meta property="og:url" content="https://www.yazantarifi.com/" />
                 <meta property="og:title" content="Yazan Tarifi - Software Engineer Portfolio" />
                 <meta property="og:description" content="Explore Yazan's code-minded approach to building digital experiences." />
-                <meta property="og:image" content="https://yazantarifi.com/banner.png" />
+                <meta property="og:image" content="https://www.yazantarifi.com/banner.png" />
 
                 {/* Twitter Card */}
                 <meta name="twitter:card" content="summary_large_image" />
                 <meta name="twitter:title" content="Yazan Tarifi - Senior Software Engineer" />
                 <meta name="twitter:description" content="Premium portfolio showcasing enterprise-grade architecture and beautiful interfaces." />
-                <meta name="twitter:image" content="https://yazantarifi.com/banner.png" />
+                <meta name="twitter:image" content="https://www.yazantarifi.com/banner.png" />
 
                 {/* JSON-LD Structured Data for Rich Snippets */}
                 <script type="application/ld+json">
@@ -48,7 +48,7 @@ function App() {
               "@type": "Person",
               "name": "Yazan Tarifi",
               "jobTitle": "Senior Software Engineer",
-              "url": "https://yazantarifi.com/",
+              "url": "https://www.yazantarifi.com/",
               "sameAs": [
                 "https://github.com/Yazan98",
                 "https://linkedin.com/in/yazantarifi"

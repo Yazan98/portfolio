@@ -46,7 +46,7 @@ const HomePage: React.FC = () => {
             <Helmet>
                 <title>Yazan Tarifi - Senior Software Engineer & Mobile Developer</title>
                 <meta name="description" content="Portfolio of Yazan Tarifi - Enterprise Mobile & Backend Developer" />
-                <link rel="canonical" href="https://yazantarifi.com/" />
+                <link rel="canonical" href="https://www.yazantarifi.com/" />
             </Helmet>
 
             {/* High-Performance Canvas Interactive Layer */}

@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { gsap } from 'gsap';
-import { Github } from 'lucide-react';
+import { Github, Globe } from 'lucide-react';
 
 // @ts-ignore
 import getProjectsList, {
@@ -60,10 +60,10 @@ const ProjectsPage: React.FC = () => {
             <Helmet>
                 <title>Yazan Tarifi - Projects</title>
                 <meta name="description" content="Browse all projects built by Yazan Tarifi — Android apps, iOS apps, backend systems, and web applications." />
-                <link rel="canonical" href="https://yazantarifi.com/projects" />
+                <link rel="canonical" href="https://www.yazantarifi.com/projects" />
                 <meta property="og:title" content="Yazan Tarifi - Projects" />
                 <meta property="og:description" content="Browse all projects built by Yazan Tarifi — Android apps, iOS apps, backend systems, and web applications." />
-                <meta property="og:url" content="https://yazantarifi.com/projects" />
+                <meta property="og:url" content="https://www.yazantarifi.com/projects" />
             </Helmet>
 
             <div className="mb-12 text-center md:text-left">
@@ -126,7 +126,8 @@ const ProjectsPage: React.FC = () => {
                                     <div className="flex justify-between items-center mb-4 relative z-10">
                                         {project.link && (
                                             <a href={project.link} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-gray-500 hover:text-white transition-colors bg-dark-100 px-3 py-1.5 rounded-md border border-gray-800 text-sm">
-                                                <Github size={16} /> Repository
+                                                {project.link.includes('github.com') ? <Github size={16} /> : <Globe size={16} />} 
+                                                {project.link.includes('github.com') ? 'Repository' : 'Visit'}
                                             </a>
                                         )}
                                         <span className="text-xs text-primary-400 font-medium tracking-wide">
