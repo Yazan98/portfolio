@@ -24,10 +24,10 @@ const SkillsPage: React.FC = () => {
             <Helmet>
                 <title>Yazan Tarifi - Skills & Expertise</title>
                 <meta name="description" content="Technical skills and technology stack of Yazan Tarifi — Kotlin, Java, TypeScript, Swift, and more." />
-                <link rel="canonical" href="https://yazantarifi.com/skills" />
+                <link rel="canonical" href="https://www.yazantarifi.com/skills" />
                 <meta property="og:title" content="Yazan Tarifi - Skills & Expertise" />
                 <meta property="og:description" content="Technical skills and technology stack of Yazan Tarifi — Kotlin, Java, TypeScript, Swift, and more." />
-                <meta property="og:url" content="https://yazantarifi.com/skills" />
+                <meta property="og:url" content="https://www.yazantarifi.com/skills" />
             </Helmet>
 
             <div className="mb-16 text-center md:text-left max-w-3xl">

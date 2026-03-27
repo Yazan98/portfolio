@@ -2,4 +2,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://yazantarifi.com/sitemap.xml
+Sitemap: https://www.yazantarifi.com/sitemap.xml

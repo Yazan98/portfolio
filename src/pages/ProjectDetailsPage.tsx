@@ -44,7 +44,7 @@ const ProjectDetailsPage: React.FC = () => {
             <Helmet>
                 <title>{project.name} - Yazan Tarifi</title>
                 <meta name="description" content={`Detailed case study and overview of the ${project.name} project.`} />
-                <link rel="canonical" href={`https://yazantarifi.com/project/${project.id || id}`} />
+                <link rel="canonical" href={`https://www.yazantarifi.com/project/${project.id || id}`} />
             </Helmet>
 
             <div ref={containerRef} className="container mx-auto px-4 max-w-6xl py-12">
@@ -98,13 +98,14 @@ const ProjectDetailsPage: React.FC = () => {
                                 <Globe className="text-primary-500" size={24} /> Links
                             </h3>
                             <div className="flex flex-col gap-4">
-                                {project.githubUrl && (
-                                    <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 p-4 bg-dark-100 hover:bg-white hover:text-dark-300 text-gray-300 rounded-xl transition-colors font-medium">
-                                        <Github size={20} /> View Source Code
+                                {project.link && (
+                                    <a href={project.link} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 p-4 bg-dark-100 hover:bg-white hover:text-dark-300 text-gray-300 rounded-xl transition-colors font-medium">
+                                        {project.link.includes('github.com') ? <Github size={20} /> : <Globe size={20} />}
+                                        {project.link.includes('github.com') ? 'View Source Code' : 'Visit Project'}
                                     </a>
                                 )}
-                                {!project.githubUrl && (
-                                    <p className="text-gray-500 italic">Source code not available publicly.</p>
+                                {!project.link && (
+                                    <p className="text-gray-500 italic">Project link not available publicly.</p>
                                 )}
                             </div>
                         </div>
