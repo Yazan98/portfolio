@@ -44,8 +44,9 @@ const HomePage: React.FC = () => {
     return (
         <div className="relative min-h-[calc(100vh-4rem)] bg-dark-300">
             <Helmet>
-                <title>Yazan Tarifi - Software Engineer</title>
+                <title>Yazan Tarifi - Senior Software Engineer & Mobile Developer</title>
                 <meta name="description" content="Portfolio of Yazan Tarifi - Enterprise Mobile & Backend Developer" />
+                <link rel="canonical" href="https://yazantarifi.com/" />
             </Helmet>
 
             {/* High-Performance Canvas Interactive Layer */}
