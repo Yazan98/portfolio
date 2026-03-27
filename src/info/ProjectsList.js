@@ -10,6 +10,12 @@ import RafeeqImage8 from '../components/images/rafeeq_8.png';
 import RafeeqImage9 from '../components/images/rafeeq_9.png';
 import RafeeqImage10 from '../components/images/rafeeq_10.png';
 import RafeeqImage11 from '../components/images/rafeeq_11.png';
+import StoreImage1 from '../components/images/store_1.png';
+import StoreImage2 from '../components/images/store_2.png';
+import StoreImage3 from '../components/images/store_3.png';
+import StoreImage4 from '../components/images/store_4.png';
+import StoreImage5 from '../components/images/store_5.png';
+import StoreImage6 from '../components/images/store_6.png';
 
 import ExpenziaImage from '../components/images/expenzia.png';
 import ExpenziaImage1 from '../components/images/expenzia_1.png';
@@ -44,6 +50,7 @@ export default function getProjectsList() {
       image: RafeeqImage,
       imageProject: RafeeqImage,
       type: MOBILE_FILTER_TYPE,
+      link: "https://rafeeq.club",
       tags: [
         "Compose Multiplatform",
         "Swift 5",
@@ -54,7 +61,7 @@ export default function getProjectsList() {
         "Shared UI",
         "Shared Database",
       ],
-      images: [RafeeqImage1, RafeeqImage2, RafeeqImage3, RafeeqImage4, RafeeqImage5, RafeeqImage6, RafeeqImage7, RafeeqImage8, RafeeqImage9, RafeeqImage10, RafeeqImage11]
+      images: [StoreImage1, StoreImage2, StoreImage3, StoreImage4, StoreImage5, StoreImage6, RafeeqImage1, RafeeqImage2, RafeeqImage3, RafeeqImage4, RafeeqImage5, RafeeqImage6, RafeeqImage7, RafeeqImage8, RafeeqImage9, RafeeqImage10, RafeeqImage11]
     },
     {
       id: 2,

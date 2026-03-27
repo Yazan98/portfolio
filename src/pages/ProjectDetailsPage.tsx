@@ -44,6 +44,7 @@ const ProjectDetailsPage: React.FC = () => {
             <Helmet>
                 <title>{project.name} - Yazan Tarifi</title>
                 <meta name="description" content={`Detailed case study and overview of the ${project.name} project.`} />
+                <link rel="canonical" href={`https://yazantarifi.com/project/${project.id || id}`} />
             </Helmet>
 
             <div ref={containerRef} className="container mx-auto px-4 max-w-6xl py-12">
