@@ -5,6 +5,7 @@ import { ThemeProvider } from './theme/ThemeProvider';
 import Navbar from './components/layout/Navbar';
 import Footer from './components/layout/Footer';
 import ScrollToTop from './components/layout/ScrollToTop';
+import ErrorBoundary from './components/ui/ErrorBoundary';
 
 // Home is eager (landing route); the rest are split into their own chunks.
 import HomePage from './pages/HomePage';
@@ -21,16 +22,18 @@ const App: React.FC = () => (
             <div className="flex min-h-screen flex-col bg-bg text-ink">
                 <Navbar />
                 <main className="flex-grow">
-                    <Suspense fallback={<div className="min-h-[70vh]" aria-hidden="true" />}>
-                        <Routes>
-                            <Route path="/" element={<HomePage />} />
-                            <Route path="/projects" element={<ProjectsPage />} />
-                            <Route path="/project/:slug" element={<ProjectDetailsPage />} />
-                            <Route path="/skills" element={<SkillsPage />} />
-                            <Route path="/archive" element={<ArchivePage />} />
-                            <Route path="*" element={<NotFoundPage />} />
-                        </Routes>
-                    </Suspense>
+                    <ErrorBoundary>
+                        <Suspense fallback={<div className="min-h-[70vh]" aria-hidden="true" />}>
+                            <Routes>
+                                <Route path="/" element={<HomePage />} />
+                                <Route path="/projects" element={<ProjectsPage />} />
+                                <Route path="/project/:slug" element={<ProjectDetailsPage />} />
+                                <Route path="/skills" element={<SkillsPage />} />
+                                <Route path="/archive" element={<ArchivePage />} />
+                                <Route path="*" element={<NotFoundPage />} />
+                            </Routes>
+                        </Suspense>
+                    </ErrorBoundary>
                 </main>
                 <Footer />
             </div>

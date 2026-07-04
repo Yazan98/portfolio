@@ -162,6 +162,19 @@ html[data-accent="cyan"] { --acc: #0E7490; --acc-soft: rgba(14, 116, 144, 0.16);
   50%      { transform: scale(1.6); opacity: .5; }
 }
 
+/* Infinite horizontal marquee (hero premium-projects slider).
+   The track holds two identical copies, so -50% loops seamlessly. */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+.marquee-track {
+  animation: marquee var(--marquee-duration, 46s) linear infinite;
+}
+.marquee-viewport:hover .marquee-track {
+  animation-play-state: paused;
+}
+
 /* Scroll-reveal — toggled by the <Reveal> IntersectionObserver */
 .reveal {
   opacity: 0;
