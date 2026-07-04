@@ -1,72 +1,89 @@
-import React, { useEffect, useRef } from 'react';
-import { Helmet } from 'react-helmet-async';
-import { gsap } from 'gsap';
+import React from 'react';
+import Seo from '../components/ui/Seo';
+import Section from '../components/ui/Section';
+import Reveal from '../components/ui/Reveal';
+import SectionHeading from '../components/ui/SectionHeading';
+import SkillCard from '../components/cards/SkillCard';
+// @ts-ignore - data modules authored in JS
+import { getSkills, languages } from '../data/skills';
 // @ts-ignore
-import getSkillsList from '../info/SkillsList';
+import getServices from '../data/services';
 
 const SkillsPage: React.FC = () => {
-    const containerRef = useRef<HTMLDivElement>(null);
-
-    const originalSkills = getSkillsList();
-
-    useEffect(() => {
-        const ctx = gsap.context(() => {
-            gsap.fromTo('.skill-category',
-                { opacity: 0, y: 40 },
-                { opacity: 1, y: 0, duration: 0.8, stagger: 0.15, ease: 'power3.out' }
-            );
-        }, containerRef);
-        return () => ctx.revert();
-    }, []);
+    const skills = getSkills();
+    const services = getServices();
 
     return (
-        <div className="container mx-auto px-4 py-16" ref={containerRef}>
-            <Helmet>
-                <title>Yazan Tarifi - Skills & Expertise</title>
-                <meta name="description" content="Technical skills and technology stack of Yazan Tarifi — Kotlin, Java, TypeScript, Swift, and more." />
-                <link rel="canonical" href="https://www.yazantarifi.com/skills" />
-                <meta property="og:title" content="Yazan Tarifi - Skills & Expertise" />
-                <meta property="og:description" content="Technical skills and technology stack of Yazan Tarifi — Kotlin, Java, TypeScript, Swift, and more." />
-                <meta property="og:url" content="https://www.yazantarifi.com/skills" />
-            </Helmet>
+        <>
+            <Seo
+                title="Skills"
+                description="Yazan Tarifi's technical skills — Kotlin, Android, Compose Multiplatform, TypeScript, NestJS, Spring Boot and more."
+                path="/skills"
+            />
 
-            <div className="mb-16 text-center md:text-left max-w-3xl">
-                <h1 className="text-4xl md:text-5xl font-display font-bold text-gray-900 dark:text-white mb-4">
-                    Technical Arsenal
-                </h1>
-                <p className="text-lg text-gray-600 dark:text-gray-400">
-                    I build robust and scalable systems across the entire technology stack, using these world-class tools and languages.
-                </p>
-            </div>
+            <header className="grid-bg px-[clamp(20px,5vw,48px)] pb-[clamp(32px,5vw,56px)] pt-[clamp(112px,16vh,150px)]">
+                <div className="mx-auto flex max-w-content flex-col gap-5">
+                    <span className="font-mono text-[12.5px] font-semibold tracking-[0.12em] text-acc" style={{ animation: 'fadeUp .6s cubic-bezier(.2,.7,.2,1) both' }}>
+                        TOOLBOX
+                    </span>
+                    <h1 className="m-0 font-display text-[clamp(40px,6vw,76px)] font-bold leading-[1.03] tracking-[-0.04em] text-ink" style={{ animation: 'fadeUp .6s .08s cubic-bezier(.2,.7,.2,1) both' }}>
+                        Skills<span className="text-acc">.</span>
+                    </h1>
+                    <p className="m-0 max-w-2xl text-[18px] leading-[1.65] text-ink3" style={{ animation: 'fadeUp .6s .16s cubic-bezier(.2,.7,.2,1) both' }}>
+                        The languages, frameworks and tools I use to build robust mobile products and the systems behind them.
+                    </p>
+                </div>
+            </header>
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                {originalSkills.map((skill: any, idx: number) => (
-                    <div key={idx} className="skill-category bg-white dark:bg-dark-200 rounded-2xl p-8 border border-gray-100 dark:border-gray-800 shadow-sm hover:shadow-lg hover:border-primary-500/50 transition-all duration-300">
-                        <div className="flex items-center gap-4 mb-6">
-                            <div className="w-16 h-16 p-2 bg-gray-50 dark:bg-dark-100 rounded-xl border border-gray-100 dark:border-gray-800 flex items-center justify-center overflow-hidden">
-                                <img src={skill.icon} alt={skill.name} className="max-w-full max-h-full object-contain" />
-                            </div>
-                            <h2 className="text-2xl font-bold text-gray-900 dark:text-white">{skill.name}</h2>
-                        </div>
-
-                        <p className="text-sm text-gray-600 dark:text-gray-400 mb-6 leading-relaxed">
-                            {skill.description}
-                        </p>
-
-                        <div className="flex flex-wrap gap-2">
-                            {skill.tags.split(' . ').map((tag: string) => (
-                                <span
-                                    key={tag}
-                                    className="px-3 py-1.5 bg-primary-50 dark:bg-primary-900/10 border border-primary-200 dark:border-primary-800/30 rounded-lg text-xs font-semibold text-primary-700 dark:text-primary-400 hover:bg-primary-100 dark:hover:bg-primary-900/30 transition-colors cursor-default"
-                                >
-                                    {tag}
-                                </span>
-                            ))}
-                        </div>
+            {/* Core languages */}
+            <Section padding="pt-8 pb-[clamp(48px,7vw,80px)]">
+                <div className="flex flex-col gap-8">
+                    <SectionHeading eyebrow="01 — LANGUAGES" title="Core languages" />
+                    <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
+                        {languages.map((l: { name: string; role: string }, i: number) => (
+                            <Reveal key={l.name} delay={(i % 3) * 50}>
+                                <div className="flex items-center justify-between gap-3 rounded-2xl border border-line10 bg-paper px-5 py-4 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-card">
+                                    <span className="font-display text-lg font-semibold tracking-[-0.01em] text-ink">{l.name}</span>
+                                    <span className="font-mono text-[10.5px] uppercase tracking-[0.08em] text-ink2">{l.role}</span>
+                                </div>
+                            </Reveal>
+                        ))}
                     </div>
-                ))}
-            </div>
-        </div>
+                </div>
+            </Section>
+
+            {/* Detailed skills */}
+            <Section tone="paper" bordered>
+                <div className="flex flex-col gap-12">
+                    <SectionHeading eyebrow="02 — EXPERTISE" title="Frameworks & platforms" />
+                    <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+                        {skills.map((s: { icon: string; name: string; description: string; tags: string[] }, i: number) => (
+                            <Reveal key={s.name} delay={(i % 2) * 80}>
+                                <SkillCard {...s} />
+                            </Reveal>
+                        ))}
+                    </div>
+                </div>
+            </Section>
+
+            {/* What I do */}
+            <Section bordered>
+                <div className="flex flex-col gap-12">
+                    <SectionHeading eyebrow="03 — WHAT I DO" title="How I can help" />
+                    <div className="grid grid-cols-1 gap-[18px] sm:grid-cols-2 lg:grid-cols-4">
+                        {services.map((s: { num: string; tag: string; title: string; description: string }, i: number) => (
+                            <Reveal key={s.num} delay={(i % 4) * 70}>
+                                <div className="flex h-full flex-col gap-3 rounded-[20px] border border-line08 bg-bg p-7">
+                                    <span className="font-mono text-sm font-semibold text-acc">{s.num}</span>
+                                    <h3 className="m-0 font-display text-[19px] font-semibold tracking-[-0.01em] text-ink">{s.title}</h3>
+                                    <p className="m-0 text-sm leading-[1.65] text-ink2">{s.description}</p>
+                                </div>
+                            </Reveal>
+                        ))}
+                    </div>
+                </div>
+            </Section>
+        </>
     );
 };
 

@@ -1,31 +1,16 @@
 {
-  "short_name": "Portfolio",
-  "name": "Yazan Tarifi - Portfolio",
-  "description": "Personal Website For Yazan Tarifi - Software Engineer",
+  "short_name": "Yazan Tarifi",
+  "name": "Yazan Tarifi — Mobile Software Engineer",
+  "description": "Portfolio of Yazan Tarifi — native Android & iOS apps, Kotlin Multiplatform and scalable backends.",
   "icons": [
-    {
-      "src": "logo.png",
-      "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/png",
-      "purpose": "maskable"
-    },
-    {
-      "src": "logo.png",
-      "type": "image/png",
-      "purpose": "maskable",
-      "sizes": "192x192"
-    },
-    {
-      "src": "logo.png",
-      "type": "image/png",
-      "purpose": "maskable",
-      "sizes": "512x512"
-    }
+    { "src": "logo.png", "sizes": "64x64 32x32 24x24 16x16", "type": "image/png", "purpose": "maskable" },
+    { "src": "logo.png", "type": "image/png", "purpose": "maskable", "sizes": "192x192" },
+    { "src": "logo.png", "type": "image/png", "purpose": "maskable", "sizes": "512x512" }
   ],
   "start_url": "/",
-  "background_color": "#0a0a0a",
+  "background_color": "#F6F3EC",
   "display": "standalone",
   "scope": "/",
-  "theme_color": "#a855f7",
+  "theme_color": "#F6F3EC",
   "orientation": "portrait"
 }

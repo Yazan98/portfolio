@@ -4,52 +4,48 @@ export default {
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
-  darkMode: 'class',
+  // Themes are driven by [data-theme] on <html>; expose a `dark:` variant too.
+  darkMode: ['selector', '[data-theme="dark"]'],
   theme: {
     extend: {
       colors: {
-        primary: {
-          50: '#faf5ff',
-          100: '#f3e8ff',
-          200: '#e9d5ff',
-          300: '#d8b4fe',
-          400: '#c084fc',
-          500: '#a855f7', // Brand color - Vibrant Purple
-          600: '#9333ea',
-          700: '#7e22ce',
-          800: '#6b21a8',
-          900: '#581c87',
-          950: '#3b0764',
-        },
-        dark: {
-          100: '#2A2A2A',
-          200: '#111111',
-          300: '#000000', // Jet Black
-        }
+        // Semantic tokens — resolve to CSS vars that flip per theme.
+        bg: 'var(--bg)',
+        paper: 'var(--paper)',
+        chip: 'var(--chip)',
+        panel: 'var(--panel)',
+        ink: 'var(--ink)',
+        ink2: 'var(--ink2)',
+        ink3: 'var(--ink3)',
+        acc: 'var(--acc)',
+        'acc-soft': 'var(--acc-soft)',
+        'btn-bg': 'var(--btn-bg)',
+        'btn-fg': 'var(--btn-fg)',
+      },
+      borderColor: {
+        line08: 'var(--line08)',
+        line10: 'var(--line10)',
+        line14: 'var(--line14)',
+        line25: 'var(--line25)',
       },
       fontFamily: {
-        sans: ['Inter', 'sans-serif'],
-        display: ['Outfit', 'sans-serif'],
+        display: ['"Space Grotesk"', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+        mono: ['"JetBrains Mono"', 'ui-monospace', 'SFMono-Regular', 'monospace'],
+        sans: ['"Helvetica Neue"', 'Helvetica', 'Arial', 'sans-serif'],
+      },
+      maxWidth: {
+        content: '1180px',
+      },
+      boxShadow: {
+        card: 'var(--shadow-card)',
+        panel: 'var(--shadow-panel)',
       },
       animation: {
-        'fade-in': 'fadeIn 0.5s ease-out',
-        'slide-up': 'slideUp 0.6s ease-out',
-        'gradient-bg': 'gradientBg 15s ease infinite',
+        'fade-up': 'fadeUp 0.6s cubic-bezier(0.2,0.7,0.2,1) both',
+        blink: 'blink 1.2s step-end infinite',
+        float: 'floatB 6s ease-in-out infinite',
+        'pulse-dot': 'pulseDot 2s ease-in-out infinite',
       },
-      keyframes: {
-        fadeIn: {
-          '0%': { opacity: '0' },
-          '100%': { opacity: '1' },
-        },
-        slideUp: {
-          '0%': { opacity: '0', transform: 'translateY(20px)' },
-          '100%': { opacity: '1', transform: 'translateY(0)' },
-        },
-        gradientBg: {
-          '0%, 100%': { backgroundPosition: '0% 50%' },
-          '50%': { backgroundPosition: '100% 50%' },
-        }
-      }
     },
   },
   plugins: [],

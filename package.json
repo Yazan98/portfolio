@@ -1,40 +1,34 @@
 {
   "name": "my-app",
-  "version": "3.1.0",
-  "homepage": "https://www.yazan98.github.io",
+  "version": "6.0.0",
+  "homepage": "https://www.yazantarifi.com",
   "private": true,
-  "description": "My Personal Website (Portfolio) V2",
+  "description": "Yazan Tarifi — Mobile Software Engineer. Personal portfolio (v6).",
   "author": "Yazan Tarifi <yazantarifi98@gmail.com>",
   "license": "MIT",
   "keywords": [
     "Personal Website",
     "React",
-    "React.js",
-    "Next.js",
-    "CV",
-    "Portfolio"
+    "Vite",
+    "Portfolio",
+    "Mobile Engineer"
   ],
+  "type": "module",
   "dependencies": {
-    "gsap": "^3.12.5",
-    "lucide-react": "^0.364.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-ga": "^3.3.1",
-    "react-helmet-async": "^2.0.4",
-    "react-icons": "^5.6.0",
-    "react-router-dom": "^6.22.3"
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.30.1"
   },
   "devDependencies": {
-    "@types/node": "^20.11.30",
-    "@types/react": "^18.2.66",
-    "@types/react-dom": "^18.2.22",
-    "@vitejs/plugin-react": "^4.2.1",
-    "autoprefixer": "^10.4.19",
-    "postcss": "^8.4.38",
-    "sass": "^1.72.0",
-    "tailwindcss": "^3.4.1",
-    "typescript": "^5.4.3",
-    "vite": "^5.2.0"
+    "@types/node": "^22.10.5",
+    "@types/react": "^18.3.18",
+    "@types/react-dom": "^18.3.5",
+    "@vitejs/plugin-react": "^4.3.4",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.17",
+    "typescript": "^5.7.3",
+    "vite": "^6.0.7"
   },
   "scripts": {
     "dev": "vite",

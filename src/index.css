@@ -2,12 +2,185 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ============================================================
+   Design tokens — warm-cream light theme + deep dark theme.
+   Colors switch automatically via [data-theme] on <html>,
+   so components just use the semantic utilities (bg-bg, text-ink…).
+   ============================================================ */
+:root {
+  --acc: #0E8A66;
+  --acc-soft: rgba(14, 138, 102, 0.14);
+  --play: running;
+
+  --bg: #F6F3EC;
+  --paper: #FFFFFF;
+  --chip: #EDE9DF;
+  --panel: #14130F;
+
+  --ink: #14130F;
+  --ink2: #5C5A52;
+  --ink3: #42403A;
+
+  --line08: rgba(20, 19, 15, 0.08);
+  --line10: rgba(20, 19, 15, 0.10);
+  --line14: rgba(20, 19, 15, 0.14);
+  --line25: rgba(20, 19, 15, 0.25);
+
+  --navbg: rgba(246, 243, 236, 0.82);
+  --gridline: rgba(20, 19, 15, 0.045);
+
+  --btn-bg: #14130F;
+  --btn-fg: #F6F3EC;
+
+  --shadow-card: 0 16px 36px rgba(20, 19, 15, 0.12);
+  --shadow-panel: 0 40px 84px rgba(20, 19, 15, 0.22);
+
+  color-scheme: light;
+}
+
+html[data-theme="dark"] {
+  --acc-soft: rgba(14, 138, 102, 0.20);
+
+  --bg: #0F0E0A;
+  --paper: #1B1A14;
+  --chip: #282619;
+  --panel: #171610;
+
+  --ink: #F3EFE6;
+  --ink2: #A8A395;
+  --ink3: #CFC9BB;
+
+  --line08: rgba(246, 243, 236, 0.09);
+  --line10: rgba(246, 243, 236, 0.12);
+  --line14: rgba(246, 243, 236, 0.16);
+  --line25: rgba(246, 243, 236, 0.28);
+
+  --navbg: rgba(15, 14, 10, 0.82);
+  --gridline: rgba(246, 243, 236, 0.05);
+
+  --btn-bg: #F6F3EC;
+  --btn-fg: #14130F;
+
+  --shadow-card: 0 16px 36px rgba(0, 0, 0, 0.44);
+  --shadow-panel: 0 40px 84px rgba(0, 0, 0, 0.55);
+
+  color-scheme: dark;
+}
+
+/* Accent variants (data attribute set by the theme provider) */
+html[data-accent="blue"] { --acc: #1F6FEB; --acc-soft: rgba(31, 111, 235, 0.16); }
+html[data-accent="cyan"] { --acc: #0E7490; --acc-soft: rgba(14, 116, 144, 0.16); }
+
 @layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
-    @apply bg-white text-gray-900 dark:bg-dark-300 dark:text-gray-100 transition-colors duration-300 antialiased font-sans;
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transition: background 0.35s ease, color 0.35s ease;
   }
-  
+
   ::selection {
-    @apply bg-primary-500 text-white;
+    background: var(--acc);
+    color: #F6F3EC;
   }
+
+  /* Themed scrollbar */
+  ::-webkit-scrollbar { width: 11px; height: 11px; }
+  ::-webkit-scrollbar-track { background: transparent; }
+  ::-webkit-scrollbar-thumb {
+    background: var(--line14);
+    border-radius: 100px;
+    border: 3px solid var(--bg);
+  }
+  ::-webkit-scrollbar-thumb:hover { background: var(--line25); }
+}
+
+@layer components {
+  /* Section shell — 1180px container with responsive gutters */
+  .container-x {
+    width: 100%;
+    max-width: 1180px;
+    margin-inline: auto;
+    padding-inline: clamp(20px, 5vw, 48px);
+  }
+
+  /* Pill chip (mono tag) */
+  .chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 7px 14px;
+    border-radius: 100px;
+    font-family: "JetBrains Mono", monospace;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1;
+    color: var(--ink3);
+    background: var(--paper);
+    border: 1px solid var(--line10);
+  }
+
+  /* Grid-line backdrop used on hero headers */
+  .grid-bg {
+    background-color: var(--bg);
+    background-image:
+      linear-gradient(var(--gridline) 1px, transparent 1px),
+      linear-gradient(90deg, var(--gridline) 1px, transparent 1px);
+    background-size: 56px 56px;
+  }
+}
+
+@layer utilities {
+  .hide-scrollbar::-webkit-scrollbar { display: none; }
+  .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+}
+
+/* ============================================================
+   Keyframes (mirrors the design source)
+   ============================================================ */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(28px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes floatB {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-16px); }
+}
+@keyframes blink {
+  0%, 49%   { opacity: 1; }
+  50%, 100% { opacity: 0; }
+}
+@keyframes pulseDot {
+  0%, 100% { transform: scale(1);   opacity: 1;  }
+  50%      { transform: scale(1.6); opacity: .5; }
+}
+
+/* Scroll-reveal — toggled by the <Reveal> IntersectionObserver */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.7s cubic-bezier(0.2, 0.7, 0.2, 1),
+              transform 0.7s cubic-bezier(0.2, 0.7, 0.2, 1);
+  will-change: opacity, transform;
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+  .reveal { opacity: 1; transform: none; }
 }
