@@ -50,7 +50,7 @@ class ErrorBoundary extends React.Component<Props, State> {
     render() {
         if (this.state.hasError) {
             return (
-                <section className="grid-bg flex min-h-[70vh] flex-col items-center justify-center gap-5 px-6 py-24 text-center">
+                <section className="flex min-h-[70vh] flex-col items-center justify-center gap-5 bg-bg px-6 py-24 text-center">
                     <span className="font-mono text-sm font-semibold tracking-[0.12em] text-acc">SOMETHING WENT WRONG</span>
                     <h1 className="m-0 font-display text-[clamp(32px,5vw,56px)] font-bold tracking-[-0.03em] text-ink">
                         This page hit a snag<span className="text-acc">.</span>

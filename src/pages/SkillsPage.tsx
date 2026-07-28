@@ -17,11 +17,12 @@ const SkillsPage: React.FC = () => {
         <>
             <Seo
                 title="Skills"
-                description="Yazan Tarifi's technical skills — Kotlin, Android, Compose Multiplatform, TypeScript, NestJS, Spring Boot and more."
+                description="Explore Yazan Tarifi's expertise in Kotlin, Android, Jetpack Compose, Kotlin Multiplatform, iOS, Spring Boot, backend systems, and developer tooling."
                 path="/skills"
+                schemaType="AboutPage"
             />
 
-            <header className="grid-bg px-[clamp(20px,5vw,48px)] pb-[clamp(32px,5vw,56px)] pt-[clamp(112px,16vh,150px)]">
+            <header className="bg-bg px-[clamp(20px,5vw,48px)] pb-[clamp(32px,5vw,56px)] pt-[clamp(112px,16vh,150px)]">
                 <div className="mx-auto flex max-w-content flex-col gap-5">
                     <span className="font-mono text-[12.5px] font-semibold tracking-[0.12em] text-acc" style={{ animation: 'fadeUp .6s cubic-bezier(.2,.7,.2,1) both' }}>
                         TOOLBOX
@@ -38,7 +39,7 @@ const SkillsPage: React.FC = () => {
             {/* Core languages */}
             <Section padding="pt-8 pb-[clamp(48px,7vw,80px)]">
                 <div className="flex flex-col gap-8">
-                    <SectionHeading eyebrow="01 — LANGUAGES" title="Core languages" />
+                    <SectionHeading eyebrow="01 - LANGUAGES" title="Core languages" />
                     <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
                         {languages.map((l: { name: string; role: string }, i: number) => (
                             <Reveal key={l.name} delay={(i % 3) * 50}>
@@ -55,7 +56,7 @@ const SkillsPage: React.FC = () => {
             {/* Detailed skills */}
             <Section tone="paper" bordered>
                 <div className="flex flex-col gap-12">
-                    <SectionHeading eyebrow="02 — EXPERTISE" title="Frameworks & platforms" />
+                    <SectionHeading eyebrow="02 - EXPERTISE" title="Frameworks & platforms" />
                     <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
                         {skills.map((s: { icon: string; name: string; description: string; tags: string[] }, i: number) => (
                             <Reveal key={s.name} delay={(i % 2) * 80}>
@@ -69,7 +70,7 @@ const SkillsPage: React.FC = () => {
             {/* What I do */}
             <Section bordered>
                 <div className="flex flex-col gap-12">
-                    <SectionHeading eyebrow="03 — WHAT I DO" title="How I can help" />
+                    <SectionHeading eyebrow="03 - WHAT I DO" title="How I can help" />
                     <div className="grid grid-cols-1 gap-[18px] sm:grid-cols-2 lg:grid-cols-4">
                         {services.map((s: { num: string; tag: string; title: string; description: string }, i: number) => (
                             <Reveal key={s.num} delay={(i % 4) * 70}>

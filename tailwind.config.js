@@ -9,7 +9,7 @@ export default {
   theme: {
     extend: {
       colors: {
-        // Semantic tokens — resolve to CSS vars that flip per theme.
+        // Semantic tokens - resolve to CSS vars that flip per theme.
         bg: 'var(--bg)',
         paper: 'var(--paper)',
         chip: 'var(--chip)',

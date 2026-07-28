@@ -3,13 +3,11 @@ import { NavLink, Link } from 'react-router-dom';
 import Icon from '../ui/Icon';
 import { useTheme } from '../../theme/ThemeProvider';
 // @ts-ignore - data module authored in JS
-import { identity, navLinks } from '../../data/site';
+import { identity, navLinks, primaryLinks } from '../../data/site';
 
 const Logo: React.FC = () => (
-    <Link to="/" className="flex items-center gap-[11px] no-underline text-ink" aria-label={`${identity.name} — home`}>
-        <span className="flex h-[38px] w-[38px] items-center justify-center rounded-xl bg-[#14130F] shadow-[inset_0_0_0_1.5px_rgba(246,243,236,0.08)] transition-transform duration-300 hover:-rotate-6 hover:scale-105">
-            <Icon name="logo" size={22} />
-        </span>
+    <Link to="/" className="flex items-center gap-[11px] no-underline text-ink" aria-label={`${identity.name} - home`}>
+        <img src="/logo.png" alt={`${identity.name} logo`} className="h-[38px] w-[38px] rounded-xl object-cover" />
         <span className="flex flex-col leading-[1.15]">
             <span className="font-display text-[16px] font-bold tracking-[-0.02em]">
                 {identity.handle}
@@ -49,7 +47,7 @@ const Navbar: React.FC = () => {
 
     return (
         <nav className="fixed inset-x-0 top-0 z-50 border-b border-line08 bg-[var(--navbg)] backdrop-blur-[14px]">
-            <div className="mx-auto flex max-w-content flex-wrap items-center justify-between gap-y-2.5 px-[clamp(16px,4vw,48px)] py-3.5">
+            <div className="flex w-full flex-wrap items-center justify-between gap-y-2.5 px-[clamp(16px,3vw,32px)] py-3.5">
                 <Logo />
 
                 {/* Desktop nav */}
@@ -68,11 +66,12 @@ const Navbar: React.FC = () => {
                     ))}
                     <ThemeToggle />
                     <a
-                        href={identity.resume}
-                        download
+                        href={primaryLinks.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="flex items-center gap-2 rounded-full bg-btn-bg px-[18px] py-[9px] text-[13.5px] font-semibold text-btn-fg no-underline transition-transform duration-200 hover:-translate-y-0.5"
                     >
-                        Resume <Icon name="download" size={15} />
+                        GitHub <Icon name="github" size={15} />
                     </a>
                 </div>
 
@@ -94,7 +93,7 @@ const Navbar: React.FC = () => {
             {/* Mobile dropdown */}
             {open && (
                 <div className="border-t border-line08 bg-[var(--navbg)] backdrop-blur-[14px] md:hidden">
-                    <div className="mx-auto flex max-w-content flex-col gap-1 px-[clamp(16px,4vw,48px)] py-4">
+                    <div className="flex w-full flex-col gap-1 px-[clamp(16px,3vw,32px)] py-4">
                         {navLinks.map((l: { label: string; to: string }) => (
                             <NavLink
                                 key={l.to}
@@ -109,12 +108,13 @@ const Navbar: React.FC = () => {
                             </NavLink>
                         ))}
                         <a
-                            href={identity.resume}
-                            download
+                            href={primaryLinks.github}
+                            target="_blank"
+                            rel="noopener noreferrer"
                             onClick={() => setOpen(false)}
                             className="mt-1 flex items-center justify-center gap-2 rounded-full bg-btn-bg px-5 py-3 text-sm font-semibold text-btn-fg no-underline"
                         >
-                            Resume <Icon name="download" size={15} />
+                            GitHub <Icon name="github" size={15} />
                         </a>
                     </div>
                 </div>

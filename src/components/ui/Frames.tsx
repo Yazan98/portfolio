@@ -15,13 +15,13 @@ const Placeholder: React.FC<{ label: string }> = ({ label }) => (
     </div>
 );
 
-/** Wide device/banner frame — dark panel with an inset 21:9 image. */
+/** Wide device/banner frame. */
 export const BannerFrame: React.FC<FrameProps> = ({ src, alt, className = '', style, fit = 'cover', eager }) => (
     <div
         className={`relative rounded-[30px] bg-panel p-3 shadow-panel ${className}`}
         style={style}
     >
-        <div className="aspect-[21/9] w-full overflow-hidden rounded-[20px] bg-[#0C0B09]">
+        <div className="aspect-[8/7] w-full overflow-hidden rounded-[20px] bg-[#0C0B09]">
             {src ? (
                 <img
                     src={src}
@@ -36,13 +36,13 @@ export const BannerFrame: React.FC<FrameProps> = ({ src, alt, className = '', st
     </div>
 );
 
-/** Phone frame — dark panel with an inset 9:19 image. */
+/** Phone frame - dark panel with an inset 9:19 image. */
 export const PhoneMockup: React.FC<FrameProps> = ({ src, alt, className = '', style, fit = 'cover', eager }) => (
     <div
-        className={`w-full max-w-[280px] rounded-[38px] bg-panel p-[11px] shadow-panel ${className}`}
+        className={`w-full max-w-[280px] overflow-hidden rounded-[28px] shadow-card ${className}`}
         style={style}
     >
-        <div className="aspect-[9/19] w-full overflow-hidden rounded-[29px] bg-[#0C0B09]">
+        <div className="aspect-[9/19] w-full overflow-hidden rounded-[28px]">
             {src ? (
                 <img
                     src={src}

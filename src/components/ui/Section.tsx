@@ -10,10 +10,14 @@ interface SectionProps {
     className?: string;
     /** Override the default vertical padding */
     padding?: string;
+    /** Override the default horizontal padding */
+    xPadding?: string;
+    /** Override the inner content wrapper */
+    contentClassName?: string;
 }
 
 /**
- * Standard section shell — 1180px container with the design's responsive
+ * Standard section shell - 1180px container with the design's responsive
  * vertical rhythm. Keeps every page section perfectly consistent.
  */
 const Section: React.FC<SectionProps> = ({
@@ -23,12 +27,14 @@ const Section: React.FC<SectionProps> = ({
     id,
     className = '',
     padding = 'py-[clamp(64px,9vw,110px)]',
+    xPadding = 'px-[clamp(20px,5vw,48px)]',
+    contentClassName = 'mx-auto max-w-content',
 }) => (
     <section
         id={id}
-        className={`px-[clamp(20px,5vw,48px)] ${padding} ${tone === 'paper' ? 'bg-paper' : 'bg-bg'} ${bordered ? 'border-t border-line08' : ''} ${className}`}
+        className={`${xPadding} ${padding} ${tone === 'paper' ? 'bg-paper' : 'bg-bg'} ${bordered ? 'border-t border-line08' : ''} ${className}`}
     >
-        <div className="mx-auto max-w-content">{children}</div>
+        <div className={contentClassName}>{children}</div>
     </section>
 );
 

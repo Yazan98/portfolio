@@ -57,7 +57,7 @@ const Articles: React.FC = () => {
     const list = loading ? getArticles() : articles;
 
     return (
-        <Section bordered>
+        <Section bordered xPadding="px-[clamp(16px,3vw,32px)]" contentClassName="w-full">
             <div className="flex flex-col gap-12">
                 <div className="flex flex-wrap items-end justify-between gap-6">
                     <SectionHeading

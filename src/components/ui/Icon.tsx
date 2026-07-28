@@ -44,7 +44,7 @@ const fill = (children: React.ReactNode) => ({
 });
 
 const ICONS: Record<IconName, { fill?: string; stroke?: string; strokeWidth?: number; strokeLinecap?: 'round'; strokeLinejoin?: 'round'; children: React.ReactNode }> = {
-    // The design's phone "</>" mark — sits on the dark logo tile, so it keeps
+    // The design's phone "</>" mark - sits on the dark logo tile, so it keeps
     // its own light + accent colors regardless of theme.
     logo: {
         fill: 'none',

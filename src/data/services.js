@@ -1,5 +1,5 @@
 // ============================================================
-// "What I do" — the service / focus areas shown on the home page.
+// "What I do" - the service / focus areas shown on the home page.
 // ============================================================
 
 const services = [
@@ -8,28 +8,35 @@ const services = [
     tag: 'Mobile',
     title: 'Android Development',
     description:
-      'Android applications used by millions — clean architecture, MVVM, Kotlin, Jetpack Compose, Firebase, Hilt, Retrofit, Room, WorkManager and multi-modular apps.',
+      'Native Android apps built with Kotlin and Jetpack Compose on a clean, multi-modular architecture - Hilt, Coroutines, Room and WorkManager - and shipped to Google Play.',
   },
   {
     num: '02',
-    tag: 'Multiplatform',
-    title: 'Compose Multiplatform',
+    tag: 'Mobile',
+    title: 'iOS Development',
     description:
-      'One Kotlin codebase for Android and iOS. Shared UI and business logic with Compose Multiplatform and Kotlin Multiplatform, without compromising the native feel.',
+      'Native iOS apps with Swift and SwiftUI - Kotlin Multiplatform libraries integrated across iOS and Android, GraphQL and REST clients with Alamofire, plus local persistence with Realm.',
   },
   {
     num: '03',
-    tag: 'Backend',
-    title: 'APIs & Backend',
+    tag: 'Multiplatform',
+    title: 'Compose & Kotlin Multiplatform',
     description:
-      'Backend projects and APIs with NestJS, Spring Boot, PostgreSQL, Firebase, Socket.IO, JWT, TypeORM, Docker, deployments, SSH servers and Nginx configuration.',
+      'Shared UI, business logic and data layers for Android and iOS with Compose Multiplatform and Kotlin Multiplatform, using Ktor, Coroutines and offline-first architecture with platform-specific integrations where they add real value.',
   },
   {
     num: '04',
-    tag: 'Web',
-    title: 'Web Development',
+    tag: 'Backend',
+    title: 'APIs & Backend',
     description:
-      'Static sites and landing pages with React, TypeScript and Tailwind CSS — responsive, accessible and deployed on GitHub Pages, Firebase and Netlify.',
+      'Production APIs with NestJS, Spring Boot and Ktor - REST and real-time Socket.IO services, JWT auth and TypeORM in clean, testable service layers.',
+  },
+  {
+    num: '05',
+    tag: 'Tooling',
+    title: 'Developer Tools & CLIs',
+    description:
+      'Developer tools built with scripts, custom commands, Fastlane plugins and JavaScript CLIs to automate repetitive workflows, improve release pipelines and make teams more productive.',
   },
 ];
 

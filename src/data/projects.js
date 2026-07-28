@@ -1,5 +1,5 @@
 // ============================================================
-// Projects — the single source of truth for the Projects grid,
+// Projects - the single source of truth for the Projects grid,
 // the featured home carousel and every project detail page.
 // Add / edit a project here and it flows through the whole site.
 //
@@ -80,12 +80,12 @@ const projects = [
     badge: 'FLAGSHIP · COMPOSE MULTIPLATFORM',
     year: '2026',
     tagline:
-      'A modern Islamic companion — Quran, prayer times, adhkar, duas, Qibla, names of Allah, tasbeeh and daily faith tools.',
+      'A modern Islamic companion - Quran, prayer times, adhkar, duas, Qibla, names of Allah, tasbeeh and daily faith tools.',
     summary:
       'Compose Multiplatform app targeting Android & iOS with shared logic and UI.',
     overview: [
       'Rafeeq is built with a strong mobile-first experience: polished UI, offline-first thinking and a scalable product vision. One Kotlin codebase renders natively on both Android and iOS.',
-      'The app is designed to feel fast and reliable in daily use — content is available offline, navigation is instant, and every screen follows a consistent, calm visual language.',
+      'The app is designed to feel fast and reliable in daily use - content is available offline, navigation is instant, and every screen follows a consistent, calm visual language.',
     ],
     facts: {
       type: 'Consumer mobile app',
@@ -95,7 +95,7 @@ const projects = [
     },
     tags: ['Compose Multiplatform', 'Swift UI', 'Jetpack Compose', 'Shared Logic', 'Shared UI', 'Shared Database'],
     features: [
-      { title: 'Quran & daily content', desc: 'Full Quran reading experience with adhkar, duas and names of Allah — structured for daily use.' },
+      { title: 'Quran & daily content', desc: 'Full Quran reading experience with adhkar, duas and names of Allah - structured for daily use.' },
       { title: 'Prayer times & Qibla', desc: 'Accurate location-based prayer times and Qibla direction, built to work reliably offline.' },
       { title: 'Tasbeeh & faith tools', desc: 'Daily tools like tasbeeh counting designed with a simple, focused mobile UX.' },
       { title: 'One codebase, two platforms', desc: 'Compose Multiplatform shares UI and business logic across Android and iOS without compromising feel.' },
@@ -113,11 +113,11 @@ const projects = [
     featured: true,
     badge: 'ANDROID · KOTLIN',
     year: '2025',
-    tagline: 'Personal expense tracking — budgeting, transactions, reminders and financial insights.',
+    tagline: 'Personal expense tracking - budgeting, transactions, reminders and financial insights.',
     summary: 'Native Android expense tracker built with Kotlin & Compose.',
     overview: [
       'Expenzia is designed for clean, mobile-first money management: track transactions, set budgets, get reminders and understand spending through clear visual insights.',
-      'Built with Kotlin and Compose UI on a clean architecture foundation — local state, charts and reminders that stay fast as data grows. It was also a testbed for the latest Play Store deployment rules and AdMob configuration.',
+      'Built with Kotlin and Compose UI on a clean architecture foundation - local state, charts and reminders that stay fast as data grows. It was also a testbed for the latest Play Store deployment rules and AdMob configuration.',
     ],
     facts: {
       type: 'Personal finance app',
@@ -145,10 +145,10 @@ const projects = [
     featured: true,
     badge: 'IOS · GITHUB CLIENT',
     year: '2024',
-    tagline: 'A GitHub client for mobile — repositories, starred projects, profile data and developer workflows.',
+    tagline: 'A GitHub client for mobile - repositories, starred projects, profile data and developer workflows.',
     summary: 'iOS GitHub client built with SwiftUI, GraphQL and Apollo.',
     overview: [
-      'Gitly brings the core GitHub workflow to mobile: browse repositories, check starred projects and profile data — built on the GitHub GraphQL API with a clean SwiftUI interface.',
+      'Gitly brings the core GitHub workflow to mobile: browse repositories, check starred projects and profile data - built on the GitHub GraphQL API with a clean SwiftUI interface.',
       'The focus is speed and clarity: efficient networking, dynamic GraphQL queries generated from the schema, sensible caching and screens designed around what developers actually check on the go.',
     ],
     facts: {
@@ -160,7 +160,7 @@ const projects = [
     tags: ['Swift 5', 'Swift UI', 'GraphQL', 'Apollo Client', 'Dynamic Queries', 'Pagination'],
     features: [
       { title: 'Repository browsing', desc: 'Explore repositories with readme, metadata and activity in a mobile-optimized layout.' },
-      { title: 'Starred projects', desc: 'Quick access to starred repos — the projects you actually come back to.' },
+      { title: 'Starred projects', desc: 'Quick access to starred repos - the projects you actually come back to.' },
       { title: 'Profile data', desc: 'Developer profiles with contributions and public activity at a glance.' },
       { title: 'GraphQL networking', desc: 'A clean Apollo layer over the GitHub GraphQL API with generated, dynamic queries.' },
     ],
@@ -182,11 +182,11 @@ const projects = [
     featured: true,
     badge: 'MULTIPLATFORM · RIOT API',
     year: '2024',
-    tagline: 'A League of Legends companion — summoner profiles, champions and match history powered by the Riot API.',
+    tagline: 'A League of Legends companion - summoner profiles, champions and match history powered by the Riot API.',
     summary: 'Kotlin Multiplatform companion app with a NodeJS/Express backend.',
     overview: [
       'Legora pairs a Kotlin Multiplatform mobile app with an Express backend to fetch summoner data, champion details and match history from the Riot API.',
-      'Business logic is shared across platforms with KMP, while the backend handles API orchestration, routing and load balancing with Nginx — a full product spanning mobile and server.',
+      'Business logic is shared across platforms with KMP, while the backend handles API orchestration, routing and load balancing with Nginx - a full product spanning mobile and server.',
     ],
     facts: {
       type: 'Companion app',
@@ -221,7 +221,7 @@ const projects = [
     featured: true,
     badge: 'MULTIPLATFORM · CRYPTO',
     year: '2023',
-    tagline: 'A cryptocurrency tracker — market data, coin details and watchlists.',
+    tagline: 'A cryptocurrency tracker - market data, coin details and watchlists.',
     summary: 'Kotlin Multiplatform crypto tracker with a shared data layer.',
     overview: [
       'Coina is a Kotlin Multiplatform cryptocurrency tracker: live market data, detailed coin pages and personal watchlists in a clean mobile UI.',
@@ -253,10 +253,10 @@ const projects = [
     featured: true,
     badge: 'IOS · SWIFT',
     year: '2023',
-    tagline: 'An iOS app exploring characters, episodes and locations — built natively with Swift.',
+    tagline: 'An iOS app exploring characters, episodes and locations - built natively with Swift.',
     summary: 'Native iOS explorer built with UIKit, Alamofire and Realm.',
     overview: [
-      'A native iOS application built with Swift, exploring the Rick & Morty universe through its public REST API — characters, episodes and locations.',
+      'A native iOS application built with Swift, exploring the Rick & Morty universe through its public REST API - characters, episodes and locations.',
       'The project focuses on native iOS patterns: UIKit collection views, nested navigations, async networking with Alamofire and local caching with Realm.',
     ],
     facts: {
@@ -288,7 +288,7 @@ const projects = [
     tagline: 'An Android GitHub client with profile pages, repositories and developer-focused browsing flows.',
     summary: 'Open-source Android GitHub client built on MVVM and the Vortex infrastructure.',
     overview: [
-      'Autohub is a native Android app built with Kotlin around developer-focused browsing flows — profiles, repositories and clean navigation, powered by the GitHub API.',
+      'Autohub is a native Android app built with Kotlin around developer-focused browsing flows - profiles, repositories and clean navigation, powered by the GitHub API.',
       'It follows modern Android architecture with the Vortex infrastructure: separated layers, navigation components, testable logic and a UI that stays responsive.',
     ],
     facts: {
@@ -322,11 +322,11 @@ const projects = [
     featured: true,
     badge: 'ANDROID · MATERIAL',
     year: '2019',
-    tagline: 'A food discovery Android app — browse categories, explore recipes and curated picks.',
+    tagline: 'A food discovery Android app - browse categories, explore recipes and curated picks.',
     summary: 'Food discovery Android app with a polished Material Design UI.',
     overview: [
       'Destiny is a food discovery app for Android: browse categories, explore recipes and find curated picks through a polished Material Design UI.',
-      'The emphasis is on visual polish and smooth browsing — imagery-forward layouts built with Kotlin, MVVM and Material components, backed by a Spring Boot API.',
+      'The emphasis is on visual polish and smooth browsing - imagery-forward layouts built with Kotlin, MVVM and Material components, backed by a Spring Boot API.',
     ],
     facts: {
       type: 'Food discovery app',
@@ -359,11 +359,11 @@ const projects = [
     featured: false,
     badge: 'WEB · REACT',
     year: '2020',
-    tagline: 'My personal website — a React SPA with PWA support, SEO and dark / light modes.',
+    tagline: 'My personal website - a React SPA with PWA support, SEO and dark / light modes.',
     summary: 'React + Vite personal website with PWA support and dark / light modes.',
     overview: [
       'My personal website built with React and TypeScript as a single page application, with PWA support and SEO techniques for Google Search Console.',
-      'The project has evolved across several versions — from SASS + Material UI to Tailwind — always focused on responsive design, dark / light theming and a fast client-side experience.',
+      'The project has evolved across several versions - from SASS + Material UI to Tailwind - always focused on responsive design, dark / light theming and a fast client-side experience.',
     ],
     facts: {
       type: 'Personal website',
@@ -452,11 +452,11 @@ const projects = [
     featured: false,
     badge: 'BACKEND · LARAVEL',
     year: '2021',
-    tagline: 'An open-source shop API built with PHP & Laravel — accounts, tokens, orders and more.',
+    tagline: 'An open-source shop API built with PHP & Laravel - accounts, tokens, orders and more.',
     summary: 'Laravel REST API handling accounts, tokens, addresses and categories.',
     overview: [
       'Shopie API is an open-source API built with PHP and Laravel to model the database relations and logic for a shop application and website.',
-      'It manages accounts, recipes, restaurants, bearer tokens, phone-number verification, user addresses and categories — built to apply PHP skills in a real project.',
+      'It manages accounts, recipes, restaurants, bearer tokens, phone-number verification, user addresses and categories - built to apply PHP skills in a real project.',
     ],
     facts: {
       type: 'REST API',
@@ -483,7 +483,7 @@ const projects = [
     summary: 'Android infrastructure library for multi-modular apps with generated base code.',
     overview: [
       'Vortex is an open-source Android infrastructure to build applications with the latest technologies, ready state handling and UI implementations for common cases.',
-      "It's not just base code — it helps you reach the target as fast as possible with ready techniques, a multi-modular structure and an MVVM foundation.",
+      "It's not just base code - it helps you reach the target as fast as possible with ready techniques, a multi-modular structure and an MVVM foundation.",
     ],
     facts: {
       type: 'Android library',
@@ -657,7 +657,7 @@ const projects = [
     tagline: 'A native Android League of Legends companion built to test the Vanite library.',
     summary: 'Native Android Riot API app built with Vanite and multi-modular architecture.',
     overview: [
-      'The original native Android Legora — a training project to test the Vanite source-code library against the Riot API.',
+      'The original native Android Legora - a training project to test the Vanite source-code library against the Riot API.',
       'Built with Navigation Components, ViewBinding, Vanite, coroutines, Retrofit and Moshi in a multi-modular structure showing summoners, champions, items, skins and deeplinks.',
     ],
     facts: {

@@ -13,7 +13,7 @@ interface SectionHeadingProps {
 
 /**
  * The numbered-eyebrow + display-heading pattern used across the design
- * (e.g. "01 — OVERVIEW" / "About the app.").
+ * (e.g. "01 - OVERVIEW" / "About the app.").
  */
 const SectionHeading: React.FC<SectionHeadingProps> = ({
     eyebrow,

@@ -8,46 +8,66 @@ import { identity, socials } from '../../data/site';
 import { sections, contact } from '../../data/home';
 
 const ContactCta: React.FC = () => (
-    <Section id="contact" bordered>
+    <Section
+        id="contact"
+        bordered
+        padding="py-[clamp(72px,9vw,112px)]"
+        xPadding="px-[clamp(16px,3vw,32px)]"
+        contentClassName="w-full"
+    >
         <Reveal>
-            <div className="relative overflow-hidden rounded-[28px] bg-panel p-[clamp(32px,6vw,72px)] text-[#F6F3EC]">
-                <div
-                    aria-hidden="true"
-                    className="pointer-events-none absolute -right-24 -top-28 h-[380px] w-[380px] rounded-full"
-                    style={{ background: 'radial-gradient(circle, var(--acc-soft), transparent 65%)' }}
-                />
-                <div className="relative flex max-w-2xl flex-col gap-6">
-                    <span className="font-mono text-xs font-semibold tracking-[0.12em] text-acc">{sections.contact.eyebrow}</span>
-                    <h2 className="m-0 font-display text-[clamp(30px,4.5vw,56px)] font-bold leading-[1.05] tracking-[-0.03em]">
-                        {contact.heading}
-                    </h2>
-                    <p className="m-0 text-[17px] leading-[1.7] text-white/70">{contact.body}</p>
+            <div className="relative isolate overflow-hidden rounded-[32px] bg-[#14130F] px-6 py-16 text-[#F6F3EC] shadow-panel sm:px-10 sm:py-20 lg:px-16 lg:py-24">
+                <span aria-hidden="true" className="contact-aura absolute -left-20 top-1/2 h-72 w-72 -translate-y-1/2 rounded-full bg-acc/25 blur-3xl" />
+                <span aria-hidden="true" className="contact-aura contact-aura-delayed absolute -right-24 top-10 h-64 w-64 rounded-full bg-acc/15 blur-3xl" />
 
-                    <div className="mt-2 flex flex-wrap items-center gap-3">
-                        <a
-                            href={`mailto:${identity.email}`}
-                            className="inline-flex items-center gap-2 rounded-full bg-[#F6F3EC] px-6 py-3.5 text-sm font-semibold text-[#14130F] no-underline transition-transform duration-200 hover:-translate-y-0.5"
-                        >
-                            <Icon name="mail" size={17} /> {identity.email}
-                        </a>
-                        <div className="flex items-center gap-1.5">
-                            {socials.slice(0, 4).map((s: { label: string; icon: string; href: string }) => (
-                                <a
-                                    key={s.label}
-                                    href={s.href}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    aria-label={s.label}
-                                    className="flex h-11 w-11 items-center justify-center rounded-full border border-white/15 text-white/75 transition-all hover:-translate-y-0.5 hover:border-white/40 hover:text-white"
-                                >
-                                    <Icon name={s.icon as never} size={18} />
-                                </a>
-                            ))}
-                        </div>
+                <div className="relative z-10 mx-auto flex max-w-3xl flex-col items-center text-center">
+                    <div className="flex items-center gap-2 font-mono text-[11px] font-semibold uppercase tracking-[0.14em] text-acc">
+                        <span className="relative flex h-2 w-2">
+                            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-acc opacity-60" />
+                            <span className="relative inline-flex h-2 w-2 rounded-full bg-acc" />
+                        </span>
+                        {sections.contact.eyebrow}
                     </div>
 
-                    <div className="mt-2 flex items-center gap-2 font-mono text-[12.5px] text-white/50">
-                        <Icon name="globe" size={14} /> {identity.location}
+                    <h2
+                        className="m-0 mt-7 font-display font-bold leading-[0.97] tracking-[-0.05em]"
+                        style={{ fontSize: 'clamp(3rem, 6vw, 5.75rem)' }}
+                    >
+                        {contact.heading}
+                    </h2>
+
+                    <p className="mb-0 mt-6 max-w-2xl text-[16px] leading-[1.75] text-[#F6F3EC]/70 sm:text-[18px]">
+                        {contact.body}
+                    </p>
+
+                    <a
+                        href={`mailto:${identity.email}`}
+                        className="group mt-10 inline-flex items-center gap-4 rounded-full bg-[#F6F3EC] px-5 py-3 text-[#14130F] no-underline transition-all duration-300 hover:-translate-y-1 hover:bg-acc hover:text-white sm:px-6 sm:py-4"
+                    >
+                        <span className="font-mono text-[11px] font-semibold uppercase tracking-[0.1em]">Start a conversation</span>
+                        <span className="flex h-8 w-8 items-center justify-center rounded-full bg-[#14130F] text-[#F6F3EC] transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:bg-white group-hover:text-acc">
+                            <Icon name="arrow-up-right" size={16} />
+                        </span>
+                    </a>
+
+                    <div className="mt-10 flex flex-wrap items-center justify-center gap-3">
+                        {socials.slice(0, 4).map((social: { label: string; icon: string; href: string }) => (
+                            <a
+                                key={social.label}
+                                href={social.href}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label={social.label}
+                                className="flex h-11 w-11 items-center justify-center rounded-full border border-white/15 text-[#F6F3EC]/70 transition-all duration-300 hover:-translate-y-1 hover:border-acc hover:bg-acc hover:text-white"
+                            >
+                                <Icon name={social.icon as never} size={17} />
+                            </a>
+                        ))}
+                    </div>
+
+                    <div className="mt-9 flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.12em] text-[#F6F3EC]/40">
+                        <Icon name="globe" size={13} />
+                        {identity.location}
                     </div>
                 </div>
             </div>

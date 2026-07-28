@@ -11,7 +11,7 @@ import { sections } from '../../data/home';
 const Services: React.FC = () => {
     const services = getServices();
     return (
-        <Section tone="paper" bordered>
+        <Section tone="paper" bordered xPadding="px-[clamp(16px,3vw,32px)]" contentClassName="w-full">
             <div className="flex flex-col gap-12">
                 <SectionHeading
                     eyebrow={sections.services.eyebrow}

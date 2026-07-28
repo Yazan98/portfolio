@@ -1,35 +1,98 @@
 // ============================================================
-// Home page content — hero copy, quick stats and the eyebrow /
-// title pairs for each section. Change copy here without
-// touching the page markup.
+// Home page content - hero copy, the technology marquee lanes and
+// the eyebrow / title pairs for each section. Change copy here
+// without touching the page markup.
 // ============================================================
 
 export const hero = {
   eyebrow: 'MOBILE SOFTWARE ENGINEER',
   greeting: 'Hi, I’m',
   name: 'Yazan Tarifi',
-  headline: 'I build mobile products that feel native on every screen',
+  headline: 'I build fast, polished mobile products people love to use from idea to launch',
   tags: ['Compose Multiplatform', 'Kotlin', 'SwiftUI', 'NestJS', 'Spring Boot'],
   primaryCta: { label: 'View projects', to: '/projects' },
   secondaryCta: { label: 'Get in touch', href: 'mailto:yazantarifi989@gmail.com' },
 };
 
-// Small stat row under the hero.
-export const stats = [
-  { value: '8+', label: 'Shipped apps' },
-  { value: '6', label: 'Languages' },
-  { value: '30+', label: 'Open-source repos' },
-  { value: 'Android · iOS', label: 'Platforms' },
-];
+// Auto-scrolling technology lanes shown in the hero's black marquee.
+// `primary` = highlighted stack (green dot), `secondary` = supporting
+// tools (muted square). Order controls the on-screen sequence.
+export const technologies = {
+  primary: [
+    'Kotlin',
+    'Java',
+    'Jetpack Compose',
+    'Compose Multiplatform',
+    'Kotlin Multiplatform',
+    'Swift',
+    'SwiftUI',
+    'iOS',
+    'Android',
+    'UIKit',
+    'Android SDK',
+    'Material 3',
+    'Coroutines',
+    'Flow',
+    'Ktor Client',
+    'Retrofit',
+    'Room',
+    'Hilt',
+    'Koin',
+    'Gradle',
+    'Clean Architecture',
+    'MVVM',
+    'MVI',
+    'Navigation Compose',
+    'Coil',
+    'Firebase',
+    'Firebase Cloud Messaging',
+  ],
+  secondary: [
+    'Spring Boot',
+    'Spring Security',
+    'Spring Data JPA',
+    'Hibernate',
+    'Spring Boot Actuator',
+    'Ktor',
+    'REST API Design',
+    'Building APIs',
+    'JWT Authentication',
+    'Refresh Tokens',
+    'OAuth 2.0',
+    'OpenAPI',
+    'Swagger',
+    'Git',
+    'NestJS',
+    'TypeScript',
+    'Node.js',
+    'React',
+    'Next.js',
+    'PostgreSQL',
+    'MySQL',
+    'MongoDB',
+    'Redis',
+    'Supabase',
+    'Firebase Admin',
+    'Docker',
+    'Docker Compose',
+    'Linux',
+    'VPS',
+    'Nginx',
+    'CI/CD',
+    'GitHub Actions',
+    'WebSockets',
+    'Webhooks',
+  ],
+};
 
 // Eyebrow + title pairs for each home section (matches the design's
 // numbered-eyebrow style).
 export const sections = {
-  services: { eyebrow: '01 — WHAT I DO', title: 'How I can help' },
-  languages: { eyebrow: '02 — TOOLBOX', title: 'Core languages' },
-  projects: { eyebrow: '03 — SELECTED WORK', title: 'Featured projects' },
-  articles: { eyebrow: '04 — WRITING', title: 'Latest articles' },
-  contact: { eyebrow: '05 — CONTACT', title: 'Let’s build something' },
+  services: { eyebrow: 'WHAT I DO', title: 'How I can help' },
+  languages: { eyebrow: 'TOOLBOX', title: 'Core languages' },
+  projects: { eyebrow: 'SELECTED WORK', title: 'Featured projects' },
+  articles: { eyebrow: 'WRITING', title: 'Latest articles' },
+  contact: { eyebrow: 'CONTACT', title: 'Let’s build something' },
 };
 
 export const contact = {

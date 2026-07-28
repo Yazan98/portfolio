@@ -1,5 +1,5 @@
 // ============================================================
-// Articles — fallback list used when the live Medium feed
+// Articles - fallback list used when the live Medium feed
 // can't be fetched. The <Articles> section fetches the RSS
 // feed first and falls back to these entries.
 // ============================================================
@@ -26,7 +26,7 @@ const articles = [
   {
     title: 'Mastering Database Design for High Concurrency',
     description:
-      'Optimizing relational databases for high concurrency and large data volumes — indexing, partitioning and caching.',
+      'Optimizing relational databases for high concurrency and large data volumes - indexing, partitioning and caching.',
     date: 'Aug 20, 2025',
     readTime: '12 min read',
     link: 'https://medium.com/@yazantarifi98',

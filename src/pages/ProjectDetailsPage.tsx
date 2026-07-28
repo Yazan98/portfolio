@@ -34,14 +34,17 @@ const FactRow: React.FC<{ label: string; value: string; accent?: boolean; last?:
 );
 
 const NotFound: React.FC = () => (
-    <Section padding="py-[clamp(140px,22vh,220px)]">
-        <div className="flex flex-col items-center gap-5 text-center">
-            <span className="font-mono text-sm text-acc">404</span>
-            <h1 className="m-0 font-display text-4xl font-bold tracking-[-0.03em] text-ink">Project not found.</h1>
-            <p className="m-0 max-w-md text-ink2">The project you’re looking for doesn’t exist or may have moved.</p>
-            <Button to="/projects" iconRight="arrow-right">Browse all projects</Button>
-        </div>
-    </Section>
+    <>
+        <Seo title="Project not found" description="The requested project could not be found." path="/404" noIndex />
+        <Section padding="py-[clamp(140px,22vh,220px)]">
+            <div className="flex flex-col items-center gap-5 text-center">
+                <span className="font-mono text-sm text-acc">404</span>
+                <h1 className="m-0 font-display text-4xl font-bold tracking-[-0.03em] text-ink">Project not found.</h1>
+                <p className="m-0 max-w-md text-ink2">The project you’re looking for doesn’t exist or may have moved.</p>
+                <Button to="/projects" iconRight="arrow-right">Browse all projects</Button>
+            </div>
+        </Section>
+    </>
 );
 
 const ProjectDetailsPage: React.FC = () => {
@@ -52,15 +55,21 @@ const ProjectDetailsPage: React.FC = () => {
 
     const next = getNextProject(project.slug);
     const buttons = linkButtons(project.links || {});
-    const ogImage = typeof project.image === 'string' && project.image.startsWith('http') ? project.image : undefined;
-    const screens: string[] = (project.screens || []).slice(0, 3);
+    const screens: string[] = project.screens || [];
 
     return (
         <>
-            <Seo title={project.name} description={project.summary} path={`/project/${project.slug}`} image={ogImage} />
+            <Seo
+                title={project.name}
+                description={project.tagline || project.summary}
+                path={`/project/${project.slug}`}
+                schemaType="CreativeWork"
+                keywords={project.tags}
+                dateCreated={project.year}
+            />
 
             {/* Hero */}
-            <header className="grid-bg px-[clamp(20px,5vw,48px)] pb-6 pt-[clamp(120px,18vh,160px)]">
+            <header className="bg-bg px-[clamp(20px,5vw,48px)] pb-6 pt-[clamp(120px,18vh,160px)]">
                 <div className="mx-auto flex max-w-content flex-col gap-6">
                     <Link
                         to="/projects"
@@ -123,7 +132,7 @@ const ProjectDetailsPage: React.FC = () => {
             <section className="bg-bg px-[clamp(20px,5vw,48px)] pt-7">
                 <div className="mx-auto max-w-content">
                     <Reveal>
-                        <BannerFrame src={project.banner || project.image} alt={`${project.name} — banner`} eager fit="cover" />
+                        <BannerFrame src={project.banner || project.image} alt={`${project.name} - banner`} eager fit="contain" />
                     </Reveal>
                 </div>
             </section>
@@ -132,7 +141,7 @@ const ProjectDetailsPage: React.FC = () => {
             <Section>
                 <div className="grid grid-cols-1 items-start gap-[clamp(32px,5vw,64px)] lg:grid-cols-2">
                     <Reveal className="flex flex-col gap-[18px]">
-                        <SectionHeading eyebrow="01 — OVERVIEW" title={`About ${project.name}`} />
+                        <SectionHeading eyebrow="01 - OVERVIEW" title={`About ${project.name}`} />
                         {(project.overview || []).map((p: string, i: number) => (
                             <p key={i} className="m-0 text-[17px] leading-[1.7] text-ink3">{p}</p>
                         ))}
@@ -152,7 +161,7 @@ const ProjectDetailsPage: React.FC = () => {
             {project.features?.length > 0 && (
                 <Section tone="paper" bordered>
                     <div className="flex flex-col gap-12">
-                        <SectionHeading eyebrow="02 — WHAT’S INSIDE" title="Key features" />
+                        <SectionHeading eyebrow="02 - WHAT’S INSIDE" title="Key features" />
                         <div className="grid grid-cols-1 gap-[18px] sm:grid-cols-2 lg:grid-cols-4">
                             {project.features.map((f: { title: string; desc: string }, i: number) => (
                                 <Reveal key={f.title} delay={(i % 4) * 70}>
@@ -168,18 +177,24 @@ const ProjectDetailsPage: React.FC = () => {
             {screens.length > 0 && (
                 <Section bordered>
                     <div className="flex flex-col gap-12">
-                        <SectionHeading eyebrow="03 — SCREENS" title="Inside the product" />
-                        <div
-                            className="grid justify-items-center gap-[26px]"
-                            style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))' }}
-                        >
+                        <SectionHeading
+                            eyebrow="03 - ALL SCREENS"
+                            title="Inside the product"
+                            description={`${screens.length} app screens, presented in full without cropping.`}
+                        />
+                        <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4 lg:gap-6">
                             {screens.map((src, i) => (
                                 <Reveal
                                     key={i}
-                                    delay={(i % 3) * 70}
-                                    className={`w-full max-w-[280px] ${i % 2 === 1 ? 'sm:mt-[clamp(0px,3vw,36px)]' : ''}`}
+                                    delay={(i % 4) * 70}
+                                    className="w-full"
                                 >
-                                    <PhoneMockup src={src} alt={`${project.name} — screen ${i + 1}`} />
+                                    <PhoneMockup
+                                        src={src}
+                                        alt={`${project.name} - screen ${i + 1}`}
+                                        fit="contain"
+                                        className="max-w-none"
+                                    />
                                 </Reveal>
                             ))}
                         </div>

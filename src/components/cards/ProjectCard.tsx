@@ -15,26 +15,35 @@ export interface Project {
     featured?: boolean;
 }
 
-const ProjectCard: React.FC<{ project: Project }> = ({ project }) => (
+const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
+    const badge = project.badge.split(' · ')[0];
+    const isFlagship = badge === 'FLAGSHIP';
+    return (
     <Link
         to={`/project/${project.slug}`}
         className="group flex h-full flex-col overflow-hidden rounded-[22px] border border-line10 bg-paper no-underline transition-all duration-300 hover:-translate-y-1.5 hover:border-line14 hover:shadow-card"
     >
-        <div className="relative aspect-[16/10] w-full overflow-hidden bg-panel">
+        <div className="relative aspect-[8/7] w-full overflow-hidden bg-panel">
             {project.image ? (
                 <img
                     src={project.image}
                     alt={project.name}
                     loading="lazy"
-                    className="h-full w-full object-cover transition-transform duration-[700ms] group-hover:scale-[1.04]"
+                    className="h-full w-full object-cover object-center transition-transform duration-[700ms] group-hover:scale-[1.04]"
                 />
             ) : (
                 <div className="flex h-full w-full items-center justify-center font-mono text-xs text-white/40">
                     {project.name}
                 </div>
             )}
-            <span className="absolute left-3.5 top-3.5 rounded-full bg-[rgba(14,138,102,0.9)] px-2.5 py-1 font-mono text-[10px] font-semibold uppercase tracking-[0.08em] text-[#F6F3EC] backdrop-blur-sm">
-                {project.badge.split(' · ')[0]}
+            <span
+                className={`absolute left-3.5 top-3.5 rounded-full px-2.5 py-1 font-mono text-[10px] font-semibold uppercase tracking-[0.08em] backdrop-blur-sm ${
+                    isFlagship
+                        ? 'bg-[rgba(14,138,102,0.92)] text-[#F6F3EC]'
+                        : 'bg-[rgba(20,19,15,0.82)] text-[#F6F3EC]'
+                }`}
+            >
+                {badge}
             </span>
         </div>
 
@@ -51,6 +60,7 @@ const ProjectCard: React.FC<{ project: Project }> = ({ project }) => (
             </span>
         </div>
     </Link>
-);
+    );
+};
 
 export default ProjectCard;

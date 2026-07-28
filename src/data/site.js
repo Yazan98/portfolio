@@ -1,5 +1,5 @@
 // ============================================================
-// Global site configuration — identity, navigation, socials,
+// Global site configuration - identity, navigation, socials,
 // SEO defaults and theme options. Edit here to change the site
 // everywhere; no component markup needs to change.
 // ============================================================
@@ -12,10 +12,9 @@ export const identity = {
   email: 'yazantarifi989@gmail.com',
   resume: '/resume.pdf',
   tagline:
-    'I build native Android & iOS apps with Kotlin, Compose Multiplatform and SwiftUI — plus scalable backends with NestJS and Spring Boot.',
+    'I design and build polished mobile apps backed by reliable systems, turning product ideas into fast, intuitive experiences that scale.',
   intro:
     'Mobile-first engineer focused on shared logic, offline-first products and clean architecture. I ship one Kotlin codebase to both platforms and back it with reliable APIs.',
-  availability: 'Available for new projects',
 };
 
 // Primary navigation (rendered in the navbar + footer)
@@ -23,7 +22,6 @@ export const navLinks = [
   { label: 'Home', to: '/' },
   { label: 'Projects', to: '/projects' },
   { label: 'Skills', to: '/skills' },
-  { label: 'Archive', to: '/archive' },
 ];
 
 // Social / external links. `icon` maps to a key in the <Icon> component.
@@ -46,12 +44,47 @@ export const primaryLinks = {
 // SEO defaults used by <Seo> / <Helmet>
 export const seo = {
   siteUrl: 'https://www.yazantarifi.com',
-  defaultTitle: 'Yazan Tarifi — Mobile Software Engineer',
-  titleTemplate: '%s · Yazan Tarifi',
+  siteName: 'Yazan Tarifi',
+  language: 'en',
+  locale: 'en_US',
+  defaultTitle: 'Yazan Tarifi | Mobile and Kotlin Multiplatform Engineer',
+  titleTemplate: '%s | Yazan Tarifi',
   description:
-    "Yazan Tarifi's portfolio — native Android & iOS apps with Kotlin, Compose Multiplatform and SwiftUI, plus scalable backends with NestJS & Spring Boot.",
+    'Portfolio of Yazan Tarifi, a senior mobile engineer building Android, iOS, Kotlin Multiplatform, Compose Multiplatform, and scalable Spring Boot backends.',
   image: 'https://www.yazantarifi.com/banner.png',
+  imageAlt: 'Yazan Tarifi mobile software engineer portfolio',
+  imageType: 'image/png',
+  imageWidth: 1280,
+  imageHeight: 720,
   twitter: '@YazanT98',
+  sameAs: [
+    'https://github.com/Yazan98',
+    'https://linkedin.com/in/yazantarifi',
+    'https://x.com/YazanT98',
+    'https://medium.com/@yazantarifi98',
+  ],
+  knowsAbout: [
+    'Android development',
+    'Kotlin',
+    'Jetpack Compose',
+    'Kotlin Multiplatform',
+    'Compose Multiplatform',
+    'iOS development',
+    'Swift',
+    'SwiftUI',
+    'Kotlin Coroutines',
+    'Mobile architecture',
+    'Spring Boot',
+    'Spring Data JPA',
+    'Ktor',
+    'NestJS',
+    'PostgreSQL',
+    'Firebase',
+    'Docker',
+    'REST API design',
+    'Developer tooling',
+    'SaaS development',
+  ],
 };
 
 // Theme options exposed by the accent switcher (matches the design source).

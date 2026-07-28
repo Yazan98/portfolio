@@ -12,7 +12,6 @@ import HomePage from './pages/HomePage';
 const ProjectsPage = lazy(() => import('./pages/ProjectsPage'));
 const ProjectDetailsPage = lazy(() => import('./pages/ProjectDetailsPage'));
 const SkillsPage = lazy(() => import('./pages/SkillsPage'));
-const ArchivePage = lazy(() => import('./pages/ArchivePage'));
 const NotFoundPage = lazy(() => import('./pages/NotFoundPage'));
 
 const App: React.FC = () => (
@@ -29,7 +28,6 @@ const App: React.FC = () => (
                                 <Route path="/projects" element={<ProjectsPage />} />
                                 <Route path="/project/:slug" element={<ProjectDetailsPage />} />
                                 <Route path="/skills" element={<SkillsPage />} />
-                                <Route path="/archive" element={<ArchivePage />} />
                                 <Route path="*" element={<NotFoundPage />} />
                             </Routes>
                         </Suspense>

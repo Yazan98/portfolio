@@ -5,8 +5,8 @@ import Button from '../components/ui/Button';
 
 const NotFoundPage: React.FC = () => (
     <>
-        <Seo title="Page not found" description="The page you're looking for doesn't exist." path="/404" />
-        <Section padding="py-[clamp(140px,24vh,240px)]" className="grid-bg">
+        <Seo title="Page not found" description="The requested page could not be found." path="/404" noIndex />
+        <Section padding="py-[clamp(140px,24vh,240px)]">
             <div className="flex flex-col items-center gap-5 text-center">
                 <span className="font-mono text-sm font-semibold tracking-[0.12em] text-acc">404</span>
                 <h1 className="m-0 font-display text-[clamp(44px,7vw,84px)] font-bold tracking-[-0.04em] text-ink">

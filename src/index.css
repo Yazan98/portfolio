@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 /* ============================================================
-   Design tokens — warm-cream light theme + deep dark theme.
+   Design tokens - warm-cream light theme + deep dark theme.
    Colors switch automatically via [data-theme] on <html>,
    so components just use the semantic utilities (bg-bg, text-ink…).
    ============================================================ */
@@ -27,8 +27,6 @@
   --line25: rgba(20, 19, 15, 0.25);
 
   --navbg: rgba(246, 243, 236, 0.82);
-  --gridline: rgba(20, 19, 15, 0.045);
-
   --btn-bg: #14130F;
   --btn-fg: #F6F3EC;
 
@@ -56,8 +54,6 @@ html[data-theme="dark"] {
   --line25: rgba(246, 243, 236, 0.28);
 
   --navbg: rgba(15, 14, 10, 0.82);
-  --gridline: rgba(246, 243, 236, 0.05);
-
   --btn-bg: #F6F3EC;
   --btn-fg: #14130F;
 
@@ -103,7 +99,7 @@ html[data-accent="cyan"] { --acc: #0E7490; --acc-soft: rgba(14, 116, 144, 0.16);
 }
 
 @layer components {
-  /* Section shell — 1180px container with responsive gutters */
+  /* Section shell - 1180px container with responsive gutters */
   .container-x {
     width: 100%;
     max-width: 1180px;
@@ -127,14 +123,6 @@ html[data-accent="cyan"] { --acc: #0E7490; --acc-soft: rgba(14, 116, 144, 0.16);
     border: 1px solid var(--line10);
   }
 
-  /* Grid-line backdrop used on hero headers */
-  .grid-bg {
-    background-color: var(--bg);
-    background-image:
-      linear-gradient(var(--gridline) 1px, transparent 1px),
-      linear-gradient(90deg, var(--gridline) 1px, transparent 1px);
-    background-size: 56px 56px;
-  }
 }
 
 @layer utilities {
@@ -161,9 +149,47 @@ html[data-accent="cyan"] { --acc: #0E7490; --acc-soft: rgba(14, 116, 144, 0.16);
   0%, 100% { transform: scale(1);   opacity: 1;  }
   50%      { transform: scale(1.6); opacity: .5; }
 }
+@keyframes projectCopyNext {
+  from { opacity: 0; transform: translateX(32px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+@keyframes projectCopyPrevious {
+  from { opacity: 0; transform: translateX(-32px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+@keyframes projectVisualNext {
+  from { opacity: 0; transform: translateX(70px) scale(.96); filter: blur(8px); }
+  to { opacity: 1; transform: translateX(0) scale(1); filter: blur(0); }
+}
+@keyframes projectVisualPrevious {
+  from { opacity: 0; transform: translateX(-70px) scale(.96); filter: blur(8px); }
+  to { opacity: 1; transform: translateX(0) scale(1); filter: blur(0); }
+}
+@keyframes contactAura {
+  0%, 100% { transform: translate3d(0, -50%, 0) scale(1); opacity: .45; }
+  50% { transform: translate3d(56px, -42%, 0) scale(1.18); opacity: .8; }
+}
+.contact-aura {
+  animation: contactAura 8s ease-in-out infinite;
+}
+.contact-aura-delayed {
+  animation-delay: -4s;
+}
+.project-copy-next {
+  animation: projectCopyNext .55s cubic-bezier(.2,.7,.2,1) both;
+}
+.project-copy-previous {
+  animation: projectCopyPrevious .55s cubic-bezier(.2,.7,.2,1) both;
+}
+.project-visual-next {
+  animation: projectVisualNext .7s cubic-bezier(.2,.7,.2,1) both;
+}
+.project-visual-previous {
+  animation: projectVisualPrevious .7s cubic-bezier(.2,.7,.2,1) both;
+}
 
-/* Infinite horizontal marquee (hero premium-projects slider).
-   The track holds two identical copies, so -50% loops seamlessly. */
+/* Infinite horizontal marquee (hero technology lanes). The track holds
+   two identical copies, so a -50% translate loops seamlessly. */
 @keyframes marquee {
   from { transform: translateX(0); }
   to   { transform: translateX(-50%); }
@@ -171,11 +197,15 @@ html[data-accent="cyan"] { --acc: #0E7490; --acc-soft: rgba(14, 116, 144, 0.16);
 .marquee-track {
   animation: marquee var(--marquee-duration, 46s) linear infinite;
 }
+/* Opposite-direction lane */
+.marquee-track.is-reverse {
+  animation-direction: reverse;
+}
 .marquee-viewport:hover .marquee-track {
   animation-play-state: paused;
 }
 
-/* Scroll-reveal — toggled by the <Reveal> IntersectionObserver */
+/* Scroll-reveal - toggled by the <Reveal> IntersectionObserver */
 .reveal {
   opacity: 0;
   transform: translateY(28px);

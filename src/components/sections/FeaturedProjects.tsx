@@ -1,162 +1,191 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import Button from '../ui/Button';
+import Section from '../ui/Section';
+import SectionHeading from '../ui/SectionHeading';
 import Icon from '../ui/Icon';
-import { TagList } from '../ui/Chip';
 // @ts-ignore - data modules authored in JS
 import { getFeaturedProjects } from '../../data/projects';
 // @ts-ignore
 import { sections } from '../../data/home';
 
-interface FP {
-    id: number; slug: string; name: string; badge: string; year: string;
-    tagline: string; tags: string[]; image?: string; facts: { platforms: string };
+interface FeaturedProject {
+    id: number;
+    slug: string;
+    name: string;
+    badge: string;
+    year: string;
+    tagline?: string;
+    summary: string;
+    tags: string[];
+    image?: string;
 }
 
-const GUTTER = 'clamp(20px,5vw,48px)';
-
-const BigCard: React.FC<{ project: FP; snap?: boolean }> = ({ project, snap }) => (
-    <article
-        className={`relative h-[62vh] max-h-[560px] w-[86vw] max-w-[980px] flex-none overflow-hidden rounded-[28px] border border-line10 bg-paper shadow-card ${snap ? 'snap-center' : ''}`}
-    >
-        <div className="grid h-full grid-cols-1 grid-rows-[42%_58%] md:grid-cols-2 md:grid-rows-1">
-            <div className="order-2 flex flex-col justify-center gap-4 p-7 md:order-1 md:p-11">
-                <span className="font-mono text-[11.5px] font-semibold uppercase tracking-[0.1em] text-acc">{project.badge}</span>
-                <h3 className="m-0 font-display text-[clamp(28px,4vw,46px)] font-bold leading-[1.05] tracking-[-0.03em] text-ink">
-                    {project.name}<span className="text-acc">.</span>
-                </h3>
-                <p className="m-0 line-clamp-3 text-[15px] leading-[1.6] text-ink3 md:text-[16px]">{project.tagline}</p>
-                <div className="hidden sm:block"><TagList tags={project.tags} max={4} /></div>
-                <div className="mt-1 flex items-center gap-3 font-mono text-[12px] text-ink2">
-                    <span>{project.year}</span><span className="text-line25">·</span><span>{project.facts.platforms}</span>
-                </div>
-                <div className="mt-2">
-                    <Button to={`/project/${project.slug}`} iconRight="arrow-right">View project</Button>
-                </div>
-            </div>
-            <div className="relative order-1 overflow-hidden bg-panel md:order-2">
-                {project.image ? (
-                    <img src={project.image} alt={project.name} loading="lazy" className="h-full w-full object-cover" />
-                ) : (
-                    <div className="flex h-full w-full items-center justify-center font-mono text-xs text-white/40">{project.name}</div>
-                )}
-            </div>
-        </div>
-    </article>
-);
-
-const Header: React.FC<{ inContainer?: boolean; barRef?: React.RefObject<HTMLDivElement> }> = ({ inContainer, barRef }) => (
-    <div className={inContainer ? 'mx-auto max-w-content' : 'mx-auto w-full max-w-content'} style={{ paddingInline: GUTTER }}>
-        <div className="flex flex-wrap items-end justify-between gap-4">
-            <div className="flex flex-col gap-2.5">
-                <span className="font-mono text-[12.5px] font-semibold tracking-[0.12em] text-acc">{sections.projects.eyebrow}</span>
-                <h2 className="m-0 font-display text-[clamp(30px,3.4vw,48px)] font-bold leading-[1.05] tracking-[-0.03em] text-ink">
-                    {sections.projects.title}<span className="text-acc">.</span>
-                </h2>
-            </div>
-            <div className="flex items-center gap-5">
-                {barRef && (
-                    <span className="hidden items-center gap-2 font-mono text-[11px] uppercase tracking-[0.12em] text-ink2 md:inline-flex">
-                        Scroll <Icon name="arrow-right" size={13} />
-                        <span className="relative block h-[3px] w-24 overflow-hidden rounded-full bg-line10">
-                            <span ref={barRef} className="absolute inset-y-0 left-0 block w-0 rounded-full bg-acc" />
-                        </span>
-                    </span>
-                )}
-                <Link to="/projects" className="inline-flex items-center gap-1.5 font-mono text-[13px] font-medium text-acc no-underline">
-                    View all <Icon name="arrow-right" size={14} />
-                </Link>
-            </div>
-        </div>
-    </div>
-);
+type Direction = 'next' | 'previous';
 
 const FeaturedProjects: React.FC = () => {
-    const featured: FP[] = getFeaturedProjects();
-    const sectionRef = useRef<HTMLElement>(null);
-    const trackRef = useRef<HTMLDivElement>(null);
-    const barRef = useRef<HTMLDivElement>(null);
-    const maxTranslate = useRef(0);
-    const [pinned, setPinned] = useState(false);
-    const [height, setHeight] = useState<string | undefined>(undefined);
+    const featured: FeaturedProject[] = getFeaturedProjects();
+    const [active, setActive] = useState(0);
+    const [direction, setDirection] = useState<Direction>('next');
 
-    // Decide pin mode + measure the horizontal scroll distance.
-    useEffect(() => {
-        const decide = () => {
-            const track = trackRef.current;
-            if (!track) return;
-            const canPin =
-                window.matchMedia('(min-width: 768px) and (pointer: fine)').matches &&
-                !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-            // clientWidth excludes the scrollbar — stable because the tall
-            // pinned section always shows a vertical scrollbar.
-            const dist = Math.max(0, track.scrollWidth - document.documentElement.clientWidth);
-            maxTranslate.current = dist;
-            if (canPin && dist > 0) {
-                setPinned(true);
-                setHeight(`${Math.round(window.innerHeight + dist)}px`);
-            } else {
-                setPinned(false);
-                setHeight(undefined);
-                track.style.transform = '';
-            }
-        };
-        decide();
-        window.addEventListener('resize', decide);
-        return () => window.removeEventListener('resize', decide);
-    }, []);
+    if (!featured.length) return null;
 
-    // Drive horizontal translate from vertical scroll while pinned.
-    useEffect(() => {
-        if (!pinned) return;
-        let raf = 0;
-        const onScroll = () => {
-            if (raf) return;
-            raf = requestAnimationFrame(() => {
-                raf = 0;
-                const section = sectionRef.current;
-                const track = trackRef.current;
-                if (!section || !track) return;
-                const distance = section.offsetHeight - window.innerHeight;
-                const progress = distance > 0 ? Math.min(1, Math.max(0, -section.getBoundingClientRect().top / distance)) : 0;
-                track.style.transform = `translate3d(${-progress * maxTranslate.current}px,0,0)`;
-                if (barRef.current) barRef.current.style.width = `${progress * 100}%`;
-            });
-        };
-        onScroll();
-        window.addEventListener('scroll', onScroll, { passive: true });
-        return () => { window.removeEventListener('scroll', onScroll); if (raf) cancelAnimationFrame(raf); };
-    }, [pinned]);
+    const current = featured[active];
+    const projectNumber = String(active + 1).padStart(2, '0');
+    const projectCount = String(featured.length).padStart(2, '0');
+    const badge = current.badge.split(' · ')[0];
 
-    if (pinned) {
-        return (
-            <section ref={sectionRef} className="relative border-t border-line08 bg-paper" style={{ height }} aria-label="Featured projects">
-                <div className="sticky top-0 flex h-screen flex-col justify-center overflow-hidden pt-16">
-                    <Header barRef={barRef} />
-                    <div className="mt-9 overflow-hidden">
+    const move = (step: number) => {
+        setDirection(step > 0 ? 'next' : 'previous');
+        setActive((value) => (value + step + featured.length) % featured.length);
+    };
+
+    const select = (index: number) => {
+        if (index === active) return;
+        setDirection(index > active ? 'next' : 'previous');
+        setActive(index);
+    };
+
+    return (
+        <Section
+            bordered
+            tone="paper"
+            padding="py-[clamp(72px,9vw,112px)]"
+            xPadding="px-[clamp(16px,3vw,32px)]"
+            contentClassName="w-full"
+        >
+            <div className="flex flex-col gap-12">
+                <div className="flex flex-wrap items-end justify-between gap-6">
+                    <SectionHeading
+                        eyebrow={sections.projects.eyebrow}
+                        title={sections.projects.title}
+                        description="A selection of the products I've designed, built and shipped."
+                    />
+                    <Link
+                        to="/projects"
+                        className="group inline-flex items-center gap-2 rounded-full border border-line14 px-4 py-2.5 font-mono text-[11px] font-semibold uppercase tracking-[0.1em] text-ink no-underline transition-all hover:border-ink hover:bg-ink hover:text-bg"
+                    >
+                        View all projects
+                        <Icon name="arrow-right" size={14} className="transition-transform group-hover:translate-x-1" />
+                    </Link>
+                </div>
+
+                <div
+                    className="relative overflow-hidden rounded-[32px] bg-[#14130F] p-3 shadow-panel"
+                    aria-roledescription="carousel"
+                    aria-label="Featured projects"
+                >
+                    <div className="grid min-h-[620px] gap-3 lg:grid-cols-[minmax(320px,0.78fr)_minmax(0,1.22fr)]">
                         <div
-                            ref={trackRef}
-                            className="flex w-max gap-6 will-change-transform"
-                            style={{ paddingInline: GUTTER }}
+                            key={`copy-${current.id}`}
+                            className={`flex min-h-[500px] flex-col justify-between rounded-[24px] px-7 py-8 text-[#F6F3EC] sm:px-10 sm:py-10 ${
+                                direction === 'next' ? 'project-copy-next' : 'project-copy-previous'
+                            }`}
+                            aria-live="polite"
                         >
-                            {featured.map((p) => <BigCard key={p.id} project={p} />)}
+                            <div className="flex items-center justify-between gap-4">
+                                <span className="inline-flex items-center gap-2 font-mono text-[10.5px] font-semibold uppercase tracking-[0.14em] text-[#F6F3EC]/60">
+                                    <span className="h-2 w-2 rounded-full bg-acc" />
+                                    {badge}
+                                </span>
+                                <span className="font-mono text-[11px] tracking-[0.12em] text-[#F6F3EC]/45">
+                                    {projectNumber} / {projectCount}
+                                </span>
+                            </div>
+
+                            <div className="my-12">
+                                <span className="mb-4 block font-mono text-[11px] font-semibold uppercase tracking-[0.14em] text-acc">
+                                    {current.year} / Selected work
+                                </span>
+                                <h3 className="m-0 font-display text-[clamp(48px,6vw,86px)] font-bold leading-[0.94] tracking-[-0.055em]">
+                                    {current.name}
+                                </h3>
+                                <p className="mb-0 mt-6 max-w-xl text-[17px] leading-[1.7] text-[#F6F3EC]/70">
+                                    {current.tagline || current.summary}
+                                </p>
+                                <div className="mt-7 flex flex-wrap gap-2">
+                                    {current.tags.slice(0, 4).map((tag) => (
+                                        <span
+                                            key={tag}
+                                            className="rounded-full border border-white/10 bg-white/[0.045] px-3 py-2 font-mono text-[10px] font-medium text-[#F6F3EC]/70"
+                                        >
+                                            {tag}
+                                        </span>
+                                    ))}
+                                </div>
+                            </div>
+
+                            <div className="flex flex-wrap items-center justify-between gap-5 border-t border-white/10 pt-6">
+                                <Link
+                                    to={`/project/${current.slug}`}
+                                    className="group inline-flex items-center gap-3 rounded-full bg-[#F6F3EC] px-5 py-3 text-sm font-semibold text-[#14130F] no-underline transition-all hover:-translate-y-0.5 hover:bg-acc hover:text-white"
+                                >
+                                    View project
+                                    <Icon name="arrow-up-right" size={16} className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                                </Link>
+
+                                <div className="flex items-center gap-2">
+                                    <button
+                                        type="button"
+                                        onClick={() => move(-1)}
+                                        aria-label="Previous featured project"
+                                        className="flex h-11 w-11 items-center justify-center rounded-full border border-white/15 text-[#F6F3EC]/75 transition-all hover:border-white/40 hover:bg-white/10 hover:text-white"
+                                    >
+                                        <Icon name="arrow-left" size={17} />
+                                    </button>
+                                    <button
+                                        type="button"
+                                        onClick={() => move(1)}
+                                        aria-label="Next featured project"
+                                        className="group flex h-11 items-center gap-3 rounded-full bg-acc px-5 font-mono text-[10px] font-semibold uppercase tracking-[0.12em] text-white transition-all hover:-translate-y-0.5 hover:bg-[#10A77A]"
+                                    >
+                                        Next
+                                        <Icon name="arrow-right" size={16} className="transition-transform group-hover:translate-x-1" />
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="relative min-h-[420px] overflow-hidden rounded-[24px] bg-[#EDE9DF] lg:min-h-full">
+                            <span className="pointer-events-none absolute -bottom-8 right-4 z-0 font-display text-[clamp(110px,16vw,260px)] font-bold leading-none tracking-[-0.08em] text-[#14130F]/[0.035]">
+                                {current.year}
+                            </span>
+                            <div
+                                key={`visual-${current.id}`}
+                                className={`absolute inset-0 z-10 flex items-center justify-center p-3 sm:p-6 ${
+                                    direction === 'next' ? 'project-visual-next' : 'project-visual-previous'
+                                }`}
+                            >
+                                {current.image ? (
+                                    <img
+                                        src={current.image}
+                                        alt={current.name}
+                                        loading={active === 0 ? 'eager' : 'lazy'}
+                                        className="max-h-full max-w-full rounded-[18px] object-contain shadow-[0_28px_70px_rgba(20,19,15,0.22)]"
+                                    />
+                                ) : (
+                                    <span className="font-display text-4xl font-bold text-ink">{current.name}</span>
+                                )}
+                            </div>
                         </div>
                     </div>
-                </div>
-            </section>
-        );
-    }
 
-    // Fallback: native horizontal scroll-snap carousel (mobile / touch / reduced-motion).
-    return (
-        <section ref={sectionRef} className="border-t border-line08 bg-paper py-[clamp(56px,8vw,90px)]" aria-label="Featured projects">
-            <Header inContainer />
-            <div className="mt-10 overflow-x-auto snap-x snap-mandatory hide-scrollbar">
-                <div ref={trackRef} className="flex w-max gap-5" style={{ paddingInline: GUTTER }}>
-                    {featured.map((p) => <BigCard key={p.id} project={p} snap />)}
+                    <div className="flex items-center gap-2 px-2 pb-1 pt-4">
+                        {featured.map((project, index) => (
+                            <button
+                                key={project.id}
+                                type="button"
+                                onClick={() => select(index)}
+                                aria-label={`Show ${project.name}`}
+                                aria-current={index === active}
+                                className={`h-1.5 rounded-full transition-all duration-500 ${
+                                    index === active ? 'w-12 bg-acc' : 'w-5 bg-white/15 hover:bg-white/35'
+                                }`}
+                            />
+                        ))}
+                    </div>
                 </div>
             </div>
-        </section>
+        </Section>
     );
 };
 

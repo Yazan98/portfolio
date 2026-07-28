@@ -1,5 +1,5 @@
-# https://www.robotstxt.org/robotstxt.html
 User-agent: *
-Disallow:
+Allow: /
+Disallow: /404
 
 Sitemap: https://www.yazantarifi.com/sitemap.xml

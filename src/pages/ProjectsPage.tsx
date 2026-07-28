@@ -20,11 +20,12 @@ const ProjectsPage: React.FC = () => {
         <>
             <Seo
                 title="Projects"
-                description="Every project built by Yazan Tarifi — Android & iOS apps, Kotlin Multiplatform, backends and websites."
+                description="Explore mobile apps, Kotlin Multiplatform products, Android and iOS projects, backend systems, developer tools, and websites built by Yazan Tarifi."
                 path="/projects"
+                schemaType="CollectionPage"
             />
 
-            <header className="grid-bg px-[clamp(20px,5vw,48px)] pb-[clamp(32px,5vw,56px)] pt-[clamp(112px,16vh,150px)]">
+            <header className="bg-bg px-[clamp(20px,5vw,48px)] pb-[clamp(32px,5vw,56px)] pt-[clamp(112px,16vh,150px)]">
                 <div className="mx-auto flex max-w-content flex-col gap-5">
                     <span className="font-mono text-[12.5px] font-semibold tracking-[0.12em] text-acc" style={{ animation: 'fadeUp .6s cubic-bezier(.2,.7,.2,1) both' }}>
                         SELECTED WORK
