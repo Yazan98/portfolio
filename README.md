@@ -1,6 +1,6 @@
 # Portfolio
 
-My personal portfolio website — built with React, TypeScript, Vite, and Tailwind CSS.
+My personal portfolio website - built with React, TypeScript, Vite, and Tailwind CSS.
 
 ![Header](https://github.com/Yazan98/portfolio/blob/v3/design/header.png?raw=true)
 
@@ -71,7 +71,7 @@ https://yazan98.github.io
 2. Migrated to Angular 8
 3. Rebuilt in React + TypeScript (PWA)
 4. Redesigned with Material UI
-5. Current version — Tailwind CSS + Vite + GSAP animations
+5. Current version - Tailwind CSS + Vite + GSAP animations
 
 ## Screenshots
 
@@ -79,4 +79,4 @@ See the [screenshots folder](https://github.com/Yazan98/portfolio/tree/master/sc
 
 ## License
 
-MIT — see [LICENSE](LICENSE) for details.
+MIT - see [LICENSE](LICENSE) for details.

@@ -1,31 +1,64 @@
 {
-  "short_name": "Portfolio",
-  "name": "Yazan Tarifi - Portfolio",
-  "description": "Personal Website For Yazan Tarifi - Software Engineer",
+  "id": "/",
+  "name": "Yazan Tarifi Portfolio",
+  "short_name": "Yazan Tarifi",
+  "description": "Portfolio of Yazan Tarifi, a senior mobile engineer building Android, iOS, Kotlin Multiplatform, Compose Multiplatform, and scalable Spring Boot backends.",
+  "lang": "en",
+  "dir": "ltr",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "display_override": [
+    "standalone",
+    "minimal-ui"
+  ],
+  "orientation": "any",
+  "background_color": "#F6F3EC",
+  "theme_color": "#F6F3EC",
+  "categories": [
+    "business",
+    "productivity"
+  ],
   "icons": [
     {
-      "src": "logo.png",
-      "sizes": "64x64 32x32 24x24 16x16",
+      "src": "/favicon-32x32.png",
+      "sizes": "32x32",
       "type": "image/png",
-      "purpose": "maskable"
+      "purpose": "any"
     },
     {
-      "src": "logo.png",
+      "src": "/icon-192.png",
+      "sizes": "192x192",
       "type": "image/png",
-      "purpose": "maskable",
-      "sizes": "192x192"
+      "purpose": "any maskable"
     },
     {
-      "src": "logo.png",
+      "src": "/icon-512.png",
+      "sizes": "512x512",
       "type": "image/png",
-      "purpose": "maskable",
-      "sizes": "512x512"
+      "purpose": "any maskable"
     }
   ],
-  "start_url": "/",
-  "background_color": "#0a0a0a",
-  "display": "standalone",
-  "scope": "/",
-  "theme_color": "#a855f7",
-  "orientation": "portrait"
+  "screenshots": [
+    {
+      "src": "/banner.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Yazan Tarifi portfolio"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Projects",
+      "short_name": "Projects",
+      "url": "/projects"
+    },
+    {
+      "name": "Skills",
+      "short_name": "Skills",
+      "url": "/skills"
+    }
+  ],
+  "prefer_related_applications": false
 }

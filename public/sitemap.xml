@@ -2,17 +2,90 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.yazantarifi.com/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
+    <lastmod>2026-07-29</lastmod>
   </url>
   <url>
     <loc>https://www.yazantarifi.com/projects</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <lastmod>2026-07-29</lastmod>
   </url>
   <url>
     <loc>https://www.yazantarifi.com/skills</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-07-29</lastmod>
+  </url>
+  <url>
+    <loc>https://www.yazantarifi.com/project/rafeeq</loc>
+    <lastmod>2026-07-29</lastmod>
+  </url>
+  <url>
+    <loc>https://www.yazantarifi.com/project/expenzia</loc>
+    <lastmod>2026-07-29</lastmod>
+  </url>
+  <url>
+    <loc>https://www.yazantarifi.com/project/gitly</loc>
+    <lastmod>2026-07-29</lastmod>
+  </url>
+  <url>
+    <loc>https://www.yazantarifi.com/project/legora</loc>
+    <lastmod>2026-07-29</lastmod>
+  </url>
+  <url>
+    <loc>https://www.yazantarifi.com/project/coina</loc>
+    <lastmod>2026-07-29</lastmod>
+  </url>
+  <url>
+    <loc>https://www.yazantarifi.com/project/rick-and-morty</loc>
+    <lastmod>2026-07-29</lastmod>
+  </url>
+  <url>
+    <loc>https://www.yazantarifi.com/project/autohub</loc>
+    <lastmod>2026-07-29</lastmod>
+  </url>
+  <url>
+    <loc>https://www.yazantarifi.com/project/destiny</loc>
+    <lastmod>2026-07-29</lastmod>
+  </url>
+  <url>
+    <loc>https://www.yazantarifi.com/project/portfolio</loc>
+    <lastmod>2026-07-29</lastmod>
+  </url>
+  <url>
+    <loc>https://www.yazantarifi.com/project/drasati</loc>
+    <lastmod>2026-07-29</lastmod>
+  </url>
+  <url>
+    <loc>https://www.yazantarifi.com/project/wintrop</loc>
+    <lastmod>2026-07-29</lastmod>
+  </url>
+  <url>
+    <loc>https://www.yazantarifi.com/project/shopie-api</loc>
+    <lastmod>2026-07-29</lastmod>
+  </url>
+  <url>
+    <loc>https://www.yazantarifi.com/project/vortex</loc>
+    <lastmod>2026-07-29</lastmod>
+  </url>
+  <url>
+    <loc>https://www.yazantarifi.com/project/netflix-clone</loc>
+    <lastmod>2026-07-29</lastmod>
+  </url>
+  <url>
+    <loc>https://www.yazantarifi.com/project/github-clone</loc>
+    <lastmod>2026-07-29</lastmod>
+  </url>
+  <url>
+    <loc>https://www.yazantarifi.com/project/autohub-v2</loc>
+    <lastmod>2026-07-29</lastmod>
+  </url>
+  <url>
+    <loc>https://www.yazantarifi.com/project/destiny-api</loc>
+    <lastmod>2026-07-29</lastmod>
+  </url>
+  <url>
+    <loc>https://www.yazantarifi.com/project/tapper</loc>
+    <lastmod>2026-07-29</lastmod>
+  </url>
+  <url>
+    <loc>https://www.yazantarifi.com/project/legora-android</loc>
+    <lastmod>2026-07-29</lastmod>
   </url>
 </urlset>
